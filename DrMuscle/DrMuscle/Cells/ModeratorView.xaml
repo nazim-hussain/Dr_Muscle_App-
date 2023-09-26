@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:xfShapeView="clr-namespace:XFShapeView;assembly=XFShapeView"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="DrMuscle.Cells.ModeratorView">
+  
+ <Grid
+        Rotation="180"
+        FlowDirection="LeftToRight"
+        ColumnSpacing="5"
+        RowSpacing="0"
+        Padding="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="40">
+            </ColumnDefinition>
+            <ColumnDefinition
+                Width="*">
+            </ColumnDefinition>
+            <ColumnDefinition
+                Width="40">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="auto">
+            </RowDefinition>
+            <RowDefinition
+                Height="*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <ffimageloading:CachedImage
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            x:Name="imgInProfilePic"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            WidthRequest="35"
+            HeightRequest="35"
+            DownsampleToViewSize="true"
+            LoadingPlaceholder="Backgroundblack.png"
+            Source="{Binding ProfileUrl}">
+        </ffimageloading:CachedImage>
+        <Frame
+            Padding="0"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            WidthRequest="35"
+            HeightRequest="35"
+            HasShadow="false"
+            x:Name="FrmProfile">
+            <Label
+                x:Name="LblProfileText"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text=""
+                TextColor="White"
+                FontSize="20" />
+        </Frame>
+
+        <StackLayout
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalOptions="End"
+            Orientation="Horizontal"
+            IsClippedToBounds="true"
+            HorizontalOptions="Start">
+
+            
+                <pancakeView:PancakeView VerticalOptions="Start"
+                                     Grid.Row="1"
+            Grid.Column="1"
+            IsClippedToBounds="true"
+                                      HorizontalOptions="End" OffsetAngle="225" Margin="5,5,15,5" Padding="20,12,20,12" CornerRadius="12" >
+        <pancakeView:PancakeView.BackgroundGradientStops>
+            <pancakeView:GradientStopCollection>
+                <pancakeView:GradientStop Color="#0B202D" Offset="0" />
+                <pancakeView:GradientStop Color="#1A587F" Offset="1" />
+            </pancakeView:GradientStopCollection>
+        </pancakeView:PancakeView.BackgroundGradientStops>
+                <controls:ExtendedLightBlueLabel
+                    VerticalTextAlignment="End"
+                    x:Name="lblOutMessage"
+                    HorizontalOptions="End"
+                    HorizontalTextAlignment="Start"
+                    TextColor="White"
+                    FontSize="16"
+                    Text="{Binding Message}">
+                    
+                    <controls:ExtendedLightBlueLabel.HorizontalTextAlignment>
+                        <OnPlatform
+                            x:TypeArguments="TextAlignment"
+                            Android="Start"
+                            iOS="Start"
+                            x:Key="TitleTextAlignment" />
+                    </controls:ExtendedLightBlueLabel.HorizontalTextAlignment>
+                </controls:ExtendedLightBlueLabel>
+            </pancakeView:PancakeView>
+        </StackLayout>
+        <StackLayout
+            Grid.Row="0"
+            Grid.Column="1"
+            VerticalOptions="Start"
+            Orientation="Horizontal"
+            HorizontalOptions="Start">
+            <Label
+                x:Name="nameLabel"
+                FontAttributes="Bold"
+                HorizontalOptions="End"
+                HorizontalTextAlignment="End"
+                Text="{Binding Nickname}"
+                TextColor="{x:Static app:AppThemeConstants.OffBlackColor}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Username_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                FontSize="Micro"
+                HorizontalOptions="Start"
+                HorizontalTextAlignment="Start"
+                Text="{Binding TImeAgo}"
+                VerticalOptions="End"
+                VerticalTextAlignment="End"
+                TextColor="{x:Static app:AppThemeConstants.BlueColor}">
+            </Label>
+        </StackLayout>
+        <!-- <Label
+            Grid.Row="1"
+            FontSize="Micro"
+            Grid.Column="1"
+            HorizontalOptions="End"
+            HorizontalTextAlignment="End"
+            Text="{Binding CreatedOn,StringFormat='{0:dd-MM-yyyy hh:mm}'}"
+            TextColor="Gray">
+        </Label>-->
+    </Grid>
+  
+</ViewCell>

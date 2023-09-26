@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                 xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+   
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:constnats="clr-namespace:DrMuscle.Constants"
+    CloseWhenBackgroundIsClicked="false"
+    BackgroundColor="Transparent"
+    HasSystemPadding="False"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="DrMuscle.Views.FullscreenMenu">
+    <!--<pages:PopupPage.Animation>
+        <animations:MoveAnimation 
+            PositionIn="Right"
+            PositionOut="Right"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>-->
+
+    <ScrollView >
+
+        <StackLayout BackgroundColor="White">
+            <StackLayout x:Name="GeneralStack" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Start"  Spacing="1">
+                        
+                        <pancakeView:PancakeView VerticalOptions="Start"
+                                   x:Name="PancakeContainer" 
+            IsClippedToBounds="true"
+                                      HorizontalOptions="End" OffsetAngle="45" Margin="0" Padding="0,8,0,0" CornerRadius="0" >
+                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                <pancakeView:GradientStopCollection>
+                                    <pancakeView:GradientStop Color="#0B202D" Offset="0" />
+                                    <pancakeView:GradientStop Color="#1A587F" Offset="1" />
+                                </pancakeView:GradientStopCollection>
+                            </pancakeView:PancakeView.BackgroundGradientStops>
+                            <Grid Padding="15,0,0,10" RowSpacing="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="33" />
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="Auto" />
+                                    
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ffimageloading:CachedImage x:Name="ImgProfile" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+			WidthRequest="60"
+            HeightRequest="60"
+			DownsampleToViewSize="true"
+			Source = "me_tab.png">
+                                    <ffimageloading:CachedImage.Transformations>
+                                            <fftransformations:CircleTransformation />
+                                        </ffimageloading:CachedImage.Transformations>
+                                </ffimageloading:CachedImage>
+                                <StackLayout Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Spacing="2" HorizontalOptions="Start" VerticalOptions="Center">
+                                    <Label TextColor="#FFFFFF" x:Name="LblNmae" Text="Etienee Juneau" Margin="0,0,0,0"  VerticalOptions="End" VerticalTextAlignment="End" FontAttributes="Bold" FontSize="21" />
+                                    <Label  TextColor="#77FFFFFF" x:Name="LblDoneWorkout" Text="" FontSize="15" VerticalOptions="Start"  />
+                                </StackLayout>
+                                <Image Source="Close.png" WidthRequest="35" Aspect="AspectFit" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" HorizontalOptions="End" Margin="0,0,20,0" >
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ImageButton_Clicked" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="0,0,58,0">
+                                    <BoxView.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="MeGesture" />
+                                    </BoxView.GestureRecognizers>
+                                </BoxView>
+
+                                <Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" IsVisible="false" Padding="0,0,0,0" Grid.ColumnSpan="2" x:Name="SettingsButton" Text="Settings" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="SettingGesture" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+
+                            </Grid>
+                        </pancakeView:PancakeView>
+                        <Grid RowSpacing="0" Padding="15,6
+                              ,14,6" >
+                            <Label Grid.Row="0" Grid.Column="0" HeightRequest="39" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Padding="0,6,0,4" Margin="5,0,0,0" x:Name="SubscriptionInfosButton" Text="Subscription"  TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"  FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="SubscriptionGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            
+
+                             
+
+                            <!--<Label Grid.Row="1" Grid.Column="0" Margin="5,0,0,0" x:Name="HistoryButton" Text="History" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="HistoryGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>-->
+                            <Label Grid.Row="1" Grid.Column="0"  HeightRequest="39"  VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Padding="0,6,0,4" Margin="5,0,0,0" x:Name="FeedbackButton" Text="Send feedback" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="FeedbackGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <!--<Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" x:Name="WebButton" Text="Web app" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="WebGesture" />
+                                    </Label.GestureRecognizers>
+                                </Label>-->
+                            <Label Grid.Row="2" Grid.Column="0"  HeightRequest="39"  VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Padding="0,6,0,4" Margin="5,0,0,0" x:Name="TellAFriend" Text="Share free trial" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="TellAFriendGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Grid.Row="3" Grid.Column="0" HeightRequest="39" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Padding="0,6,0,4" Margin="5,0,0,0" x:Name="HistoryButton" Text="History"  TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"  FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="HistoryGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Grid.Row="4" Grid.Column="0"  HeightRequest="39"  VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Padding="0,6,0,4" Margin="5,0,0,0" x:Name="LearnButton" Text="Learn" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="LearnGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Grid.Row="5" Grid.Column="0"  HeightRequest="39"  VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Padding="0,6,0,4" Margin="5,0,0,0" x:Name="FAQButton" Text="Help" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="FAQGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+
+
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#F0F0F0" VerticalOptions="Start">
+
+                        <Frame Padding="25,10,25,10" Margin="20,11,20,11" BackgroundColor="White" CornerRadius="8" HasShadow="False" >
+                            <StackLayout >
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblReview" Text="For basic strength training this app out performs the many methods/apps I have tried in my 30+ years of body/strength training. What I like the most is that it take the brain work out of weights, reps, and sets (if you follow a structured workout). What I like even more is the exceptional customer engagement." MaxLines="4" LineBreakMode="TailTruncation" VerticalOptions="Fill" Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="LblReviewerName" Text="A McM" MaxLines="1" LineBreakMode="TailTruncation" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                                <Label x:Name="WebReviews" Text="More reviews" BackgroundColor="Transparent" TextColor="{x:Static constnats:AppThemeConstants.BlueColor}" HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource LabelStyle}">
+                                    <!--<Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="WebGestures" />
+                                    </Label.GestureRecognizers>-->
+                                </Label>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapMoreReviews_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Spacing="16" Padding="0">
+                        <StackLayout Spacing="1" Margin="20,11,0,0"> 
+                        <Label Grid.Row="1" Grid.Column="0"  x:Name="LogOutButton" Text="Log out" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="18" />
+                            <Label Grid.Row="1" Grid.Column="0"  x:Name="LblEmail" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="14" />
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="LogoutGesture" />
+                            </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        <Label x:Name="VersionInfoLabel" FontSize="14" VerticalOptions="End" HorizontalOptions="Start" Margin="20,0,0,20" TextColor="#26262B">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_BuildVersionTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</pages:PopupPage>

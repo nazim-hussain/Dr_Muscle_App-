@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="False"
+
+    x:Class="DrMuscle.OnBoarding.Page1">
+    <Grid>
+        <Image Source="Splash.png" Aspect="AspectFill" />
+        <StackLayout HorizontalOptions="Center" x:Name="mainStack" Margin="0,100,0,50">
+            <Image HeightRequest="200" WidthRequest="150" x:Name="imgLogo" Source="logo.png" />
+
+            <StackLayout>
+                <Image Margin="0,24,0,0" x:Name="ImgStar1" Source="stars_5.png" WidthRequest="90" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Label TextColor="White" FontAttributes="Italic" Text="&quot;Stronger at 62 than I was at 31&quot;" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="14" x:Name="LblReview1" />
+                    <Label TextColor="LightGray" Text="-Rodney Spence" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13"  x:Name="LblAuthor1" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Image Margin="0,24,0,0" x:Name="ImgStar2" Source="stars_5.png" WidthRequest="90" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                        <Label TextColor="White" FontAttributes="Italic" Text="&quot;I’ve never looked or felt better&quot;" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="14"  x:Name="LblReview2"/>
+                        <Label TextColor="LightGray" Text="-Matthew Hammond" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13"  x:Name="LblAuthor2"/>
+                    </StackLayout>
+
+               </StackLayout>
+            </StackLayout>
+            
+        </StackLayout>
+    </Grid>
+</ContentView>
+

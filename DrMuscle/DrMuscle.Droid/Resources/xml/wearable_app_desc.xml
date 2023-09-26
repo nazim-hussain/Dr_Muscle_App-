@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wearableApp package="wearable.app.package.name">
+  <versionCode>1520</versionCode>
+  <versionName>2.6</versionName>
+  <rawPathResId>dr_muscle_wear</rawPathResId>
+</wearableApp>

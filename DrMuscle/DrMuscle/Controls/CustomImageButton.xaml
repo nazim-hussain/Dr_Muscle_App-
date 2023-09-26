@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DrMuscle.Controls.CustomImageButton" xmlns:app="clr-namespace:DrMuscle.Constants">
+    <ContentView.Content>
+        <StackLayout
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Spacing="10"
+            Orientation="Horizontal">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Button_Tapped" />
+            </StackLayout.GestureRecognizers>
+            <Image
+                x:Name="ButtonImage"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                WidthRequest="35"
+                HeightRequest="35"
+                Aspect="AspectFit" />
+            <Label
+                x:Name="ButtonText"
+                Text="F4 Select Club"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="Start"
+                TextColor="{x:Static app:AppThemeConstants.OffBlackColor}"
+                 />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Views.BodyweightPopup"
+    CloseWhenBackgroundIsClicked="false"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:constants="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+  <pages:PopupPage.Content>
+      <Frame Padding="0" CornerRadius="4"
+             HasShadow="False"
+             IsClippedToBounds="True"
+             HorizontalOptions="FillAndExpand"
+        VerticalOptions="CenterAndExpand"
+             BackgroundColor="White"
+             Margin="20,20,20,0">
+    <StackLayout
+        Orientation="Vertical"
+        BackgroundColor="White"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="Center"
+        Padding="0,15,0,10"
+        >
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="TextColor" Value="{x:Static constants:AppThemeConstants.BlueColor}" />
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+          </Style>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <Label x:Name="LblTitle" Margin="15,0,10,0" Text="Your body weight" FontAttributes="Bold" FontSize="Medium" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+      <StackLayout Margin="7,10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <controls:DrMuscleEntry Margin="5,0,0,0" TextChanged="BodyweightPopup_OnTextChanged" x:Name="EntryBodyWeight" TextColor="Black" VerticalOptions="Start" Keyboard="Numeric" Text="" Placeholder="Enter weight" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" MaxLength="5" />
+          <BoxView HorizontalOptions="FillAndExpand" Margin="5,0" BackgroundColor="#D8D8D8" HeightRequest="0.5" />
+          <Frame Margin="5,5,5,0" HasShadow="False" IsClippedToBounds="True" Padding="1,1,1,1" BackgroundColor="Transparent" BorderColor="{x:Static constants:AppThemeConstants.BlueColor}" CornerRadius="6">
+          <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="0" BackgroundColor="Transparent">
+              <StackLayout
+                                  Margin="0"
+                  x:Name="LbGradient"
+                                   HorizontalOptions="FillAndExpand" VerticalOptions="End"  >
+                            
+                        <Button Text="Lbs" x:Name="BtnLbs" HorizontalOptions="FillAndExpand" Clicked="BtnLbsClicked" TextColor="White" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" CornerRadius="6" ></Button>
+                  </StackLayout>
+              <StackLayout 
+                                  Margin="0" 
+                                      HorizontalOptions="FillAndExpand" x:Name="KgGradient" VerticalOptions="End"  >
+                            
+              <Button Text="Kg" x:Name="BtnKg" HorizontalOptions="FillAndExpand" Clicked="BtnKgClicked" TextColor="#0C2432" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" CornerRadius="6"></Button>
+                  </StackLayout>
+          </StackLayout>
+              </Frame>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" Margin="10,0,10,15" VerticalOptions="EndAndExpand" HorizontalOptions="End">
+        <Button x:Name="BtnConfirm" Text="Save" Style="{StaticResource ButtonStyle}" HorizontalOptions="End" WidthRequest="80" Clicked="BtnDoneClicked" />
+      </StackLayout>
+    </StackLayout>
+          </Frame>
+      </pages:PopupPage.Content>
+</pages:PopupPage>

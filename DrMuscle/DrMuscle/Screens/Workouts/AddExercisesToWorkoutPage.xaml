@@ -1,0 +1,20 @@
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DrMuscle"
+                xmlns:control="clr-namespace:DrMuscle.Controls"
+                xmlns:cells="clr-namespace:DrMuscle.Cells"
+                xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+			 xmlns:t="clr-namespace:DrMuscle.Layout"
+                    xmlns:effects="clr-namespace:DrMuscle.Effects"
+                xmlns:app="clr-namespace:DrMuscle.Constants"
+                xmlns:converter="clr-namespace:DrMuscle.Converters"
+                xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                    xmlns:constnats="clr-namespace:DrMuscle.Constants"
+             x:Class="DrMuscle.Screens.Workouts.AddExercisesToWorkoutPage">
+    <t:DrMusclePage.Resources>
+        <ResourceDictionary>
+            <converter:IdToBodyPartConverter x:Key="IdToBodyConverter" />
+        </ResourceDictionary>
+    </t:DrMusclePage.Resources>
+    
+</t:DrMusclePage>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+    xmlns:local="clr-namespace:DrMuscle"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:history="clr-namespace:DrMuscle.Screens.History"
+    xmlns:control="clr-namespace:DrMuscle.Controls"
+    xmlns:helpers="clr-namespace:DrMuscle.Helpers"
+    xmlns:s="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    x:Class="DrMuscle.Screens.Me.MeView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="historyDateTemplate"
+                          x:Name="DateTemplate">
+                <ViewCell Height="45">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="45"
+                                 VerticalOptions="Center">
+                        <!--                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                        <Label Margin="0,0,5,0"
+                               Opacity="1"
+                               Text="{Binding Label}"
+                               Style="{StaticResource LabelStyle}"
+                               VerticalTextAlignment="Center"
+                               Font="Bold,16"
+                               HorizontalOptions="StartAndExpand" />
+                        <!--                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End">
+                            <t:DrMuscleButton Clicked="OnCancelClicked"
+                                              Text="{Binding [Cancel].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextCancelButton}" />
+                            <t:DrMuscleButton Clicked="OnDeleteWorkoutLogClicked"
+                                              Text="{Binding [Delete].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextDeleteButton}" />
+                            <t:DrMuscleButton Clicked="OnContextMenuClicked"
+                                              CommandParameter="{Binding .}"
+                                              HorizontalOptions="End"
+                                              
+                                              Style="{StaticResource ItemContextMoreButton}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="historyExerciseTemplate"
+                          x:Name="ExerciseTemplate">
+                <ViewCell Height="45">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="45"
+                                 VerticalOptions="Center">
+                        <!--                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                        <Label Margin="20,0,0,0"
+                               Opacity="1"
+                               Text="{Binding Label}"
+                               Style="{StaticResource LabelStyle}"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               Font="16" />
+                        <!--                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End">
+                            <t:DrMuscleButton Clicked="OnCancelClicked"
+                                              Text="{Binding [Cancel].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextCancelButton}" />
+                            <t:DrMuscleButton Clicked="OnDeleteWorkoutLogExerciseClicked"
+                                              Text="{Binding [Delete].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextDeleteButton}" />
+                            <t:DrMuscleButton Clicked="OnContextMenuClicked"
+                                              CommandParameter="{Binding .}"
+                                              HorizontalOptions="End"
+                                              
+                                              Style="{StaticResource ItemContextMoreButton}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="historySetTemplate"
+                          x:Name="SetTemplate">
+                <ViewCell Height="45">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="45"
+                                 VerticalOptions="Center">
+                        <!--                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                        <Label Margin="40,0,0,0"
+                               Text="{Binding Label}"
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Style="{StaticResource LabelStyle}"
+                               VerticalTextAlignment="Center"
+                               Font="16" />
+                        <!--                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End">
+                            <t:DrMuscleButton Clicked="OnCancelClicked"
+                                              Text="{Binding [Cancel].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextCancelButton}" />
+                            <t:DrMuscleButton Clicked="OnEditClicked"
+                                              Text="{Binding [Edit].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextEditButton}" />
+                            <t:DrMuscleButton Clicked="OnDeleteWorkoutLogSerieClicked"
+                                              Text="{Binding [Delete].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextDeleteButton}" />
+                            <t:DrMuscleButton Clicked="OnContextMenuClicked"
+                                              CommandParameter="{Binding .}"
+                                              HorizontalOptions="End"
+                                              
+                                              Style="{StaticResource ItemContextMoreButton}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="historyStatisticTemplate"
+                          x:Name="StatisticTemplate">
+                <ViewCell Height="45">
+                    <!--<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" HeightRequest="40" VerticalOptions="Center">-->
+                    <Label Margin="40,0,0,0"
+                           Opacity="1"
+                           Text="{Binding Label}"
+                           VerticalOptions="FillAndExpand"
+                           Style="{StaticResource LabelStyle}"
+                           VerticalTextAlignment="Center"
+                           FontSize="12" />
+                    <!--</StackLayout>-->
+                </ViewCell>
+            </DataTemplate>
+            <history:HistoryDataTemplateSelector x:Key="historyDataTemplateSelector"
+                                                 HistoryDateTemplate="{StaticResource historyDateTemplate}"
+                                                 HistoryExerciseTemplate="{StaticResource historyExerciseTemplate}"
+                                                 HistorySetTemplate="{StaticResource historySetTemplate}">
+            </history:HistoryDataTemplateSelector>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!--<AbsoluteLayout>
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Padding="20,0,20,0"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <ScrollView HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="Transparent"
+                             VerticalOptions="FillAndExpand"
+                             Margin="0,20">
+                    <StackLayout VerticalOptions="StartAndExpand">
+                        <Label x:Name="lblWorkoutsDone"
+                               IsVisible="false"
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}" />
+                        <Label x:Name="lblLiftedCount"
+                               IsVisible="false"
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}" />
+                        <Label x:Name="lblProgram"
+                               Text=""
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}"
+                               FontAttributes="Bold" />
+                        <Label x:Name="lblLevel"
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}" />
+                        <Label x:Name="lblWorkout"
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}" />
+                    </StackLayout>
+                    <StackLayout VerticalOptions="Start">
+
+                        <Grid x:Name="GridChart"
+                              HeightRequest="175">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <control:ZoomableScrollview x:Name="plotScroll1"
+                                                        Grid.Column="0"
+                                                        Orientation="Horizontal">
+                                <oxy:PlotView  x:Name="plotView"
+                                               IsEnabled="false"
+                                               IsVisible="true"
+                                               VerticalOptions="Start"
+                                               HeightRequest="250">
+                                </oxy:PlotView>
+                            </control:ZoomableScrollview>
+                            <control:ZoomableScrollview x:Name="plotScroll2"
+                                                        Grid.Column="1"
+                                                        Orientation="Horizontal">
+                                <oxy:PlotView x:Name="plotViewVolume"
+                                              IsEnabled="false"
+                                              IsVisible="true"
+                                              VerticalOptions="Start"
+                                              HeightRequest="250">
+                                </oxy:PlotView>
+                            </control:ZoomableScrollview>
+                        </Grid>
+                        <Label x:Name="LblProgress"
+                               Text=""
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}" />
+                        <Label x:Name="LblSetsProgress"
+                               Text=""
+                               HorizontalOptions="CenterAndExpand"
+                               Style="{StaticResource OnBoardingLabelStyle}" />
+                    </StackLayout>
+                    <StackLayout x:Name="LogsStack"
+                                 IsVisible="true"
+                                 VerticalOptions="FillAndExpand">
+                        <Label Text="Logs"
+                               Style="{StaticResource BoldLabelStyle}" />
+                        <layout:DrMuscleListView x:Name="HistoryListView"
+                                                 VerticalOptions="Fill"
+                                                 BackgroundColor="Transparent"
+                                                 SeparatorVisibility="None"
+                                                 RowHeight="45"
+                                                 HeightRequest="500" />
+                    </StackLayout>                </StackLayout>
+            </ScrollView>
+            <StackLayout VerticalOptions="End">
+                <Label x:Name="LblTimeFrame"
+                       Margin="20,0"
+                       Style="{StaticResource BoldLabelStyle}" />
+                <Picker x:Name="ExericsesPicker"
+                        Margin="20,0,20,0"
+                        Style="{StaticResource PickerStyle}" />
+                <Picker x:Name="DatePicker"
+                        Margin="20,0,20,0"
+                        Style="{StaticResource PickerStyle}" />
+            </StackLayout>
+        </StackLayout>
+
+    </AbsoluteLayout>-->
+
+    
+</ContentView>

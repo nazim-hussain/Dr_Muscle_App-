@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xfShapeView="clr-namespace:XFShapeView;assembly=XFShapeView"
+    x:Class="DrMuscle.Layout.TimerOverlay"
+    BackgroundColor="#333333">
+        <AbsoluteLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                <Image Source="nav.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="TimerView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,10,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Opacity="0.9">
+            
+            <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                <Label x:Name="LblRestFor" FontSize="Medium" Text="Rest for" TextColor="White" HorizontalOptions="Center" />
+                <xfShapeView:ShapeView
+                    WidthRequest="200" HeightRequest="200" x:Name="ProgressCircle" ShapeType="ProgressCircle" BorderColor="Gray" Color="Transparent" Opacity="1" BorderWidth="5" ProgressBorderWidth="5" ProgressBorderColor="White" VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label x:Name="LblProgressSeconds" FontSize="36" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label x:Name="LblSecondsText" Text="seconds" TextColor="White" FontSize="Medium" />
+                    </StackLayout>
+                </xfShapeView:ShapeView>
+                <!--<StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="15,25,0,0">
+                    <Label x:Name="LblGetReadyFor" HorizontalOptions="Center" Text="Get ready for" Style="{StaticResource BoldLabelStyle}" FontSize="Medium" />
+                    <Label x:Name="LblUpNextRepsSet" Text="" Style="{StaticResource LabelStyle}" FontSize="36"  />
+                </StackLayout>-->
+            </StackLayout>
+                
+            <StackLayout Spacing="30" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="0,0,0,0" Padding="25.0">
+                <t:DrMuscleButton ContentLayout="Top,8" FontSize="15" x:Name="HideButton" Text="Hide" Image="hide.png" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" TextColor="White" Clicked="ButtonHide_Clicked" Padding="0,5" />
+<!--                <t:DrMuscleButton ContentLayout="Top,0" FontSize="12" x:Name="SkipButton" Text="Skip" Image="skip.png" BackgroundColor="Transparent" HeightRequest="60" HorizontalOptions="CenterAndExpand" TextColor="White" Clicked="ButtonSkip_Clicked" Padding="0,5" />-->
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</t:DrMusclePage>

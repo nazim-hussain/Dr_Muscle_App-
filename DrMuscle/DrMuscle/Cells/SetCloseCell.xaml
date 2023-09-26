@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    x:Class="DrMuscle.Cells.SetCloseCell"
+    xmlns:behaviours="clr-namespace:DrMuscle.Behaviors"
+    xmlns:converters="clr-namespace:DrMuscle.Converters"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:helpers="clr-namespace:DrMuscle.Helpers"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:video="clr-namespace:FormsVideoLibrary"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    Height="{OnPlatform Android=60, iOS=55}"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <ViewCell.View CompressedLayout.IsHeadless="True" >
+
+        <pancakeView:PancakeView
+            Padding="15,11,15,1"
+            Margin="4,0,4,0"
+            IsClippedToBounds="true"
+            HorizontalOptions="End"
+            OffsetAngle="90"
+            VerticalOptions="FillAndExpand"
+            CornerRadius="0">
+            <pancakeView:PancakeView.BackgroundGradientStops>
+                <pancakeView:GradientStopCollection>
+                    <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                    <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                </pancakeView:GradientStopCollection>
+            </pancakeView:PancakeView.BackgroundGradientStops>
+            <StackLayout CompressedLayout.IsHeadless="True" VerticalOptions="FillAndExpand">
+                <StackLayout.Resources>
+                    <converters:BoolInverter
+                        x:Key="BoolInverterConverter" />
+                </StackLayout.Resources>
+
+                <Grid
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        IsClippedToBounds="True"
+                        ColumnSpacing="0"
+                        RowSpacing="0"
+                        VerticalOptions="FillAndExpand"
+                        IsVisible="{Binding IsNext, Converter={StaticResource BoolInverterConverter}}"
+                        HorizontalOptions="FillAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"  />
+                        <ColumnDefinition Width="60"  />
+                        <ColumnDefinition Width="0.77*" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="0.77*" />
+                        <!--<ColumnDefinition Width="Auto" />-->
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                                Height="*" />
+                        <RowDefinition
+                                Height="Auto" />
+                        <RowDefinition
+                                Height="Auto" />
+                        <RowDefinition
+                                Height="Auto" />
+                        <RowDefinition
+                                Height="Auto" />
+                        <RowDefinition
+                                Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ffimageloading:CachedImage
+                            Source="done2.png"
+                            Margin="0,5,0,5"
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Aspect="AspectFit"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            IsVisible="{Binding IsFinished}" />
+                     <ffimageloading:CachedImage
+                            Source="deleteset.png"
+                            Margin="0,5,0,5"
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Aspect="AspectFit"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            IsVisible="{Binding IsFinished, Converter={StaticResource BoolInverterConverter}}" >
+                            </ffimageloading:CachedImage>
+                    <t:DrMuscleButton
+                            Margin="0"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            Clicked="DeleteSetTapGestureRecognizer_Tapped"
+                            IsVisible="{Binding IsFinished, Converter={StaticResource BoolInverterConverter}}" >
+                            </t:DrMuscleButton>
+                    <Label
+                            Text="{Binding SetNo}"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            FontSize="21"
+                            TextColor="#AAFFFFFF"
+                            />
+                    <t:WorkoutEntry
+Grid.Row="0" Margin="10,0" 
+                            Grid.Column="2"
+                                Text="{Binding Reps}"
+                                x:Name="RepsEntry"
+                                HorizontalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                Keyboard="Numeric"
+                            HorizontalOptions="FillAndExpand"
+                                FontSize="21"
+                                MaxLength="4"
+                                TextChanged="RepsEntry_TextChanged"
+                                BackgroundColor="{Binding BackColor}"
+                                IsReadOnly="{Binding IsFinished, Converter={StaticResource BoolInverterConverter}}"
+                                TextColor="#AAFFFFFF" >
+                        
+                            <t:WorkoutEntry.Triggers>
+                                 <MultiTrigger
+                                    TargetType="t:WorkoutEntry">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding IsMaxChallenge}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding IsFinished}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </MultiTrigger>
+                            </t:WorkoutEntry.Triggers>
+                        </t:WorkoutEntry>
+                    
+                    <Label
+                        Grid.Row="0"
+                            Grid.Column="2"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Max"
+                            HorizontalTextAlignment="Center"
+                            FontSize="21"
+                            IsVisible="false"
+                            TextColor="#AAFFFFFF" 
+                                        >
+                        <Label.Triggers>
+                            
+                            <MultiTrigger
+                                    TargetType="Label">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding IsMaxChallenge}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding IsFinished}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </MultiTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+
+
+                    <Label
+                            Text="*"
+                            Grid.Row="0"
+                            Margin="0,2,0,0"
+                            Grid.Column="3"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            FontSize="21"
+                            TextColor="#AAFFFFFF" />
+                    <t:WorkoutEntry
+                                x:Name="WeightEntry"
+                                Grid.Row="0"
+                            Grid.Column="4"
+                            Margin="10,3,10,4"
+                            Keyboard="Numeric"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                                Text="{Binding WeightSingal}"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                TextChanged="WeightEntry_TextChanged"
+                                BackgroundColor="{Binding BackColor}"
+                                IsReadOnly="{Binding IsFinished, Converter={StaticResource BoolInverterConverter}}"
+                                FontSize="21"
+                                TextColor="#AAFFFFFF">   
+                        <t:WorkoutEntry.Triggers>
+                                <DataTrigger
+                                                TargetType="t:WorkoutEntry"
+                                                Binding="{Binding IsBodyweight}"
+                                                Value="true">
+                                    <Setter Property="IsReadOnly" Value="True" />
+                                            </DataTrigger>
+                            </t:WorkoutEntry.Triggers>
+                    </t:WorkoutEntry>
+
+                    <Grid.Triggers>
+                        <DataTrigger TargetType="Grid" Binding="{Binding IsSetupNotCompleted}" Value="true">
+                            <Setter Property="HeightRequest" Value="0" />
+                        </DataTrigger>
+                    </Grid.Triggers>
+                </Grid>
+
+            </StackLayout>
+
+        </pancakeView:PancakeView>
+
+    </ViewCell.View>
+</ViewCell>

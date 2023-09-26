@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:controls="clr-namespace:DrMuscle.Controls"
+                xmlns:local="clr-namespace:DrMuscle.Cells"
+                BackgroundColor="White"
+                xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                xmlns:constnats="clr-namespace:DrMuscle.Constants"
+             x:Class="DrMuscle.Screens.Subscription.SubscriptionPage">
+ <t:DrMusclePage.Resources>
+        <ResourceDictionary>
+            <local:BotDataTemplateSelector
+                x:Key="BotTemplateSelector">
+            </local:BotDataTemplateSelector>
+        </ResourceDictionary>
+    </t:DrMusclePage.Resources>
+     <StackLayout VerticalOptions="CenterAndExpand">
+        
+     <ScrollView Orientation="Vertical" >
+
+  
+     
+         </ScrollView>
+             
+         <!--<Frame HasShadow="true" CornerRadius="8" Padding="1,4,1,0" BackgroundColor="#faf9f8"
+                     x:Name="bottomSheet" 
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Height,Factor=.90,Constant=0}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Height,Factor=1,Constant=0}" >
+            <Frame.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="OnPanUpdated" />
+                </Frame.GestureRecognizers>
+              <StackLayout Spacing="0">
+                  <StackLayout.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                  </StackLayout.GestureRecognizers>
+               
+               <StackLayout
+                    Orientation="Vertical" HorizontalOptions="CenterAndExpand" Padding="0,5" Spacing="0">
+                   
+                   <Image x:Name="ImgArrow" Source="up.png" WidthRequest="22" Aspect="AspectFit"/>
+                   <Label HorizontalOptions="Center" Text="Reviews" TextColor="#195377" VerticalOptions="Center" />
+                </StackLayout>
+              <StackLayout
+        Spacing="10" Padding="0,0,0,15"
+                 BackgroundColor="#f4f4f4">
+        <t:DrMuscleListView
+            BackgroundColor="#f4f4f4"
+            ItemTemplate="{StaticResource BotTemplateSelector}"
+            HasUnevenRows="True"
+            ItemTapped="lstChats_ItemTapped"
+            x:Name="lstChats"
+            VerticalOptions="FillAndExpand"
+            FlowDirection="LeftToRight"
+            SeparatorColor="Transparent" />
+            </StackLayout>
+                  </StackLayout>
+          </Frame>-->
+         </StackLayout>
+
+</t:DrMusclePage>

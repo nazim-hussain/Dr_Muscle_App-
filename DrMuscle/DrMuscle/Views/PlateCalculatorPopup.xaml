@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    CloseWhenBackgroundIsClicked="false"
+    BackgroundColor="#333333"
+     xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    x:Class="DrMuscle.Views.PlateCalculatorPopup">
+    <pages:PopupPage.Content>
+         <AbsoluteLayout>
+            <StackLayout Padding="0,0,0,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Image Source="nav.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        <StackLayout
+            x:Name="PlateView"
+            Padding="20,10,10,0"
+            AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </StackLayout.GestureRecognizers>
+            <StackLayout
+                VerticalOptions="CenterAndExpand"
+                Orientation="Vertical">
+                <StackLayout
+                    Margin="0,30,0,0"
+                    Orientation="Horizontal">
+                    <StackLayout
+                        x:Name="PlateStack"
+                        Orientation="Horizontal"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        effects:TooltipEffect.Text="Plates weight"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Bottom"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="False"
+                        Spacing="1">
+                    </StackLayout>
+                    <t:DrMuscleButton
+                        Text="Edit  "
+                        ContentLayout="Top,8"
+                        FontSize="15"
+                        x:Name="EditButton"
+                        Image="edit_plate.png"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        Padding="0,0"
+                        Clicked="Edit_Clicked"
+                        VerticalOptions="Center"
+                        Margin="10,0,0,0" />
+                </StackLayout>
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Padding="20,0,20,0"
+                    Orientation="Vertical"
+                    HorizontalOptions="FillAndExpand">
+                    <Label
+                        x:Name="LblSlideToAdjust"
+                        Text="Slide to adjust bar weight"
+                        FontSize="15"
+                        TextColor="White"
+                        Style="{StaticResource LabelStyle}"
+                        HorizontalOptions="Center" />
+                    <StackLayout
+                        Margin="0,0,0,20"
+                        Orientation="Vertical"
+                        Spacing="30"
+                        HorizontalOptions="FillAndExpand">
+                        <StackLayout
+                            x:Name="SliderBar"
+                            VerticalOptions="Center"
+                            Orientation="Horizontal"
+                            effects:TooltipEffect.Text="Bar weight"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Bottom"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="False">
+                            <Label
+                                Text="0"
+                                FontSize="15"
+                                Style="{StaticResource LabelStyle}"
+                                TextColor="White"
+                                x:Name="LblMinimum"
+                                VerticalOptions="Center" />
+                            <Slider
+                                Minimum="0"
+                                x:Name="slider"
+                                MaximumTrackColor="White"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"
+                                ValueChanged="OnSliderValueChanged"
+                                DragCompleted="slider_DragCompleted"
+                                effects:TooltipEffect.Text="Slide to adjust bar weight"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Bottom"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="False"/>
+                            <Label
+                                x:Name="LblSlider"
+                                Text="0"
+                                TextColor="White"
+                                FontSize="15"
+                                Style="{StaticResource LabelStyle}"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                        <Label
+                            x:Name="LblBarWeight"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource LabelStyle}"
+                            TextColor="White"
+                            FontSize="38"
+                            MaxLines="2"
+                            WidthRequest="100">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        Text=""
+                                        x:Name="BarWeight"
+                                        FontSize="33"
+                                        Style="{StaticResource LabelStyle}" TextColor="White"/>
+                                    <Span
+                                        Text=""
+                                        x:Name="BarWeightText"
+                                        FontSize="15"
+                                        TextColor="White"
+                                        Style="{StaticResource LabelStyle}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                            x:Name="LblPlatesWeight"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource LabelStyle}"
+                            FontSize="38"
+                            TextColor="White"
+                            MaxLines="2"
+                            WidthRequest="100">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        Text=""
+                                        x:Name="PlateWeight"
+                                        FontSize="33"
+                                        TextColor="White"
+                                        Style="{StaticResource LabelStyle}" />
+                                    <Span
+                                        Text="Plates"
+                                        x:Name="PlateWeightText"
+                                        FontSize="15"
+                                        TextColor="White"
+                                        Style="{StaticResource LabelStyle}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout
+                VerticalOptions="End"
+                Spacing="30"
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,0,0,0"
+                Padding="25.0">
+                <t:DrMuscleButton
+                    ContentLayout="Top,8"
+                    FontSize="15"
+                    x:Name="HidePlateButton"
+                    Text="Hide"
+                    Image="hide.png"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Clicked="ButtonPlateHide_Clicked"
+                    Padding="0,5" />
+            </StackLayout>
+        </StackLayout>
+             </AbsoluteLayout>
+         </pages:PopupPage.Content>
+</pages:PopupPage>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    x:Class="DrMuscle.Cells.LastWorkoutWasCardCell">
+    <ViewCell.View>
+    <controls:CustomFrame
+                            x:Name="WeightProgress2"
+                            Margin="10,10,10,10"
+                            Padding="0,10,10,10"
+                            CornerRadius="12"
+                            HasShadow="False">
+        <controls:CustomFrame.Triggers>
+                <DataTrigger Binding="{Binding IsNewRecordAvailable}" Value="True" TargetType="controls:CustomFrame">
+                    <Setter Property="Margin" Value="10,10,10,0" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsNewRecordAvailable}" Value="False" TargetType="controls:CustomFrame">
+                    <Setter Property="Margin" Value="10,0,10,10" />
+                </DataTrigger>
+            </controls:CustomFrame.Triggers>
+            <StackLayout Padding="10,15,10,15">
+                
+                    <!--<StackLayout
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            >
+                        <Label
+                                                Text="{Binding Question}"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19"
+                                                Margin="0,0,0,9" />
+                        <Label
+                            x:Name="LblDescription"
+                                                Text="Next workout reps..."
+                                                TextColor="#AA000000"
+                                                FontSize="15" />
+                    </StackLayout>-->
+                <Grid
+                                        Margin="0,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="*" />
+                                            <RowDefinition
+                                                Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+                                                Width="40" />
+                                            <ColumnDefinition
+                                                Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image
+                                            Source="{Binding StrengthImage}"
+                                            Margin="{OnPlatform Android='0,-6,0,0', iOS='0,-8,0,0'}"
+                                            Grid.Row="0"
+                                            WidthRequest="27"
+                                            VerticalOptions="Start"
+                                            HeightRequest="27" />
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                            Grid.RowSpan="2">
+                                            <Label
+                                                x:Name="LblStrengthUp"
+                                                Text="{Binding Question}"
+                                                Margin="0,-8,0,9"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19" />
+                                            <Label
+                                                x:Name="LblStrengthUpText"
+                                                Margin="0,-2,0,0"
+                                                Text="{Binding Part1}"
+                                                TextColor="#AA000000"
+                                                FontSize="15" />
+                                        </StackLayout>
+                                    </Grid>
+                
+            </StackLayout>
+        </controls:CustomFrame>
+        </ViewCell.View>
+</ViewCell>

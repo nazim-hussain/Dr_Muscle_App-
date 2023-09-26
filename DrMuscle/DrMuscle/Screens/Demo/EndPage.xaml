@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    x:Class="DrMuscle.Screens.Demo.EndPage">
+   <AbsoluteLayout>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="20,0,20,0"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <StackLayout
+                VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    
+                    <StackLayout
+                        x:Name="ResultStackLayout"
+                        VerticalOptions="FillAndExpand"
+                        Padding="0,10,0,0">
+                        <Label
+                            x:Name="lblResult1"
+                            Text=""
+                            Margin="0,12,0,10"
+                            IsVisible="true"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            Font="Bold,20"
+                            Style="{StaticResource LabelStyle}"
+                            TextColor="Black" />
+
+                        <Label
+                            x:Name="lblResult2"
+                            Margin="0,5,0,0"
+                            Text=""
+                            IsVisible="true"
+                            HorizontalOptions="StartAndExpand"
+                            Style="{StaticResource LabelStyle}"
+                            TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+
+                        <Label
+                            x:Name="lblResult6"
+                            Text=""
+                            IsVisible="true"
+                            HorizontalOptions="StartAndExpand"
+                            Style="{StaticResource LabelStyle}"
+                            TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+
+                       <Grid Margin="0,20,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="*" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+                            
+                            <StackLayout
+                                Grid.Column="0"
+                                HorizontalOptions="FillAndExpand">
+                                <Image
+                                    x:Name="IconHistory"
+                                    Source="history.png"
+                                    Aspect="AspectFit"
+                                    HeightRequest="32"
+                                    HorizontalOptions="CenterAndExpand" />
+                                <Label
+                                    x:Name="lblResult3"
+                                    Text=""
+                                    IsVisible="true"
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource LabelStyle}"
+                                    Font="Bold,17"
+                                    TextColor="Black" />
+                                <Label
+                                    x:Name="lblResult33"
+                                    Text="Last workout"
+                                    IsVisible="true"
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource LabelStyle}"
+                                    TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Column="1"
+                                HorizontalOptions="FillAndExpand">
+                                <Image
+                                    x:Name="IconCalander"
+                                    Source="calander.png"
+                                    Aspect="AspectFit"
+                                    HeightRequest="32"
+                                    HorizontalOptions="CenterAndExpand" />
+                                <Label
+                                    x:Name="lblResult21"
+                                    Text=""
+                                    IsVisible="true"
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource LabelStyle}"
+                                    Font="Bold,17"
+                                    TextColor="Black" />
+                                 <Label
+                                    x:Name="lblResult211"
+                                    Text="Today"
+                                    IsVisible="true"
+                                    
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource LabelStyle}"
+                                    TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Column="2"
+                                HorizontalOptions="FillAndExpand">
+                                <Image
+                                    x:Name="IconResultImage"
+                                    Source="up_arrow.png"
+                                    Aspect="AspectFit"
+                                    HeightRequest="32"
+                                    HorizontalOptions="CenterAndExpand" />
+
+                                <Label
+                                    x:Name="lblResult4"
+                                    Text=""
+                                    IsVisible="true"
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource LabelStyle}"
+                                    Font="Bold,17"
+                                    TextColor="Black" />
+                                <Label
+                                    x:Name="lblResult44"
+                                    Text="Progress"
+                                    IsVisible="true"
+                                    
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource LabelStyle}"
+                                    TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+                            </StackLayout>
+                        </Grid>
+                        <Grid
+                            Margin="0,20,0,0"
+                        HeightRequest="170">
+                        <oxy:PlotView
+                            x:Name="plotView"
+                            IsVisible="true"
+                            VerticalOptions="Start"
+                            HeightRequest="170">
+                        </oxy:PlotView>
+                    </Grid>
+
+                        
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout
+                Orientation="Vertical"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Padding="0,0,0,20">
+                <t:DrMuscleButton
+                    x:Name="LearnMoreButton"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="false"
+                    Style="{StaticResource buttonLinkStyle}" />
+                <!--<t:DrMuscleButton x:Name="ShareWithFBButton" Padding="10,0,0,0" Image="facebook_f_white.png" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Text="Share record" IsVisible="true" Style="{StaticResource highEmphasisButtonStyle}" BackgroundColor="#7f3c5a99" BorderColor="#7f3c5a99" BorderWidth="2" TextColor="White" />-->
+
+                <Grid
+                    x:Name="FbShare"
+                    Padding="0,0,0,0"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50">
+                    <t:DrMuscleButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HeightRequest="50"
+                        x:Name="ShareWithFBButton"
+                        Text="Share record"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White"
+                        BackgroundColor="#3c5a99"
+                        BorderWidth="2"
+                        BorderColor="#7f3c5a99"
+                        Style="{StaticResource highEmphasisButtonStyle}"
+                        VerticalOptions="EndAndExpand"
+                        FontAttributes="Bold">
+                    </t:DrMuscleButton>
+                    <t:DrMuscleButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10,0"
+                        Image="facebook_f_white.png"
+                        Text=" "
+                        TextColor="#7f3c5a99"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        IsEnabled="false"
+                        Style="{StaticResource highEmphasisButtonStyle}">
+                        <t:DrMuscleButton.HorizontalOptions>
+                            <OnPlatform
+                                x:TypeArguments="LayoutOptions"
+                                iOS="Start"
+                                Android="FillAndExpand" />
+                        </t:DrMuscleButton.HorizontalOptions>
+                    </t:DrMuscleButton>
+                </Grid>
+                <t:DrMuscleButton
+                    x:Name="NextExerciseButton"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="true"
+                    Style="{StaticResource highEmphasisButtonStyle}"
+                    HeightRequest="66"/>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</t:DrMusclePage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="DrMuscle.Cells.WeightCell">
+  <ViewCell.View>
+        <StackLayout>
+            <oxy:PlotView
+                x:Name="plotView3"
+                IsVisible="true"
+                VerticalOptions="Start"
+                HeightRequest="150">
+            </oxy:PlotView>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

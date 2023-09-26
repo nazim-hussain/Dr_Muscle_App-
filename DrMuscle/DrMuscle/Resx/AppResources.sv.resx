@@ -1,0 +1,1604 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<root>
+    <resheader
+        name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader
+        name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader
+        name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader
+        name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+     <data name="WelcomeTo" xml:space="preserve"> 
+    <value>Välkommen till</value> 
+  </data> 
+  <data name="DrMuslce" xml:space="preserve"> 
+    <value>Dr. Muscle</value> 
+  </data> 
+  <data name="IHelpYouTransformYourBody" xml:space="preserve"> 
+    <value>Jag hjälper dig komma i form snabbare</value> 
+  </data> 
+  <data name="ByLiftingWeightsUsingScience" xml:space="preserve"> 
+    <value>för att jag använder mig av vetenskap och AI</value> 
+  </data> 
+  <data name="AndASmartProgramThatLevels" xml:space="preserve"> 
+    <value>för att skapa ett nytt anpassat träningspass</value> 
+  </data> 
+  <data name="IMLikeAPersonalTrainer" xml:space="preserve"> 
+    <value>Jag är som en personlig tränare, men betydligt billigare,</value> 
+  </data> 
+  <data name="AlwaysUptoDateAndAvailableAnytimeAnywhere" xml:space="preserve"> 
+    <value>alltid uppdaterat och tillgängligt när och var som helst.</value> 
+  </data> 
+  <data name="HelpMeCustomizeYourProgramAreYouA" xml:space="preserve"> 
+    <value>Hjälp mig skapa ett anpassat program för dig. Är du...</value> 
+  </data> 
+  <data name="UpWithYouAutomatically" xml:space="preserve"> 
+    <value>för varje gång du tränar.</value> 
+  </data> 
+  <data name="AreYouMaleorWoman" xml:space="preserve"> 
+    <value>Hjälp mig skapa ett anpassat program för dig. Vad är ditt kön?</value> 
+  </data> 
+  <data name="Man" xml:space="preserve"> 
+    <value>Man</value> 
+  </data> 
+  <data name="Woman" xml:space="preserve"> 
+    <value>Kvinna</value> 
+  </data> 
+  <data name="AlreadyHaveAnAccount" xml:space="preserve"> 
+    <value>Har du redan ett konto?</value> 
+  </data> 
+  <data name="ByContinuingYouAgreeToOur" xml:space="preserve"> 
+    <value>Genom att fortsätta, godkänner du våra</value> 
+  </data> 
+  <data name="TermsOfUseLower" xml:space="preserve"> 
+    <value>användarvillkor</value> 
+  </data> 
+  <data name="And" xml:space="preserve"> 
+    <value>och</value> 
+  </data> 
+  <data name="PrivacyPolicy" xml:space="preserve"> 
+    <value>integritetspolicy</value> 
+  </data> 
+  <data name="ImNotLikeOtherApps" xml:space="preserve"> 
+    <value>Jag är inte som andra appar. Jag säger åt dig hur du ska träna, precis som en personlig tränare i din telefon. Jag använder mig utav den senaste vetenskapen, men jag kan inte rätta din träningsform, eller anpassa ifall du skulle ha en kroppslig sjukdom. Jag kan ha fel ibland, ifall du är tveksam ska du lita på ditt egna omdöme. Ta då även kontakt med oss, vårt team jobbar ständigt på att förbättra vår AI.</value> 
+  </data> 
+  <data name="GotIt" xml:space="preserve"> 
+    <value>Förstått!</value> 
+  </data> 
+  <data name="CustomizingYourProgram" xml:space="preserve"> 
+    <value>Anpassa ditt program...</value> 
+  </data> 
+  <data name="GotItYourProgramStart" xml:space="preserve"> 
+    <value>Jag förstår. Ditt program börjar på din nivå. Under hur lång tid har du tränat?</value> 
+  </data> 
+  <data name="LessThan1Year" xml:space="preserve"> 
+    <value>Mindre än 1 år</value> 
+  </data> 
+  <data name="YearOrMore" xml:space="preserve"> 
+    <value>1 år eller mer</value> 
+  </data> 
+  <data name="YouHaveSetA" xml:space="preserve"> 
+    <value>Du har ett</value> 
+  </data> 
+  <data name="NewRecord" xml:space="preserve"> 
+    <value>Nytt rekord!</value> 
+  </data> 
+  <data name="PleaseEnterYourFirstnameSoICan" xml:space="preserve"> 
+    <value>Vänligen, skriv in ditt förnamn så att jag kan gratulera dig när du sätter nya rekord:</value> 
+  </data> 
+  <data name="TapToEnterYourFirstName" xml:space="preserve"> 
+    <value>Tryck för att skriva in ditt förnamn</value> 
+  </data> 
+  <data name="Next" xml:space="preserve"> 
+    <value>Nästa</value> 
+  </data> 
+  <data name="GotItPleaseChooseAGoalDontWorryYouCanForMan" xml:space="preserve"> 
+    <value>Jag förstår. Sätt ett mål. Oroa dig inte: Du kan anpassa allt i ett senare skede.</value> 
+  </data> 
+  <data name="FocusOnBuildingMuscle" xml:space="preserve"> 
+    <value>Fokusera på att bygga muskler</value> 
+  </data> 
+  <data name="BuildMuscleAndBurnFat" xml:space="preserve"> 
+    <value>Bygg muskler och bränn fett</value> 
+  </data> 
+  <data name="FocusOnBurningFat" xml:space="preserve"> 
+    <value>Fokusera på fettförbränning</value> 
+  </data> 
+  <data name="GotItPleaseChooseAGoalDontWorryLiftingWeightsForWoman" xml:space="preserve"> 
+    <value>Jag förstår. Välj ett mål. Oroa dig inte: Styrketräning gör dig inte klumpig. Dessutom kan du anpassa allt senare.</value> 
+  </data> 
+  <data name="FocusOnToningUp" xml:space="preserve"> 
+    <value>Fokusera på att tona upp</value> 
+  </data> 
+  <data name="ToneUpAndSlimDown" xml:space="preserve"> 
+    <value>Tona upp och bli smalare</value> 
+  </data> 
+  <data name="FocusOnSlimmingDown" xml:space="preserve"> 
+    <value>Fokusera på att bli smalare</value> 
+  </data> 
+  <data name="BuildMuscle" xml:space="preserve"> 
+    <value>Ditt program uppdateras automatiskt. Jag uppdateras varje gång du tränar, så att du alltid bygger muskler så fort som möjligt. </value> 
+  </data> 
+  <data name="BuildMuscleBurnFat" xml:space="preserve"> 
+    <value>Ditt program uppdateras automatiskt. Jag uppdateras varje gång du tränar, så att du alltid bygger muskler och bränner fett så fort som möjligt. </value> 
+  </data> 
+  <data name="FatBurning" xml:space="preserve"> 
+    <value>Ditt program uppdateras automatiskt. Jag uppdateras varje gång du tränar, så att du alltid bränner fett så fort som möjligt. </value> 
+  </data> 
+  <data name="YouSaidBigBigMenOftenWantSayTheyWantToGetRid" xml:space="preserve"> 
+    <value>Du sa: 'Stor'. Stora män säger oftast att dem vill: 'Bli av med sitt kroppsfett, särskilt kring magen. Och lägga på muskler.' Vill du att jag skapar ett träningsprogram med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="Yes" xml:space="preserve"> 
+    <value>Ja</value> 
+  </data> 
+  <data name="NoChooseOtherGoal" xml:space="preserve"> 
+    <value>Nej (välj ett annat mål)</value> 
+  </data> 
+  <data name="YouSaidMidSizeMidSizeMenOthenSayTheyWantToGetFit" xml:space="preserve"> 
+    <value>Du sa: 'Normalbyggd.' Normalbyggda män säger oftast att de vill: 'Komma i form, bli starkare och mer muskulär. Gå upp i muskelmassa och ha synliga magmuskler.' Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="YouSaidSkinnySkinnyMenOftenHaveAHardTimeGainingWeight" xml:space="preserve"> 
+    <value>Du sa: Smal.' Smala män säger oftast att de har svårt att gå upp i vikt. Vissa säger: 'Jag äter konstant och tränar hårt, men jag går bara inte upp i vikt. Trött på att vara smal och benig.' Kan du relatera?</value> 
+  </data> 
+  <data name="YesIHaveAHardTimeGaining" xml:space="preserve"> 
+    <value>Ja, jag har svårt för att bygga</value> 
+  </data> 
+  <data name="NoIDontHaveAHardTime" xml:space="preserve"> 
+    <value>Nej, jag har inte svårt med det</value> 
+  </data> 
+  <data name="NotSureIveNeverLiftedBefore" xml:space="preserve"> 
+    <value>Osäker, jag har aldrig styrketränat tidigare</value> 
+  </data> 
+  <data name="GotItSkinnyMenOftenSayTheyWantToPutOnLeanMassWhileKeepingMyAbsDefined" xml:space="preserve"> 
+    <value>Jag förstår. Smala män säger oftast: 'Lägga på muskelmassa och behålla min muskeldefinition. Gå upp hälsosamt i vikt och komma i form.' Vill du att jag skapar ett träningsprogram med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="YouSaidManWhatsYourBodyType" xml:space="preserve"> 
+    <value>Du sa: 'Man'. Vad är din kroppstyp?</value> 
+  </data> 
+  <data name="Skinny" xml:space="preserve"> 
+    <value>Smal</value> 
+  </data> 
+  <data name="Midsize" xml:space="preserve"> 
+    <value>Mellan</value> 
+  </data> 
+  <data name="Big" xml:space="preserve"> 
+    <value>Stor</value> 
+  </data> 
+  <data name="DoYouUseLbsOrKgs" xml:space="preserve"> 
+    <value>Använder du lbs eller kgs?</value> 
+  </data> 
+  <data name="Lbs" xml:space="preserve"> 
+    <value>Lbs</value> 
+  </data> 
+  <data name="Kg" xml:space="preserve"> 
+    <value>Kg</value> 
+  </data> 
+  <data name="YouSaidFullFiguredFullFiguredWomenOftenHaveAHardTimeLosingWeight" xml:space="preserve"> 
+    <value>Du sa: 'Välformade.' Välformade kvinnor har oftast svårt att gå ner i vikt. Vissa säger: 'Jag går upp i vikt bara genom att kolla på mat! Så frustrerande.' Kan du relatera?</value> 
+  </data> 
+  <data name="YesICanGainWeightEasily" xml:space="preserve"> 
+    <value>Ja, jag kan lätt gå upp i vikt</value> 
+  </data> 
+  <data name="NoIDontGainWeightThatEasily" xml:space="preserve"> 
+    <value>Nej, jag går inte enkelt upp i vikt</value> 
+  </data> 
+  <data name="ThankYouFullFiguredWomenAlsoOftenSayTheyWantToGetFItAndStrong" xml:space="preserve"> 
+    <value>Tack. Välformade kvinnor säger oftast att dem villl: 'Komma i form och bli stark, samtidigt som kroppsfettsnivån sjunker. Forma mina armar, ben och rumpa. Känna mig bekväm i min kropp.' Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="YouSaidMidSizeMidSizeWomenOftenSAyTheyWantToGetFitAndStrong" xml:space="preserve"> 
+    <value>Du sa: 'Normalbyggd.' Normalbyggda kvinnor säger oftast att dem vill: 'Komma i form, bli stark och känna mig bekväm i min kropp. Välformade ben och rumpa, och en platt mage.' Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="YouSaidThinThinWomenOftenSayTheyWantToGetFitAndStrongW" xml:space="preserve"> 
+    <value>Du sa: 'Smal.' Smala kvinnor säger oftast att dem vill: 'Komma i form och bli starkare samt behålla en väldefinierad fysisk. Lägga på muskelmassa till benen, rumpan och välformade muskler överlag.' Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="YouSaidWomanPleaseTellMeAboutYourBodyType" xml:space="preserve"> 
+    <value>Du sa: 'Kvinna.' Berätta mer om din kroppstyp:</value> 
+  </data> 
+  <data name="Thin" xml:space="preserve"> 
+    <value>Smal</value> 
+  </data> 
+  <data name="FullFigured" xml:space="preserve"> 
+    <value>Välutformad</value> 
+  </data> 
+  <data name="ThankYouYourSuggestedProgramIs" xml:space="preserve"> 
+    <value>Tack. Ditt föreslagna program är:</value> 
+  </data> 
+  <data name="UpperLowerBodySplitLevel1More1Year" xml:space="preserve"> 
+    <value>Övre/Nedre kroppssplit Steg 1</value> 
+  </data> 
+  <data name="MondayUpperBody1More1Year" xml:space="preserve"> 
+    <value>Måndag: Överkropp</value> 
+  </data> 
+  <data name="TuesdayLowerBodyMore1Year" xml:space="preserve"> 
+    <value>Tisdag: Underkropp</value> 
+  </data> 
+  <data name="WednesdayOffMore1Year" xml:space="preserve"> 
+    <value>Onsdag: Vila</value> 
+  </data> 
+  <data name="ThursdayUpperBodyMore1Year" xml:space="preserve"> 
+    <value>Torsdag: Överkropp</value> 
+  </data> 
+  <data name="FridayOrSaturdayLowerBodyMore1Year" xml:space="preserve"> 
+    <value>Fredag eller lördag: Underkropp</value> 
+  </data> 
+  <data name="SundayOffMore1Year" xml:space="preserve"> 
+    <value>Söndag: Vila</value> 
+  </data> 
+  <data name="WorkOutYourUpperAndYourLowerBody2xWeekForBestResultsMore1Year" xml:space="preserve"> 
+    <value>- Träna överkroppen samt underkroppen 2 gånger i veckan för bästa resultat</value> 
+  </data> 
+  <data name="FullBodyLevel1" xml:space="preserve"> 
+    <value>Helkropp Steg 1</value> 
+  </data> 
+  <data name="MondayFullBody" xml:space="preserve"> 
+    <value>Måndag: Helkropp</value> 
+  </data> 
+  <data name="TuesdayOff" xml:space="preserve"> 
+    <value>Tisdag: Vila</value> 
+  </data> 
+  <data name="WednesdayFullBody" xml:space="preserve"> 
+    <value>Ondag: Helkropp</value> 
+  </data> 
+  <data name="ThursdayOff" xml:space="preserve"> 
+    <value>Torsdag: Vila</value> 
+  </data> 
+  <data name="FridayOrSaturdayFullBody" xml:space="preserve"> 
+    <value>Fredag eller söndag: Helkropp</value> 
+  </data> 
+  <data name="SundayOff" xml:space="preserve"> 
+    <value>Söndag: Vila</value> 
+  </data> 
+  <data name="WorkOutYourFullBody3xWeekForBestResults" xml:space="preserve"> 
+    <value>- Träna helkroppen 3/v för bästa resultat</value> 
+  </data> 
+  <data name="YouCanChangeWorkoutDays" xml:space="preserve"> 
+    <value>- Du kan ändra dina träningsdagar</value> 
+  </data> 
+  <data name="WhereDoYouWorkOut" xml:space="preserve"> 
+    <value>Vart tränar du?</value> 
+  </data> 
+  <data name="Gym" xml:space="preserve"> 
+    <value>Gym</value> 
+  </data> 
+  <data name="Home" xml:space="preserve"> 
+    <value>Hemma</value> 
+  </data> 
+  <data name="Continue" xml:space="preserve"> 
+    <value>Fortsätt</value> 
+  </data> 
+  <data name="YourWorkoutPlanIs" xml:space="preserve"> 
+    <value>Ditt träningsupplägg är:</value> 
+  </data> 
+  <data name="LogInWithFacebook" xml:space="preserve"> 
+    <value>Logga in med facebook</value> 
+  </data> 
+  <data name="LogInWithEmail" xml:space="preserve"> 
+    <value>Logga in med mejladress</value> 
+  </data> 
+  <data name="TapToEnterYourEmail" xml:space="preserve"> 
+    <value>Skriv in din mejladress</value> 
+  </data> 
+  <data name="TapToEnterYourPassword" xml:space="preserve"> 
+    <value>Skriv in ditt lösenord</value> 
+  </data> 
+  <data name="SixCharactersOrLonger" xml:space="preserve"> 
+    <value>6 tecken eller längre</value> 
+  </data> 
+  <data name="LogIn" xml:space="preserve"> 
+    <value>Logga in</value> 
+  </data> 
+  <data name="ForgotPassword" xml:space="preserve"> 
+    <value>Glömt lösenord?</value> 
+  </data> 
+  <data name="MadeAMistakeStartOver" xml:space="preserve"> 
+    <value>Gjort ett misstag? Börja på nytt</value> 
+  </data> 
+  <data name="CreateNewAccount" xml:space="preserve"> 
+    <value>Skapa ett nytt konto</value> 
+  </data> 
+  <data name="TermsOfUse" xml:space="preserve"> 
+    <value>användarvillkor</value> 
+  </data> 
+  <data name="AnErrorOccursWhenSigningIn" xml:space="preserve"> 
+    <value>Ett fel uppstod när du skulle loggas in</value> 
+  </data> 
+  <data name="UnableToLogIn" xml:space="preserve"> 
+    <value>Misslyckades med att logga in</value> 
+  </data> 
+  <data name="EmailAndPasswordDoNotMatch" xml:space="preserve"> 
+    <value>Mejladress och lösenord matchar inte.</value> 
+  </data> 
+  <data name="PasswordReset" xml:space="preserve"> 
+    <value>Återställ lösenord</value> 
+  </data> 
+  <data name="EnterYourEmail" xml:space="preserve"> 
+    <value>Skriv in din mejladress</value> 
+  </data> 
+  <data name="Ok" xml:space="preserve"> 
+    <value>Ok</value> 
+  </data> 
+  <data name="PleaseCheckYourEmail" xml:space="preserve"> 
+    <value>Vänligen kolla din mejlinkorg</value> 
+  </data> 
+  <data name="ToRestYourPassword" xml:space="preserve"> 
+    <value>för att återställa ditt lösenord.</value> 
+  </data> 
+  <data name="CanYouTryAnotherLoginEmail" xml:space="preserve"> 
+    <value>Kan du försöka med en annan inloggningsmejl?</value> 
+  </data> 
+  <data name="EmailNotFound" xml:space="preserve"> 
+    <value>Kunde inte hitta mejladress</value> 
+  </data> 
+  <data name="EmailPasswordEmptyError" xml:space="preserve"> 
+    <value>Mata vänligen in mejladress och lösenord.</value> 
+  </data> 
+  <data name="InvalidEmailError" xml:space="preserve"> 
+    <value>Mata vänligen in en giltig mejladress</value> 
+  </data> 
+  <data name="InvalidEmailAddress" xml:space="preserve"> 
+    <value>Ogiltig mejladress</value> 
+  </data> 
+  <data name="PasswordLengthError" xml:space="preserve"> 
+    <value>Välj ett lösenord med minst 6 tecken.</value> 
+  </data> 
+  <data name="PleaseCheckInternetConnection" xml:space="preserve"> 
+    <value>Kontrollera din internetanslutning och försök igen. Om detta problemet fortsätter, vänligen kontakta supporten.</value> 
+  </data> 
+  <data name="Error" xml:space="preserve"> 
+    <value>Felaktigt !</value> 
+  </data> 
+  <data name="ConnectWithFacebook" xml:space="preserve"> 
+    <value>Anslut med Facebook</value> 
+  </data> 
+  <data name="CreateAccountWithWmail" xml:space="preserve"> 
+    <value>Skapa konto med din mejl</value> 
+  </data> 
+  <data name="CreateAccount" xml:space="preserve"> 
+    <value>Skapa konto</value> 
+  </data> 
+  <data name="TapToCreateYourPassword" xml:space="preserve"> 
+    <value>Mata in ett lösenord</value> 
+  </data> 
+  <data name="WelcomeToLower" xml:space="preserve"> 
+    <value>Välkommen till</value> 
+  </data> 
+  <data name="SaveYourCustomProgramAndProgression" xml:space="preserve"> 
+    <value>Spara ditt anpassade program och din utveckling</value> 
+  </data> 
+  <data name="GymFullBody" xml:space="preserve"> 
+    <value>[Gym] Hela kroppen</value> 
+  </data> 
+  <data name="GymUpperBody" xml:space="preserve"> 
+    <value>[Gym] Överkropp</value> 
+  </data> 
+  <data name="HomeFullBody" xml:space="preserve"> 
+    <value>[Hemma] Hela kroppen</value> 
+  </data> 
+  <data name="HomeUpperBody" xml:space="preserve"> 
+    <value>[Hemma] Överkropp</value> 
+  </data> 
+  <data name="NotSetUp" xml:space="preserve"> 
+    <value>Ej inställt</value> 
+  </data> 
+  <data name="GymFullBodyLevel1" xml:space="preserve"> 
+    <value>[Gym] Hela kroppen Nivå 1</value> 
+  </data> 
+  <data name="GymUpLowSplitLevel1" xml:space="preserve"> 
+    <value>[Gym] Över- och underkropp Nivå 1</value> 
+  </data> 
+  <data name="HomeFullBodyLevel1" xml:space="preserve"> 
+    <value>[Hemma] Hela kroppen Nivå 1</value> 
+  </data> 
+  <data name="HomeUpLowSplitLevel1" xml:space="preserve"> 
+    <value>[Hemma] Över- och underkropp Nivå 1</value> 
+  </data> 
+  <data name="SearchExercises" xml:space="preserve"> 
+    <value>Sök övningar</value> 
+  </data> 
+  <data name="Cancel" xml:space="preserve"> 
+    <value>Avbryt</value> 
+  </data> 
+  <data name="ChooseExercises" xml:space="preserve"> 
+    <value>Välj övningar</value> 
+  </data> 
+  <data name="ChooseWorkouts" xml:space="preserve"> 
+    <value>Välj träningspass</value> 
+  </data> 
+  <data name="Custom" xml:space="preserve"> 
+    <value>Anpassat</value> 
+  </data> 
+  <data name="ChooseWorkout" xml:space="preserve"> 
+    <value>Välj träningspass</value> 
+  </data> 
+  <data name="HomeGym" xml:space="preserve"> 
+    <value>Hemmagym</value> 
+  </data> 
+  <data name="SaveWorkout" xml:space="preserve"> 
+    <value>Spara träningsprogram</value> 
+  </data> 
+  <data name="Bodyweight" xml:space="preserve"> 
+    <value>Kroppsvikt</value> 
+  </data> 
+  <data name="ChooseOrder" xml:space="preserve"> 
+    <value>Välj ordning</value> 
+  </data> 
+  <data name="SaveProgram" xml:space="preserve"> 
+    <value>Spara program</value> 
+  </data> 
+  <data name="ChoosePrograms" xml:space="preserve"> 
+    <value>Välj program</value> 
+  </data> 
+  <data name="up" xml:space="preserve"> 
+    <value>upp</value> 
+  </data> 
+  <data name="down" xml:space="preserve"> 
+    <value>ner</value> 
+  </data> 
+  <data name="BodyweightWorkouts24xWk" xml:space="preserve"> 
+    <value>Kroppsviktsövningar (2-4x/veckan)</value> 
+  </data> 
+  <data name="CreateNewProgram" xml:space="preserve"> 
+    <value>Skapa ett nytt program</value> 
+  </data> 
+  <data name="NameYourProgram" xml:space="preserve"> 
+    <value>Namnge ditt program</value> 
+  </data> 
+  <data name="CreateNew" xml:space="preserve"> 
+    <value>Skapa nytt</value> 
+  </data> 
+  <data name="CreateNewWorkout" xml:space="preserve"> 
+    <value>Skapa nytt träningspass</value> 
+  </data> 
+  <data name="NameYourWorkout" xml:space="preserve"> 
+    <value>Namnge ditt träningspass</value> 
+  </data> 
+  <data name="MyWorkouts" xml:space="preserve"> 
+    <value>Mina träningspass</value> 
+  </data> 
+  <data name="MyPrograms" xml:space="preserve"> 
+    <value>Mitt träningspass</value> 
+  </data> 
+  <data name="TapToCreateNewCustomWorkout..." xml:space="preserve"> 
+    <value>Tryck för att skapa ett nytt anpassat träningspass...</value> 
+  </data> 
+  <data name="CreateWorkoutsToCreateACustomProgram" xml:space="preserve"> 
+    <value>Lägg till träningspass för att skapa ett anpassat träningsprogram</value> 
+  </data> 
+  <data name="Rename" xml:space="preserve"> 
+    <value>Ändra namn</value> 
+  </data> 
+  <data name="EnterNewName" xml:space="preserve"> 
+    <value>Fyll i nytt namn</value> 
+  </data> 
+  <data name="DeleteWorkout" xml:space="preserve"> 
+    <value>Radera träningspass</value> 
+  </data> 
+  <data name="Delete" xml:space="preserve"> 
+    <value>Radera</value> 
+  </data> 
+  <data name="PermanentlyDelete" xml:space="preserve"> 
+    <value>Radera permanent</value> 
+  </data> 
+  <data name="EnterProgramName" xml:space="preserve"> 
+    <value>Namnge ditt träningsprogram</value> 
+  </data> 
+  <data name="Create" xml:space="preserve"> 
+    <value>Skapa</value> 
+  </data> 
+  <data name="EnterWorkoutName" xml:space="preserve"> 
+    <value>Namnge träningspasset</value> 
+  </data> 
+  <data name="FullBodyWorkouts23xWk" xml:space="preserve"> 
+    <value>Helkroppspass (2-3x/v)</value> 
+  </data> 
+  <data name="UpLowSplitWorkouts45xWk" xml:space="preserve"> 
+    <value>Övre/nedre träningssplit (4-5x/v)</value> 
+  </data> 
+  <data name="TodaYExercises" xml:space="preserve"> 
+    <value>Dagens övningar:</value> 
+  </data> 
+  <data name="FinishAndSaveWorkout" xml:space="preserve"> 
+    <value>Avsluta och spara träningspass</value> 
+  </data> 
+  <data name="ChooseExercise" xml:space="preserve"> 
+    <value>Välj övning</value> 
+  </data> 
+  <data name="ShowWelcomePopUp2Messagge" xml:space="preserve"> 
+    <value>Dagens övningar är listade i den ordning som kommer generera bäst träningsresultat. För att börja, tryck på övningen längst upp.</value> 
+  </data> 
+  <data name="ShowWelcomePopUp2Title" xml:space="preserve"> 
+    <value>Välkommen!</value> 
+  </data> 
+  <data name="RemindMe" xml:space="preserve"> 
+    <value>Påminn mig</value> 
+  </data> 
+  <data name="AreYouSureYouAreFinishedAndWantToSaveTodaysWorkout" xml:space="preserve"> 
+    <value>Är du säker på att du är färdig och vill spara dagens träningspass?</value> 
+  </data> 
+  <data name="FinishAndSave" xml:space="preserve"> 
+    <value>Avsluta och spara</value> 
+  </data> 
+  <data name="Congratulations" xml:space="preserve"> 
+    <value>Grattis</value> 
+  </data> 
+  <data name="YouAre1WorkoutCloserToNewExercisesYourProgramWillLevelUpIn" xml:space="preserve"> 
+    <value>Du är 1 träningspass närmre nya övningar. Ditt program kommer gå till nästa nivå om</value> 
+  </data> 
+  <data name="WorkoutsFullStop" xml:space="preserve"> 
+    <value>träningspass.</value> 
+  </data> 
+  <data name="ResetExercise" xml:space="preserve"> 
+    <value>Återställ övning</value> 
+  </data> 
+  <data name="AreYouSureYouWantToResetThisExerciseAndDeleteAllItsHistoryThisCannotBeUndone" xml:space="preserve"> 
+    <value>Är du säker på att du vill återställa och radera övningshistoriken? Detta kan ej ångras.</value> 
+  </data> 
+  <data name="Reset" xml:space="preserve"> 
+    <value>Återställ</value> 
+  </data> 
+  <data name="TapToEnterNewName" xml:space="preserve"> 
+    <value>Tryck för att namnge</value> 
+  </data> 
+  <data name="ChooseYourExercise" xml:space="preserve"> 
+    <value>Välj din övning</value> 
+  </data> 
+  <data name="NewExercise" xml:space="preserve"> 
+    <value>Ny övning</value> 
+  </data> 
+  <data name="LetsNameYourNewExercise" xml:space="preserve"> 
+    <value>Låt oss namnge din nya övning:</value> 
+  </data> 
+  <data name="TapHereToEnterName" xml:space="preserve"> 
+    <value>Tryck här för att namnge</value> 
+  </data> 
+  <data name="RenameExercise" xml:space="preserve"> 
+    <value>Ändra övningsnamn</value> 
+  </data> 
+  <data name="DeleteExercise" xml:space="preserve"> 
+    <value>Radera övning</value> 
+  </data> 
+  <data name="TapToCreateNewCustomExercise" xml:space="preserve"> 
+    <value>Tryck för att skapa en egen övning</value> 
+  </data> 
+  <data name="IsThisABodyweightExercise" xml:space="preserve"> 
+    <value>Är detta en kroppsövning?</value> 
+  </data> 
+  <data name="YesBodyweight" xml:space="preserve"> 
+    <value>Ja (kroppsvikt)</value> 
+  </data> 
+  <data name="IsThisAnEasyExerciseUsedForRecovery" xml:space="preserve"> 
+    <value>Är detta en lättare övning för återhämtning?</value> 
+  </data> 
+  <data name="YesEasy" xml:space="preserve"> 
+    <value>Ja (lätt)</value> 
+  </data> 
+  <data name="TapToEnterName" xml:space="preserve"> 
+    <value>Tryck för att namnge</value> 
+  </data> 
+  <data name="Add" xml:space="preserve"> 
+    <value>Lägg till</value> 
+  </data> 
+  <data name="Exercises" xml:space="preserve"> 
+    <value>Övningar</value> 
+  </data> 
+  <data name="MyExercises" xml:space="preserve"> 
+    <value>Mina övningar</value> 
+  </data> 
+  <data name="ChooseYourSwapExercise" xml:space="preserve"> 
+    <value>Välj din utbytbara övning</value> 
+  </data> 
+  <data name="AddMyOwn" xml:space="preserve"> 
+    <value>Lägg till min egna...</value> 
+  </data> 
+  <data name="LearnMoreAboutDeloads" xml:space="preserve"> 
+    <value>Lär dig mer om deloads</value> 
+  </data> 
+  <data name="NextExercise" xml:space="preserve"> 
+    <value>Nästa övning</value> 
+  </data> 
+  <data name="MAXSTRENGTHESTIMATELAST3WORKOUTS" xml:space="preserve"> 
+    <value>UPPSKATTNING AV DIN MAX STYRKA: SENASTE 3 TRÄNINGSPASS</value> 
+  </data> 
+  <data name="YourStrengthHasGoneUp" xml:space="preserve"> 
+    <value>Din styrka har ökat!</value> 
+  </data> 
+  <data name="YourStrengthHasGoneUpAndYouHaveSetaNewRecord" xml:space="preserve"> 
+    <value>Din styrka har ökat och du har satt ett nytt rekord!</value> 
+  </data> 
+  <data name="TodaysMaxEstimate" xml:space="preserve"> 
+    <value>Dagens maxuppskattning:</value> 
+  </data> 
+  <data name="PreviousMaxEstimate" xml:space="preserve"> 
+    <value>Tidigare maxuppskattning:</value> 
+  </data> 
+  <data name="Attention" xml:space="preserve"> 
+    <value>Observera</value> 
+  </data> 
+  <data name="YourStrengthHasGoneDown" xml:space="preserve"> 
+    <value>Du har tappat i styrka</value> 
+  </data> 
+  <data name="IWillLowerYourWeightsToHelpYouRecoverTheNextTimeYou" xml:space="preserve"> 
+    <value>Jag kommer minska dina vikter för att hjälpa dig med din återhämtning nästa gång du</value> 
+  </data> 
+  <data name="DeloadSuccessful" xml:space="preserve"> 
+    <value>Deload har lyckats</value> 
+  </data> 
+  <data name="IHaveLowedYourWeightsToHelpYouRecoverInTheShortTermAndProgressLongTerm" xml:space="preserve"> 
+    <value>Jag har minskat på dina vikter för att hjälpa dig återhämtas på kort sikt och utvecklas på lång sikt.</value> 
+  </data> 
+  <data name="WellDone" xml:space="preserve"> 
+    <value>Bra jobbat</value> 
+  </data> 
+  <data name="YourStrengthHasNotChangedButYouHaveDoneMoreSetsThisIsGood" xml:space="preserve"> 
+    <value>Din styrka är oförändrad, men du har gjort fler sets. Det är bra.</value> 
+  </data> 
+  <data name="YourStrengthHasDecreasedSlightlyButYouHaveDoneMoreSetsOverallThisIsProgress." xml:space="preserve"> 
+    <value>Din styrka har minskat marginellt, men du har gjort fler sets, vilket är ett framsteg.</value> 
+  </data> 
+  <data name="IMadeThisExericseEasyToHelpYouRecoverTheNextTimeYouTrain" xml:space="preserve"> 
+    <value>Jag har denna övningen enklare för att du ska återhämta dig. Nästa gång du tränar, kommer du vara återställd och redo att sätta ett nytt rekord.</value> 
+  </data> 
+  <data name="ShowWelcomePopUp5Message" xml:space="preserve"> 
+    <value>Här ser du din utveckling på grafen. Jag talar om när du tar nya rekord, och hur mycket du utvecklas.</value> 
+  </data> 
+  <data name="ShowWelcomePopUp5Title" xml:space="preserve"> 
+    <value>Grymt! Du är nu klar med din första övning</value> 
+  </data> 
+  <data name="DoThisTodayToBuildMuscleFaster" xml:space="preserve"> 
+    <value>Gör detta idag för att bygga muskler snabbare:</value> 
+  </data> 
+  <data name="BeginExercise" xml:space="preserve"> 
+    <value>Påbörja övning</value> 
+  </data> 
+  <data name="DoThisTodayToBuildMuscleAndBurnFatFaster" xml:space="preserve"> 
+    <value>Gör detta idag för att bygga muskler och bränna fett snabbare:</value> 
+  </data> 
+  <data name="DoThisTodayToProgressFaster" xml:space="preserve"> 
+    <value>Gör detta idag för att utvecklas snabbare:</value> 
+  </data> 
+  <data name="DoThisTodayToGetFitAndStrongFaster" xml:space="preserve"> 
+    <value>Gör detta idag för att bli stark snabbare:</value> 
+  </data> 
+  <data name="DoThisTodayToGetFitAndLeanFaster" xml:space="preserve"> 
+    <value>Gör detta idag för att få bättre kroppsform snabbare:</value> 
+  </data> 
+  <data name="DoThisTodayToGetFitAndBurnFatFaster" xml:space="preserve"> 
+    <value>Gör detta idag för att komma i form och bränna fett snabbare:</value> 
+  </data> 
+  <data name="ShowEasyExercisePopUpTitle" xml:space="preserve"> 
+    <value>Välkommen till din fösta enkla övning!</value> 
+  </data> 
+  <data name="ShowEasyExercisePopUpMessage" xml:space="preserve"> 
+    <value>Jag har gjort denna övning enklare, för att hjälpa dig återhämtas. Ta det lugnt idag. Under ditt nästa träningspass, kommer du vara återställd och i en bättre form för att sätta ett nytt rekord.</value> 
+  </data> 
+  <data name="WarmUp" xml:space="preserve"> 
+    <value>Uppvärmning:</value> 
+  </data> 
+  <data name="RepsAt" xml:space="preserve"> 
+    <value>reps på</value> 
+  </data> 
+  <data name="Rest" xml:space="preserve"> 
+    <value>vila</value> 
+  </data> 
+  <data name="WorkSets" xml:space="preserve"> 
+    <value>Träningssets:</value> 
+  </data> 
+  <data name="ShowWelcomePopUp3Message" xml:space="preserve"> 
+    <value>Längst upp ser du din historik. Jag har uppskattat nuvarande beräkningar. Nedan ser du vad du ska träna idag. När du är redo, tryck \"Börja övning\" (botten).</value> 
+  </data> 
+  <data name="ShowWelcomePopUp3Title" xml:space="preserve"> 
+    <value>Välkommen till din första övning!</value> 
+  </data> 
+  <data name="DoThisNow" xml:space="preserve"> 
+    <value>Gör detta nu:</value> 
+  </data> 
+  <data name="Reps" xml:space="preserve"> 
+    <value>Reps:</value> 
+  </data> 
+  <data name="Saveset" xml:space="preserve"> 
+    <value>Spara set</value> 
+  </data> 
+  <data name="Superset" xml:space="preserve"> 
+    <value>Superset</value> 
+  </data> 
+  <data name="FinishExercise" xml:space="preserve"> 
+    <value>Avsluta övning</value> 
+  </data> 
+  <data name="ASuperSetIsWhenYouAlternateSetsOfDifferentExercisesYourSets" xml:space="preserve"> 
+    <value>Ett superset är när du kombinerar sets från olika övningar. Dina sets har sparats. Välj nu din nästa övning. Gå därefter tillbaks hit för att avsluta din övning.</value> 
+  </data> 
+  <data name="WhatIsASuperset" xml:space="preserve"> 
+    <value>Vad är ett superset?</value> 
+  </data> 
+  <data name="SetsLeftLift" xml:space="preserve"> 
+    <value>sets kvar-lyft</value> 
+  </data> 
+  <data name="times" xml:space="preserve"> 
+    <value>gånger</value> 
+  </data> 
+  <data name="NowPleaseTellMeHowHardThatWas" xml:space="preserve"> 
+    <value>Tala om för mig hur svårt det var.</value> 
+  </data> 
+  <data name="ThatWasVeryVeryHard" xml:space="preserve"> 
+    <value>Det var väldigt, väldigt svårt</value> 
+  </data> 
+  <data name="ICouldHaveDone12MoreRep" xml:space="preserve"> 
+    <value>Jag kunde ha gjort 1-2 fler reps</value> 
+  </data> 
+  <data name="ICouldHaveDone34MoreReps" xml:space="preserve"> 
+    <value>Jag kunde ha gjort 3-4 fler reps</value> 
+  </data> 
+  <data name="IcouldHaveDone56MoreReps" xml:space="preserve"> 
+    <value>Jag kunde ha gjort 5-6 fler reps</value> 
+  </data> 
+  <data name="ICouldHaveDone7PMoreReps" xml:space="preserve"> 
+    <value>Jag kunde ha gjort 7+ fler reps</value> 
+  </data> 
+  <data name="PleaseAnswer" xml:space="preserve"> 
+    <value>Vänligen svara</value> 
+  </data> 
+  <data name="ImSorryIDidNotGetYourAnswerINeedToKnow" xml:space="preserve"> 
+    <value>Jag är ledsen, jag begriper inte ditt svar. Jag måste veta hur svårt det setet var för att kunna anpassa din vikt inför nästa träningspass. Vänligen försöka igen och mata in ett svar.</value> 
+  </data> 
+  <data name="TryAgain" xml:space="preserve"> 
+    <value>Försök igen</value> 
+  </data> 
+  <data name="GotItExclamation" xml:space="preserve"> 
+    <value>Jag förstår!</value> 
+  </data> 
+  <data name="YouSaid" xml:space="preserve"> 
+    <value>Du sa:</value> 
+  </data> 
+  <data name="IWillAdjustAccordingly" xml:space="preserve"> 
+    <value>Jag anpassar följaktligen.</value> 
+  </data> 
+  <data name="Lift" xml:space="preserve"> 
+    <value>lyft</value> 
+  </data> 
+  <data name="time" xml:space="preserve"> 
+    <value>tid</value> 
+  </data> 
+  <data name="Sets" xml:space="preserve"> 
+    <value>sets</value> 
+  </data> 
+  <data name="set" xml:space="preserve"> 
+    <value>set</value> 
+  </data> 
+  <data name="AlmostDoneYouCanDoThis" xml:space="preserve"> 
+    <value>Nästan färdig - du klarar det!</value> 
+  </data> 
+  <data name="AllSetsDoneCongrats" xml:space="preserve"> 
+    <value>Samtliga set klara - grattis!</value> 
+  </data> 
+  <data name="TapFinishExerciseToContinue" xml:space="preserve"> 
+    <value>Tryck på "Avsluta övning" för att fortsätta</value> 
+  </data> 
+  <data name="ShowWelcomePopUp4Message" xml:space="preserve"> 
+    <value>Forskare har kommit fram till att 1 rest-pause set är lika effektivt som 3 vanliga set (Prestes et al. 2017). Låt oss börja uppvärmningen och prova ett set. Följ mina instruktioner. Gör ditt första set, och tryck därefter på \"Spara set\".</value> 
+  </data> 
+  <data name="ShowWelcomePopUp4Title" xml:space="preserve"> 
+    <value>Spara tid med rest-pause</value> 
+  </data> 
+  <data name="Chart" xml:space="preserve"> 
+    <value>Diagram</value> 
+  </data> 
+  <data name="Logs" xml:space="preserve"> 
+    <value>Loggar</value> 
+  </data> 
+  <data name="History" xml:space="preserve"> 
+    <value>Historik</value> 
+  </data> 
+  <data name="Last3Workouts" xml:space="preserve"> 
+    <value>Dina 3 senaste träningspass</value> 
+  </data> 
+  <data name="LastMonth" xml:space="preserve"> 
+    <value>Senaste månaden</value> 
+  </data> 
+  <data name="Last3Months" xml:space="preserve"> 
+    <value>Senaste 3 månaderna</value> 
+  </data> 
+  <data name="Last6Months" xml:space="preserve"> 
+    <value>Senaste 6 månaderna</value> 
+  </data> 
+  <data name="LastYear" xml:space="preserve"> 
+    <value>Senaste året</value> 
+  </data> 
+  <data name="AllTime" xml:space="preserve"> 
+    <value>All historik</value> 
+  </data> 
+  <data name="Total" xml:space="preserve"> 
+    <value>totalt</value> 
+  </data> 
+  <data name="PerRepOnAverage" xml:space="preserve"> 
+    <value>per rep i genomsnitt</value> 
+  </data> 
+  <data name="MY1RMPROGRESSION" xml:space="preserve"> 
+    <value>MIN 1RM UTVECKLING</value> 
+  </data> 
+  <data name="OverTheLast4WeeksYouHaveTrainedTheFollowingExercisesAtLeast3Times" xml:space="preserve"> 
+    <value>Under dem senaste 4 veckorna, har du tränat följande övningar minst 3 gånger:</value> 
+  </data> 
+  <data name="AverageOfAllRecentExercises" xml:space="preserve"> 
+    <value>Genomsnitt för alla nyligen genomförda övningar</value> 
+  </data> 
+  <data name="ForTheseExercisesYourCurrentAverage1RMIs" xml:space="preserve"> 
+    <value>. För dessa övningar är ditt genomsnittliga 1RM {0}.</value> 
+  </data> 
+  <data name="YourPrevious1RMWas" xml:space="preserve"> 
+    <value>Ditt tidigare 1RM var</value> 
+  </data> 
+  <data name="ChangeIs" xml:space="preserve"> 
+    <value>Skillnaden är</value> 
+  </data> 
+  <data name="SignUpToContinueUsing" xml:space="preserve"> 
+    <value>Registrera dig för att fortsätta använda</value> 
+  </data> 
+  <data name="DrMuscleAfterYourFreeTrial" xml:space="preserve"> 
+    <value>Dr. Muscle efter din kostnadsfria period</value> 
+  </data> 
+  <data name="SignUpMonthly" xml:space="preserve"> 
+    <value>Prenumerera månadsvis</value> 
+  </data> 
+  <data name="SignUpAnnual" xml:space="preserve"> 
+    <value>Prenumerera årligen</value> 
+  </data> 
+  <data name="RestorePurchase" xml:space="preserve"> 
+    <value>Återställ köp</value> 
+  </data> 
+  <data name="EmailSupport" xml:space="preserve"> 
+    <value>Mejla supporten</value> 
+  </data> 
+  <data name="OnceYouConfirmYourSubscriptionPurchase" xml:space="preserve"> 
+    <value>När du bekräftat ditt prenumerationköp, kommer ditt iTuneskonto att debiteras. Resterande oanvända dagar av ditt kostnadsfria medlemskap kommer sägas upp.</value> 
+  </data> 
+  <data name="OnceYourSubscriptionIsActiveYourITunesAccountWill" xml:space="preserve"> 
+    <value>När din prenumeration är aktiv kommer ditt iTuneskonto att debiteras automatiskt i slutet av prenumerationsperioden, såvida du inte stänger av automatiskt förnyelse 24 timmar innan sista dagen i prenumerationsperioden. Du kan stänga av automatisk förnyelse när du vill i dina iTunesinställningar.</value> 
+  </data> 
+  <data name="ByTappingContinueYourPaymentWillBeChargedToYourGooglePlayAccount" xml:space="preserve"> 
+    <value>Genom att fortsätta, kommer din betalning dras från ditt Google Play konto, och resterande oanvända dagar av ditt kostnadsfria medlemskap att sägas upp.</value> 
+  </data> 
+  <data name="YourSubscriptionWillRenewAutomatically" xml:space="preserve"> 
+    <value>Din prenumeration kommer förnyas automatiskt tills du aktivt avbryter prenumerationen i ditt Google Play konto (du måste avbryta minst 24 timmar innan nuvarande period avslutas). Genom att fortsätta, accepterar du våra användarvillkor och integritetspolicy.</value> 
+  </data> 
+  <data name="YouAlreadyHaveAccess" xml:space="preserve"> 
+    <value>Du har redan tillgång</value> 
+  </data> 
+  <data name="ThankYou" xml:space="preserve"> 
+    <value>Tack!</value> 
+  </data> 
+  <data name="Edit" xml:space="preserve"> 
+    <value>Redigera</value> 
+  </data> 
+  <data name="Restore" xml:space="preserve"> 
+    <value>Återställ</value> 
+  </data> 
+  <data name="Swap" xml:space="preserve"> 
+    <value>Byt</value> 
+  </data> 
+  <data name="Loading" xml:space="preserve"> 
+    <value>Laddar...</value> 
+  </data> 
+  <data name="Welcome" xml:space="preserve"> 
+    <value>Välkommen</value> 
+  </data> 
+  <data name="WehaveSentYourAccountDetailsAndTipsToYourEmail" xml:space="preserve"> 
+    <value>Vi har skickat dina kontouppgifter med tips till din mejl</value> 
+  </data> 
+  <data name="SinceYouAreNewLetsTryAWorkoutDontWorryYouCanResetItLater" xml:space="preserve"> 
+    <value>Med tanke på att du är ny, låt oss prova ett träningspass. Oroa dig inte: du kan nollställa passet senare.</value> 
+  </data> 
+  <data name="TryAWorkout" xml:space="preserve"> 
+    <value>Prova ett träningspass</value> 
+  </data> 
+  <data name="ConnectionError" xml:space="preserve"> 
+    <value>Anslutningsfel</value> 
+  </data> 
+  <data name="YourProgram" xml:space="preserve"> 
+    <value>Ditt träningsprogram:</value> 
+  </data> 
+  <data name="TodaysWorkout" xml:space="preserve"> 
+    <value>Dagens träningspass:</value> 
+  </data> 
+  <data name="WorkoutsBeforeYouLevelUp" xml:space="preserve"> 
+    <value>träningspass innan du går upp till nästa nivå</value> 
+  </data> 
+  <data name="YourProgramNotSetUp" xml:space="preserve"> 
+    <value>Ditt träningsprogram: Inte inställt</value> 
+  </data> 
+  <data name="TodaysWorkoutNotSetUp" xml:space="preserve"> 
+    <value>Dagens träningspass: Inte inställt</value> 
+  </data> 
+  <data name="YourProgramIs" xml:space="preserve"> 
+    <value>Ditt träningsprogram är:</value> 
+  </data> 
+  <data name="TodaysWorkoutIs" xml:space="preserve"> 
+    <value>Dagens träningspass är:</value> 
+  </data> 
+  <data name="TodaysWorkoutTitle" xml:space="preserve"> 
+    <value>Dagens träningspass</value> 
+  </data> 
+  <data name="ManageWorkouts" xml:space="preserve"> 
+    <value>Hantera träningspass</value> 
+  </data> 
+  <data name="ManageExercises" xml:space="preserve"> 
+    <value>Hantera övningar</value> 
+  </data> 
+  <data name="LetsSetUpYour" xml:space="preserve"> 
+    <value>Låt oss ställa in din</value> 
+  </data> 
+  <data name="WhatsYourBodyWeight" xml:space="preserve"> 
+    <value>Vad är din kroppsvikt</value> 
+  </data> 
+  <data name="in" xml:space="preserve"> 
+    <value>i</value> 
+  </data> 
+  <data name="HowMuchCanYou" xml:space="preserve"> 
+    <value>Hur mycket kan du</value> 
+  </data> 
+  <data name="VeryVeryVeryEasily6TimesIwillImproveOnYourGuessAfterYourFirstWorkout" xml:space="preserve"> 
+    <value>6 gånger med extrem lätthet? På sikt kommer jag förbättras på att uppskatta din optimala vikt för varje övning. Korrigering sker efter ditt första träningspass. Ifall du använder hantlar, mata in vikten för en arm.</value> 
+  </data> 
+  <data name="VeryEasily6TimesIWillImproveOnYourGuessAfterYourFirstWorkout" xml:space="preserve"> 
+    <value>6 gånger utan svårigheter? På sikt kommer jag förbättras på att uppskatta din optimala vikt för varje övning. Korrigering sker efter ditt första träningspass. Ifall du använder hantlar, mata in vikten för en arm.</value> 
+  </data> 
+  <data name="TapToEnterYourWeight" xml:space="preserve"> 
+    <value>Skriv in vikt</value> 
+  </data> 
+  <data name="HowMany" xml:space="preserve"> 
+    <value>Hur många</value> 
+  </data> 
+  <data name="CanYouDo" xml:space="preserve"> 
+    <value>kan du göra?</value> 
+  </data> 
+  <data name="TapToEnterHowMany" xml:space="preserve"> 
+    <value>Tryck för att mata in antal</value> 
+  </data> 
+  <data name="SetupComplete" xml:space="preserve"> 
+    <value>Installationen är färdig</value> 
+  </data> 
+  <data name="SetupCompleteExerciseNow" xml:space="preserve"> 
+    <value>Installationen är färdiginställd. Börja träna nu?</value> 
+  </data> 
+  <data name="SelectLanguage" xml:space="preserve"> 
+    <value>Välj språk</value> 
+  </data> 
+  <data name="Change" xml:space="preserve"> 
+    <value>Ändra</value> 
+  </data> 
+  <data name="HomeScreen" xml:space="preserve"> 
+    <value>Hemvy</value> 
+  </data> 
+  <data name="TrainingLogAndCharts" xml:space="preserve"> 
+    <value>Träningslog &amp; grafer</value> 
+  </data> 
+  <data name="SubscriptionInfo" xml:space="preserve"> 
+    <value>Information om prenumeration</value> 
+  </data> 
+  <data name="Settings" xml:space="preserve"> 
+    <value>Inställningar</value> 
+  </data> 
+  <data name="LogOut" xml:space="preserve"> 
+    <value>Logga ut</value> 
+  </data> 
+  <data name="REPRANGE" xml:space="preserve"> 
+    <value>Repintervall</value> 
+  </data> 
+  <data name="YouProgressFasterWhenYouChangeRepsOftenChooseARangeYourRepsWillChangeAutomaticallyEveryWorkout" xml:space="preserve"> 
+    <value>Du utvecklas snabbare när du varierar dina reps oftare. Välj ett intervall som passar dig. Dina reps kommer automatiskt att uppdateras vid varje träningspass.</value> 
+  </data> 
+  <data name="LearnMore" xml:space="preserve"> 
+    <value>Lär dig mer</value> 
+  </data> 
+  <data name="FiveToTwelveReps" xml:space="preserve"> 
+    <value>5-12 reps</value> 
+  </data> 
+  <data name="EightToFifteenReps" xml:space="preserve"> 
+    <value>8-15 reps</value> 
+  </data> 
+  <data name="TwelveToTwentyReps" xml:space="preserve"> 
+    <value>12-20 reps</value> 
+  </data> 
+  <data name="Min" xml:space="preserve"> 
+    <value>Min:</value> 
+  </data> 
+  <data name="Max" xml:space="preserve"> 
+    <value>Max:</value> 
+  </data> 
+  <data name="SaveCustomReps" xml:space="preserve"> 
+    <value>Spara anpassade reps</value> 
+  </data> 
+  <data name="SETSTYLE" xml:space="preserve"> 
+    <value>SETSTIL</value> 
+  </data> 
+  <data name="RestPauseSetsAreHarderButTheyHalveWorkoutTime" xml:space="preserve"> 
+    <value>Rest-pause sets är svårare, men de halverar tiden på gymmet.</value> 
+  </data> 
+  <data name="NormalSets" xml:space="preserve"> 
+    <value>Normala sets</value> 
+  </data> 
+  <data name="RestPauseSets" xml:space="preserve"> 
+    <value>Rest-pause sets</value> 
+  </data> 
+  <data name="UNITS" xml:space="preserve"> 
+    <value>ENHETER</value> 
+  </data> 
+  <data name="BACKGROUNDIMAGE" xml:space="preserve"> 
+    <value>BAKGRUNDSBILD</value> 
+  </data> 
+  <data name="Male" xml:space="preserve"> 
+    <value>Man</value> 
+  </data> 
+  <data name="Female" xml:space="preserve"> 
+    <value>Kvinna</value> 
+  </data> 
+  <data name="NoImage" xml:space="preserve"> 
+    <value>Ingen bild</value> 
+  </data> 
+  <data name="LANGUAGE" xml:space="preserve"> 
+    <value>SPRÅK</value> 
+  </data> 
+  <data name="VIBRATE" xml:space="preserve"> 
+    <value>VIBRERA</value> 
+  </data> 
+  <data name="SOUND" xml:space="preserve"> 
+    <value>LJUD</value> 
+  </data> 
+  <data name="AUTOSTART" xml:space="preserve"> 
+    <value>STARTA AUTOMATISKT</value> 
+  </data> 
+  <data name="AUTOMATCHREPS" xml:space="preserve"> 
+    <value>AUTOMATCHA REPS</value> 
+  </data> 
+  <data name="AutomaticallyChangeTimerDurationToMatchRecommendedRepsAndOptimizeMuscleHypertrophy" xml:space="preserve"> 
+    <value>(Ändra automatiskt timern för att matcha rekommenderat antal reps och optimera muskeltillväxten.) </value> 
+  </data> 
+  <data name="START" xml:space="preserve"> 
+    <value>START</value> 
+  </data> 
+  <data name="STOP" xml:space="preserve"> 
+    <value>STOP</value> 
+  </data> 
+  <data name="LowRepsBuildMoreStrengthHighRepsAreEasierOnYourJoints" xml:space="preserve"> 
+    <value>Lågt repantal bygger styrka. Högre repantal är skonsammare för dina leder. De bränner även mer fett. För fettförbränning, är din diet viktig. Kontakta supporten för kostnadsfri rådgivning.</value> 
+  </data> 
+  <data name="AllRepsBuildMuscle" xml:space="preserve"> 
+    <value>Alla reps bygger muskler</value> 
+  </data> 
+  <data name="SetsOfLessThan5RepsAreVeryHeavyAndDoNotBuildMuscleFasterForYourSafetyMinimumRepsIs5" xml:space="preserve"> 
+    <value>Sets med färre än 5 reps är tunga och bygger inte muskler snabbare. För din säkerhet, är minimum reps 5.</value> 
+  </data> 
+  <data name="LessThan5Reps" xml:space="preserve"> 
+    <value>Färre än 5 reps?</value> 
+  </data> 
+  <data name="PleaseIncreaseMaxRepsToIncreaseMinimumRepsFurther" xml:space="preserve"> 
+    <value>Vänligen öka max reps för att kunna öka minimum reps.</value> 
+  </data> 
+  <data name="SetsOfMoreThan30RepsAreRatherPainfulTakeALongTimeToDoAndDoNotBuildMuscleFasterForBestResultsMaxRepsIs30" xml:space="preserve"> 
+    <value>Sets med fler än 30 reps är smärtsamma, tar lång tid att genomföra, och bygger inte muskler snabbare. För bästa resultat, är max-reps 30.</value> 
+  </data> 
+  <data name="MoreThan30Reps" xml:space="preserve"> 
+    <value>Mer än 30 reps?</value> 
+  </data> 
+  <data name="PleaseDecreaseMinimumRepsToDecreaseMaxRepsFurther" xml:space="preserve"> 
+    <value>Vänligen minska minimum reps för att kunna minska max reps ytterligare.</value> 
+  </data> 
+  <data name="SetsOfMoreThan30RepsAreRatherpainfulTakeALongTime" xml:space="preserve"> 
+    <value>Sets med fler än 30 reps är smärtsamma, tar lång tid</value> 
+  </data> 
+  <data name="ChooseEnvironment" xml:space="preserve"> 
+    <value>Välj miljö</value> 
+  </data> 
+  <data name="Month" xml:space="preserve"> 
+    <value>månad</value> 
+  </data> 
+  <data name="Year" xml:space="preserve"> 
+    <value>år</value> 
+  </data> 
+  <data name="Version" xml:space="preserve"> 
+    <value>Version</value> 
+  </data> 
+  <data name="Build" xml:space="preserve"> 
+    <value>Build</value> 
+  </data> 
+  <data name="WhatAreTheSmallestWeightIncrementsAvailableToU" xml:space="preserve"> 
+    <value>Vad är den minska viktökningar som är tillgänglig hos dig? Om du är osäker, välj 1. Du kan ändra detta senare.</value> 
+  </data> 
+  <data name="TapToEnterYourIncrements" xml:space="preserve"> 
+    <value>Fyll i dina viktökningar (t.ex. 1 kg)</value> 
+  </data> 
+  <data name="Save" xml:space="preserve"> 
+    <value>Spara</value> 
+  </data> 
+  <data name="Increments" xml:space="preserve"> 
+    <value>Viktökningar</value> 
+  </data> 
+  <data name="TapToSet" xml:space="preserve"> 
+    <value>Ställ in</value> 
+  </data> 
+  <data name="PleaseEntryYourIncrements" xml:space="preserve"> 
+    <value>Mata in dina önskade viktökningar</value> 
+  </data> 
+  <data name="FeelStrongToday" xml:space="preserve"> 
+    <value>Känner du dig stark idag?</value> 
+  </data> 
+  <data name="TryAChallengeYouWillDoAsManyRepsAsYouCan" xml:space="preserve"> 
+    <value>Utmana dig själv! Gör så många repetitioner du kan på ditt första träningsset, med god träningsform. </value> 
+  </data> 
+  <data name="Challenge" xml:space="preserve"> 
+    <value>Utmaning</value> 
+  </data> 
+  <data name="maxLowecase" xml:space="preserve"> 
+    <value>max</value> 
+  </data> 
+  <data name="GiveMeAChallenge" xml:space="preserve"> 
+    <value>Ge mig en utmaning</value> 
+  </data> 
+  <data name="Weight" xml:space="preserve"> 
+    <value>Vikt</value> 
+  </data> 
+  <data name="SaveIncrements" xml:space="preserve"> 
+    <value>Spara viktökningar</value> 
+  </data> 
+  <data name="FinishAndSaveWorkoutQuestion" xml:space="preserve"> 
+    <value>Avsluta och spara träningspass?</value> 
+  </data> 
+  <data name="CheckYourMail" xml:space="preserve"> 
+    <value>Kolla din mejl</value> 
+  </data> 
+  <data name="YourProgramIsReady" xml:space="preserve"> 
+    <value>Ditt träningsprogram är redo</value> 
+  </data> 
+  <data name="BackupAutomaticallyAccessAnywhere" xml:space="preserve"> 
+    <value>Backa upp automatisk - du har tillgång var som helst</value> 
+  </data> 
+  <data name="PleaseChooseAGoal" xml:space="preserve"> 
+    <value>Vänligen, välj ett mål</value> 
+  </data> 
+  <data name="DontWorryYouCanCustomizeLater" xml:space="preserve"> 
+    <value>Oroa dig inte: Du kan anpassa allt senare.</value> 
+  </data> 
+  <data name="DontWorryLiftingWightsWontMakeyouBulky" xml:space="preserve"> 
+    <value>Oroa dig inte: Styrketräning kommer inte göra dig klumpig. Dessutom kan du anpassa allt senare.</value> 
+  </data> 
+  <data name="BigMenOftenSay" xml:space="preserve"> 
+    <value>Stora män säger oftast...</value> 
+  </data> 
+  <data name="TheyWantToGetRidOfThisBodyFatAndLoseMyGut" xml:space="preserve"> 
+    <value>Dem vill: 'Bli av kroppsfett, i synnerhet på magen. Och bygga muskler!' Vill du att jag skapar ett träningsprogram med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="MidsizeMenOftenSay" xml:space="preserve"> 
+    <value>Normalbyggda män säger oftast...</value> 
+  </data> 
+  <data name="TheyWantToGetFitStrongAndMoreMuscularGainLeanMassAndHaveAVisibleSetOf" xml:space="preserve"> 
+    <value>Dem vill: 'Komma i form, bli starka och mer muskulära. Bygga muskler och ha synliga magmuskler.' Vill du att jag skapar ett träningsprogram med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="SkinnyMenOften" xml:space="preserve"> 
+    <value>Smala män säger oftast...</value> 
+  </data> 
+  <data name="HaveAHardTimeGainingWeightSomeSayIEatConstantlyAndWorkMyButtOff" xml:space="preserve"> 
+    <value>Har svårt för att gå upp i vikt. Vissa säger: 'Jag äter konstant och tränar hårt, men jag bygger inte muskler. Jag är trött på att vara smal.' Kan du relatera?</value> 
+  </data> 
+  <data name="SkinnyMenAlsoOftenSay" xml:space="preserve"> 
+    <value>Smala män säger oftast...</value> 
+  </data> 
+  <data name="TheyWantToPutOnLeanMassWhileKeepingmyAbsDefinedGainHealthy" xml:space="preserve"> 
+    <value>Dem vill: 'Lägga på muskelmassa och behålla sin muskeldefinition kring sina magmuskler. Gå upp i vikt på ett hälsosamt sätt och vara i form.' Vill du att jag skapar ett träningsprogram med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="WhatsYourBodyType" xml:space="preserve"> 
+    <value>Vad är din kroppstyp?</value> 
+  </data> 
+  <data name="AreYouABeginnerWithNoEquipment" xml:space="preserve"> 
+    <value>Är du en nybörjare utan gymutrustning?</value> 
+  </data> 
+  <data name="IWillSimplyYourAccountSetupAndGiveYouBodyWeightExercisesOnly" xml:space="preserve"> 
+    <value>Jag förenklar din kontoinställning och ger dig enbart kroppsviktsövningar. Du kan ändra detta senare.</value> 
+  </data> 
+  <data name="YesIMBeginner" xml:space="preserve"> 
+    <value>Ja, jag är en nybörjare</value> 
+  </data> 
+  <data name="NoImMoreAdvanced" xml:space="preserve"> 
+    <value>Nej, jag är mer avancerad</value> 
+  </data> 
+  <data name="HowLongHaveYouBeenWorkingOut" xml:space="preserve"> 
+    <value>Hur länge har du tränat?</value> 
+  </data> 
+  <data name="YourProgramStartsAtYourLevelItLevelsUpWithAsYouProgress" xml:space="preserve"> 
+    <value>Ditt träningsprogram börjar på din nivå och ökas gradvis i takt med att du utvecklas.</value> 
+  </data> 
+  <data name="OneToThreeYears" xml:space="preserve"> 
+    <value>1-3 år</value> 
+  </data> 
+  <data name="MoreThan3Years" xml:space="preserve"> 
+    <value>Mer än 3 år</value> 
+  </data> 
+  <data name="HomeGymBasicEqipment" xml:space="preserve"> 
+    <value>Hemgym (basal utrustning)</value> 
+  </data> 
+  <data name="HomeBodtweightOnly" xml:space="preserve"> 
+    <value>Hem (kroppsvikt)</value> 
+  </data> 
+  <data name="WhatWeightIncrementsDoYouUse" xml:space="preserve"> 
+    <value>Vilka viktökningar använder du?</value> 
+  </data> 
+  <data name="IfYouAreNotSureEnter1YouCanChangeLater" xml:space="preserve"> 
+    <value>Om du är osäker, fyll i 1. Du kan ändra senare.</value> 
+  </data> 
+  <data name="YourProgramLevelsUpAutomatically" xml:space="preserve"> 
+    <value>Ditt träningsprogram uppdaterar automatiskt. </value> 
+  </data> 
+  <data name="IUpdateItEveryTimeYouWorkOutBuild" xml:space="preserve"> 
+    <value>Jag uppdaterar varje gång du tränar, så att du alltid bygger muskler så snabbt som möjligt.</value> 
+  </data> 
+  <data name="IUpdateItEveryTimeYouWorkOutBuildNBuildFat" xml:space="preserve"> 
+    <value>Jag uppdaterar varje gång du tränar, så att du alltid bygger muskler och bränner fett så snabbt som möjligt.</value> 
+  </data> 
+  <data name="IUpdateItEveryTimeYouWorkOutBurnFatFaster" xml:space="preserve"> 
+    <value>Jag uppdaterar varje gång du tränar, så att du alltid bränner fett så snabbt som möjligt.</value> 
+  </data> 
+  <data name="WarningIMNOtLikeOtherAppsIGuideYouInRealTimeBased" xml:space="preserve"> 
+    <value>Varning: Jag är inte som andra appar. Jag guidar dig i realtid baserat på dina preferenser, precis som en personlig tränare. Jag använder mig utav den senaste vetenskapen, men kan inte justera din form när du tränar, eller anpassa utefter eventuell kroppslig sjukdom. Jag kan ibland ha fel. När du är tveksam, lita på din egna bedömning och kontakta oss. Vårt team förbättrar ständigt min AI.</value> 
+  </data> 
+  <data name="IUnderstand" xml:space="preserve"> 
+    <value>Jag förstår</value> 
+  </data> 
+  <data name="SuggestedProgram" xml:space="preserve"> 
+    <value>Föreslaget träningsprogram:</value> 
+  </data> 
+  <data name="FullFiguredOften" xml:space="preserve"> 
+    <value>Välbyggda säger oftast...</value> 
+  </data> 
+  <data name="HaveAHardTimeLosingWeightGetFatLookingAtFood" xml:space="preserve"> 
+    <value>Har svårt att gå ner i vikt. Vissa säger: 'Jag blir fet av att bara kolla på mat! Så frustrerande.' Kan du relatera?</value> 
+  </data> 
+  <data name="FullFiguredWomenAlsoOftenSay" xml:space="preserve"> 
+    <value>Kvinnor med väl utformad kroppsfigur säger även oftast...</value> 
+  </data> 
+  <data name="TheyWantToGetFitAndStrongWhileDroppingBodyFatShapeArms" xml:space="preserve"> 
+    <value>Dem vill: 'Komma i form och bli stark, få mindre kroppsfett. Utforma armar, ben och rumpa. Bli bekväm med min kropp.' Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="ThankYouTitle" xml:space="preserve"> 
+    <value>Tack</value> 
+  </data> 
+  <data name="MidsizeWomenOftenSay" xml:space="preserve"> 
+    <value>Mellanstora kvinnor säger oftast...</value> 
+  </data> 
+  <data name="TheyWantToGetFitAndStrongLeanerAndComfortableInMyBody" xml:space="preserve"> 
+    <value>Dem vill: 'Komma i form, bli stark och känna mig bekväm med min kropp. Vältränade ben och rumpa samt en platt mage.' Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="TheyWantToGetFitAndStrongWhileMaintaingLeanPhysiqueAddSizeToLegsBootyDenseLookingMuscleOverall" xml:space="preserve"> 
+    <value>Dem vill: 'Komma i form och bli stark, samtidigt som jag behåller min väldefinierade kroppsbyggnad. Få större benvolym, rumpa och högre muskeldensitet'. Vill du att jag anpassar ditt program med detta i åtanke? Jag kommer även se till att ditt program är balanserat, säkert och effektivt.</value> 
+  </data> 
+  <data name="PleaseTellMeAboutYourBodyType" xml:space="preserve"> 
+    <value>Vad är din kroppstyp?</value> 
+  </data> 
+  <data name="Setup" xml:space="preserve"> 
+    <value>Inställning</value> 
+  </data> 
+  <data name="Video" xml:space="preserve"> 
+    <value>Video</value> 
+  </data> 
+  <data name="FirstTimeHereTryAWorkoutDontWorryYouCanResetItLater" xml:space="preserve"> 
+    <value>Din första gång? Testa ett träningspass. Oroa dig inte: du kan alltid nollställa passet senare.</value> 
+  </data> 
+  <data name="UpdateReps" xml:space="preserve"> 
+    <value>Uppdatera Reps</value> 
+  </data> 
+  <data name="EnterWeights" xml:space="preserve"> 
+    <value>Fyll i vikter</value> 
+  </data> 
+  <data name="LanguageLowercase" xml:space="preserve"> 
+    <value>Språk</value> 
+  </data> 
+  <data name="No" xml:space="preserve"> 
+    <value>Nej</value> 
+  </data> 
+  <data name="Program" xml:space="preserve"> 
+    <value>Program</value> 
+  </data> 
+  <data name="WelcomeBack" xml:space="preserve"> 
+    <value>Välkommen tillbaka</value> 
+  </data> 
+  <data name="Today" xml:space="preserve"> 
+    <value>Idag</value> 
+  </data> 
+  <data name="CurrentMaxEstimate" xml:space="preserve"> 
+    <value>Nuvarande maxuppskattning</value> 
+  </data> 
+  <data name="PreviousMaxEstimateHomeScreen" xml:space="preserve"> 
+    <value>Föregående maxuppskattning</value> 
+  </data> 
+  <data name="Progress" xml:space="preserve"> 
+    <value>Utveckling</value> 
+  </data> 
+  <data name="LastWorkout" xml:space="preserve"> 
+    <value>Senaste träningspass</value> 
+  </data> 
+  <data name="WorkoutsDone" xml:space="preserve"> 
+    <value>träningspass avklarade</value> 
+  </data> 
+  <data name="Lifted" xml:space="preserve"> 
+    <value>lyft</value> 
+  </data> 
+  <data name="StartTodaysWorkout" xml:space="preserve"> 
+    <value>Börja dagens träningspass</value> 
+  </data> 
+  <data name="DayAgo" xml:space="preserve"> 
+    <value>en dag sedan</value> 
+  </data> 
+  <data name="AMonthAgo" xml:space="preserve"> 
+    <value>en månad sedan</value> 
+  </data> 
+  <data name="AYearAgo" xml:space="preserve"> 
+    <value>ett år sedan</value> 
+  </data> 
+  <data name="TodayLowercase" xml:space="preserve"> 
+    <value>idag</value> 
+  </data> 
+  <data name="UpNext" xml:space="preserve"> 
+    <value>Nästa</value> 
+  </data> 
+  <data name="StartCapitalized" xml:space="preserve"> 
+    <value>Starta</value> 
+  </data> 
+  <data name="EnterNewReps" xml:space="preserve"> 
+    <value>För in nya reps (avbryt för att enbart ändra vikter)</value> 
+  </data> 
+  <data name="MaxStrengthProgression" xml:space="preserve"> 
+    <value>Utveckling maxstyrka</value> 
+  </data> 
+  <data name="VolumeSetsProgression" xml:space="preserve"> 
+    <value>Utveckling volym (sets)</value> 
+  </data> 
+  <data name="FullscreenUppercase" xml:space="preserve"> 
+    <value>FULLSKÄRM</value> 
+  </data> 
+  <data name="Skip" xml:space="preserve"> 
+    <value>Skippa</value> 
+  </data> 
+  <data name="Hide" xml:space="preserve"> 
+    <value>Göm</value> 
+  </data> 
+  <data name="Seconds" xml:space="preserve"> 
+    <value>sekunder</value> 
+  </data> 
+  <data name="Restfor" xml:space="preserve"> 
+    <value>Vila i</value> 
+  </data> 
+  <data name="WorkSetsNoColon" xml:space="preserve"> 
+    <value>Träningssets</value> 
+  </data> 
+  <data name="MaxStrength" xml:space="preserve"> 
+    <value>Maxstyrka</value> 
+  </data> 
+  <data name="WorkoutDone" xml:space="preserve"> 
+    <value>träningspass avklarat</value> 
+  </data> 
+  <data name="TryAWorkoutToSeeYourProgressInThisChart" xml:space="preserve"> 
+    <value>Testa ett träningspass för att se din utveckling i grafen</value> 
+  </data> 
+  <data name="GetReadyFor" xml:space="preserve"> 
+    <value>Gör dig redo för</value> 
+  </data> 
+  <data name="StrengthAndSetsLast3Weeks" xml:space="preserve"> 
+    <value>STYRKA OCH SETS: SENASTE 3 VECKORNA</value> 
+  </data> 
+  <data name="Notes" xml:space="preserve"> 
+    <value>ANTECKNINGAR</value> 
+  </data> 
+  <data name="VideoAndInstruction" xml:space="preserve"> 
+    <value>Video och instruktioner</value> 
+  </data> 
+  <data name="ResetHistory" xml:space="preserve"> 
+    <value>Nollställ historiken</value> 
+  </data> 
+  <data name="SettingsUppercase" xml:space="preserve"> 
+    <value>INSTÄLLNINGAR</value> 
+  </data> 
+  <data name="UseCustomReps" xml:space="preserve"> 
+    <value>Använd anpassade reps</value> 
+  </data> 
+  <data name="UseCustomSetStyle" xml:space="preserve"> 
+    <value>Använd anpassade set</value> 
+  </data> 
+  <data name="UseCustomIncrements" xml:space="preserve"> 
+    <value>Använd anpassade viktökningar</value> 
+  </data> 
+  <data name="IncrementsCapital" xml:space="preserve"> 
+    <value>VIKTÖKNINGAR</value> 
+  </data> 
+  <data name="MoreUppercase" xml:space="preserve"> 
+    <value>MER</value> 
+  </data> 
+  <data name="TryaWorkoutToSee" xml:space="preserve"> 
+    <value>Prova ett träningspass för att se</value> 
+  </data> 
+  <data name="YourProgressInThisChart" xml:space="preserve"> 
+    <value>din utveckling i denna graf</value> 
+  </data> 
+  <data name="MaxStrengthCapital" xml:space="preserve"> 
+    <value>MAX STYRKA</value> 
+  </data> 
+  <data name="WorkSetsCapital" xml:space="preserve"> 
+    <value>TRÄNINGSSET</value> 
+  </data> 
+  <data name="MinValueShouldNotGreaterThenMax" xml:space="preserve"> 
+    <value>Minsta värdet bör inte överstiga maxvärdet</value> 
+  </data> 
+  <data name="Bar" xml:space="preserve"> 
+    <value>Stång</value> 
+  </data> 
+  <data name="Plates" xml:space="preserve"> 
+    <value>Viktskivor</value> 
+  </data> 
+  <data name="PlatesCapital" xml:space="preserve"> 
+    <value>VIKTSKIVOR</value> 
+  </data> 
+  <data name="Equipment" xml:space="preserve"> 
+    <value>Utrustning</value> 
+  </data> 
+  <data name="EnterNewCount" xml:space="preserve"> 
+    <value>Lägg till nytt antal</value> 
+  </data> 
+  <data name="TapToEnterNewPlates" xml:space="preserve"> 
+    <value>Tryck för att lägga till nya viktskivor</value> 
+  </data> 
+  <data name="EditPlateCount" xml:space="preserve"> 
+    <value>Ändra antal viktskivor</value> 
+  </data> 
+  <data name="AddPlateWeight" xml:space="preserve"> 
+    <value>Lägg till viktskiva (vikt)</value> 
+  </data> 
+  <data name="EnterNewWeightIn" xml:space="preserve"> 
+    <value>Skriv in ny vikt i</value> 
+  </data> 
+  <data name="EditPlateWeight" xml:space="preserve"> 
+    <value>Ändra viktskiva (vikt)</value> 
+  </data> 
+  <data name="DeletePlates" xml:space="preserve"> 
+    <value>Ta bort viktskivor</value> 
+  </data> 
+  <data name="AddPlateCount" xml:space="preserve"> 
+    <value>Lägg till antal viktskivor</value> 
+  </data> 
+  <data name="ChatBeta" xml:space="preserve"> 
+    <value>Chatt</value> 
+  </data> 
+  <data name="CongYouHaveBeenWorkingOutFor" xml:space="preserve"> 
+    <value>Gratulerar! Du har tränat i</value> 
+  </data> 
+  <data name="HowsYourExperienceWithDrMuscle" xml:space="preserve"> 
+    <value>Vad är din upplevelse av Dr. Muscle? </value> 
+  </data> 
+  <data name="GreatYouHaveBeenWorkingOutFor" xml:space="preserve"> 
+    <value>Underbart! Du har tränat i</value> 
+  </data> 
+  <data name="Days" xml:space="preserve"> 
+    <value>dagar</value> 
+  </data> 
+  <data name="GreatYourFreeTrialEndsIn" xml:space="preserve"> 
+    <value>Underbart! Din gratisversion avslutas om</value> 
+  </data> 
+  <data name="WouldYouLikeToLearnMoreAboutSigningUp" xml:space="preserve"> 
+    <value>Vill du lära dig mer om hur du blir medlem?</value> 
+  </data> 
+  <data name="months" xml:space="preserve"> 
+    <value>månader</value> 
+  </data> 
+  <data name="GreatExclamation" xml:space="preserve"> 
+    <value>Underbart!</value> 
+  </data> 
+  <data name="RateUsOnStore" xml:space="preserve"> 
+    <value>Betygsätt oss på App Store?</value> 
+  </data> 
+  <data name="MaybeLater" xml:space="preserve"> 
+    <value>Senare</value> 
+  </data> 
+  <data name="InviteAFriendToTryDrMuscleForFree" xml:space="preserve"> 
+    <value>Bjud in en vän till Dr. Muscle kostnadsfritt</value> 
+  </data> 
+  <data name="GreatNewWorkoutApp" xml:space="preserve"> 
+    <value>Grymt bra app!</value> 
+  </data> 
+  <data name="SendUsAQuickEmail" xml:space="preserve"> 
+    <value>Skicka oss ett mejl</value> 
+  </data> 
+  <data name="WeBelieveYourExperienceShouldBeSolidHowCanWeImprove" xml:space="preserve"> 
+    <value>Vi vill att du ska vara nöjd med din app-upplevelse. Hur vi kan bli bättre?</value> 
+  </data> 
+  <data name="SendEmail" xml:space="preserve"> 
+    <value>Skicka mejl</value> 
+  </data> 
+  <data name="BadSorryToHearThat" xml:space="preserve"> 
+    <value>Vi beklagar</value> 
+  </data> 
+  <data name="WeBelieveYourExperienceShouldBeSolidSendQuickEmailHowCanWeImprove" xml:space="preserve"> 
+    <value>Vi vill att du ska vara nöjd med din app-upplevelse. Skicka oss ett mejl med förslag på hur vi kan bli bättre.</value> 
+  </data> 
+  <data name="GoodButCouldBeImproved" xml:space="preserve"> 
+    <value>Bra, men kan bli bättre</value> 
+  </data> 
+  <data name="Bad" xml:space="preserve"> 
+    <value>Dålig</value> 
+  </data> 
+  <data name="SlideToAdjustBarWeight" xml:space="preserve"> 
+    <value>Svep för att anpassa vikten</value> 
+  </data> 
+  <data name="TwoWorkSetsPerExercise" xml:space="preserve"> 
+    <value>2 träningsset per övning</value> 
+  </data> 
+  <data name="ThirtyMinMode" xml:space="preserve"> 
+    <value>30-min pass</value> 
+  </data> 
+  <data name="QUICKMODE" xml:space="preserve"> 
+    <value>SNABBLÄGE</value> 
+  </data> 
+  <data name="GroupChatBeta" xml:space="preserve"> 
+    <value>Gruppchatt</value> 
+  </data> 
+  <data name="Workouts" xml:space="preserve"> 
+    <value>Träningspass</value> 
+  </data> 
+  <data name="GroupChatIsPayingSubscribeOnly" xml:space="preserve"> 
+    <value>Gruppchatten är under utveckling. För att ta del av betaversionen kan du kontakta oss.</value> 
+  </data> 
+  <data name="Send" xml:space="preserve"> 
+    <value>Skicka</value> 
+  </data> 
+  <data name="AreYouSureYouWantToExit" xml:space="preserve"> 
+    <value>Är du säker på att du vill avsluta?</value> 
+  </data> 
+  <data name="Exit" xml:space="preserve"> 
+    <value>Avsluta</value> 
+  </data> 
+  <data name="ChooseAnotherWorkout" xml:space="preserve"> 
+    <value>Välj ett annat träningspass</value> 
+  </data> 
+  <data name="EnterUnlockCode" xml:space="preserve"> 
+    <value>Skriv in kod</value> 
+  </data> 
+  <data name="InvalidCode" xml:space="preserve"> 
+    <value>Ogiltig kod</value> 
+  </data> 
+  <data name="UnlockProgram" xml:space="preserve"> 
+    <value>Lås upp ett träningsprogram</value> 
+  </data> 
+  <data name="UnlockCode" xml:space="preserve"> 
+    <value>Lås upp</value> 
+  </data> 
+  <data name="UnlockAnotherProgram" xml:space="preserve"> 
+    <value>Lås upp ett annat träningsprogram</value> 
+  </data> 
+  <data name="TryCodeForSurprise" xml:space="preserve"> 
+    <value>Prova denna kod (123456) för en överraskning!</value> 
+  </data> 
+  <data name="Support" xml:space="preserve"> 
+    <value>Kundservice</value> 
+  </data> 
+  <data name="TapHereFor11Chat" xml:space="preserve"> 
+    <value>Klicka här för personlig kundservice</value> 
+  </data> 
+  <data name="HumanSupport" xml:space="preserve"> 
+    <value>Personlig kundservice</value> 
+  </data> 
+  <data name="ChatWithSupport" xml:space="preserve"> 
+    <value>Chatta med kundservice</value> 
+  </data> 
+  <data name="GroupChat" xml:space="preserve"> 
+    <value>Gruppchatt</value> 
+  </data> 
+  <data name="RestPauseSetsAreHarderButMakeYourWorkouts59Faster" xml:space="preserve"> 
+    <value>Vila-pausuppsättningar är hårdare, men gör dina träningspassar 59% snabbare</value> 
+  </data> 
+  <data name="Featured" xml:space="preserve"> 
+    <value>Dagens</value> 
+  </data> 
+  </root>

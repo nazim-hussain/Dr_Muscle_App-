@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Views.FullReview"
+    CloseWhenBackgroundIsClicked="True"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:constants="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    BackgroundColor="#55000000">
+    <Frame
+        Padding="0"
+        CornerRadius="4"
+        HasShadow="False"
+        IsClippedToBounds="True"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="CenterAndExpand"
+        BackgroundColor="Transparent"
+        Margin="20,0,20,0">
+        <Grid
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            Padding="0,0,0,10">
+
+
+            <Frame
+                Padding="20,30,20,20"
+                Grid.Row="0"
+                Margin="0,25,0,0"
+                CornerRadius="6"
+                HasShadow="False"
+                IsClippedToBounds="True"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout
+                    Spacing="10">
+
+                    <t:DrMuscleButton
+                        x:Name="ReviewButton"
+                        VerticalOptions="EndAndExpand"
+                        Text="Rate 5 stars"
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="ReviewButton_Clicked"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0"
+                        HeightRequest="60"
+                        CornerRadius="0" />
+                    <Button
+                        Text="Share free trial"
+                        x:Name="MonthFree"
+                        Clicked="MonthFree_Clicked"
+                        Style="{StaticResource buttonStyle}"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0"
+                        HeightRequest="60"
+                        CornerRadius="0" />
+                    <Button
+                        Text="4 months free with annual plan"
+                        x:Name="Upgrade"
+                        Clicked="Upgrade_Clicked"
+                        Style="{StaticResource buttonStyle}"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0"
+                        HeightRequest="60"
+                        CornerRadius="0" />
+
+                    <!--<t:DrMuscleButton x:Name="ReviewButton" HorizontalOptions="FillAndExpand" Text="Rate 5 stars" Style="{StaticResource buttonLinkStyle}" Clicked="ReviewButton_Clicked" HeightRequest="40" />
+                    <Button Text="Give 1 month free" x:Name="MonthFree" Clicked="MonthFree_Clicked"  Style="{StaticResource buttonLinkStyle}" HeightRequest="40" />
+                    <Button Text="Upgrade to annual plan" x:Name="Upgrade" Clicked="Upgrade_Clicked" Style="{StaticResource buttonLinkStyle}" HorizontalOptions="FillAndExpand" HeightRequest="40" />-->
+
+                </StackLayout>
+                <!--<StackLayout
+                        Spacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"  >
+                   
+                        <Label x:Name="ReviewButton" Text="Rate 5 stars" Margin="15,0"  HeightRequest="40" VerticalOptions="Center" FontSize="Default" TextColor="{StaticResource LinkTextColor}" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers >
+                                <TapGestureRecognizer Tapped="ReviewButton_Clicked" />
+                            </Label.GestureRecognizers>    
+                        </Label>
+                        <BoxView HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource SeparatorColor}" />
+                        <Label Text="Give 1 month free" x:Name="MonthFree" Margin="15,0" LineBreakMode="TailTruncation" HeightRequest="40" VerticalOptions="Center" FontSize="Default" TextColor="{StaticResource LinkTextColor}" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            <Label.GestureRecognizers >
+                                <TapGestureRecognizer Tapped="MonthFree_Clicked" />
+                            </Label.GestureRecognizers>    
+                        </Label>
+                        <BoxView x:Name="LastSaperator" HeightRequest="0.5"
+HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource SeparatorColor}" />
+                        <Label Text="Upgrade to annual plan" x:Name="Upgrade" Margin="15,0"  HeightRequest="40" VerticalOptions="Center" FontSize="Default" TextColor="{StaticResource LinkTextColor}" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            <Label.GestureRecognizers >
+                                <TapGestureRecognizer Tapped="Upgrade_Clicked" />
+                            </Label.GestureRecognizers>    
+                        </Label>
+                        </StackLayout>-->
+            </Frame>
+            <Image Grid.Row="0" Source="heartIcon.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Start" />
+        </Grid>
+    </Frame>
+</pages:PopupPage>

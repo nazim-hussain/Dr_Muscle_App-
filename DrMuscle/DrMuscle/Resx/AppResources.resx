@@ -1,0 +1,1893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+   <data name="WelcomeTo" xml:space="preserve"> 
+    <value>Welcome to</value> 
+  </data> 
+  <data name="DrMuslce" xml:space="preserve"> 
+    <value>Dr. Muscle</value> 
+  </data> 
+  <data name="IHelpYouTransformYourBody" xml:space="preserve"> 
+    <value>I help you get in shape faster</value> 
+  </data> 
+  <data name="ByLiftingWeightsUsingScience" xml:space="preserve"> 
+    <value>because I use science and AI</value> 
+  </data> 
+  <data name="AndASmartProgramThatLevels" xml:space="preserve"> 
+    <value>to create a new custom workout</value> 
+  </data> 
+  <data name="IMLikeAPersonalTrainer" xml:space="preserve"> 
+    <value>I'm like a personal trainer, but less expensive,</value> 
+  </data> 
+  <data name="AlwaysUptoDateAndAvailableAnytimeAnywhere" xml:space="preserve"> 
+    <value>always up to date, and available anytime, anywhere.</value> 
+  </data> 
+  <data name="HelpMeCustomizeYourProgramAreYouA" xml:space="preserve"> 
+    <value>Help me customize your program. Are you a...</value> 
+  </data> 
+  <data name="UpWithYouAutomatically" xml:space="preserve"> 
+    <value>for you every time you train.</value> 
+  </data> 
+  <data name="AreYouMaleorWoman" xml:space="preserve"> 
+    <value>Help me customize your program. Are you a man, or a woman?</value> 
+  </data> 
+  <data name="Man" xml:space="preserve"> 
+    <value>Man</value> 
+  </data> 
+  <data name="Woman" xml:space="preserve"> 
+    <value>Woman</value> 
+  </data> 
+  <data name="AlreadyHaveAnAccount" xml:space="preserve"> 
+    <value>Already have an account?</value> 
+  </data> 
+  <data name="ByContinuingYouAgreeToOur" xml:space="preserve"> 
+    <value>By continuing, you agree to our</value> 
+  </data> 
+  <data name="TermsOfUseLower" xml:space="preserve"> 
+    <value>terms of use</value> 
+  </data> 
+  <data name="And" xml:space="preserve"> 
+    <value>and</value> 
+  </data> 
+  <data name="PrivacyPolicy" xml:space="preserve"> 
+    <value>privacy policy</value> 
+  </data> 
+  <data name="ImNotLikeOtherApps" xml:space="preserve"> 
+    <value>I'm not like other apps. I tell you what to do when you work out, like a personal trainer in your phone. I use the latest science, but I can't correct your form, or allow for a medical condition. I may be wrong at times. When in doubt, trust your own judgment. And contact us. The team is always improving my AI.</value> 
+  </data> 
+  <data name="GotIt" xml:space="preserve"> 
+    <value>Got it</value> 
+  </data> 
+  <data name="CustomizingYourProgram" xml:space="preserve"> 
+    <value>Customizing your program...</value> 
+  </data> 
+  <data name="GotItYourProgramStart" xml:space="preserve"> 
+    <value>Got it. Your program starts at your level. How long have you been working out for?</value> 
+  </data> 
+  <data name="LessThan1Year" xml:space="preserve"> 
+    <value>Less than 1 year</value> 
+  </data> 
+  <data name="YearOrMore" xml:space="preserve"> 
+    <value>1 year or more</value> 
+  </data> 
+  <data name="YouHaveSetA" xml:space="preserve"> 
+    <value>You have set a</value> 
+  </data> 
+  <data name="NewRecord" xml:space="preserve"> 
+    <value>New record!</value> 
+  </data> 
+  <data name="PleaseEnterYourFirstnameSoICan" xml:space="preserve"> 
+    <value>Please enter your firstname so I can congratulate you when you set new records:</value> 
+  </data> 
+  <data name="TapToEnterYourFirstName" xml:space="preserve"> 
+    <value>Tap to enter your firstname</value> 
+  </data> 
+  <data name="Next" xml:space="preserve"> 
+    <value>Next</value> 
+  </data> 
+  <data name="GotItPleaseChooseAGoalDontWorryYouCanForMan" xml:space="preserve"> 
+    <value>Got it. Please choose a goal. Don't worry: you can customize everything later.</value> 
+  </data> 
+  <data name="FocusOnBuildingMuscle" xml:space="preserve"> 
+    <value>Focus on building muscle</value> 
+  </data> 
+  <data name="BuildMuscleAndBurnFat" xml:space="preserve"> 
+    <value>Build muscle and burn fat</value> 
+  </data> 
+  <data name="FocusOnBurningFat" xml:space="preserve"> 
+    <value>Focus on burning fat</value> 
+  </data> 
+  <data name="GotItPleaseChooseAGoalDontWorryLiftingWeightsForWoman" xml:space="preserve"> 
+    <value>Got it. Please choose a goal. Don't worry: lifting weights won't make you bulky. Plus, you can customize everything later.</value> 
+  </data> 
+  <data name="FocusOnToningUp" xml:space="preserve"> 
+    <value>Focus on toning up</value> 
+  </data> 
+  <data name="ToneUpAndSlimDown" xml:space="preserve"> 
+    <value>Tone up and slim down</value> 
+  </data> 
+  <data name="FocusOnSlimmingDown" xml:space="preserve"> 
+    <value>Focus on slimming down</value> 
+  </data> 
+  <data name="BuildMuscle" xml:space="preserve"> 
+    <value>Your program levels up automatically with you. I update it every time you work out, so you always build muscle as fast as possible.</value> 
+  </data> 
+  <data name="BuildMuscleBurnFat" xml:space="preserve"> 
+    <value>Your program levels up automatically with you. I update it every time you work out, so you always build muscle and burn fat as fast as possible.</value> 
+  </data> 
+  <data name="FatBurning" xml:space="preserve"> 
+    <value>Your program levels up automatically with you. I update it every time you work out, so you always burn fat as fast as possible.</value> 
+  </data> 
+  <data name="YouSaidBigBigMenOftenWantSayTheyWantToGetRid" xml:space="preserve"> 
+    <value>You said: 'Big'. Big men often want say they want to: 'Get rid of this body fat and lose my gut. Then pack on muscle.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="Yes" xml:space="preserve"> 
+    <value>Yes</value> 
+  </data> 
+  <data name="NoChooseOtherGoal" xml:space="preserve"> 
+    <value>No (choose other goal)</value> 
+  </data> 
+  <data name="YouSaidMidSizeMidSizeMenOthenSayTheyWantToGetFit" xml:space="preserve"> 
+    <value>You said: 'Midsize.' Midsize men often say they want to: 'Get fit, strong, and more muscular. Gain lean mass and have a visible set of abs.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="YouSaidSkinnySkinnyMenOftenHaveAHardTimeGainingWeight" xml:space="preserve"> 
+    <value>You said: 'Skinny.' Skinny men often have a hard time gaining weight. Some say: 'I eat constantly and work my butt off, but I just don't gain. Tired of being a sack of skin and bones.' Can you relate?</value> 
+  </data> 
+  <data name="YesIHaveAHardTimeGaining" xml:space="preserve"> 
+    <value>Yes, I have a hard time gaining</value> 
+  </data> 
+  <data name="NoIDontHaveAHardTime" xml:space="preserve"> 
+    <value>No, I don't have a hard time</value> 
+  </data> 
+  <data name="NotSureIveNeverLiftedBefore" xml:space="preserve"> 
+    <value>Not sure, I've never lifted before</value> 
+  </data> 
+  <data name="GotItSkinnyMenOftenSayTheyWantToPutOnLeanMassWhileKeepingMyAbsDefined" xml:space="preserve"> 
+    <value>Got it. Skinny men often say they want to: 'Put on lean mass while keeping my abs defined. Gain healthy weight and be fit.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="YouSaidManWhatsYourBodyType" xml:space="preserve"> 
+    <value>You said: 'Man.' What's your body type?</value> 
+  </data> 
+  <data name="Skinny" xml:space="preserve"> 
+    <value>Skinny</value> 
+  </data> 
+  <data name="Midsize" xml:space="preserve"> 
+    <value>Midsize</value> 
+  </data> 
+  <data name="Big" xml:space="preserve"> 
+    <value>Big</value> 
+  </data> 
+  <data name="DoYouUseLbsOrKgs" xml:space="preserve"> 
+    <value>Do you use lbs or kg?</value> 
+  </data> 
+  <data name="Lbs" xml:space="preserve"> 
+    <value>Lbs</value> 
+  </data> 
+  <data name="Kg" xml:space="preserve"> 
+    <value>Kg</value> 
+  </data> 
+  <data name="YouSaidFullFiguredFullFiguredWomenOftenHaveAHardTimeLosingWeight" xml:space="preserve"> 
+    <value>You said: 'Full-figured.' Full-figured women often have a hard time losing weight. Some say: 'I get fat just looking at food! So frustrating.' Can you relate?</value> 
+  </data> 
+  <data name="YesICanGainWeightEasily" xml:space="preserve"> 
+    <value>Yes, I can gain weight easily</value> 
+  </data> 
+  <data name="NoIDontGainWeightThatEasily" xml:space="preserve"> 
+    <value>No, I don't gain weight that easily</value> 
+  </data> 
+  <data name="ThankYouFullFiguredWomenAlsoOftenSayTheyWantToGetFItAndStrong" xml:space="preserve"> 
+    <value>Thank you. Full-figured women also often say they want to: 'Get fit and strong while dropping body fat. Shape arms, legs, and booty, and feel more comfortable in my body.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="YouSaidMidSizeMidSizeWomenOftenSAyTheyWantToGetFitAndStrong" xml:space="preserve"> 
+    <value>You said: 'Midsize.' Midzise women often say they want to: 'Get fit and strong, leaner, and comfortable in my body. Firm legs and booty, and a flat stomach.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="YouSaidThinThinWomenOftenSayTheyWantToGetFitAndStrongW" xml:space="preserve"> 
+    <value>You said: 'Thin.' Thin women often say they want to: 'Get fit and strong while maintaining a lean physique. Add size to legs, booty, and dense looking muscle overall.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="YouSaidWomanPleaseTellMeAboutYourBodyType" xml:space="preserve"> 
+    <value>You said: 'Woman.' Please tell me about your body type:</value> 
+  </data> 
+  <data name="Thin" xml:space="preserve"> 
+    <value>Thin</value> 
+  </data> 
+  <data name="FullFigured" xml:space="preserve"> 
+    <value>Full-figured</value> 
+  </data> 
+  <data name="ThankYouYourSuggestedProgramIs" xml:space="preserve"> 
+    <value>Thank you. Your suggested program is:</value> 
+  </data> 
+  <data name="UpperLowerBodySplitLevel1More1Year" xml:space="preserve"> 
+    <value>Upper/Lower Body Split Level 1</value> 
+  </data> 
+  <data name="MondayUpperBody1More1Year" xml:space="preserve"> 
+    <value>Monday: Upper Body</value> 
+  </data> 
+  <data name="TuesdayLowerBodyMore1Year" xml:space="preserve"> 
+    <value>Tuesday: Lower Body</value> 
+  </data> 
+  <data name="WednesdayOffMore1Year" xml:space="preserve"> 
+    <value>Wednesday: Off</value> 
+  </data> 
+  <data name="ThursdayUpperBodyMore1Year" xml:space="preserve"> 
+    <value>Thursday: Upper Body</value> 
+  </data> 
+  <data name="FridayOrSaturdayLowerBodyMore1Year" xml:space="preserve"> 
+    <value>Friday or Saturday: Lower Body</value> 
+  </data> 
+  <data name="SundayOffMore1Year" xml:space="preserve"> 
+    <value>Sunday: Off</value> 
+  </data> 
+  <data name="WorkOutYourUpperAndYourLowerBody2xWeekForBestResultsMore1Year" xml:space="preserve"> 
+    <value>- Work out your upper and your lower body 2x/week for best results</value> 
+  </data> 
+  <data name="FullBodyLevel1" xml:space="preserve"> 
+    <value>Full-Body Level 1</value> 
+  </data> 
+  <data name="MondayFullBody" xml:space="preserve"> 
+    <value>Monday: Full Body</value> 
+  </data> 
+  <data name="TuesdayOff" xml:space="preserve"> 
+    <value>Tuesday: Off</value> 
+  </data> 
+  <data name="WednesdayFullBody" xml:space="preserve"> 
+    <value>Wednesday: Full Body</value> 
+  </data> 
+  <data name="ThursdayOff" xml:space="preserve"> 
+    <value>Thursday: Off</value> 
+  </data> 
+  <data name="FridayOrSaturdayFullBody" xml:space="preserve"> 
+    <value>Friday or Saturday: Full Body</value> 
+  </data> 
+  <data name="SundayOff" xml:space="preserve"> 
+    <value>Sunday: Off</value> 
+  </data> 
+  <data name="WorkOutYourFullBody3xWeekForBestResults" xml:space="preserve"> 
+    <value>- Work out your full body 3x/week for best results</value> 
+  </data> 
+  <data name="YouCanChangeWorkoutDays" xml:space="preserve"> 
+    <value>- You can change workout days</value> 
+  </data> 
+  <data name="WhereDoYouWorkOut" xml:space="preserve"> 
+    <value>Where do you work out?</value> 
+  </data> 
+  <data name="Gym" xml:space="preserve"> 
+    <value>Gym</value> 
+  </data> 
+  <data name="Home" xml:space="preserve"> 
+    <value>Home</value> 
+  </data> 
+  <data name="Continue" xml:space="preserve"> 
+    <value>Continue</value> 
+  </data> 
+  <data name="YourWorkoutPlanIs" xml:space="preserve"> 
+    <value>Your workout plan is:</value> 
+  </data> 
+  <data name="LogInWithFacebook" xml:space="preserve"> 
+    <value>Log in with facebook</value> 
+  </data> 
+  <data name="LogInWithEmail" xml:space="preserve"> 
+    <value>Log in with email</value> 
+  </data> 
+  <data name="TapToEnterYourEmail" xml:space="preserve"> 
+    <value>Tap to enter your email</value> 
+  </data> 
+  <data name="TapToEnterYourPassword" xml:space="preserve"> 
+    <value>Tap to enter your password</value> 
+  </data> 
+  <data name="SixCharactersOrLonger" xml:space="preserve"> 
+    <value>6 characters or longer</value> 
+  </data> 
+  <data name="LogIn" xml:space="preserve"> 
+    <value>Log in</value> 
+  </data> 
+  <data name="ForgotPassword" xml:space="preserve"> 
+    <value>Forgot password?</value> 
+  </data> 
+  <data name="MadeAMistakeStartOver" xml:space="preserve"> 
+    <value>Made a mistake? Start over</value> 
+  </data> 
+  <data name="CreateNewAccount" xml:space="preserve"> 
+    <value>Create new account</value> 
+  </data> 
+  <data name="TermsOfUse" xml:space="preserve"> 
+    <value>terms of use</value> 
+  </data> 
+  <data name="AnErrorOccursWhenSigningIn" xml:space="preserve"> 
+    <value>An error occurs when signing in</value> 
+  </data> 
+  <data name="UnableToLogIn" xml:space="preserve"> 
+    <value>Unable to log in</value> 
+  </data> 
+  <data name="EmailAndPasswordDoNotMatch" xml:space="preserve"> 
+    <value>Email and password do not match.</value> 
+  </data> 
+  <data name="PasswordReset" xml:space="preserve"> 
+    <value>Password reset</value> 
+  </data> 
+  <data name="EnterYourEmail" xml:space="preserve"> 
+    <value>Enter your email</value> 
+  </data> 
+  <data name="Ok" xml:space="preserve"> 
+    <value>Ok</value> 
+  </data> 
+  <data name="PleaseCheckYourEmail" xml:space="preserve"> 
+    <value>Please check your email</value> 
+  </data> 
+  <data name="ToRestYourPassword" xml:space="preserve"> 
+    <value>to reset your password.</value> 
+  </data> 
+  <data name="CanYouTryAnotherLoginEmail" xml:space="preserve"> 
+    <value>Can you try another login email?</value> 
+  </data> 
+  <data name="EmailNotFound" xml:space="preserve"> 
+    <value>Email not found</value> 
+  </data> 
+  <data name="EmailPasswordEmptyError" xml:space="preserve"> 
+    <value>Please provide email and password.</value> 
+  </data> 
+  <data name="InvalidEmailError" xml:space="preserve"> 
+    <value>Please enter a valid email address.</value> 
+  </data> 
+  <data name="InvalidEmailAddress" xml:space="preserve"> 
+    <value>Invalid email address</value> 
+  </data> 
+  <data name="PasswordLengthError" xml:space="preserve"> 
+    <value>Password needs to be at least 6 characters.</value> 
+  </data> 
+  <data name="PleaseCheckInternetConnection" xml:space="preserve"> 
+    <value>Please check your Internet connection and try again. If this problem persists, please contact support.</value> 
+  </data> 
+  <data name="Error" xml:space="preserve"> 
+    <value>Error!</value> 
+  </data> 
+  <data name="ConnectWithFacebook" xml:space="preserve"> 
+    <value>Connect with Facebook</value> 
+  </data> 
+  <data name="CreateAccountWithWmail" xml:space="preserve"> 
+    <value>Create account with email</value> 
+  </data> 
+  <data name="CreateAccount" xml:space="preserve"> 
+    <value>Create account</value> 
+  </data> 
+  <data name="TapToCreateYourPassword" xml:space="preserve"> 
+    <value>Tap to create your password</value> 
+  </data> 
+  <data name="WelcomeToLower" xml:space="preserve"> 
+    <value>Welcome to</value> 
+  </data> 
+  <data name="SaveYourCustomProgramAndProgression" xml:space="preserve"> 
+    <value>Save your custom program and progression</value> 
+  </data> 
+  <data name="GymFullBody" xml:space="preserve"> 
+    <value>[Gym] Full-Body</value> 
+  </data> 
+  <data name="GymUpperBody" xml:space="preserve"> 
+    <value>[Gym] Upper-Body</value> 
+  </data> 
+  <data name="HomeFullBody" xml:space="preserve"> 
+    <value>[Home] Full-Body</value> 
+  </data> 
+  <data name="HomeUpperBody" xml:space="preserve"> 
+    <value>[Home] Upper-Body</value> 
+  </data> 
+  <data name="NotSetUp" xml:space="preserve"> 
+    <value>Not set up</value> 
+  </data> 
+  <data name="GymFullBodyLevel1" xml:space="preserve"> 
+    <value>[Gym] Full-Body Level 1</value> 
+  </data> 
+  <data name="GymUpLowSplitLevel1" xml:space="preserve"> 
+    <value>[Gym] Up/Low Split Level 1</value> 
+  </data> 
+  <data name="HomeFullBodyLevel1" xml:space="preserve"> 
+    <value>[Home] Full-Body Level 1</value> 
+  </data> 
+  <data name="HomeUpLowSplitLevel1" xml:space="preserve"> 
+    <value>[Home] Up/Low Split Level 1</value> 
+  </data> 
+  <data name="SearchExercises" xml:space="preserve"> 
+    <value>Search exercises</value> 
+  </data> 
+  <data name="Cancel" xml:space="preserve"> 
+    <value>Cancel</value> 
+  </data> 
+  <data name="ChooseExercises" xml:space="preserve"> 
+    <value>Choose exercises</value> 
+  </data> 
+  <data name="ChooseWorkouts" xml:space="preserve"> 
+    <value>Choose workouts</value> 
+  </data> 
+  <data name="Custom" xml:space="preserve"> 
+    <value>Custom</value> 
+  </data> 
+  <data name="ChooseWorkout" xml:space="preserve"> 
+    <value>Choose workout</value> 
+  </data> 
+  <data name="HomeGym" xml:space="preserve"> 
+    <value>Home Gym</value> 
+  </data> 
+  <data name="SaveWorkout" xml:space="preserve"> 
+    <value>Save Workout</value> 
+  </data> 
+  <data name="Bodyweight" xml:space="preserve"> 
+    <value>Bodyweight</value> 
+  </data> 
+  <data name="ChooseOrder" xml:space="preserve"> 
+    <value>Choose order</value> 
+  </data> 
+  <data name="SaveProgram" xml:space="preserve"> 
+    <value>Save Program</value> 
+  </data> 
+  <data name="ChoosePrograms" xml:space="preserve"> 
+    <value>Choose programs</value> 
+  </data> 
+  <data name="up" xml:space="preserve"> 
+    <value>up</value> 
+  </data> 
+  <data name="down" xml:space="preserve"> 
+    <value>down</value> 
+  </data> 
+  <data name="BodyweightWorkouts24xWk" xml:space="preserve"> 
+    <value>Bodyweight workouts (2-4x/wk)</value> 
+  </data> 
+  <data name="CreateNewProgram" xml:space="preserve"> 
+    <value>Create new program</value> 
+  </data> 
+  <data name="NameYourProgram" xml:space="preserve"> 
+    <value>Name your program</value> 
+  </data> 
+  <data name="CreateNew" xml:space="preserve"> 
+    <value>Create new</value> 
+  </data> 
+  <data name="CreateNewWorkout" xml:space="preserve"> 
+    <value>Create new workout</value> 
+  </data> 
+  <data name="NameYourWorkout" xml:space="preserve"> 
+    <value>Name your workout</value> 
+  </data> 
+  <data name="MyWorkouts" xml:space="preserve"> 
+    <value>My workouts</value> 
+  </data> 
+  <data name="MyPrograms" xml:space="preserve"> 
+    <value>My programs</value> 
+  </data> 
+  <data name="TapToCreateNewCustomWorkout..." xml:space="preserve"> 
+    <value>Tap to create new custom workout...</value> 
+  </data> 
+  <data name="CreateWorkoutsToCreateACustomProgram" xml:space="preserve"> 
+    <value>Create workouts to create a custom program...</value> 
+  </data> 
+  <data name="Rename" xml:space="preserve"> 
+    <value>Rename</value> 
+  </data> 
+  <data name="EnterNewName" xml:space="preserve"> 
+    <value>Enter new name</value> 
+  </data> 
+  <data name="DeleteWorkout" xml:space="preserve"> 
+    <value>Delete workout</value> 
+  </data> 
+  <data name="Delete" xml:space="preserve"> 
+    <value>Delete</value> 
+  </data> 
+  <data name="PermanentlyDelete" xml:space="preserve"> 
+    <value>Permanently delete</value> 
+  </data> 
+  <data name="EnterProgramName" xml:space="preserve"> 
+    <value>Enter program name</value> 
+  </data> 
+  <data name="Create" xml:space="preserve"> 
+    <value>Create</value> 
+  </data> 
+  <data name="EnterWorkoutName" xml:space="preserve"> 
+    <value>Enter workout name</value> 
+  </data> 
+  <data name="FullBodyWorkouts23xWk" xml:space="preserve"> 
+    <value>Full-body workouts (2-3x/wk)</value> 
+  </data> 
+  <data name="UpLowSplitWorkouts45xWk" xml:space="preserve"> 
+    <value>Up/low split workouts (4-5x/wk)</value> 
+  </data> 
+  <data name="TodaYExercises" xml:space="preserve"> 
+    <value>Today's exercises:</value> 
+  </data> 
+  <data name="FinishAndSaveWorkout" xml:space="preserve"> 
+    <value>Finish &amp; save workout</value> 
+  </data> 
+  <data name="ChooseExercise" xml:space="preserve"> 
+    <value>Choose exercise</value> 
+  </data> 
+  <data name="ShowWelcomePopUp2Messagge" xml:space="preserve"> 
+    <value>Today's exercises are listed in the order that gets you in shape the fastest. To begin, tap your first exercise at the top.</value> 
+  </data> 
+  <data name="ShowWelcomePopUp2Title" xml:space="preserve"> 
+    <value>Welcome!</value> 
+  </data> 
+  <data name="RemindMe" xml:space="preserve"> 
+    <value>Remind me</value> 
+  </data> 
+  <data name="AreYouSureYouAreFinishedAndWantToSaveTodaysWorkout" xml:space="preserve"> 
+    <value>Are you sure you are finished and want to save today's workout?</value> 
+  </data> 
+  <data name="FinishAndSave" xml:space="preserve"> 
+    <value>Finish &amp; save</value> 
+  </data> 
+  <data name="Congratulations" xml:space="preserve"> 
+    <value>Congratulations</value> 
+  </data> 
+  <data name="YouAre1WorkoutCloserToNewExercisesYourProgramWillLevelUpIn" xml:space="preserve"> 
+    <value>You're 1 workout closer to new exercises. Your program will level up in</value> 
+  </data> 
+  <data name="WorkoutsFullStop" xml:space="preserve"> 
+    <value>workouts.</value> 
+  </data> 
+  <data name="ResetExercise" xml:space="preserve"> 
+    <value>Reset exercise</value> 
+  </data> 
+  <data name="AreYouSureYouWantToResetThisExerciseAndDeleteAllItsHistoryThisCannotBeUndone" xml:space="preserve"> 
+    <value>Are you sure you want to reset this exercise and delete all its history? This cannot be undone.</value> 
+  </data> 
+  <data name="Reset" xml:space="preserve"> 
+    <value>Reset</value> 
+  </data> 
+  <data name="TapToEnterNewName" xml:space="preserve"> 
+    <value>Tap to enter new name</value> 
+  </data> 
+  <data name="ChooseYourExercise" xml:space="preserve"> 
+    <value>Choose your exercise</value> 
+  </data> 
+  <data name="NewExercise" xml:space="preserve"> 
+    <value>New exercise</value> 
+  </data> 
+  <data name="LetsNameYourNewExercise" xml:space="preserve"> 
+    <value>Let's name your new exercise:</value> 
+  </data> 
+  <data name="TapHereToEnterName" xml:space="preserve"> 
+    <value>Tap here to enter name</value> 
+  </data> 
+  <data name="RenameExercise" xml:space="preserve"> 
+    <value>Rename exercise</value> 
+  </data> 
+  <data name="DeleteExercise" xml:space="preserve"> 
+    <value>Delete exercise</value> 
+  </data> 
+  <data name="TapToCreateNewCustomExercise" xml:space="preserve"> 
+    <value>Tap to create new custom exercise...</value> 
+  </data> 
+  <data name="IsThisABodyweightExercise" xml:space="preserve"> 
+    <value>Is this a bodyweight exercise?</value> 
+  </data> 
+  <data name="YesBodyweight" xml:space="preserve"> 
+    <value>Yes (bodyweight)</value> 
+  </data> 
+  <data name="IsThisAnEasyExerciseUsedForRecovery" xml:space="preserve"> 
+    <value>Is this an easy exercise used for recovery?</value> 
+  </data> 
+  <data name="YesEasy" xml:space="preserve"> 
+    <value>Yes (easy)</value> 
+  </data> 
+  <data name="TapToEnterName" xml:space="preserve"> 
+    <value>Tap to enter name</value> 
+  </data> 
+  <data name="Add" xml:space="preserve"> 
+    <value>Add</value> 
+  </data> 
+  <data name="Exercises" xml:space="preserve"> 
+    <value>Exercises</value> 
+  </data> 
+  <data name="MyExercises" xml:space="preserve"> 
+    <value>My exercises</value> 
+  </data> 
+  <data name="ChooseYourSwapExercise" xml:space="preserve"> 
+    <value>Choose your swap exercise</value> 
+  </data> 
+  <data name="AddMyOwn" xml:space="preserve"> 
+    <value>Add my own...</value> 
+  </data> 
+  <data name="LearnMoreAboutDeloads" xml:space="preserve"> 
+    <value>Learn more about deloads</value> 
+  </data> 
+  <data name="NextExercise" xml:space="preserve"> 
+    <value>Next exercise</value> 
+  </data> 
+  <data name="MAXSTRENGTHESTIMATELAST3WORKOUTS" xml:space="preserve"> 
+    <value>MAX STRENGTH ESTIMATE: LAST 3 WORKOUTS</value> 
+  </data> 
+  <data name="YourStrengthHasGoneUp" xml:space="preserve"> 
+    <value>Your strength has gone up!</value> 
+  </data> 
+  <data name="YourStrengthHasGoneUpAndYouHaveSetaNewRecord" xml:space="preserve"> 
+    <value>Your strength has gone up and you have set a new record!</value> 
+  </data> 
+  <data name="TodaysMaxEstimate" xml:space="preserve"> 
+    <value>Today's max estimate:</value> 
+  </data> 
+  <data name="PreviousMaxEstimate" xml:space="preserve"> 
+    <value>Previous max estimate:</value> 
+  </data> 
+  <data name="Attention" xml:space="preserve"> 
+    <value>Attention</value> 
+  </data> 
+  <data name="YourStrengthHasGoneDown" xml:space="preserve"> 
+    <value>Your strength has gone down</value> 
+  </data> 
+  <data name="IWillLowerYourWeightsToHelpYouRecoverTheNextTimeYou" xml:space="preserve"> 
+    <value>I will lower your weights to help you recover the next time you</value> 
+  </data> 
+  <data name="DeloadSuccessful" xml:space="preserve"> 
+    <value>Deload successful</value> 
+  </data> 
+  <data name="IHaveLowedYourWeightsToHelpYouRecoverInTheShortTermAndProgressLongTerm" xml:space="preserve"> 
+    <value>I have lowered your weights to help you recover in the short term and progress long-term.</value> 
+  </data> 
+  <data name="WellDone" xml:space="preserve"> 
+    <value>Well done</value> 
+  </data> 
+  <data name="YourStrengthHasNotChangedButYouHaveDoneMoreSetsThisIsGood" xml:space="preserve"> 
+    <value>Your strength has not changed, but you have done more sets. This is good.</value> 
+  </data> 
+  <data name="YourStrengthHasDecreasedSlightlyButYouHaveDoneMoreSetsOverallThisIsProgress." xml:space="preserve"> 
+    <value>Your strength has decreased slightly, but you have done more sets. Overall, this is progress.</value> 
+  </data> 
+  <data name="IMadeThisExericseEasyToHelpYouRecoverTheNextTimeYouTrain" xml:space="preserve"> 
+    <value>I made this exercise easy to help you recover. The next time you train, you'll be in a great position to smash a new record.</value> 
+  </data> 
+  <data name="ShowWelcomePopUp5Message" xml:space="preserve"> 
+    <value>Here, you see your progression on the chart. I tell you when you break new records, and how much you're improving.</value> 
+  </data> 
+  <data name="ShowWelcomePopUp5Title" xml:space="preserve"> 
+    <value>Nice! You've finished your first exercise</value> 
+  </data> 
+  <data name="DoThisTodayToBuildMuscleFaster" xml:space="preserve"> 
+    <value>Do this today to build muscle faster:</value> 
+  </data> 
+  <data name="BeginExercise" xml:space="preserve"> 
+    <value>Begin Exercise</value> 
+  </data> 
+  <data name="DoThisTodayToBuildMuscleAndBurnFatFaster" xml:space="preserve"> 
+    <value>Do this today to build muscle and burn fat faster:</value> 
+  </data> 
+  <data name="DoThisTodayToProgressFaster" xml:space="preserve"> 
+    <value>Do this today to progress faster:</value> 
+  </data> 
+  <data name="DoThisTodayToGetFitAndStrongFaster" xml:space="preserve"> 
+    <value>Do this today to get fit and strong faster:</value> 
+  </data> 
+  <data name="DoThisTodayToGetFitAndLeanFaster" xml:space="preserve"> 
+    <value>Do this today to get fit and lean faster:</value> 
+  </data> 
+  <data name="DoThisTodayToGetFitAndBurnFatFaster" xml:space="preserve"> 
+    <value>Do this today to get fit and burn fat faster:</value> 
+  </data> 
+  <data name="ShowEasyExercisePopUpTitle" xml:space="preserve"> 
+    <value>Welcome to your first easy exercise!</value> 
+  </data> 
+  <data name="ShowEasyExercisePopUpMessage" xml:space="preserve"> 
+    <value>I've made this exercise easy, to help you recover. Take it easy today. On your next workout, you'll be recovered and in a great position to smash a new record.</value> 
+  </data> 
+  <data name="WarmUp" xml:space="preserve"> 
+    <value>Warm-up:</value> 
+  </data> 
+  <data name="RepsAt" xml:space="preserve"> 
+    <value>reps at</value> 
+  </data> 
+  <data name="Rest" xml:space="preserve"> 
+    <value>rest</value> 
+  </data> 
+  <data name="WorkSets" xml:space="preserve"> 
+    <value>Work sets:</value> 
+  </data> 
+  <data name="ShowWelcomePopUp3Message" xml:space="preserve"> 
+    <value>At the top, you see your history. For now, I've estimated it. Below, you see what to do today. When you're ready, tap "Begin exercise" (bottom).</value> 
+  </data> 
+  <data name="ShowWelcomePopUp3Title" xml:space="preserve"> 
+    <value>Welcome to your first exercise!</value> 
+  </data> 
+  <data name="DoThisNow" xml:space="preserve"> 
+    <value>Do this now:</value> 
+  </data> 
+  <data name="Reps" xml:space="preserve"> 
+    <value>Reps</value> 
+  </data> 
+  <data name="Saveset" xml:space="preserve"> 
+    <value>Save set</value> 
+  </data> 
+  <data name="Superset" xml:space="preserve"> 
+    <value>Superset</value> 
+  </data> 
+  <data name="FinishExercise" xml:space="preserve"> 
+    <value>Finish Exercise</value> 
+  </data> 
+  <data name="ASuperSetIsWhenYouAlternateSetsOfDifferentExercisesYourSets" xml:space="preserve"> 
+    <value>A superset is when you alternate sets of different exercises. Your sets have been saved. Choose your next exercise now. Then return here to finish this exercise.</value> 
+  </data> 
+  <data name="WhatIsASuperset" xml:space="preserve"> 
+    <value>What is a superset?</value> 
+  </data> 
+  <data name="SetsLeftLift" xml:space="preserve"> 
+    <value>sets left—lift</value> 
+  </data> 
+  <data name="times" xml:space="preserve"> 
+    <value>times</value> 
+  </data> 
+  <data name="NowPleaseTellMeHowHardThatWas" xml:space="preserve"> 
+    <value>Now, please tell me how hard that was.</value> 
+  </data> 
+  <data name="ThatWasVeryVeryHard" xml:space="preserve"> 
+    <value>That was very, very hard</value> 
+  </data> 
+  <data name="ICouldHaveDone12MoreRep" xml:space="preserve"> 
+    <value>I could have done 1-2 more</value> 
+  </data> 
+  <data name="ICouldHaveDone34MoreReps" xml:space="preserve"> 
+    <value>I could have done 3-4 more</value> 
+  </data> 
+  <data name="IcouldHaveDone56MoreReps" xml:space="preserve"> 
+    <value>I could have done 5-6 more</value> 
+  </data> 
+  <data name="ICouldHaveDone7PMoreReps" xml:space="preserve"> 
+    <value>I could have done 7+ more</value> 
+  </data> 
+  <data name="PleaseAnswer" xml:space="preserve"> 
+    <value>Please answer</value> 
+  </data> 
+  <data name="ImSorryIDidNotGetYourAnswerINeedToKnow" xml:space="preserve"> 
+    <value>I'm sorry, I did not get your answer. I need to know how hard that set was to adjust your weight on your next workout. Please try again and tap one answer.</value> 
+  </data> 
+  <data name="TryAgain" xml:space="preserve"> 
+    <value>Try again</value> 
+  </data> 
+  <data name="GotItExclamation" xml:space="preserve"> 
+    <value>Got it!</value> 
+  </data> 
+  <data name="YouSaid" xml:space="preserve"> 
+    <value>You said:</value> 
+  </data> 
+  <data name="IWillAdjustAccordingly" xml:space="preserve"> 
+    <value>I'll adjust accordingly.</value> 
+  </data> 
+  <data name="Lift" xml:space="preserve"> 
+    <value>lift</value> 
+  </data> 
+  <data name="time" xml:space="preserve"> 
+    <value>time</value> 
+  </data> 
+  <data name="Sets" xml:space="preserve"> 
+    <value>sets</value> 
+  </data> 
+  <data name="set" xml:space="preserve"> 
+    <value>set</value> 
+  </data> 
+  <data name="AlmostDoneYouCanDoThis" xml:space="preserve"> 
+    <value>Almost done—you can do this!</value> 
+  </data> 
+  <data name="AllSetsDoneCongrats" xml:space="preserve"> 
+    <value>All sets done—congrats!</value> 
+  </data> 
+  <data name="TapFinishExerciseToContinue" xml:space="preserve"> 
+    <value>Tap "Finish Exercise" to continue</value> 
+  </data> 
+  <data name="ShowWelcomePopUp4Message" xml:space="preserve"> 
+    <value>Scientists have found that 1 rest-pause set is just as effective as 3 normal sets (Prestes et al. 2017). Let's warm up and try one. Follow my instructions at the top. Do your first set, and tap "Save set".</value> 
+  </data> 
+  <data name="ShowWelcomePopUp4Title" xml:space="preserve"> 
+    <value>Save time with rest-pause</value> 
+  </data> 
+  <data name="Chart" xml:space="preserve"> 
+    <value>Chart</value> 
+  </data> 
+  <data name="Logs" xml:space="preserve"> 
+    <value>Logs</value> 
+  </data> 
+  <data name="History" xml:space="preserve"> 
+    <value>History</value> 
+  </data> 
+  <data name="Last3Workouts" xml:space="preserve"> 
+    <value>Last 3 workouts</value> 
+  </data> 
+  <data name="LastMonth" xml:space="preserve"> 
+    <value>Last month</value> 
+  </data> 
+  <data name="Last3Months" xml:space="preserve"> 
+    <value>Last 3 months</value> 
+  </data> 
+  <data name="Last6Months" xml:space="preserve"> 
+    <value>Last 6 months</value> 
+  </data> 
+  <data name="LastYear" xml:space="preserve"> 
+    <value>Last year</value> 
+  </data> 
+  <data name="AllTime" xml:space="preserve"> 
+    <value>All time</value> 
+  </data> 
+  <data name="Total" xml:space="preserve"> 
+    <value>total</value> 
+  </data> 
+  <data name="PerRepOnAverage" xml:space="preserve"> 
+    <value>per rep on average</value> 
+  </data> 
+  <data name="MY1RMPROGRESSION" xml:space="preserve"> 
+    <value>MY 1RM PROGRESSION</value> 
+  </data> 
+  <data name="OverTheLast4WeeksYouHaveTrainedTheFollowingExercisesAtLeast3Times" xml:space="preserve"> 
+    <value>Over the last 4 weeks, you have trained the following exercises at least 3 times:</value> 
+  </data> 
+  <data name="AverageOfAllRecentExercises" xml:space="preserve"> 
+    <value>Average of all recent exercises</value> 
+  </data> 
+  <data name="ForTheseExercisesYourCurrentAverage1RMIs" xml:space="preserve"> 
+    <value>. For these exercises, your current average 1RM is {0}.</value> 
+  </data> 
+  <data name="YourPrevious1RMWas" xml:space="preserve"> 
+    <value>Your previous 1RM was</value> 
+  </data> 
+  <data name="ChangeIs" xml:space="preserve"> 
+    <value>Change is</value> 
+  </data> 
+  <data name="SignUpToContinueUsing" xml:space="preserve"> 
+    <value>Sign up to continue using</value> 
+  </data> 
+  <data name="DrMuscleAfterYourFreeTrial" xml:space="preserve"> 
+    <value>Dr. Muscle after your free trial</value> 
+  </data> 
+  <data name="SignUpMonthly" xml:space="preserve"> 
+    <value>Sign up monthly</value> 
+  </data> 
+  <data name="SignUpAnnual" xml:space="preserve"> 
+    <value>Sign up annual</value> 
+  </data> 
+  <data name="RestorePurchase" xml:space="preserve"> 
+    <value>Restore purchase</value> 
+  </data> 
+  <data name="EmailSupport" xml:space="preserve"> 
+    <value>Email Support</value> 
+  </data> 
+  <data name="OnceYouConfirmYourSubscriptionPurchase" xml:space="preserve"> 
+    <value>Once you confirm your subscription purchase, your payment will be charged to your iTunes account, and any unused portion of your free trial will be forfeited.</value> 
+  </data> 
+  <data name="OnceYourSubscriptionIsActiveYourITunesAccountWill" xml:space="preserve"> 
+    <value>Once your subscription is active, your iTunes account will be charged again automatically when your subscription renews at the end of your subscription period, unless you turn off auto-renew at least 24 hours before. You can turn off auto-renew anytime in your iTunes account settings.</value> 
+  </data> 
+  <data name="ByTappingContinueYourPaymentWillBeChargedToYourGooglePlayAccount" xml:space="preserve"> 
+    <value>By tapping Continue, your payment will be charged to your Google Play account, and any unused portion of your free trial will be forfeited.</value> 
+  </data> 
+  <data name="YourSubscriptionWillRenewAutomatically" xml:space="preserve"> 
+    <value>Your subscription will renew automatically until you cancel in your Google Play account settings (you must cancel at least 24 hours before the end of the current period). By tapping Continue, you agree to our Terms of Use and Privacy Policy.</value> 
+  </data> 
+  <data name="YouAlreadyHaveAccess" xml:space="preserve"> 
+    <value>You already have access</value> 
+  </data> 
+  <data name="ThankYou" xml:space="preserve"> 
+    <value>Thank you!</value> 
+  </data> 
+  <data name="Edit" xml:space="preserve"> 
+    <value>Edit</value> 
+  </data> 
+  <data name="Restore" xml:space="preserve"> 
+    <value>Restore</value> 
+  </data> 
+  <data name="Swap" xml:space="preserve"> 
+    <value>Swap</value> 
+  </data> 
+  <data name="Loading" xml:space="preserve"> 
+    <value>Loading...</value> 
+  </data> 
+  <data name="Welcome" xml:space="preserve"> 
+    <value>Welcome</value> 
+  </data> 
+  <data name="WehaveSentYourAccountDetailsAndTipsToYourEmail" xml:space="preserve"> 
+    <value>We've sent your account details and tips to your email</value> 
+  </data> 
+  <data name="SinceYouAreNewLetsTryAWorkoutDontWorryYouCanResetItLater" xml:space="preserve"> 
+    <value>Since you're new, let's try a workout. Don't worry: you can reset it later.</value> 
+  </data> 
+  <data name="TryAWorkout" xml:space="preserve"> 
+    <value>Try a workout</value> 
+  </data> 
+  <data name="ConnectionError" xml:space="preserve"> 
+    <value>Connection error</value> 
+  </data> 
+  <data name="YourProgram" xml:space="preserve"> 
+    <value>Your program:</value> 
+  </data> 
+  <data name="TodaysWorkout" xml:space="preserve"> 
+    <value>Today's workout:</value> 
+  </data> 
+  <data name="WorkoutsBeforeYouLevelUp" xml:space="preserve"> 
+    <value>workouts before you level up</value> 
+  </data> 
+  <data name="YourProgramNotSetUp" xml:space="preserve"> 
+    <value>Your program: Not set up</value> 
+  </data> 
+  <data name="TodaysWorkoutNotSetUp" xml:space="preserve"> 
+    <value>Today's workout: Not set up</value> 
+  </data> 
+  <data name="YourProgramIs" xml:space="preserve"> 
+    <value>Your program is:</value> 
+  </data> 
+  <data name="TodaysWorkoutIs" xml:space="preserve"> 
+    <value>Today's workout is:</value> 
+  </data> 
+  <data name="TodaysWorkoutTitle" xml:space="preserve"> 
+    <value>Today's workout</value> 
+  </data> 
+  <data name="ManageWorkouts" xml:space="preserve"> 
+    <value>Manage workouts</value> 
+  </data> 
+  <data name="ManageExercises" xml:space="preserve"> 
+    <value>Manage exercises</value> 
+  </data> 
+  <data name="LetsSetUpYour" xml:space="preserve"> 
+    <value>Let's set up your</value> 
+  </data> 
+  <data name="WhatsYourBodyWeight" xml:space="preserve"> 
+    <value>What's your body weight</value> 
+  </data> 
+  <data name="in" xml:space="preserve"> 
+    <value>in</value> 
+  </data> 
+  <data name="HowMuchCanYou" xml:space="preserve"> 
+    <value>How much can you</value> 
+  </data> 
+  <data name="VeryVeryVeryEasily6TimesIwillImproveOnYourGuessAfterYourFirstWorkout" xml:space="preserve"> 
+    <value>very, very, very easily 6 times? I'll improve on your guess after your first workout. If you're using dumbbells, enter the weight for 1 hand.</value> 
+  </data> 
+  <data name="VeryEasily6TimesIWillImproveOnYourGuessAfterYourFirstWorkout" xml:space="preserve"> 
+    <value>very easily 6 times? I'll improve on your guess after your first workout. If you're using dumbbells, enter the weight for 1 hand.</value> 
+  </data> 
+  <data name="TapToEnterYourWeight" xml:space="preserve"> 
+    <value>Tap to enter your weight</value> 
+  </data> 
+  <data name="HowMany" xml:space="preserve"> 
+    <value>How many</value> 
+  </data> 
+  <data name="CanYouDo" xml:space="preserve"> 
+    <value>can you do?</value> 
+  </data> 
+  <data name="TapToEnterHowMany" xml:space="preserve"> 
+    <value>Tap to enter how many</value> 
+  </data> 
+  <data name="SetupComplete" xml:space="preserve"> 
+    <value>Setup complete</value> 
+  </data> 
+  <data name="SetupCompleteExerciseNow" xml:space="preserve"> 
+    <value>setup complete. Exercise now?</value> 
+  </data> 
+  <data name="SelectLanguage" xml:space="preserve"> 
+    <value>Select Language</value> 
+  </data> 
+  <data name="Change" xml:space="preserve"> 
+    <value>Change</value> 
+  </data> 
+  <data name="HomeScreen" xml:space="preserve"> 
+    <value>Home screen</value> 
+  </data> 
+  <data name="TrainingLogAndCharts" xml:space="preserve"> 
+    <value>Training log &amp; charts</value> 
+  </data> 
+  <data name="SubscriptionInfo" xml:space="preserve"> 
+    <value>Subscription info</value> 
+  </data> 
+  <data name="Settings" xml:space="preserve"> 
+    <value>Settings</value> 
+  </data> 
+  <data name="LogOut" xml:space="preserve"> 
+    <value>Log out</value> 
+  </data> 
+  <data name="REPRANGE" xml:space="preserve"> 
+    <value>REP RANGE</value> 
+  </data> 
+  <data name="YouProgressFasterWhenYouChangeRepsOftenChooseARangeYourRepsWillChangeAutomaticallyEveryWorkout" xml:space="preserve"> 
+    <value>You progress faster when you change reps often. Choose a range. Your reps will vary to match your range and equipment increments.</value>
+  </data> 
+  <data name="LearnMore" xml:space="preserve"> 
+    <value>Learn more</value> 
+  </data> 
+  <data name="FiveToTwelveReps" xml:space="preserve"> 
+    <value>5-12 reps</value> 
+  </data> 
+  <data name="EightToFifteenReps" xml:space="preserve"> 
+    <value>8-15 reps</value> 
+  </data> 
+  <data name="TwelveToTwentyReps" xml:space="preserve"> 
+    <value>12-20 reps</value> 
+  </data> 
+  <data name="Min" xml:space="preserve"> 
+    <value>Min:</value> 
+  </data> 
+  <data name="Max" xml:space="preserve"> 
+    <value>Max:</value> 
+  </data> 
+  <data name="SaveCustomReps" xml:space="preserve"> 
+    <value>Save custom reps</value> 
+  </data> 
+  <data name="SETSTYLE" xml:space="preserve"> 
+    <value>SET STYLE</value> 
+  </data> 
+  <data name="RestPauseSetsAreHarderButTheyHalveWorkoutTime" xml:space="preserve"> 
+    <value>Rest-pause sets are harder, but they halve workout time.</value> 
+  </data> 
+  <data name="NormalSets" xml:space="preserve"> 
+    <value>Normal sets</value> 
+  </data> 
+  <data name="RestPauseSets" xml:space="preserve"> 
+    <value>Rest-pause sets</value> 
+  </data> 
+  <data name="UNITS" xml:space="preserve"> 
+    <value>UNITS</value> 
+  </data> 
+  <data name="BACKGROUNDIMAGE" xml:space="preserve"> 
+    <value>BACKGROUND IMAGE</value> 
+  </data> 
+  <data name="Male" xml:space="preserve"> 
+    <value>Male</value> 
+  </data> 
+  <data name="Female" xml:space="preserve"> 
+    <value>Female</value> 
+  </data> 
+  <data name="NoImage" xml:space="preserve"> 
+    <value>No image</value> 
+  </data> 
+  <data name="LANGUAGE" xml:space="preserve"> 
+    <value>LANGUAGE</value> 
+  </data> 
+  <data name="VIBRATE" xml:space="preserve"> 
+    <value>VIBRATE</value> 
+  </data> 
+  <data name="SOUND" xml:space="preserve"> 
+    <value>SOUND</value> 
+  </data> 
+  <data name="AUTOSTART" xml:space="preserve"> 
+    <value>AUTOSTART</value> 
+  </data> 
+  <data name="AUTOMATCHREPS" xml:space="preserve"> 
+    <value>AUTOMATCH REPS</value> 
+  </data> 
+  <data name="AutomaticallyChangeTimerDurationToMatchRecommendedRepsAndOptimizeMuscleHypertrophy" xml:space="preserve"> 
+    <value>Automatically change timer duration to match recommended reps and optimize muscle hypertrophy</value> 
+  </data> 
+  <data name="START" xml:space="preserve"> 
+    <value>START</value> 
+  </data> 
+  <data name="STOP" xml:space="preserve"> 
+    <value>STOP</value> 
+  </data> 
+  <data name="LowRepsBuildMoreStrengthHighRepsAreEasierOnYourJoints" xml:space="preserve"> 
+    <value>Low reps build more strength. High reps are easier on your joints. They also burn more fat. For fat loss, your diet is important. Contact support for free, custom advice.</value> 
+  </data> 
+  <data name="AllRepsBuildMuscle" xml:space="preserve"> 
+    <value>All reps build muscle</value> 
+  </data> 
+  <data name="SetsOfLessThan5RepsAreVeryHeavyAndDoNotBuildMuscleFasterForYourSafetyMinimumRepsIs5" xml:space="preserve"> 
+    <value>Sets of less than 5 reps are very heavy and do not build muscle faster.</value> 
+  </data> 
+  <data name="LessThan5Reps" xml:space="preserve"> 
+    <value>Less than 5 reps?</value> 
+  </data> 
+  <data name="PleaseIncreaseMaxRepsToIncreaseMinimumRepsFurther" xml:space="preserve"> 
+    <value>Please increase max reps to increase minimum reps further.</value> 
+  </data> 
+  <data name="SetsOfMoreThan30RepsAreRatherPainfulTakeALongTimeToDoAndDoNotBuildMuscleFasterForBestResultsMaxRepsIs30" xml:space="preserve"> 
+    <value>Sets of more than 30 reps are rather painful, take a long time to do, and do not build muscle faster.</value> 
+  </data> 
+  <data name="MoreThan30Reps" xml:space="preserve"> 
+    <value>More than 30 reps?</value> 
+  </data> 
+  <data name="PleaseDecreaseMinimumRepsToDecreaseMaxRepsFurther" xml:space="preserve"> 
+    <value>Please decrease minimum reps to decrease max reps further.</value> 
+  </data> 
+  <data name="SetsOfMoreThan30RepsAreRatherpainfulTakeALongTime" xml:space="preserve"> 
+    <value>Sets of more than 30 reps are rather painful, take a long time</value> 
+  </data> 
+  <data name="ChooseEnvironment" xml:space="preserve"> 
+    <value>Choose environment</value> 
+  </data> 
+  <data name="Month" xml:space="preserve"> 
+    <value>month</value> 
+  </data> 
+  <data name="Year" xml:space="preserve"> 
+    <value>year</value> 
+  </data> 
+  <data name="Version" xml:space="preserve"> 
+    <value>Version</value> 
+  </data> 
+  <data name="Build" xml:space="preserve"> 
+    <value>Build</value> 
+  </data> 
+  <data name="WhatAreTheSmallestWeightIncrementsAvailableToU" xml:space="preserve"> 
+    <value>What are the smallest weight increments available to you? If you're not sure, enter 1. You can change this later.</value> 
+  </data> 
+  <data name="TapToEnterYourIncrements" xml:space="preserve"> 
+    <value>Tap to enter your increments (e.g. 1)</value> 
+  </data> 
+  <data name="Save" xml:space="preserve"> 
+    <value>Save</value> 
+  </data> 
+  <data name="Increments" xml:space="preserve"> 
+    <value>Increments</value> 
+  </data> 
+  <data name="TapToSet" xml:space="preserve"> 
+    <value>Tap to set</value> 
+  </data> 
+  <data name="PleaseEntryYourIncrements" xml:space="preserve"> 
+    <value>Please enter your increments.</value> 
+  </data> 
+  <data name="FeelStrongToday" xml:space="preserve"> 
+    <value>Feel strong today?</value> 
+  </data> 
+  <data name="TryAChallengeYouWillDoAsManyRepsAsYouCan" xml:space="preserve"> 
+    <value>Try a challenge! You will do as many reps as you can on your first work set. Be safe: stop before your form breaks down.</value> 
+  </data> 
+  <data name="Challenge" xml:space="preserve"> 
+    <value>Challenge</value> 
+  </data> 
+  <data name="maxLowecase" xml:space="preserve"> 
+    <value>max</value> 
+  </data> 
+  <data name="GiveMeAChallenge" xml:space="preserve"> 
+    <value>Give me a challenge</value> 
+  </data> 
+  <data name="Weight" xml:space="preserve"> 
+    <value>Weight</value> 
+  </data> 
+  <data name="SaveIncrements" xml:space="preserve"> 
+    <value>Save increments</value> 
+  </data> 
+  <data name="FinishAndSaveWorkoutQuestion" xml:space="preserve"> 
+    <value>Finish &amp; save workout?</value> 
+  </data> 
+  <data name="CheckYourMail" xml:space="preserve"> 
+    <value>Check your email</value> 
+  </data> 
+  <data name="YourProgramIsReady" xml:space="preserve"> 
+    <value>Your program is ready</value> 
+  </data> 
+  <data name="BackupAutomaticallyAccessAnywhere" xml:space="preserve"> 
+    <value>Back up automatically—access anywhere</value> 
+  </data> 
+  <data name="PleaseChooseAGoal" xml:space="preserve"> 
+    <value>Please choose a goal</value> 
+  </data> 
+  <data name="DontWorryYouCanCustomizeLater" xml:space="preserve"> 
+    <value>Don't worry: you can customize everything later.</value> 
+  </data> 
+  <data name="DontWorryLiftingWightsWontMakeyouBulky" xml:space="preserve"> 
+    <value>Don't worry: lifting weights won't make you bulky. Plus, you can customize everything later.</value> 
+  </data> 
+  <data name="BigMenOftenSay" xml:space="preserve"> 
+    <value>Big men often say...</value> 
+  </data> 
+  <data name="TheyWantToGetRidOfThisBodyFatAndLoseMyGut" xml:space="preserve"> 
+    <value>They want to: 'Get rid of this body fat and lose my gut. Then pack on muscle.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="MidsizeMenOftenSay" xml:space="preserve"> 
+    <value>Midsize men often say...</value> 
+  </data> 
+  <data name="TheyWantToGetFitStrongAndMoreMuscularGainLeanMassAndHaveAVisibleSetOf" xml:space="preserve"> 
+    <value>They want to: 'Get fit, strong, and more muscular. Gain lean mass and have a visible set of abs.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="SkinnyMenOften" xml:space="preserve"> 
+    <value>Skinny men often...</value> 
+  </data> 
+  <data name="HaveAHardTimeGainingWeightSomeSayIEatConstantlyAndWorkMyButtOff" xml:space="preserve"> 
+    <value>Have a hard time gaining weight. Some say: 'I eat constantly and work my butt off, but I just don't gain. Tired of being a sack of skin and bones.' Can you relate</value> 
+  </data> 
+  <data name="SkinnyMenAlsoOftenSay" xml:space="preserve"> 
+    <value>Skinny men also often say...</value> 
+  </data> 
+  <data name="TheyWantToPutOnLeanMassWhileKeepingmyAbsDefinedGainHealthy" xml:space="preserve"> 
+    <value>They want to: 'Put on lean mass while keeping my abs defined. Gain healthy weight and be fit.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="WhatsYourBodyType" xml:space="preserve"> 
+    <value>What's your body type?</value> 
+  </data> 
+  <data name="AreYouABeginnerWithNoEquipment" xml:space="preserve"> 
+    <value>Are you a beginner training at home with no equipment?</value> 
+  </data> 
+  <data name="IWillSimplyYourAccountSetupAndGiveYouBodyWeightExercisesOnly" xml:space="preserve"> 
+    <value>I'll simplify your account setup and give you bodyweight exercises only. You can change this later.</value> 
+  </data> 
+  <data name="YesIMBeginner" xml:space="preserve"> 
+    <value>Yes, beginner at home</value> 
+  </data> 
+  <data name="NoImMoreAdvanced" xml:space="preserve"> 
+    <value>No, gym / more experienced</value> 
+  </data> 
+  <data name="HowLongHaveYouBeenWorkingOut" xml:space="preserve"> 
+    <value>How long have you been working out?</value> 
+  </data> 
+  <data name="YourProgramStartsAtYourLevelItLevelsUpWithAsYouProgress" xml:space="preserve"> 
+    <value>Your program starts at your level. It levels up with you as you progress.</value> 
+  </data> 
+  <data name="OneToThreeYears" xml:space="preserve"> 
+    <value>1-3 years</value> 
+  </data> 
+  <data name="MoreThan3Years" xml:space="preserve"> 
+    <value>More than 3 years</value> 
+  </data> 
+  <data name="HomeGymBasicEqipment" xml:space="preserve"> 
+    <value>Home gym (basic equipment)</value> 
+  </data> 
+  <data name="HomeBodtweightOnly" xml:space="preserve"> 
+    <value>Home (bodyweight only)</value> 
+  </data> 
+  <data name="WhatWeightIncrementsDoYouUse" xml:space="preserve"> 
+    <value>What weight increments do you use?</value> 
+  </data> 
+  <data name="IfYouAreNotSureEnter1YouCanChangeLater" xml:space="preserve"> 
+    <value>If you're not sure, enter 1. You can change this later.</value> 
+  </data> 
+  <data name="YourProgramLevelsUpAutomatically" xml:space="preserve"> 
+    <value>Your program levels up automatically</value> 
+  </data> 
+  <data name="IUpdateItEveryTimeYouWorkOutBuild" xml:space="preserve"> 
+    <value>I update it every time you work out, so you always build muscle as fast as possible.</value> 
+  </data> 
+  <data name="IUpdateItEveryTimeYouWorkOutBuildNBuildFat" xml:space="preserve"> 
+    <value>I update it every time you work out, so you always build muscle and burn fat as fast as possible.</value> 
+  </data> 
+  <data name="IUpdateItEveryTimeYouWorkOutBurnFatFaster" xml:space="preserve"> 
+    <value>I update it every time you work out, so you always burn fat as fast as possible.</value> 
+  </data> 
+  <data name="WarningIMNOtLikeOtherAppsIGuideYouInRealTimeBased" xml:space="preserve"> 
+    <value>Warning: this app is different. You now have a smart program. Every time you complete a set, your program updates to match your progress, and speed up future progress.</value> 
+  </data> 
+  <data name="IUnderstand" xml:space="preserve"> 
+    <value>I understand</value> 
+  </data> 
+  <data name="SuggestedProgram" xml:space="preserve"> 
+    <value>Suggested program:</value> 
+  </data> 
+  <data name="FullFiguredOften" xml:space="preserve"> 
+    <value>Full-figured often...</value> 
+  </data> 
+  <data name="HaveAHardTimeLosingWeightGetFatLookingAtFood" xml:space="preserve"> 
+    <value>Have a hard time losing weight. Some say: 'I get fat just looking at food! So frustrating.' Can you relate?</value> 
+  </data> 
+  <data name="FullFiguredWomenAlsoOftenSay" xml:space="preserve"> 
+    <value>Full-figured women also often say...</value> 
+  </data> 
+  <data name="TheyWantToGetFitAndStrongWhileDroppingBodyFatShapeArms" xml:space="preserve"> 
+    <value>They want to: 'Get fit and strong while dropping body fat. Shape arms, legs, and booty, and feel more comfortable in my body.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="ThankYouTitle" xml:space="preserve"> 
+    <value>Thank you</value> 
+  </data> 
+  <data name="MidsizeWomenOftenSay" xml:space="preserve"> 
+    <value>Midsize women often say...</value> 
+  </data> 
+  <data name="TheyWantToGetFitAndStrongLeanerAndComfortableInMyBody" xml:space="preserve"> 
+    <value>They want to: 'Get fit and strong, leaner, and comfortable in my body. Firm legs and booty, and a flat stomach.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="TheyWantToGetFitAndStrongWhileMaintaingLeanPhysiqueAddSizeToLegsBootyDenseLookingMuscleOverall" xml:space="preserve"> 
+    <value>They want to: 'Get fit and strong while maintaining a lean physique. Add size to legs, booty, and dense looking muscle overall.' Would you like me to set up your program with that goal in mind? I'll also make sure your program is balanced, safe, and effective.</value> 
+  </data> 
+  <data name="PleaseTellMeAboutYourBodyType" xml:space="preserve"> 
+    <value>Please tell me about your body type:</value> 
+  </data> 
+  <data name="Setup" xml:space="preserve"> 
+    <value>Setup</value> 
+  </data> 
+  <data name="Video" xml:space="preserve"> 
+    <value>Video</value> 
+  </data> 
+  <data name="FirstTimeHereTryAWorkoutDontWorryYouCanResetItLater" xml:space="preserve"> 
+    <value>First time here? Try a workout. Don't worry: you can reset it later.</value> 
+  </data> 
+  <data name="UpdateReps" xml:space="preserve"> 
+    <value>Update Reps</value> 
+  </data> 
+  <data name="EnterWeights" xml:space="preserve"> 
+    <value>Enter weight</value> 
+  </data> 
+  <data name="LanguageLowercase" xml:space="preserve"> 
+    <value>Language</value> 
+  </data> 
+  <data name="No" xml:space="preserve"> 
+    <value>No</value> 
+  </data> 
+  <data name="Program" xml:space="preserve"> 
+    <value>Program</value> 
+  </data> 
+  <data name="WelcomeBack" xml:space="preserve"> 
+    <value>Welcome back</value> 
+  </data> 
+  <data name="Today" xml:space="preserve"> 
+    <value>Today</value> 
+  </data> 
+  <data name="CurrentMaxEstimate" xml:space="preserve"> 
+    <value>Current max estimate</value> 
+  </data> 
+  <data name="PreviousMaxEstimateHomeScreen" xml:space="preserve"> 
+    <value>Previous max estimate</value> 
+  </data> 
+  <data name="Progress" xml:space="preserve"> 
+    <value>Progress</value> 
+  </data> 
+  <data name="LastWorkout" xml:space="preserve"> 
+    <value>Last workout</value> 
+  </data> 
+  <data name="WorkoutsDone" xml:space="preserve"> 
+    <value>workouts done</value> 
+  </data> 
+  <data name="Lifted" xml:space="preserve"> 
+    <value>lifted</value> 
+  </data> 
+  <data name="StartTodaysWorkout" xml:space="preserve"> 
+    <value>Start today's workout</value> 
+  </data> 
+  <data name="DayAgo" xml:space="preserve"> 
+    <value>day ago</value> 
+  </data> 
+  <data name="AMonthAgo" xml:space="preserve"> 
+    <value>a month ago</value> 
+  </data> 
+  <data name="AYearAgo" xml:space="preserve"> 
+    <value>a year ago</value> 
+  </data> 
+  <data name="TodayLowercase" xml:space="preserve"> 
+    <value>today</value> 
+  </data> 
+  <data name="UpNext" xml:space="preserve"> 
+    <value>Up next</value> 
+  </data> 
+  <data name="StartCapitalized" xml:space="preserve"> 
+    <value>Start</value> 
+  </data> 
+  <data name="EnterNewReps" xml:space="preserve"> 
+    <value>Enter new reps</value> 
+  </data> 
+  <data name="MaxStrengthProgression" xml:space="preserve"> 
+    <value>Max strength progression</value> 
+  </data> 
+  <data name="VolumeSetsProgression" xml:space="preserve"> 
+    <value>Volume (sets) progression</value> 
+  </data> 
+  <data name="FullscreenUppercase" xml:space="preserve"> 
+    <value>FULLSCREEN</value> 
+  </data> 
+  <data name="Skip" xml:space="preserve"> 
+    <value>Skip</value> 
+  </data> 
+  <data name="Hide" xml:space="preserve"> 
+    <value>Hide</value> 
+  </data> 
+  <data name="Seconds" xml:space="preserve"> 
+    <value>seconds</value> 
+  </data> 
+  <data name="Restfor" xml:space="preserve"> 
+    <value>Rest for</value> 
+  </data> 
+  <data name="WorkSetsNoColon" xml:space="preserve"> 
+    <value>Work sets</value> 
+  </data> 
+  <data name="MaxStrength" xml:space="preserve"> 
+    <value>Max strength</value> 
+  </data> 
+  <data name="WorkoutDone" xml:space="preserve"> 
+    <value>workout done</value> 
+  </data> 
+  <data name="TryAWorkoutToSeeYourProgressInThisChart" xml:space="preserve"> 
+    <value>Try a workout to see your progress in this chart</value> 
+  </data> 
+  <data name="GetReadyFor" xml:space="preserve"> 
+    <value>Get ready for</value> 
+  </data> 
+  <data name="StrengthAndSetsLast3Weeks" xml:space="preserve"> 
+    <value>STRENGTH AND SETS: LAST 3 WEEKS</value> 
+  </data> 
+  <data name="Notes" xml:space="preserve"> 
+    <value>NOTES</value> 
+  </data> 
+  <data name="VideoAndInstruction" xml:space="preserve"> 
+    <value>Video and instructions</value> 
+  </data> 
+  <data name="ResetHistory" xml:space="preserve"> 
+    <value>Reset history</value> 
+  </data> 
+  <data name="SettingsUppercase" xml:space="preserve"> 
+    <value>SETTINGS</value> 
+  </data> 
+  <data name="UseCustomReps" xml:space="preserve"> 
+    <value>Use custom reps</value> 
+  </data> 
+  <data name="UseCustomSetStyle" xml:space="preserve"> 
+    <value>Use custom set style</value> 
+  </data> 
+  <data name="UseCustomIncrements" xml:space="preserve"> 
+    <value>Use custom increments</value> 
+  </data> 
+  <data name="IncrementsCapital" xml:space="preserve"> 
+    <value>INCREMENTS</value> 
+  </data> 
+  <data name="MoreUppercase" xml:space="preserve"> 
+    <value>MORE</value> 
+  </data> 
+  <data name="TryaWorkoutToSee" xml:space="preserve"> 
+    <value>Try a workout to see </value> 
+  </data> 
+  <data name="YourProgressInThisChart" xml:space="preserve"> 
+    <value>your progress in this chart</value> 
+  </data> 
+  <data name="MaxStrengthCapital" xml:space="preserve"> 
+    <value>MAX STRENGTH</value> 
+  </data> 
+  <data name="WorkSetsCapital" xml:space="preserve"> 
+    <value>WORK SETS</value> 
+  </data> 
+  <data name="MinValueShouldNotGreaterThenMax" xml:space="preserve"> 
+    <value>Min value should not greater then max</value> 
+  </data> 
+  <data name="Bar" xml:space="preserve"> 
+    <value>Bar</value> 
+  </data> 
+  <data name="Plates" xml:space="preserve"> 
+    <value>Plates</value> 
+  </data> 
+  <data name="PlatesCapital" xml:space="preserve"> 
+    <value>PLATES</value> 
+  </data> 
+  <data name="Equipment" xml:space="preserve"> 
+    <value>Equipment</value> 
+  </data> 
+  <data name="EnterNewCount" xml:space="preserve"> 
+    <value>Enter new count</value> 
+  </data> 
+  <data name="TapToEnterNewPlates" xml:space="preserve"> 
+    <value>Tap to enter new plates</value> 
+  </data> 
+  <data name="EditPlateCount" xml:space="preserve"> 
+    <value>Edit plate count</value> 
+  </data> 
+  <data name="AddPlateWeight" xml:space="preserve"> 
+    <value>Add plate weight</value> 
+  </data> 
+  <data name="EnterNewWeightIn" xml:space="preserve"> 
+    <value>Enter new weight in</value> 
+  </data> 
+  <data name="EditPlateWeight" xml:space="preserve"> 
+    <value>Edit plate weight</value> 
+  </data> 
+  <data name="DeletePlates" xml:space="preserve"> 
+    <value>Delete Plates</value> 
+  </data> 
+  <data name="AddPlateCount" xml:space="preserve"> 
+    <value>Add plate count</value> 
+  </data> 
+  <data name="ChatBeta" xml:space="preserve"> 
+    <value>AI Chat</value> 
+  </data> 
+  <data name="CongYouHaveBeenWorkingOutFor" xml:space="preserve"> 
+    <value>Congratulations! You've been working out for</value> 
+  </data> 
+  <data name="HowsYourExperienceWithDrMuscle" xml:space="preserve"> 
+    <value>How's your experience with Dr. Muscle?</value> 
+  </data> 
+  <data name="GreatYouHaveBeenWorkingOutFor" xml:space="preserve"> 
+    <value>Great! You've been working out for</value> 
+  </data> 
+  <data name="Days" xml:space="preserve"> 
+    <value>days</value> 
+  </data> 
+  <data name="GreatYourFreeTrialEndsIn" xml:space="preserve"> 
+    <value>Great! Your free trial ends in</value> 
+  </data> 
+  <data name="WouldYouLikeToLearnMoreAboutSigningUp" xml:space="preserve"> 
+    <value>Would you like to learn more about signing up?</value> 
+  </data> 
+  <data name="months" xml:space="preserve"> 
+    <value>months</value> 
+  </data> 
+  <data name="GreatExclamation" xml:space="preserve"> 
+    <value>Great!</value> 
+  </data> 
+  <data name="RateUsOnStore" xml:space="preserve"> 
+    <value>Rate us on app store?</value> 
+  </data> 
+  <data name="MaybeLater" xml:space="preserve"> 
+    <value>Maybe later</value> 
+  </data> 
+  <data name="InviteAFriendToTryDrMuscleForFree" xml:space="preserve"> 
+    <value>Invite a friend to try Dr. Muscle for free?</value> 
+  </data> 
+  <data name="GreatNewWorkoutApp" xml:space="preserve"> 
+    <value>Great new workout app</value> 
+  </data> 
+  <data name="SendUsAQuickEmail" xml:space="preserve"> 
+    <value>Send us a quick email?</value> 
+  </data> 
+  <data name="WeBelieveYourExperienceShouldBeSolidHowCanWeImprove" xml:space="preserve"> 
+    <value>We believe your experience should be a solid 10/10. How can we improve?</value> 
+  </data> 
+  <data name="SendEmail" xml:space="preserve"> 
+    <value>Send email</value> 
+  </data> 
+  <data name="BadSorryToHearThat" xml:space="preserve"> 
+    <value>Bad—Sorry to hear that</value> 
+  </data> 
+  <data name="WeBelieveYourExperienceShouldBeSolidSendQuickEmailHowCanWeImprove" xml:space="preserve"> 
+    <value>We believe your experience should be a solid 10/10. Please send us a quick email. How can we improve?</value> 
+  </data> 
+  <data name="GoodButCouldBeImproved" xml:space="preserve"> 
+    <value>Good, but could be improved</value> 
+  </data> 
+  <data name="Bad" xml:space="preserve"> 
+    <value>Bad</value> 
+  </data> 
+  <data name="SlideToAdjustBarWeight" xml:space="preserve"> 
+    <value>Slide to adjust bar weight</value> 
+  </data> 
+  <data name="TwoWorkSetsPerExercise" xml:space="preserve"> 
+    <value>2 work sets per exercise</value> 
+  </data> 
+  <data name="ThirtyMinMode" xml:space="preserve"> 
+    <value>30-min mode</value> 
+  </data> 
+  <data name="QUICKMODE" xml:space="preserve"> 
+    <value>QUICK MODE</value> 
+  </data> 
+  <data name="GroupChatBeta" xml:space="preserve"> 
+    <value>Group chat</value> 
+  </data> 
+  <data name="Workouts" xml:space="preserve"> 
+    <value>Workouts</value> 
+  </data> 
+  <data name="GroupChatIsPayingSubscribeOnly" xml:space="preserve"> 
+    <value>Chat with support 1-on-1 free or sign up to unlock group chat</value> 
+  </data> 
+  <data name="Send" xml:space="preserve"> 
+    <value>Send</value> 
+  </data> 
+  <data name="AreYouSureYouWantToExit" xml:space="preserve"> 
+    <value>Are you sure you want to exit?</value> 
+  </data> 
+  <data name="Exit" xml:space="preserve"> 
+    <value>Exit</value> 
+  </data> 
+  <data name="ChooseAnotherWorkout" xml:space="preserve"> 
+    <value>Choose another workout</value> 
+  </data> 
+  <data name="EnterUnlockCode" xml:space="preserve"> 
+    <value>Enter unlock code</value> 
+  </data> 
+  <data name="InvalidCode" xml:space="preserve"> 
+    <value>Invalid code</value> 
+  </data> 
+  <data name="UnlockProgram" xml:space="preserve"> 
+    <value>Unlock program</value> 
+  </data> 
+  <data name="UnlockCode" xml:space="preserve"> 
+    <value>Unlock Code</value> 
+  </data> 
+  <data name="UnlockAnotherProgram" xml:space="preserve"> 
+    <value>Unlock another program</value> 
+  </data> 
+  <data name="TryCodeForSurprise" xml:space="preserve"> 
+    <value>Try code 123456 for a surprise!</value> 
+  </data> 
+  <data name="Support" xml:space="preserve"> 
+    <value>Support</value> 
+  </data> 
+  <data name="TapHereFor11Chat" xml:space="preserve"> 
+    <value>Tap here for 1-on-1 support</value> 
+  </data> 
+  <data name="HumanSupport" xml:space="preserve"> 
+    <value>Human support</value> 
+  </data> 
+  <data name="ChatWithSupport" xml:space="preserve"> 
+    <value>Chat with support</value> 
+  </data> 
+  <data name="GroupChat" xml:space="preserve"> 
+    <value>Group chat</value> 
+  </data> 
+  <data name="RestPauseSetsAreHarderButMakeYourWorkouts59Faster" xml:space="preserve"> 
+    <value>Rest-pause sets are harder, but make your workouts 59% faster</value> 
+  </data> 
+  <data name="Featured" xml:space="preserve"> 
+    <value>Featured</value> 
+  </data> 
+  <data name="Caution" xml:space="preserve"> 
+    <value>Take a day off?</value> 
+  </data> 
+  <data name="YouHaveBeenWorkingOut" xml:space="preserve"> 
+    <value>You've been working out</value> 
+  </data> 
+  <data name="DaysInARowISuggestTalkingADayOffAreYouSureYouWantToWorkOutToday" xml:space="preserve"> 
+    <value>days in a row. I suggest taking a day off. Are you sure you want to work out today?</value> 
+  </data> 
+  <data name="WorkOut" xml:space="preserve"> 
+    <value>Work out</value> 
+  </data> 
+  <data name="WelcomeBackExclamination" xml:space="preserve"> 
+    <value>Welcome back!</value> 
+  </data> 
+  <data name="YourLastWorkoutWas" xml:space="preserve"> 
+    <value>Your last workout was</value> 
+  </data> 
+  <data name="DaysAgoYouMayNeedToAdjustYourWeightsLetsSee" xml:space="preserve"> 
+    <value>days ago. I may recommend a light session for some exercises. Work out now?</value> 
+  </data> 
+  <data name="WorkOutNow" xml:space="preserve"> 
+    <value>Work out now</value> 
+  </data> 
+  <data name="TheLastTimeYouDid" xml:space="preserve"> 
+    <value>The last time you trained</value> 
+  </data> 
+  <data name="was" xml:space="preserve"> 
+    <value>was</value> 
+  </data> 
+  <data name="DaysAgoYouShouldBeFullyRecoveredDoExtraSet" xml:space="preserve"> 
+    <value>days ago. You should be fully recovered. Do 1 extra set?</value> 
+  </data> 
+  <data name="AddOneSet" xml:space="preserve"> 
+    <value>Add 1 set</value> 
+  </data> 
+  <data name="DaysAgoDoALightSessionToRecover" xml:space="preserve"> 
+    <value>days ago. Do a light session to ease back into it?</value> 
+  </data> 
+  <data name="LightSession" xml:space="preserve"> 
+    <value>Light session</value> 
+  </data> 
+  <data name="GoodMorning" xml:space="preserve"> 
+    <value>Good morning</value> 
+  </data> 
+  <data name="GoodAfternoon" xml:space="preserve"> 
+    <value>Good afternoon</value> 
+  </data> 
+  <data name="GoodEvening" xml:space="preserve"> 
+    <value>Good evening</value> 
+  </data> 
+  <data name="Hi" xml:space="preserve"> 
+    <value>Hi!</value> 
+  </data> 
+  <data name="WelcomeToDrMuscleIMCarlAndIWillHelp" xml:space="preserve"> 
+    <value>Welcome to Dr. Muscle. I'm Carl and I'll help you get in shape.</value> 
+  </data> 
+  <data name="ThatsMeGettingMyPhDInExerciseStatics" xml:space="preserve"> 
+    <value>That's me getting my PhD in exercise statistics:</value> 
+  </data> 
+  <data name="IHaveBeenACoachAllMyLifeAndATrainerForTheCandadianForcesIHaveHelped" xml:space="preserve"> 
+    <value>Getting in shape is hard. It requires time, knowledge, and motivation. To help you with all 3, I built this new technology. It automates everything so you can get in shape fast without the guesswork.</value> 
+  </data> 
+  <data name="ThisAppIsLikeATrainerInYourPhoneThatGuidesYou" xml:space="preserve"> 
+    <value>It's like a trainer in your phone that guides you in real time. Let's start by creating your custom program. Are you a man or a woman? Men and women often have different goals.</value> 
+  </data> 
+  <data name="LetsCustomizeYourProgramCanIAskIfYouAreAManOrWoman" xml:space="preserve"> 
+    <value>Let's customize your program. Can I ask if you're a man, or a woman?</value> 
+  </data> 
+  <data name="ManOrWoman" xml:space="preserve"> 
+    <value>Are you a man or a woman?</value> 
+  </data> 
+  <data name="OkAManMenOftenSayIWantToGainLeanMassAndHaveAVisibleSetOfAbs" xml:space="preserve"> 
+    <value>I'm customizing your program to make it safe and healthy. I can also help you focus on...</value> 
+  </data> 
+  <data name="BuildingMuscle" xml:space="preserve"> 
+    <value>Building muscle</value> 
+  </data> 
+  <data name="BuildingMuscleAndBurningFat" xml:space="preserve"> 
+    <value>Building muscle and burning fat</value> 
+  </data> 
+  <data name="BurningFat" xml:space="preserve"> 
+    <value>Burning fat</value> 
+  </data> 
+  <data name="OkAWomanWomanOftenSayIWantToGetFit" xml:space="preserve"> 
+    <value>I'm customizing your program to make it safe and healthy. I can also help you focus on...</value> 
+  </data> 
+  <data name="GettingStronger" xml:space="preserve"> 
+    <value>Getting stronger</value> 
+  </data> 
+  <data name="OverallFitness" xml:space="preserve"> 
+    <value>Overall fitness</value> 
+  </data> 
+  <data name="GotItAreYouABeginnerWithNoEquipment" xml:space="preserve"> 
+    <value>Got it! Are you a beginner training at home with no equipment?</value> 
+  </data> 
+  <data name="BurningFatGotItAreYouBegginerWithNoEquipment" xml:space="preserve"> 
+    <value>Burning fat -- got it! Are you a beginner training at home with no equipment?</value> 
+  </data> 
+  <data name="BuildingMuscleBuriningFatGotItAreYouBeginner" xml:space="preserve"> 
+    <value>Building muscle and burning fat -- got it! Are you a beginner training at home with no equipment?</value> 
+  </data> 
+  <data name="BuildingMuscleGotItAreYouABeginnerWithNoEquipment" xml:space="preserve"> 
+    <value>Building muscle -- got it! Are you a beginner training at home with no equipment?</value> 
+  </data> 
+  <data name="OkHowLongHaveYouBeenWorkingOutFor" xml:space="preserve"> 
+    <value>OK -- how long have you been working out for?</value> 
+  </data> 
+  <data name="AllRightPleaseWait" xml:space="preserve"> 
+    <value>All right!</value> 
+  </data> 
+  <data name="YourProgramIsReadyExclamation" xml:space="preserve"> 
+    <value>Your program is ready!</value> 
+  </data> 
+  <data name="InternetConnectionProblem" xml:space="preserve"> 
+    <value>Please check your Internet connection and try again.</value> 
+  </data> 
+  <data name="SelectExercisesAndTimeframes" xml:space="preserve"> 
+    <value>Select exercises and timeframes:</value> 
+  </data> 
+  <data name="trained" xml:space="preserve"> 
+    <value>trained</value> 
+  </data> 
+  <data name="SetsTotal" xml:space="preserve"> 
+    <value>sets total</value> 
+  </data> 
+  <data name="MaxStrenthRMRecord" xml:space="preserve"> 
+    <value>Strength record</value> 
+  </data> 
+  <data name="RecentExercisesinFourWeek" xml:space="preserve"> 
+    <value>Recent exercises</value> 
+  </data> 
+  <data name="AverageMaxStrength" xml:space="preserve"> 
+    <value>Average max strength</value> 
+  </data> 
+  <data name="WorkSetsLastSevenDays" xml:space="preserve"> 
+    <value>Work sets (last 7 days)</value> 
+  </data> 
+  <data name="SaveWarmUps" xml:space="preserve"> 
+    <value>Save Warm-ups</value> 
+  </data> 
+  <data name="WarmUpSets" xml:space="preserve"> 
+    <value>Warm-up sets</value> 
+  </data> 
+  <data name="UseCustomWarmUps" xml:space="preserve"> 
+    <value>Use custom warm-ups</value> 
+  </data> 
+  <data name="ViewOnTheWeb" xml:space="preserve"> 
+    <value>View on the Web?</value> 
+  </data> 
+  <data name="ViewAnalyzeAndDownloadData" xml:space="preserve"> 
+    <value>View, analyze, and download your exercise data on the Web.</value> 
+  </data> 
+  <data name="OpenWebApp" xml:space="preserve"> 
+    <value>Open Web app</value> 
+  </data> 
+  <data name="WebApp" xml:space="preserve"> 
+    <value>Web app</value> 
+  </data> 
+  <data name="MaxWeight" xml:space="preserve"> 
+    <value>Max weight</value> 
+  </data> 
+  <data name="MinWeight" xml:space="preserve"> 
+    <value>Min weight</value> 
+  </data> 
+  <data name="DaysAgo" xml:space="preserve"> 
+    <value>days ago</value> 
+  </data> 
+  <data name="ThinWomenOftenSay" xml:space="preserve"> 
+    <value>Thin women often say...</value> 
+  </data> 
+  <data name="More" xml:space="preserve"> 
+    <value>More</value> 
+  </data> 
+  <data name="AttentionTodayIsADeload" xml:space="preserve"> 
+    <value>Today is a deload</value> 
+  </data> 
+  <data name="FreeOnSupport" xml:space="preserve"> 
+    <value>Free 1-on-1 support</value> 
+  </data> 
+  <data name="SignUptoUnlock" xml:space="preserve"> 
+    <value>Sign up to unlock</value> 
+  </data> 
+  <data name="ThisIsBeginningWithSupport" xml:space="preserve"> 
+    <value>This is the beginning of your 1-on-1 chat with support. Type your message below to get started. Happy to help! :)</value> 
+  </data> 
+   <data name="ISuggestForRecovery" xml:space="preserve"> 
+    <value>I suggest at least 24 hours for recovery. You can take time off now :)</value> 
+  </data> 
+</root>

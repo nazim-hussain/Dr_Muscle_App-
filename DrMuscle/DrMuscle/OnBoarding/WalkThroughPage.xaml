@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:DrMusclePage    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+                   NavigationPage.HasNavigationBar="False"
+    xmlns:page="clr-namespace:DrMuscle.OnBoarding"
+   xmlns:local="clr-namespace:DrMuscle.Cells"
+                   BackgroundColor="Black"
+    x:Class="DrMuscle.OnBoarding.WalkThroughPage">
+    <!--<page:Page1 />-->
+    <t:DrMusclePage.Resources>
+        <ResourceDictionary>
+            <local:CaroselDataTemplateSelector
+                x:Key="CaroselTemplateSelector">
+            </local:CaroselDataTemplateSelector>
+        </ResourceDictionary>
+    </t:DrMusclePage.Resources>
+
+    <Grid>
+
+   <CarouselView x:Name="carouserView" Loop="False" IsSwipeEnabled="True" IsBounceEnabled="True" VerticalOptions="FillAndExpand" ItemTemplate="{StaticResource CaroselTemplateSelector}" PositionChanged="carouserView_PositionChanged" >
+       
+       </CarouselView>
+        <StackLayout VerticalOptions="End">
+        <IndicatorView HorizontalOptions="Center" IsEnabled="False" VerticalOptions="EndAndExpand" IndicatorColor="Gray" SelectedIndicatorColor="White" x:Name="indicatorView" />
+        <Button x:Name="btnContinue"  HorizontalOptions="FillAndExpand" Text="Get started" TextColor="White" BackgroundColor="Transparent" CornerRadius="0" BorderWidth="2" BorderColor="White" HeightRequest="66" Margin="25" VerticalOptions="End" Clicked="btnContinue_Clicked" FontSize="17" />
+            </StackLayout>
+    </Grid>
+
+
+</t:DrMusclePage>
+

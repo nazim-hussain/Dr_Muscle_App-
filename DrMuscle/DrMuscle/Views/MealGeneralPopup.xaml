@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    CloseWhenBackgroundIsClicked="false"
+    xmlns:constants="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="DrMuscle.Views.MealGeneralPopup">
+    <pages:PopupPage.Content>
+        <Frame
+            Padding="0"
+            CornerRadius="4"
+            HasShadow="False"
+            IsClippedToBounds="True"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"
+            BackgroundColor="White"
+            Margin="20,20,20,0">
+            <StackLayout
+                Orientation="Vertical"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Padding="0,15,0,10">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style
+                            TargetType="Button"
+                            x:Key="ButtonStyle">
+                            <Setter
+                                Property="FontSize"
+                                Value="Medium" />
+                            <Setter
+                                Property="TextColor"
+                                Value="{x:Static constants:AppThemeConstants.BlueColor}" />
+                            <Setter
+                                Property="BorderColor"
+                                Value="Transparent" />
+                            <Setter
+                                Property="HorizontalOptions"
+                                Value="End" />
+                            <Setter
+                                Property="VerticalOptions"
+                                Value="CenterAndExpand" />
+                            <Setter
+                                Property="BackgroundColor"
+                                Value="Transparent" />
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <Label
+                    x:Name="LblTitle"
+                    Margin="15,0,10,0"
+                    Text="Last meal was..."
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start" />
+                 <Label
+                     x:Name="LblSubTitle"
+                    Margin="15,0,10,0"
+                    Text=""
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start" />
+                <StackLayout
+                    Margin="7,10"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand">
+                    <Editor
+                        Margin="5,0,5,0"
+                        BackgroundColor="#f4f4f4"
+                        x:Name="EditorMealInfo"
+                        TextColor="Black"
+                        VerticalOptions="Start"
+                        Text=""
+                        HeightRequest="80"
+                        Placeholder=""
+                        HorizontalOptions="FillAndExpand"
+                         />
+                    <BoxView
+                        HorizontalOptions="FillAndExpand"
+                        Margin="5,0"
+                        BackgroundColor="#D8D8D8"
+                        HeightRequest="0.5" />
+                    
+                </StackLayout>
+                <StackLayout
+                    Orientation="Horizontal"
+                    Margin="10,0,10,15"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="End">
+                    <Button
+                        x:Name="BtnCancel"
+                        Text="Cancel"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalOptions="End"
+                        WidthRequest="100"
+                        Clicked="BtnCancel_Clicked" />
+                    <Button
+                        x:Name="BtnSave"
+                        Text="Save"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalOptions="End"
+                        WidthRequest="80"
+                        Clicked="BtnSave_Clicked" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

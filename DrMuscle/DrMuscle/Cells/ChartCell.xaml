@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+    x:Class="DrMuscle.Cells.ChartCell">
+    <ViewCell.View>
+        <Grid
+            HeightRequest="150"
+            HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <oxy:PlotView
+                 IsVisible="true"
+                Grid.Row="0"
+                Grid.Column="0"
+                x:Name="plotView"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150">
+            </oxy:PlotView>
+            <BoxView IsVisible="true" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="StrenthChart_Tapped" />
+                    </BoxView.GestureRecognizers>
+                    </BoxView>
+            <oxy:PlotView
+                Grid.Row="0"
+                Grid.Column="1"
+                x:Name="plotView2"
+                IsVisible="true"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150">
+            </oxy:PlotView>
+            <BoxView  IsVisible="true" Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SetsChart_Tapped" />
+                    </BoxView.GestureRecognizers>
+                    </BoxView>
+            
+        </Grid>
+    </ViewCell.View>
+</ViewCell>

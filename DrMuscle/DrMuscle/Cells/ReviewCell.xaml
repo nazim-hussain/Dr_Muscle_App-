@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Cells.ReviewCell">
+    <ViewCell.View>
+        <StackLayout BackgroundColor="#F0F0F0" Margin="0,8,0,0" Padding="0,8,0,8" >
+                            <Label
+                                x:Name="LblTitle"
+                                Text="{Binding Part1}"
+                                Margin="10,0,0,0"
+                                IsVisible="true"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Font="Bold,18"
+                                Style="{StaticResource LabelStyle}"
+                                TextColor="Black" />
+                        <Frame Padding="20,5,20,15" Margin="10,2,40,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblReview" Text="{Binding Part2}" MaxLines="8" LineBreakMode="TailTruncation" Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="LblReviewerName" Text="{Binding Part3}" MaxLines="1" LineBreakMode="TailTruncation" Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapMoreReviews_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                            <!--<Label
+                                Text="More reviews"
+                                Margin="20,0,0,0"
+                                IsVisible="true"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Font="Bold,16"
+                                Style="{StaticResource LabelStyle}"
+                                TextColor="Black" >
+                                 <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapMoreReviews_Tapped" CommandParameter="{Binding .}" />
+                            </Label.GestureRecognizers>
+                                </Label>-->
+                        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

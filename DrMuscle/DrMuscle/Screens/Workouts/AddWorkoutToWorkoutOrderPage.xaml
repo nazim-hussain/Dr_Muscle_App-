@@ -1,0 +1,7 @@
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DrMuscle"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+             x:Class="DrMuscle.Screens.Workouts.AddWorkoutToWorkoutOrderPage">
+
+</t:DrMusclePage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    x:Class="DrMuscle.Cells.LinkGestureCell">
+    <ViewCell.View>
+        <Frame
+            Margin="10,10,40,5"
+            CornerRadius="12"
+            x:Name="FrmContainer"
+            Padding="20,12,20,12"
+            HorizontalOptions="Start"
+            BorderColor="#ffffff"
+            OutlineColor="#ffffff"
+            HasShadow="False"
+            Opacity="0"
+            BackgroundColor="#ffffff">
+            <Label
+                x:Name="LblQuestion"
+                FontSize="Medium"
+                Text="{Binding Question}"
+                TextDecorations="Underline"
+                TextColor="{x:Static app:AppThemeConstants.BlueLightColor}"
+                Style="{StaticResource LabelStyle}"
+                HorizontalOptions="Start"
+                Margin="4,0">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>

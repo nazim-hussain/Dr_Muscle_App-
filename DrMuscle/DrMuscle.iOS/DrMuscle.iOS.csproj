@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <FirebaseCrashlyticsUploadSymbolsEnabled>True</FirebaseCrashlyticsUploadSymbolsEnabled>
+  </PropertyGroup>
+  <Import Project="..\..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.iOS.Crashlytics.4.6.2\build\Xamarin.Firebase.iOS.Crashlytics.props" Condition="Exists('..\..\packages\Xamarin.Firebase.iOS.Crashlytics.4.6.2\build\Xamarin.Firebase.iOS.Crashlytics.props')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3261BAB-F82E-4BF7-AFDC-64F3EB488B78}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DrMuscle.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>DrMuscle.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>Apple Development: jigneshkumar bodarya (36F7F75XHC)</CodesignKey>
+    <CodesignResourceRules>
+    </CodesignResourceRules>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <CodesignExtraArgs />
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchSdkVersion>14.5</MtouchSdkVersion>
+    <CodesignProvision>
+    </CodesignProvision>
+    <!-- Configure Sentry org and project -->
+    <SentryOrg>drmuscle-8da500fa5</SentryOrg>
+    <SentryProject>dotnet-xamarin</SentryProject>
+    <!--
+      Each of the below features are opt-in.
+      Enable the features you wish to use.
+    -->
+    <!-- Sends symbols to Sentry, enabling symbolication of stack traces. -->
+    <SentryUploadSymbols>true</SentryUploadSymbols>
+    <!-- Sends sources to Sentry, enabling display of source context. -->
+    <SentryUploadSources>true</SentryUploadSources>
+    <!-- If you are targeting Android, sends proguard mapping file to Sentry. -->
+    <SentryUploadAndroidProguardMapping>true</SentryUploadAndroidProguardMapping>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Dr. Muscle (7AAXZ47995)</CodesignKey>
+    <CodesignProvision>Automatic</CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>false</MtouchDebug>
+    <OptimizePNGs>false</OptimizePNGs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <BuildIpa>true</BuildIpa>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Dr. Muscle (7AAXZ47995)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>false</MtouchDebug>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+    <CodesignProvision>2023 06 14 Jignesh</CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <OptimizePNGs>true</OptimizePNGs>
+    <MtouchUseLlvm>false</MtouchUseLlvm>
+    <!-- Configure Sentry org and project -->
+    <SentryOrg>drmuscle-8da500fa5</SentryOrg>
+    <SentryProject>dotnet-xamarin</SentryProject>
+    <!--
+      Each of the below features are opt-in.
+      Enable the features you wish to use.
+    -->
+    <!-- Sends symbols to Sentry, enabling symbolication of stack traces. -->
+    <SentryUploadSymbols>true</SentryUploadSymbols>
+    <!-- Sends sources to Sentry, enabling display of source context. -->
+    <SentryUploadSources>true</SentryUploadSources>
+    <!-- If you are targeting Android, sends proguard mapping file to Sentry. -->
+    <SentryUploadAndroidProguardMapping>true</SentryUploadAndroidProguardMapping>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignKey>iPhone Developer: jigneshkumar bodarya (36F7F75XHC)</CodesignKey>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <IpaIncludeArtwork>false</IpaIncludeArtwork>
+    <MtouchFastDev>false</MtouchFastDev>
+    <OptimizePNGs>true</OptimizePNGs>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>VS: com.drmaxmuscle.max Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: jigneshkumar bodarya (36F7F75XHC)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator'">
+    <CodesignKey>iPhone Developer: jigneshkumar bodarya (36F7F75XHC)</CodesignKey>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignEntitlements />
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DrMuscleSubscription_iOS.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="SQLite_iOS.cs" />
+    <None Include="app.config" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="FacebookLoginButtonRenderer.cs" />
+    <Compile Include="FacebookManager_iOS.cs" />
+    <Compile Include="Styles_iOS.cs" />
+    <Compile Include="AudioService.cs" />
+    <Compile Include="Firebase_iOS.cs" />
+    <Compile Include="DrMusclePageRenderer.cs" />
+    <Compile Include="Renderer\DrMuscleEntryRenderer.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <Compile Include="Renderer\DrMuscleEditorRenderer.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Renderer\ChatEntryRenderer.cs" />
+    <Compile Include="Renderer\CustomEditorRenderer.cs" />
+    <Compile Include="Renderer\ExtendedListViewRenderer.cs" />
+    <Compile Include="Renderer\HeaderCellRenderer.cs" />
+    <Compile Include="Renderer\ZoomableScrollviewRenderer.cs" />
+    <Compile Include="Renderer\ExtendedLabelRenderer.cs" />
+    <Compile Include="Renderer\ScreenshotService.cs" />
+    <Compile Include="Controls\HyperlinkUIView.cs" />
+    <Compile Include="Renderer\HyperlinkLabelRenderer.cs" />
+    <Compile Include="Renderer\CustomCellRenderer.cs" />
+    <Compile Include="Service\VersionInfoService.cs" />
+    <Compile Include="Renderer\BackgroundImageTabbedPageRenderer.cs" />
+    <Compile Include="Renderer\DynamicListView.cs" />
+    <Compile Include="Renderer\KeyboardHelpers.cs" />
+    <Compile Include="Effects\DropShadowEffect.cs" />
+    <Compile Include="Renderer\KeyboardViewRenderer.cs" />
+    <Compile Include="Renderer\AutoBotListViewRenderer.cs" />
+    <Compile Include="Renderer\DrMuscleEntry.cs" />
+    <Compile Include="Service\AlarmAndNotificationService.cs" />
+    <Compile Include="Localize.cs" />
+    <Compile Include="Renderer\TimePickerRender.cs" />
+    <Compile Include="Renderer\ExtendedLightBlueLabelRender.cs" />
+    <Compile Include="Service\KillAppService.cs" />
+    <Compile Include="Service\OrientationService.cs" />
+    <Compile Include="Renderer\ExerciseVideoPageRenderer.cs" />
+    <Compile Include="Renderer\DropDownPickerRenderer.cs" />
+    <Compile Include="Renderer\DrMuscleButtonRender.cs" />
+    <Compile Include="Renderer\AutoSizeLabelRenderer.cs" />
+    <Compile Include="Renderer\AppleSignInButtonRenderer.cs" />
+    <Compile Include="Service\AppleSignInService.cs" />
+    <Compile Include="..\..\DrMuscleWatch\DrMuscleWatch.WatchOSExtension\SessionManager\WCSessionManager.cs">
+      <Link>SessionManager\WCSessionManager.cs</Link>
+    </Compile>
+    <Compile Include="Renderer\TimePickerRenderer.cs" />
+    <Compile Include="Effects\TooltipEffect.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPicker.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPlayerRenderer.cs" />
+    <Compile Include="Service\HealthData.cs" />
+    <Compile Include="Renderer\ExtendedButtonRenderer.cs" />
+    <Compile Include="Renderer\DrMuscleListViewRenderer.cs" />
+    <Compile Include="Renderer\CustomFrameShadowRenderer.cs" />
+    <None Include="RemoteConfigDefaults.plist" />
+    <Compile Include="Service\MyRemoteConfigurationService.cs" />
+    <Compile Include="Service\OpenImplementation.cs" />
+    <Compile Include="Renderer\PickerViewRenderer.cs" />
+    <Compile Include="Service\NotificationsInterface.cs" />
+    <Compile Include="Service\AppSettingsInterface.cs" />
+    <Compile Include="Renderer\WorkoutEntryRenderer.cs" />
+    <Compile Include="Renderer\ContextMenuButtonRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Icon-App-20x20%401x.png" />
+    <BundleResource Include="Resources\Icon-App-20x20%402x.png" />
+    <BundleResource Include="Resources\Icon-App-20x20%403x.png" />
+    <BundleResource Include="Resources\Icon-App-29x29%401x.png" />
+    <BundleResource Include="Resources\Icon-App-29x29%402x.png" />
+    <BundleResource Include="Resources\Icon-App-29x29%403x.png" />
+    <BundleResource Include="Resources\Icon-App-40x40%401x.png" />
+    <BundleResource Include="Resources\Icon-App-40x40%402x.png" />
+    <BundleResource Include="Resources\Icon-App-40x40%403x.png" />
+    <BundleResource Include="Resources\Icon-App-57x57%401x.png" />
+    <BundleResource Include="Resources\Icon-App-60x60%401x.png" />
+    <BundleResource Include="Resources\Icon-App-60x60%402x.png" />
+    <BundleResource Include="Resources\Icon-App-60x60%403x.png" />
+    <BundleResource Include="Resources\Icon-App-72x72%401x.png" />
+    <BundleResource Include="Resources\Icon-App-76x76%401x.png" />
+    <BundleResource Include="Resources\Icon-App-76x76%402x.png" />
+    <BundleResource Include="Resources\Icon-App-76x76%403x.png" />
+    <BundleResource Include="Resources\Icon-App-83.5x83.5%402x.png" />
+    <BundleResource Include="Resources\Icon-App-120x120%401x.png" />
+    <BundleResource Include="Resources\Icon-App-152x152%401x.png" />
+    <BundleResource Include="Resources\Icon-App-167x167%401x.png" />
+    <BundleResource Include="Resources\Icon-App-87x87%401x.png" />
+    <BundleResource Include="Resources\Icon-App-114x114%401x.png" />
+    <BundleResource Include="Resources\Icon-App-58x58%401x.png" />
+    <BundleResource Include="Resources\downarrow.png" />
+    <BundleResource Include="Resources\light_blue_arrow.png" />
+    <BundleResource Include="Resources\light_blue_arrow@2x.png" />
+    <BundleResource Include="Resources\light_blue_arrow_down.png" />
+    <BundleResource Include="Resources\light_blue_arrow_down@2x.png" />
+    <BundleResource Include="Resources\uparrow.png" />
+    <BundleResource Include="Resources\facebook%403x.png" />
+    <BundleResource Include="Resources\green.png" />
+    <BundleResource Include="Resources\orange.png" />
+    <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\stopwatch%402x.png" />
+    <BundleResource Include="Resources\alarma.mp3" />
+    <BundleResource Include="Resources\Background2%402x.png" />
+    <BundleResource Include="Resources\swap.png" />
+    <BundleResource Include="Resources\WorkoutNow.png" />
+    <BundleResource Include="Resources\BackgroundFemale%403x.png" />
+    <BundleResource Include="Resources\BackgroundFemale%402x.png" />
+    <BundleResource Include="Resources\Backgroundblack.png" />
+    <BundleResource Include="Resources\Splash.png" />
+    <BundleResource Include="Resources\icon_search_gray.png" />
+    <BundleResource Include="Resources\DrMuscleLogo.png" />
+    <BundleResource Include="Resources\Icon-App-57x57%402x.png" />
+    <BundleResource Include="Resources\Icon-App-72x72%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-50x50%401x.png" />
+    <BundleResource Include="Resources\Icon-Small-50x50%402x.png" />
+    <BundleResource Include="Resources\Flag_French.png" />
+    <BundleResource Include="Resources\Flag_English.png" />
+    <BundleResource Include="Resources\Flag_Swedish.png" />
+    <BundleResource Include="Resources\backspace_white.png" />
+    <BundleResource Include="Resources\stars_5.png" />
+    <BundleResource Include="Resources\hide.png" />
+    <BundleResource Include="Resources\hide%402x.png" />
+    <BundleResource Include="Resources\skip.png" />
+    <BundleResource Include="Resources\skip%402x.png" />
+    <BundleResource Include="Resources\skip%403x.png" />
+    <BundleResource Include="Resources\hide%403x.png" />
+    <BundleResource Include="Resources\plate%402x.png" />
+    <BundleResource Include="Resources\bar.png" />
+    <BundleResource Include="Resources\plate2half.png" />
+    <BundleResource Include="Resources\plate5.png" />
+    <BundleResource Include="Resources\plate10.png" />
+    <BundleResource Include="Resources\plate25.png" />
+    <BundleResource Include="Resources\plate35.png" />
+    <BundleResource Include="Resources\plate45.png" />
+    <BundleResource Include="Resources\barKg.png" />
+    <BundleResource Include="Resources\plateKg25.png" />
+    <BundleResource Include="Resources\plateKg1.png" />
+    <BundleResource Include="Resources\plateKg2.png" />
+    <BundleResource Include="Resources\plateKg5.png" />
+    <BundleResource Include="Resources\plateKg10.png" />
+    <BundleResource Include="Resources\plateKg15.png" />
+    <BundleResource Include="Resources\plateKg20.png" />
+    <BundleResource Include="Resources\custom.png" />
+    <BundleResource Include="Resources\edit_plate.png" />
+    <BundleResource Include="Resources\edit_plate%402x.png" />
+    <BundleResource Include="Resources\edit_plate%403x.png" />
+    <BundleResource Include="Resources\chat_tab.png" />
+    <BundleResource Include="Resources\chat_tab%402x.png" />
+    <BundleResource Include="Resources\chat_tab%403x.png" />
+    <BundleResource Include="Resources\home_tab.png" />
+    <BundleResource Include="Resources\home_tab%402x.png" />
+    <BundleResource Include="Resources\home_tab%403x.png" />
+    <BundleResource Include="Resources\settings_tab.png" />
+    <BundleResource Include="Resources\settings_tab%402x.png" />
+    <BundleResource Include="Resources\settings_tab%403x.png" />
+    <BundleResource Include="Resources\adminprofile.png" />
+    <BundleResource Include="Resources\barBlank.png" />
+    <BundleResource Include="Resources\exercise_tab.png" />
+    <BundleResource Include="Resources\exercise_tab%402x.png" />
+    <BundleResource Include="Resources\exercise_tab%403x.png" />
+    <BundleResource Include="Resources\workout_tab.png" />
+    <BundleResource Include="Resources\workout_tab%402x.png" />
+    <BundleResource Include="Resources\workout_tab%403x.png" />
+    <BundleResource Include="Resources\Flag_Germany.png" />
+    <BundleResource Include="Resources\bottomText.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\carlPhoto.png" />
+    <BundleResource Include="Resources\facebook_share%403x.png" />
+    <BundleResource Include="Resources\facebook_f_white%403x.png" />
+    <BundleResource Include="Resources\down.png" />
+    <BundleResource Include="Resources\open.png" />
+    <BundleResource Include="Resources\up.png" />
+    <BundleResource Include="Resources\PlusBlack.png" />
+    <BundleResource Include="Resources\me_tab.png" />
+    <BundleResource Include="Resources\me_tab%402x.png" />
+    <BundleResource Include="Resources\me_tab%403x.png" />
+    <BundleResource Include="Resources\Leg.png" />
+    <BundleResource Include="Resources\Leg%402x.png" />
+    <BundleResource Include="Resources\Leg%403x.png" />
+    <BundleResource Include="Resources\ic_history.png" />
+    <BundleResource Include="Resources\ic_history%402x.png" />
+    <BundleResource Include="Resources\ic_history%403x.png" />
+    <BundleResource Include="Resources\more.png" />
+    <BundleResource Include="Resources\more%402x.png" />
+    <BundleResource Include="Resources\more%403x.png" />
+    <BundleResource Include="Resources\ic_add.png" />
+    <BundleResource Include="Resources\ic_add%402x.png" />
+    <BundleResource Include="Resources\ic_add%403x.png" />
+    <BundleResource Include="Resources\ic_added.png" />
+    <BundleResource Include="Resources\ic_added%402x.png" />
+    <BundleResource Include="Resources\ic_added%403x.png" />
+    <BundleResource Include="Resources\ic_back.png" />
+    <BundleResource Include="Resources\ic_back%402x.png" />
+    <BundleResource Include="Resources\ic-_ack%403x.png" />
+    <BundleResource Include="Resources\nav.png" />
+    <BundleResource Include="Resources\nav%402x.png" />
+    <BundleResource Include="Resources\nav%403x.png" />
+    <BundleResource Include="Resources\ic_edit.png" />
+    <BundleResource Include="Resources\ic_edit%402x.png" />
+    <BundleResource Include="Resources\ic_edit%403x.png" />
+    <BundleResource Include="Resources\done.png" />
+    <BundleResource Include="Resources\done%402x.png" />
+    <BundleResource Include="Resources\done%403x.png" />
+    <BundleResource Include="Resources\finishSet.png" />
+    <BundleResource Include="Resources\finishSet%402x.png" />
+    <BundleResource Include="Resources\finishSet%403x.png" />
+    <BundleResource Include="Resources\ic_minus.png" />
+    <BundleResource Include="Resources\ic_minus%402x.png" />
+    <BundleResource Include="Resources\ic_minus%403x.png" />
+    <BundleResource Include="Resources\ic_plus.png" />
+    <BundleResource Include="Resources\ic_plus%402x.png" />
+    <BundleResource Include="Resources\ic_plus%403x.png" />
+    <BundleResource Include="Resources\Abs.png" />
+    <BundleResource Include="Resources\Back.png" />
+    <BundleResource Include="Resources\Biceps.png" />
+    <BundleResource Include="Resources\Calves.png" />
+    <BundleResource Include="Resources\Chest.png" />
+    <BundleResource Include="Resources\Legs.png" />
+    <BundleResource Include="Resources\Neck.png" />
+    <BundleResource Include="Resources\Shoulders.png" />
+    <BundleResource Include="Resources\Triceps.png" />
+    <BundleResource Include="Resources\Undefined.png" />
+    <BundleResource Include="Resources\topNav.png" />
+    <BundleResource Include="Resources\finishSet_orange.png" />
+    <BundleResource Include="Resources\finishSet_orange%402x.png" />
+    <BundleResource Include="Resources\finishSet_orange%403x.png" />
+    <BundleResource Include="Resources\android_back.png" />
+    <BundleResource Include="Resources\android_back%402x.png" />
+    <BundleResource Include="Resources\android_back%403x.png" />
+    <BundleResource Include="Resources\ic_edit_white.png" />
+    <BundleResource Include="Resources\ic_edit_white%402x.png" />
+    <BundleResource Include="Resources\ic_edit_white%403x.png" />
+    <BundleResource Include="Resources\edit_plate_blue.png" />
+    <BundleResource Include="Resources\edit_plate_blue%402x.png" />
+    <BundleResource Include="Resources\edit_plate_blue%403x.png" />
+    <BundleResource Include="Resources\Undone.png" />
+    <BundleResource Include="Resources\Undone%402x.png" />
+    <BundleResource Include="Resources\Undone%403x.png" />
+    <BundleResource Include="Resources\Forearm.png" />
+    <BundleResource Include="Resources\mail.png" />
+    <BundleResource Include="Resources\mail%402x.png" />
+    <BundleResource Include="Resources\mail%403x.png" />
+    <BundleResource Include="Resources\google_icon.png" />
+    <BundleResource Include="Resources\google_icon%402x.png" />
+    <BundleResource Include="Resources\google_icon%403x.png" />
+    <BundleResource Include="Resources\facebook_white%403x.png" />
+    <BundleResource Include="Resources\google_ic%403x.png" />
+    <BundleResource Include="Resources\gradient_background.png" />
+    <BundleResource Include="Resources\Abs_Transparent.png" />
+    <BundleResource Include="Resources\Back_Transparent.png" />
+    <BundleResource Include="Resources\Biceps_Transparent.png" />
+    <BundleResource Include="Resources\Calves_Transparent.png" />
+    <BundleResource Include="Resources\Chest_Transparent.png" />
+    <BundleResource Include="Resources\Forearm_Transparent.png" />
+    <BundleResource Include="Resources\Legs_Transparent.png" />
+    <BundleResource Include="Resources\Shoulders_Transparent.png" />
+    <BundleResource Include="Resources\Triceps_Transparent.png" />
+    <BundleResource Include="Resources\Undefined_Transparent.png" />
+    <BundleResource Include="Resources\done2.png" />
+    <BundleResource Include="Resources\done2%402x.png" />
+    <BundleResource Include="Resources\done2%403x.png" />
+    <BundleResource Include="Resources\Neck_Transparent.png" />
+    <BundleResource Include="Resources\AlarmTone.caf" />
+    <BundleResource Include="Resources\big_plate.png" />
+    <BundleResource Include="Resources\big_plate%402x.png" />
+    <BundleResource Include="Resources\big_plate%403x.png" />
+    <BundleResource Include="Resources\plate2halfhalf.png" />
+    <BundleResource Include="Resources\plate5half.png" />
+    <BundleResource Include="Resources\plate10half.png" />
+    <BundleResource Include="Resources\plate25half.png" />
+    <BundleResource Include="Resources\plate35half.png" />
+    <BundleResource Include="Resources\plate45half.png" />
+    <BundleResource Include="Resources\plateKg1half.png" />
+    <BundleResource Include="Resources\plateKg2half.png" />
+    <BundleResource Include="Resources\plateKg5half.png" />
+    <BundleResource Include="Resources\plateKg10half.png" />
+    <BundleResource Include="Resources\plateKg15half.png" />
+    <BundleResource Include="Resources\plateKg20half.png" />
+    <BundleResource Include="Resources\plateKg25half.png" />
+    <BundleResource Include="Resources\orange2.png" />
+    <BundleResource Include="Resources\barHalf.png" />
+    <BundleResource Include="Resources\barKgHalf.png" />
+    <BundleResource Include="Resources\middle%402x.png" />
+    <BundleResource Include="Resources\top%402x.png" />
+    <BundleResource Include="Resources\bottom%402x.png" />
+    <BundleResource Include="Resources\middle2%402x.png" />
+    <BundleResource Include="Resources\bottom2%402x.png" />
+    <BundleResource Include="Resources\top2%402x.png" />
+    <BundleResource Include="Resources\down_arrow.png" />
+    <BundleResource Include="Resources\down_arrow%402x.png" />
+    <BundleResource Include="Resources\down_arrow%403x.png" />
+    <BundleResource Include="Resources\up_arrow.png" />
+    <BundleResource Include="Resources\up_arrow%402x.png" />
+    <BundleResource Include="Resources\up_arrow%403x.png" />
+    <BundleResource Include="Resources\Cardio.png" />
+    <BundleResource Include="Resources\Cardio_Transparent.png" />
+    <BundleResource Include="Resources\Learn_Tab.png" />
+    <BundleResource Include="Resources\Learn_Tab%402x.png" />
+    <BundleResource Include="Resources\Learn_Tab%403x.png" />
+    <BundleResource Include="Resources\black_down_arrow.png" />
+    <BundleResource Include="Resources\black_down_arrow%402x.png" />
+    <BundleResource Include="Resources\black_down_arrow%403x.png" />
+    <BundleResource Include="Resources\more_blue.png" />
+    <BundleResource Include="Resources\more_blue%402x.png" />
+    <BundleResource Include="Resources\more_blue%403x.png" />
+    <BundleResource Include="Resources\Play.png" />
+    <BundleResource Include="Resources\Play%402x.png" />
+    <BundleResource Include="Resources\Play%403x.png" />
+    <BundleResource Include="Resources\more_dark_blue.png" />
+    <BundleResource Include="Resources\more_dark_blue%402x.png" />
+    <BundleResource Include="Resources\more_dark_blue%403x.png" />
+    <BundleResource Include="Resources\Play_dark_blue.png" />
+    <BundleResource Include="Resources\Play_dark_blue%402x.png" />
+    <BundleResource Include="Resources\Play_dark_blue%403x.png" />
+    <BundleResource Include="Resources\Favorites.png" />
+    <BundleResource Include="Resources\Favorites%402x.png" />
+    <BundleResource Include="Resources\apple.png" />
+    <BundleResource Include="Resources\apple%402x.png" />
+    <BundleResource Include="Resources\apple%403x.png" />
+    <BundleResource Include="Resources\calander.png" />
+    <BundleResource Include="Resources\history.png" />
+    <BundleResource Include="Resources\DragIndicator.png" />
+    <BundleResource Include="Resources\Fire.png" />
+    <BundleResource Include="Resources\Records.png" />
+    <BundleResource Include="Resources\Clock.png" />
+    <BundleResource Include="Resources\Chain.png" />
+    <BundleResource Include="Resources\My_exercises.png" />
+    <BundleResource Include="Resources\Flexed_Biceps.png" />
+    <BundleResource Include="Resources\Bodyweight.png" />
+    <BundleResource Include="Resources\NextWorkout.png" />
+    <BundleResource Include="Resources\WeightLifting.png" />
+    <BundleResource Include="Resources\WorkoutDone.png" />
+    <BundleResource Include="Resources\Selected.png" />
+    <BundleResource Include="Resources\RestRecovery.png" />
+    <BundleResource Include="Resources\ExerciseBackground%402x.png" />
+    <BundleResource Include="Resources\SettingsBackground%402x.png" />
+    <BundleResource Include="Resources\WorkoutBackground%402x.png" />
+    <BundleResource Include="Resources\Close%402x.png" />
+    <BundleResource Include="Resources\artin.png" />
+    <BundleResource Include="Resources\jonus.png" />
+    <BundleResource Include="Resources\brandLogo.png" />
+    <BundleResource Include="Resources\plateKg05.png" />
+    <BundleResource Include="Resources\plateKg05half.png" />
+    <BundleResource Include="Resources\barBlankHalf.png" />
+    <BundleResource Include="Resources\heartIcon.png" />
+    <BundleResource Include="Resources\crunch.gif" />
+    <BundleResource Include="Resources\Flexibility_Transparent.png" />
+    <BundleResource Include="Resources\Flexibility.png" />
+    <BundleResource Include="Resources\Lower_back_Transparent.png" />
+    <BundleResource Include="Resources\Lower_back.png" />
+    <BundleResource Include="Resources\SharpCurve.png" />
+    <BundleResource Include="Resources\SharpCurve%402x.png" />
+    <BundleResource Include="Resources\SharpCurve%403x.png" />
+    <BundleResource Include="Resources\TrueState.png" />
+    <BundleResource Include="Resources\EmptyStar.png" />
+    <BundleResource Include="Resources\Lists.png" />
+    <BundleResource Include="Resources\FirstWorkout.png" />
+    <BundleResource Include="Resources\Medal.png" />
+    <BundleResource Include="Resources\Star.png" />
+    <BundleResource Include="Resources\Trophy.png" />
+    <BundleResource Include="Resources\SwappedSuccess.png" />
+    <BundleResource Include="Resources\Lamp.png" />
+    <BundleResource Include="Resources\Close_Gray.png" />
+    <BundleResource Include="Resources\weightChart.png" />
+    <BundleResource Include="Resources\logo2.png" />
+    <BundleResource Include="Resources\ScaleIcon.png" />
+    <BundleResource Include="Resources\starTrophy.png" />
+    <BundleResource Include="Resources\RobotoRegular.ttf" />
+    <BundleResource Include="Resources\appleFruite.png" />
+    <BundleResource Include="Resources\rcustom.png" />
+    <BundleResource Include="Resources\rplate2half.png" />
+    <BundleResource Include="Resources\rplate2halfhalf.png" />
+    <BundleResource Include="Resources\rplate5.png" />
+    <BundleResource Include="Resources\rplate5half.png" />
+    <BundleResource Include="Resources\rplate10.png" />
+    <BundleResource Include="Resources\rplate10half.png" />
+    <BundleResource Include="Resources\rplate25.png" />
+    <BundleResource Include="Resources\rplate25half.png" />
+    <BundleResource Include="Resources\rplate35.png" />
+    <BundleResource Include="Resources\rplate35half.png" />
+    <BundleResource Include="Resources\rplate45.png" />
+    <BundleResource Include="Resources\rplate45half.png" />
+    <BundleResource Include="Resources\rplateKg1.png" />
+    <BundleResource Include="Resources\rplateKg1half.png" />
+    <BundleResource Include="Resources\rplateKg2.png" />
+    <BundleResource Include="Resources\rplateKg2half.png" />
+    <BundleResource Include="Resources\rplateKg5.png" />
+    <BundleResource Include="Resources\rplateKg05.png" />
+    <BundleResource Include="Resources\rplateKg5half.png" />
+    <BundleResource Include="Resources\rplateKg05half.png" />
+    <BundleResource Include="Resources\rplateKg10.png" />
+    <BundleResource Include="Resources\rplateKg10half.png" />
+    <BundleResource Include="Resources\rplateKg15.png" />
+    <BundleResource Include="Resources\rplateKg15half.png" />
+    <BundleResource Include="Resources\rplateKg20.png" />
+    <BundleResource Include="Resources\rplateKg20half.png" />
+    <BundleResource Include="Resources\rplateKg25.png" />
+    <BundleResource Include="Resources\rplateKg25half.png" />
+    <BundleResource Include="Resources\calArrow.png" />
+    <BundleResource Include="Resources\email.png" />
+    <BundleResource Include="Resources\chekedGreen.png" />
+    <BundleResource Include="Resources\logo1.png" />
+    <BundleResource Include="Resources\page2.png" />
+    <BundleResource Include="Resources\page3.png" />
+    <BundleResource Include="Resources\JuraDemiBold.ttf" />
+    <BundleResource Include="Resources\logo3.png" />
+    <BundleResource Include="Resources\Jura-Bold.ttf" />
+    <BundleResource Include="Resources\reps1.mp3" />
+    <BundleResource Include="Resources\reps2.mp3" />
+    <BundleResource Include="Resources\reps3.mp3" />
+    <BundleResource Include="Resources\reps4.mp3" />
+    <BundleResource Include="Resources\reps5.mp3" />
+    <BundleResource Include="Resources\reps6.mp3" />
+    <BundleResource Include="Resources\reps7.mp3" />
+    <BundleResource Include="Resources\reps8.mp3" />
+    <BundleResource Include="Resources\reps9.mp3" />
+    <BundleResource Include="Resources\reps10.mp3" />
+    <BundleResource Include="Resources\reps11.mp3" />
+    <BundleResource Include="Resources\reps12.mp3" />
+    <BundleResource Include="Resources\reps13.mp3" />
+    <BundleResource Include="Resources\reps14.mp3" />
+    <BundleResource Include="Resources\reps15.mp3" />
+    <BundleResource Include="Resources\reps16.mp3" />
+    <BundleResource Include="Resources\reps17.mp3" />
+    <BundleResource Include="Resources\reps18.mp3" />
+    <BundleResource Include="Resources\reps19.mp3" />
+    <BundleResource Include="Resources\reps20.mp3" />
+    <BundleResource Include="Resources\reps21.mp3" />
+    <BundleResource Include="Resources\reps22.mp3" />
+    <BundleResource Include="Resources\reps23.mp3" />
+    <BundleResource Include="Resources\reps24.mp3" />
+    <BundleResource Include="Resources\reps25.mp3" />
+    <BundleResource Include="Resources\reps26.mp3" />
+    <BundleResource Include="Resources\reps27.mp3" />
+    <BundleResource Include="Resources\reps28.mp3" />
+    <BundleResource Include="Resources\reps29.mp3" />
+    <BundleResource Include="Resources\reps30.mp3" />
+    <BundleResource Include="Resources\reps31.mp3" />
+    <BundleResource Include="Resources\reps32.mp3" />
+    <BundleResource Include="Resources\reps33.mp3" />
+    <BundleResource Include="Resources\reps34.mp3" />
+    <BundleResource Include="Resources\reps35.mp3" />
+    <BundleResource Include="Resources\reps36.mp3" />
+    <BundleResource Include="Resources\reps37.mp3" />
+    <BundleResource Include="Resources\reps38.mp3" />
+    <BundleResource Include="Resources\reps39.mp3" />
+    <BundleResource Include="Resources\reps40.mp3" />
+    <BundleResource Include="Resources\reps41.mp3" />
+    <BundleResource Include="Resources\reps42.mp3" />
+    <BundleResource Include="Resources\reps43.mp3" />
+    <BundleResource Include="Resources\reps44.mp3" />
+    <BundleResource Include="Resources\reps45.mp3" />
+    <BundleResource Include="Resources\reps46.mp3" />
+    <BundleResource Include="Resources\reps47.mp3" />
+    <BundleResource Include="Resources\reps48.mp3" />
+    <BundleResource Include="Resources\reps49.mp3" />
+    <BundleResource Include="Resources\reps50.mp3" />
+    <BundleResource Include="Resources\reps51.mp3" />
+    <BundleResource Include="Resources\reps52.mp3" />
+    <BundleResource Include="Resources\reps53.mp3" />
+    <BundleResource Include="Resources\reps54.mp3" />
+    <BundleResource Include="Resources\reps55.mp3" />
+    <BundleResource Include="Resources\reps56.mp3" />
+    <BundleResource Include="Resources\reps57.mp3" />
+    <BundleResource Include="Resources\reps58.mp3" />
+    <BundleResource Include="Resources\reps59.mp3" />
+    <BundleResource Include="Resources\reps60.mp3" />
+    <BundleResource Include="Resources\leaves.png" />
+    <BundleResource Include="Resources\leaves2.png" />
+    <BundleResource Include="Resources\timer123.mp3" />
+    <BundleResource Include="Resources\emptyAudio.wav" />
+    <BundleResource Include="Resources\alert_ic_blue.png" />
+    <BundleResource Include="Resources\victoriaProfile.png" />
+    <BundleResource Include="Resources\deleteset.png" />
+    <BundleResource Include="Resources\deleteset%402x.png" />
+    <BundleResource Include="Resources\deleteset%403x.png" />
+    <BundleResource Include="Resources\deleteset_yellow.png" />
+    <BundleResource Include="Resources\DrSign.png" />
+    <BundleResource Include="Resources\Icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Acr.Support.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\K4os.Compression.LZ4.1.3.5\lib\netstandard2.1\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry, Version=3.33.1.0, Culture=neutral, PublicKeyToken=fba2ec45388e2af0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Sentry.3.33.1\lib\netstandard2.1\Sentry.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Android.AssemblyReader, Version=3.33.1.0, Culture=neutral, PublicKeyToken=fba2ec45388e2af0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Sentry.Android.AssemblyReader.3.33.1\lib\netstandard2.0\Sentry.Android.AssemblyReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Xamarin, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Sentry.Xamarin.1.5.2\lib\xamarinios10\Sentry.Xamarin.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Xamarin.Forms, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Sentry.Xamarin.Forms.1.5.2\lib\netstandard2.0\Sentry.Xamarin.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.5.0.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Reflection.Metadata, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reflection.Metadata.5.0.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Encodings.Web.5.0.1\lib\netstandard2.1\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Json.5.0.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="OxyPlot">
+      <HintPath>..\..\packages\OxyPlot.Core.2.0.0\lib\netstandard1.0\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.iOS">
+      <HintPath>..\..\packages\OxyPlot.Xamarin.iOS.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="OxyPlot.Xamarin.Forms">
+      <HintPath>..\..\packages\OxyPlot.Xamarin.Forms.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\OxyPlot.Xamarin.Forms.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SegmentedControl.FormsPlugin.Abstractions">
+      <HintPath>..\..\packages\SegmentedControl.FormsPlugin.2.0.1\lib\Xamarin.iOS10\SegmentedControl.FormsPlugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SegmentedControl.FormsPlugin.iOS">
+      <HintPath>..\..\packages\SegmentedControl.FormsPlugin.2.0.1\lib\Xamarin.iOS10\SegmentedControl.FormsPlugin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.InAppBilling">
+      <HintPath>..\..\packages\Plugin.InAppBilling.4.0.2\lib\xamarinios10\Plugin.InAppBilling.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="XFShapeView">
+      <HintPath>..\..\packages\VG.XFShapeView.1.0.5\lib\Xamarin.iOS10\XFShapeView.dll</HintPath>
+    </Reference>
+    <Reference Include="XFShapeView.iOS">
+      <HintPath>..\..\packages\VG.XFShapeView.1.0.5\lib\Xamarin.iOS10\XFShapeView.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.2.0\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.2.0\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\..\packages\Microsoft.AppCenter.4.1.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.4.1.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.4.1.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.4.1.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.4.1.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.4.1.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="SendBird">
+      <HintPath>..\..\lib\SendBird.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>..\..\lib\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Forms.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Forms.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Transformations.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Transformations.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.2.0.0.10\lib\xamarinios10\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.CloudMessaging">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.CloudMessaging.4.7.1\lib\xamarinios10\Firebase.CloudMessaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Core">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.Core.6.10.4\lib\xamarinios10\Firebase.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.InstanceID">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.InstanceID.4.8.0\lib\xamarinios10\Firebase.InstanceID.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.Analytics.6.9.0\lib\xamarinios10\Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.FirebasePushNotification">
+      <HintPath>..\..\packages\Plugin.FirebasePushNotification.3.3.10\lib\xamarinios10\Plugin.FirebasePushNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Toast.Abstractions">
+      <HintPath>..\..\packages\Plugin.Toast.2.2.0\lib\Xamarin.iOS10\Plugin.Toast.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Toast">
+      <HintPath>..\..\packages\Plugin.Toast.2.2.0\lib\Xamarin.iOS10\Plugin.Toast.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.CoreKit">
+      <HintPath>..\..\packages\Xamarin.Facebook.CoreKit.iOS.12.2.0.1\lib\xamarinios10\Facebook.CoreKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.LoginKit">
+      <HintPath>..\..\packages\Xamarin.Facebook.LoginKit.iOS.12.2.0.1\lib\xamarinios10\Facebook.LoginKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.MarketingKit">
+      <HintPath>..\..\packages\Xamarin.Facebook.MarketingKit.iOS.5.11.1\lib\xamarinios10\Facebook.MarketingKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.PlacesKit">
+      <HintPath>..\..\packages\Xamarin.Facebook.PlacesKit.iOS.5.12.0\lib\xamarinios10\Facebook.PlacesKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.ShareKit">
+      <HintPath>..\..\packages\Xamarin.Facebook.ShareKit.iOS.12.2.0.1\lib\xamarinios10\Facebook.ShareKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.7.2.0.564\lib\xamarinios10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.PancakeView">
+      <HintPath>..\..\packages\Xamarin.Forms.PancakeView.2.3.0.759\lib\xamarinios10\Xamarin.Forms.PancakeView.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.SignIn">
+      <HintPath>..\..\packages\Xamarin.Google.iOS.SignIn.5.0.2.1\lib\xamarinios10\Google.SignIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.GoogleClient">
+      <HintPath>..\..\packages\Plugin.GoogleClient.2.1.12\lib\xamarinios10\Plugin.GoogleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.LatestVersion">
+      <HintPath>..\..\packages\Xam.Plugin.LatestVersion.2.1.0\lib\xamarinios10\Plugin.LatestVersion.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\..\packages\Xamarin.Essentials.1.6.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="Firebase.Crashlytics">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.Crashlytics.4.6.2\lib\xamarinios10\Firebase.Crashlytics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="SlideOverKit">
+      <HintPath>..\..\packages\SlideOverKit.2.1.6.2\lib\Xamarin.iOS10\SlideOverKit.dll</HintPath>
+    </Reference>
+    <Reference Include="SlideOverKit.iOS">
+      <HintPath>..\..\packages\SlideOverKit.2.1.6.2\lib\Xamarin.iOS10\SlideOverKit.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Branch-Xamarin-Lib.iOS">
+      <HintPath>..\..\packages\Branch-Xamarin-Linking-SDK.7.0.7\lib\Xamarin.iOS10\Branch-Xamarin-Lib.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Branch-Xamarin-SDK">
+      <HintPath>..\..\packages\Branch-Xamarin-Linking-SDK.7.0.7\lib\Xamarin.iOS10\Branch-Xamarin-SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Branch-Xamarin-SDK.iOS">
+      <HintPath>..\..\packages\Branch-Xamarin-Linking-SDK.7.0.7\lib\Xamarin.iOS10\Branch-Xamarin-SDK.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyTipView">
+      <HintPath>..\..\packages\EasyTipView.1.0.1\lib\xamarinios10\EasyTipView.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\..\packages\BTProgressHUD.1.3.5\lib\xamarinios10\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.10.0.1\lib\netstandard2.0\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Vibrate">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.4.0.0.5\lib\xamarinios10\Plugin.Vibrate.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="Xamarin.Facebook.GamingServicesKit">
+      <HintPath>..\..\packages\Xamarin.Facebook.GamingServicesKit.iOS.12.2.0.1\lib\xamarinios10\Xamarin.Facebook.GamingServicesKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Installations">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.Installations.1.7.0\lib\xamarinios10\Firebase.Installations.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\..\packages\SQLitePCLRaw.core.1.1.9\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.9\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.9\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.9\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialComponents">
+      <HintPath>..\..\packages\Xamarin.iOS.MaterialComponents.92.0.0\lib\Xamarin.iOS\MaterialComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Material">
+      <HintPath>..\..\packages\Xamarin.Forms.Visual.Material.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\packages\SkiaSharp.2.80.2\lib\xamarinios1.0\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.iOS">
+      <HintPath>..\..\packages\SkiaSharp.Views.2.80.2\lib\xamarinios1.0\SkiaSharp.Views.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts">
+      <HintPath>..\..\packages\Microcharts.Forms.1.0.0-preview1\lib\netstandard2.0\Microcharts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts.iOS">
+      <HintPath>..\..\packages\Microcharts.iOS.1.0.0-preview1\lib\xamarinios1.0\Microcharts.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts.Forms">
+      <HintPath>..\..\packages\Microcharts.Forms.1.0.0-preview1\lib\netstandard2.0\Microcharts.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.2.80.2\lib\xamarinios1.0\SkiaSharp.Views.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.ABTesting">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.ABTesting.4.2.0\lib\xamarinios10\Firebase.ABTesting.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.RemoteConfig">
+      <HintPath>..\..\packages\Xamarin.Firebase.iOS.RemoteConfig.4.9.1\lib\xamarinios10\Firebase.RemoteConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Svg.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Svg.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Svg.Forms">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Svg.Forms.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Svg.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="Xamarin.Plugin.Calendar">
+      <HintPath>..\..\packages\Xamarin.Plugin.Calendar.1.4.5304\lib\xamarinios10\Xamarin.Plugin.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json" />
+    <Reference Include="Particle.Forms">
+      <HintPath>..\..\packages\particle.forms.1.0.0\lib\netstandard2.0\Particle.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DrMuscle\DrMuscle.csproj">
+      <Project>{BE1EE65E-49AA-451B-843C-40477246DB1B}</Project>
+      <Name>DrMuscle</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-120x120%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-152x152%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-167x167%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-58x58%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-87x87%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-80x80%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-114x114%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-1024x1024%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon48.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon55.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon88.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon100.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon172.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon196.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon216.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-76.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-80x80%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Exercise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Workout.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.iOS.Core.6.10.4\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('..\..\packages\Xamarin.Firebase.iOS.Core.6.10.4\build\Xamarin.Firebase.iOS.Core.targets')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.iOS.Analytics.6.9.0\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\..\packages\Xamarin.Firebase.iOS.Analytics.6.9.0\build\Xamarin.Firebase.iOS.Analytics.targets')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.iOS.Crashlytics.4.6.2\build\Xamarin.Firebase.iOS.Crashlytics.targets" Condition="Exists('..\..\packages\Xamarin.Firebase.iOS.Crashlytics.4.6.2\build\Xamarin.Firebase.iOS.Crashlytics.targets')" />
+  <Import Project="..\..\packages\Xamarin.Google.iOS.SignIn.5.0.2.1\build\Xamarin.Google.iOS.SignIn.targets" Condition="Exists('..\..\packages\Xamarin.Google.iOS.SignIn.5.0.2.1\build\Xamarin.Google.iOS.SignIn.targets')" />
+  <Import Project="..\..\packages\SkiaSharp.2.80.2\build\xamarinios1.0\SkiaSharp.targets" Condition="Exists('..\..\packages\SkiaSharp.2.80.2\build\xamarinios1.0\SkiaSharp.targets')" />
+  <Import Project="..\..\packages\Xamarin.Facebook.CoreKit.iOS.12.2.0.1\build\Xamarin.Facebook.CoreKit.iOS.targets" Condition="Exists('..\..\packages\Xamarin.Facebook.CoreKit.iOS.12.2.0.1\build\Xamarin.Facebook.CoreKit.iOS.targets')" />
+  <Import Project="..\..\packages\Xamarin.Facebook.ShareKit.iOS.12.2.0.1\build\Xamarin.Facebook.ShareKit.iOS.targets" Condition="Exists('..\..\packages\Xamarin.Facebook.ShareKit.iOS.12.2.0.1\build\Xamarin.Facebook.ShareKit.iOS.targets')" />
+  <Import Project="..\..\packages\Xamarin.Facebook.GamingServicesKit.iOS.12.2.0.1\build\Xamarin.Facebook.GamingServicesKit.iOS.targets" Condition="Exists('..\..\packages\Xamarin.Facebook.GamingServicesKit.iOS.12.2.0.1\build\Xamarin.Facebook.GamingServicesKit.iOS.targets')" />
+  <Import Project="..\..\packages\Xamarin.Facebook.LoginKit.iOS.12.2.0.1\build\Xamarin.Facebook.LoginKit.iOS.targets" Condition="Exists('..\..\packages\Xamarin.Facebook.LoginKit.iOS.12.2.0.1\build\Xamarin.Facebook.LoginKit.iOS.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets')" />
+  <PropertyGroup>
+    <FirebaseCrashlyticsUploadSymbolsEnabled>True</FirebaseCrashlyticsUploadSymbolsEnabled>
+  </PropertyGroup>
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\..\packages\Sentry.3.33.1\build\Sentry.targets" Condition="Exists('..\..\packages\Sentry.3.33.1\build\Sentry.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Sentry.3.33.1\build\Sentry.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Sentry.3.33.1\build\Sentry.targets'))" />
+  </Target>
+</Project>

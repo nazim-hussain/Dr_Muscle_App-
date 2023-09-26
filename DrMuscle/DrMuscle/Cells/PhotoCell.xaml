@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DrMuscle.Cells.PhotoCell">
+    <Frame
+        Margin="10,5,10,5"
+        CornerRadius="6"
+        Padding="0,0,0,0"
+        HasShadow="False"
+        x:Name="FrmContainer"
+        HorizontalOptions="Center"
+        BorderColor="Transparent"
+        OutlineColor="Transparent"
+        BackgroundColor="Transparent">
+    <Image
+        x:Name="ImgPhoto"
+        HorizontalOptions="FillAndExpand"
+        Aspect="AspectFit"
+        Source="{Binding Source}" />
+        </Frame>
+</ViewCell>

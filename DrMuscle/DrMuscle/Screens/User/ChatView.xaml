@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+             xmlns:local="clr-namespace:DrMuscle.Cells"
+             xmlns:controls="clr-namespace:DrMuscle.Controls"
+             xmlns:app="clr-namespace:DrMuscle.Constants"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="DrMuscle.Screens.User.ChatView"
+              BackgroundColor="#f4f4f4">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:ChatDataTemplateSelector x:Key="MessageTemplateSelector">
+            </local:ChatDataTemplateSelector>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <AbsoluteLayout>
+      
+        </AbsoluteLayout>
+        </ContentView.Content>
+</ContentView>

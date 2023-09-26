@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:app="clr-namespace:DrMuscle.Constants;assembly:DrMuscle"
+          x:Class="DrMuscle.Cells.WelcomeCell">
+    <StackLayout Padding="15"
+                 Rotation="180">
+        <Label HorizontalOptions="CenterAndExpand"
+               x:Name="LblWelcome"
+               HorizontalTextAlignment="Center"
+               Text=""
+               TextColor="{x:Static app:AppThemeConstants.BlueColor}">
+            <Label.HorizontalTextAlignment>
+                <OnPlatform x:TypeArguments="TextAlignment"
+                            Android="Start"
+                            iOS="End"
+                            x:Key="TitleTextAlignment" />
+            </Label.HorizontalTextAlignment>
+        </Label>
+        <Label HorizontalOptions="End"
+               x:Name="LblGroupChat"
+               HorizontalTextAlignment="Start"
+               Text="Preview group chat"
+               TextDecorations="Underline"
+               TextColor="{x:Static app:AppThemeConstants.BlueColor}">
+            <Label.HorizontalTextAlignment>
+                <OnPlatform x:TypeArguments="TextAlignment"
+                            Android="Start"
+                            iOS="Start"
+                            x:Key="TitleTextAlignment" />
+            </Label.HorizontalTextAlignment>
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GroupChatTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+        <!--<BoxView BackgroundColor="Silver" HeightRequest="0.5" HorizontalOptions="FillAndExpand" />-->
+    </StackLayout>
+</ViewCell>

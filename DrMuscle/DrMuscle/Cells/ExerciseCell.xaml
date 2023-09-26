@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="DrMuscle.Cells.ExerciseCell">
+    <ViewCell.View>
+        <Frame Margin="4,4,4,6"
+               HasShadow="False"
+               CornerRadius="4"
+               BackgroundColor="White"
+               Padding="20,16">
+            <StackLayout>
+                
+            <StackLayout Orientation="Horizontal">
+                <!--<StackLayout.Triggers>
+                            <DataTrigger TargetType="StackLayout" Binding="{Binding IsNextExercise}" Value="True">
+                                <Setter Property="BackgroundColor" Value="White" />
+                            </DataTrigger>
+                        </StackLayout.Triggers>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                          <Image Source="green.png" WidthRequest="15" Aspect="AspectFit" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsFinished}" />
+                          <Label Text="{Binding Label}" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" Style="{StaticResource LabelStyle}" >
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding IsNextExercise}" Value="true">
+                                        <Setter Property="TextColor" Value="Black" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                          </Label>
+                          <Image Source="swap.png" WidthRequest="10" Aspect="AspectFit" HorizontalOptions="StartAndExpand" Margin="3,6" VerticalOptions="Start" IsVisible="false" />                   
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                          <t:DrMuscleButton Clicked="OnCancelClicked" Text="{Binding [Cancel].Value, Mode=OneWay,  Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" Style="{StaticResource ItemContextCancelButton}"  />
+                          <t:DrMuscleButton Clicked="OnSwap" Text="{Binding [Swap].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" Style="{StaticResource ItemContextSwapButton}" />
+                          <t:DrMuscleButton Clicked="OnVideo" Text="{Binding [Video].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" Style="{StaticResource ItemContextVideoButton}" />
+                          <t:DrMuscleButton Clicked="OnRestore" Text="{Binding [Restore].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" Style="{StaticResource ItemContextRestoreButton}"  />
+                          <t:DrMuscleButton Clicked="OnReset" Text="{Binding [More].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" Style="{StaticResource ItemContextResetButton}" />
+                          <t:DrMuscleButton Clicked="OnContextMenuClicked" CommandParameter="{Binding .}" HorizontalOptions="End" TextColor="White" IsVisible="true"  Style="{StaticResource ItemContextMoreButton}">
+                                <t:DrMuscleButton.Triggers>
+                                <DataTrigger TargetType="t:DrMuscleButton" Binding="{Binding IsNextExercise}" Value="true">
+                                    <Setter Property="TextColor" Value="Black" />
+                                </DataTrigger>
+                            </t:DrMuscleButton.Triggers>
+                          </t:DrMuscleButton>
+                        </StackLayout>-->
+
+                <Image Source="Leg.png"
+                       HeightRequest="53"
+                       WidthRequest="53"
+                       Aspect="AspectFit" />
+                <Label Text="{Binding Label}"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalTextAlignment="Center"
+                       Style="{StaticResource LabelStyle}"
+                       TextColor="#23253A" />
+                <Button Image="ic_edit.png"
+                        HeightRequest="25"
+                        TextColor="#5063EE"
+                        Text="Edit"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
+
+
+            </StackLayout>
+                
+                <StackLayout IsVisible="{Binding IsNextExercise}" />
+
+            </StackLayout>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>

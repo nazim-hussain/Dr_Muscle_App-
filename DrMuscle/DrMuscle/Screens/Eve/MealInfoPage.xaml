@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:local="clr-namespace:DrMuscle.Cells"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+
+    BackgroundColor="#f4f4f4"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    
+
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    x:Class="DrMuscle.Screens.Eve.MealInfoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BotDataTemplateSelector
+                x:Key="BotTemplateSelector">
+            </local:BotDataTemplateSelector>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+     <ContentPage.Content>
+         <StackLayout>
+
+        <Grid
+            BackgroundColor="#f4f4f4"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            x:Name="MainGrid"
+            RowSpacing="1"
+            Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="1" />
+                <RowDefinition
+                    x:Name="BottomViewHeight"
+                    Height="5" />
+            </Grid.RowDefinitions>
+            <controls:AutoBotListView
+                Margin="2,10,2,0"
+                IsOnBoarding="True"
+                Grid.Row="0"
+                BackgroundColor="#f4f4f4"
+                ItemTemplate="{StaticResource BotTemplateSelector}"
+                HasUnevenRows="True"
+                x:Name="lstChats"
+                VerticalOptions="FillAndExpand"
+                FlowDirection="LeftToRight"
+                SeparatorColor="Transparent">
+
+            </controls:AutoBotListView>
+            <StackLayout
+                Grid.Row="2"
+                Margin="0,0,0,10"
+                BackgroundColor="Transparent"
+                VerticalOptions="EndAndExpand"
+                x:Name="stackOptions" />
+
+             <Image Source="PlusBlack.png" x:Name="FabImage" Margin="0,0,20,20" Grid.Row="0" Grid.RowSpan="3" HeightRequest="70" WidthRequest="70" VerticalOptions="End" HorizontalOptions="End" Aspect="AspectFit" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="NewTapped" />
+            </Image.GestureRecognizers>
+
+        </Image>
+        <StackLayout x:Name="ActionStack" IsVisible="false" Grid.Row="0" Grid.RowSpan="3" BackgroundColor="#55000000" VerticalOptions="FillAndExpand" Padding="20,5,20,0" AbsoluteLayout.LayoutFlags="All"  AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <StackLayout VerticalOptions="EndAndExpand" Spacing="10">
+                <pancakeView:PancakeView 
+                                 Margin="0,15,0,0"
+                                     HorizontalOptions="FillAndExpand" CornerRadius="0" >
+                    <pancakeView:PancakeView.BackgroundGradientStops>
+                    <pancakeView:GradientStopCollection>
+                <pancakeView:GradientStop Color="#0B202D" Offset="0" />
+                <pancakeView:GradientStop Color="#1A587F" Offset="1" />
+            </pancakeView:GradientStopCollection>
+        </pancakeView:PancakeView.BackgroundGradientStops>
+
+                    <Button x:Name="newMealPlanButton" Text="Get a new meal plan"
+Clicked="BtnAddMealPref_Clicked"
+Style="{StaticResource highEmphasisButtonStyle}" BorderColor="Transparent" BackgroundColor="Transparent" VerticalOptions="End" />
+                </pancakeView:PancakeView>
+                
+                <Image Source="PlusBlack.png"  Margin="0,0,0,20" HeightRequest="70" WidthRequest="70" VerticalOptions="End" HorizontalOptions="End" Aspect="AspectFit"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NewTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="NewTapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+        </Grid>
+             <ScrollView
+                
+                x:Name="mainScroll"
+                
+                Padding="0,0,0,0">
+                
+                
+                    
+                    <StackLayout
+                        x:Name="StackSteps2">
+                        <!--Target Intake card-->
+                        <controls:CustomFrame
+                            x:Name="TargetIntake2"
+                            Margin="10,15,10,0"
+                            Padding="10,10,10,10"
+                            CornerRadius="12"
+                            HasShadow="False">
+                            <StackLayout>
+                                    <Grid RowSpacing="0"
+                                        Margin="0,17,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="Auto" />
+                                            <RowDefinition
+                                                Height="Auto" />
+
+                                            <RowDefinition
+                                                Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+                                                Width="40" />
+                                            <ColumnDefinition
+                                                Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Column="0"
+                                            VerticalOptions="Start"
+HorizontalOptions="Center"                                                  Margin="{OnPlatform Android='0,-8,0,0', iOS='0,-10,0,0'}"
+                                            Source="appleFruite.png"
+                                            WidthRequest="27"
+                                            HeightRequest="27"
+                                            />
+                                       
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                            >
+                                            <Label
+                                                x:Name="LblTargetIntake2"
+                                                Text="-"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19"
+                                                Margin="0,-8,0,9" />
+                                           
+                                        </StackLayout>
+                                        
+
+                                        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0" RowSpacing="0" BackgroundColor="White" ColumnSpacing="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            
+                                            <!--Protein-->
+                                            <Frame
+                CornerRadius="6"
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="45"
+                BackgroundColor="White"
+                HasShadow="False"
+                Padding="0">
+                                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label
+                                                x:Name="LblProteinText2"
+                                                Font="Bold,17"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black" />
+                                            <Label
+                                                x:Name="LblProtein2"
+                                                Text="Protein"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="CenterAndExpand"
+                                                HorizontalTextAlignment="Center" />
+                                                </StackLayout>
+                                            </Frame>
+                                            <!--Carbs-->
+                                            <Frame
+                CornerRadius="6"
+                Grid.Row="0"
+                Grid.Column="1"
+                HeightRequest="45"
+                BackgroundColor="White"
+                HasShadow="False"
+                Padding="0">
+                                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                                   
+                                                    <Label
+                                                x:Name="LblCarbText2"
+                                                Font="Bold,17"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black" />
+                                            <Label
+                                                x:Name="LblCarb2"
+                                                Text="Carbs"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="CenterAndExpand"
+                                                HorizontalTextAlignment="Center" />
+                                                </StackLayout>
+
+                                            </Frame>
+
+
+
+
+                                            <!--Fat-->
+                                            <Frame
+                CornerRadius="6"
+                Grid.Row="0"
+                Grid.Column="2"
+                HeightRequest="75"
+                HasShadow="False"
+                BackgroundColor="White"
+                Padding="0">
+                                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label
+                                                x:Name="LblFatText2"
+                                                Font="Bold,17"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black" />
+                                            <Label
+                                                x:Name="LblFat2"
+                                                Text="Fat"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="CenterAndExpand"
+                                                HorizontalTextAlignment="Center" />
+                                                </StackLayout>
+                                            </Frame>
+                                        </Grid>
+                                    </Grid>
+
+                                    <Grid
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="1,10,1,15">
+                                        <t:DrMuscleButton
+                                            Text="LEARN MORE"
+                                            FontSize="13"
+                                            FontAttributes="Bold"
+                                            Grid.Column="0"
+                                            HorizontalOptions="Center"
+                                            Clicked="BtnLearnMore_Clicked"
+                                            Style="{StaticResource buttonLinkStyle}"
+                                            VerticalOptions="Center"
+                                            TextColor="{x:Static app:AppThemeConstants.BlueColor}" />
+
+                                        <pancakeView:PancakeView
+                                            Padding="0"
+                                            Margin="0"
+                                            IsClippedToBounds="true"
+                                            OffsetAngle="90"
+                                            CornerRadius="6"
+                                            Grid.Column="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Center"
+                                            HeightRequest="45">
+                                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                                <pancakeView:GradientStopCollection>
+                                                    <pancakeView:GradientStop
+                                                        Color="#0C2432"
+                                                        Offset="1" />
+                                                    <pancakeView:GradientStop
+                                                        Color="#195276"
+                                                        Offset="0" />
+                                                </pancakeView:GradientStopCollection>
+                                            </pancakeView:PancakeView.BackgroundGradientStops>
+                                            <StackLayout>
+                                            <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                x:Name="btnMealPlan"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="GET MEAL PLAN"
+                                                Clicked="GetMealPlan_Clicked"
+                                                IsVisible="true"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                            <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                x:Name="btnUpdateGoal"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="UPDATE GOAL"
+                                                Clicked="btnUpdateGoal_Clicked"
+                                                IsVisible="false"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                                </StackLayout>
+                                        </pancakeView:PancakeView>
+
+                                    </Grid>
+                                </StackLayout>
+                        </controls:CustomFrame>
+
+                       
+                        <!--WeightProgress2 card-->
+                        <controls:CustomFrame
+                            x:Name="WeightProgress2"
+                            Margin="10,5,10,0"
+                            Padding="10,10,10,10"
+                            CornerRadius="12"
+                            HasShadow="False">
+                            <StackLayout>
+                                    <Grid RowSpacing="0"
+                                        Margin="0,17,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="Auto" />
+                                            <RowDefinition
+                                                Height="Auto" />
+
+                                            <RowDefinition
+                                                Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+                                                Width="40" />
+                                            <ColumnDefinition
+                                                Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Column="0"
+                                            VerticalOptions="Start"
+HorizontalOptions="Center"                                                  Margin="0,-8,0,0"
+                                            Source="Bodyweight.png"
+                                            WidthRequest="27"
+                                            HeightRequest="27"
+                                            />
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                            >
+                                            <Label
+                                                x:Name="LblWeightToGo2"
+                                                Text="Weight progress"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19"
+                                                Margin="0,-8,0,9" />
+                                            <!--<Label
+                                                x:Name="LblWeightTipText2"
+                                                Text="-"
+                                                TextColor="#AA000000"
+                                                FontSize="15" />-->
+                                        </StackLayout>
+                                        
+
+                                        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0" RowSpacing="0" BackgroundColor="White" ColumnSpacing="10">
+                                            <Grid.RowDefinitions>
+                                                <!--<RowDefinition Height="60" />-->
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <!--Start weight-->
+                                            <Frame
+                CornerRadius="6"
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="45"
+                BackgroundColor="White"
+                HasShadow="False"
+                Padding="0">
+                                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                                   
+                                                    <Label
+                                                x:Name="LblStartText2"
+                                                Font="Bold,17"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black" />
+                                            <Label
+                                                x:Name="LblStartWeight2"
+                                                Text="Start weight"
+                                                Style="{StaticResource LabelStyle}"
+                                                FontSize="15"
+                                                HorizontalOptions="CenterAndExpand"
+                                                HorizontalTextAlignment="Center" />
+                                                </StackLayout>
+
+                                            </Frame>
+
+
+                                            <!--Current weight-->
+                                            <Frame
+                CornerRadius="6"
+                Grid.Row="0"
+                Grid.Column="1"
+                HeightRequest="45"
+                BackgroundColor="White"
+                HasShadow="False"
+                Padding="0">
+                                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label
+                                                x:Name="LblCurrentText2"
+                                                Font="Bold,17"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black" />
+                                            <Label
+                                                x:Name="LblCurrentWeight2"
+                                                Text="Current weight"
+                                                Style="{StaticResource LabelStyle}"
+                                                FontSize="15"
+                                                HorizontalOptions="CenterAndExpand"
+                                                HorizontalTextAlignment="Center" />
+                                                </StackLayout>
+                                            </Frame>
+
+
+                                            <!--Goal weight-->
+                                            <Frame
+                CornerRadius="6"
+                Grid.Row="0"
+                Grid.Column="2"
+                HeightRequest="75"
+                HasShadow="False"
+                BackgroundColor="White"
+                Padding="0">
+                                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label
+                                                x:Name="LblGoalText2"
+                                                Font="Bold,17"
+                                                Style="{StaticResource LabelStyle}"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black" />
+                                            <Label
+                                                x:Name="LblGoalWeight2"
+                                                Text="Goal weight"
+                                                Style="{StaticResource LabelStyle}"
+                                                FontSize="15"
+                                                HorizontalOptions="CenterAndExpand"
+                                                HorizontalTextAlignment="Center" />
+                                                </StackLayout>
+                                            </Frame>
+                                            <!--Tracker-->
+                                            <StackLayout Grid.Row="0" IsVisible="false" Grid.Column="0" Grid.ColumnSpan="3">
+                                                <Label HorizontalOptions="CenterAndExpand" x:Name="LbltrackerText2" FontSize="17" />
+                                                <Frame x:Name="FrmTracker2" HasShadow="False" Margin="20,0" Padding="0" HeightRequest="10" CornerRadius="5" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </Grid>
+
+                                    <Grid
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="1,10,1,15">
+                                        <t:DrMuscleButton
+                                            Text="UPDATE GOAL"
+                                            FontSize="13"
+                                            FontAttributes="Bold"
+                                            Grid.Column="0"
+                                            HorizontalOptions="Center"
+                                            Clicked="btnUpdateGoal_Clicked"
+                                            VerticalOptions="Center"
+                                            Style="{StaticResource buttonLinkStyle}"
+                                            TextColor="{x:Static app:AppThemeConstants.BlueColor}" />
+
+                                        <pancakeView:PancakeView
+                                            Padding="0"
+                                            Margin="0"
+                                            IsClippedToBounds="true"
+                                            OffsetAngle="90"
+                                            CornerRadius="6"
+                                            Grid.Column="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Center"
+                                            HeightRequest="45">
+                                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                                <pancakeView:GradientStopCollection>
+                                                    <pancakeView:GradientStop
+                                                        Color="#0C2432"
+                                                        Offset="1" />
+                                                    <pancakeView:GradientStop
+                                                        Color="#195276"
+                                                        Offset="0" />
+                                                </pancakeView:GradientStopCollection>
+                                            </pancakeView:PancakeView.BackgroundGradientStops>
+                                            <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="LOG WEIGHT"
+                                                Clicked="EnterWeight_Clicked"
+                                                IsVisible="true"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                        </pancakeView:PancakeView>
+
+                                    </Grid>
+                                </StackLayout>
+                        </controls:CustomFrame>
+
+                        <!--Weight Coaching card-->
+                        <controls:CustomFrame
+                            x:Name="WeightCoachingCard2"
+                            Margin="10,5,10,0"
+                            Padding="10,10,10,10"
+                            CornerRadius="12"
+                            IsVisible="true"
+                            HasShadow="False">
+                            <!--<SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems
+                                        Mode="Execute">
+                                        <SwipeItem
+                                            Text=""
+                                            IconImageSource="delete.png"
+                                            Invoked="WeightCoachingDismiss2_Clicked" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems
+                                        Mode="Execute">
+                                        <SwipeItem
+                                            Text=""
+                                            IconImageSource="delete.png"
+                                            Invoked="WeightCoachingDismiss2_Clicked" />
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                
+                            </SwipeView>-->
+                            <StackLayout>
+                                    <Grid
+                                        Margin="0,10,0,15">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="*" />
+                                            <RowDefinition
+                                                Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+                                                Width="40" />
+                                            <ColumnDefinition
+                                                Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Column="0"
+                                            VerticalOptions="Start"
+HorizontalOptions="Center"                                            Margin="0,-8,0,0"
+                                            Source="Lamp.png"
+                                            WidthRequest="40"
+                                            HeightRequest="40"
+                                            />
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                            Grid.RowSpan="2">
+                                            <Label
+                                                x:Name="LblWeightTip2"
+                                                Text=""
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19"
+                                                Margin="0,0,0,9" />
+                                            <Label
+                                                x:Name="LblWeightTipText2"
+                                                Text="-"
+                                                TextColor="#AA000000"
+                                                FontSize="15" />
+                                        </StackLayout>
+                                    
+                                    </Grid>
+                                    <Grid
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="1,10,1,15">
+                                        <t:DrMuscleButton
+                                            Text="LEARN MORE"
+                                            FontSize="13"
+                                            FontAttributes="Bold"
+                                            Grid.Column="0"
+                                            HorizontalOptions="Center"
+                                            Clicked="BtnLearnMore_Clicked"
+                                            VerticalOptions="Center"
+                                            Style="{StaticResource buttonLinkStyle}"
+                                            TextColor="{x:Static app:AppThemeConstants.BlueColor}" />
+
+                                        <pancakeView:PancakeView
+                                            Padding="0"
+                                            Margin="0"
+                                            IsClippedToBounds="true"
+                                            OffsetAngle="90"
+                                            CornerRadius="6"
+                                            Grid.Column="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Center"
+                                            HeightRequest="45">
+                                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                                <pancakeView:GradientStopCollection>
+                                                    <pancakeView:GradientStop
+                                                        Color="#0C2432"
+                                                        Offset="1" />
+                                                    <pancakeView:GradientStop
+                                                        Color="#195276"
+                                                        Offset="0" />
+                                                </pancakeView:GradientStopCollection>
+                                            </pancakeView:PancakeView.BackgroundGradientStops>
+                                            <StackLayout>
+                                            <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="UPDATE MEAL PLAN"
+                                                x:Name="btnUpdateMealPlan"
+                                                Clicked="GetMealPlan_Clicked"
+                                                IsVisible="true"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                                <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                x:Name="btnUpdateGoal2"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="UPDATE GOAL"
+                                                Clicked="btnUpdateGoal_Clicked"
+                                                IsVisible="false"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                                </StackLayout>
+                                        </pancakeView:PancakeView>
+
+                                    </Grid>
+                                    
+                                </StackLayout>
+                        </controls:CustomFrame>
+
+                        <!--Second weight box-->
+                        <controls:CustomFrame
+                            x:Name="WeightBox2"
+                            Margin="10,5,10,0"
+                            Padding="0,0,0,10"
+                            CornerRadius="12"
+                            HasShadow="False"
+                            IsClippedToBounds="True">
+                            <!--<SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems
+                                        Mode="Execute">
+                                        <SwipeItem
+                                            Text=""
+                                            IconImageSource="delete.png"
+                                            BackgroundColor="White"
+                                            Invoked="BtnWeightGotit_Clicked" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems
+                                        Mode="Execute">
+                                        <SwipeItem
+                                            Text=""
+                                            IconImageSource="delete.png"
+                                            BackgroundColor="White"
+                                            Invoked="BtnWeightGotit_Clicked" />
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                
+                            </SwipeView>-->
+                            <StackLayout>
+
+                                    <Frame
+                                        Padding="0"
+                                        IsClippedToBounds="True"
+                                        x:Name="ImgWeight"
+                                        CornerRadius="12"
+                                        HasShadow="False">
+                                        <ffimageloading:CachedImage
+                                            Source="weightChart.png"
+                                            HeightRequest="150"
+                                            Aspect="Fill" />
+
+                                    </Frame>
+                                    <microcharts:ChartView
+                                        x:Name="chartViewWeight"
+                                        IsVisible="false"
+                                        HorizontalOptions="FillAndExpand"
+                                        HeightRequest="200" />
+                                    <Label
+                                        Text="Start tracking your weight"
+                                        x:Name="LblTrackin2"
+                                        VerticalOptions="Center"
+                                        Margin="20,11,20,0"
+                                        FontAttributes="Bold"
+                                        FontSize="19"
+                                        TextColor="Black" />
+                                    <StackLayout
+                                        Orientation="Horizontal"
+                                        Margin="0.5,0">
+
+                                        <Label
+                                            x:Name="LblWeightGoal2"
+                                            Margin="20,11,20,0"
+                                            HorizontalOptions="Start"
+                                            TextColor="#AA000000"
+                                            FontSize="15"
+                                            Text="Track your weight to get custom tip to building muscle" />
+                                        <ffimageloading:CachedImage
+                                            HorizontalOptions="Center"
+                                            x:Name="WeightArrowImage"
+                                            IsVisible="false"
+                                            Aspect="AspectFit"
+                                            Source="{Binding StrengthImage}" />
+                                    </StackLayout>
+                                    <Label
+                                        Margin="20,9,20,0"
+                                        x:Name="WeightArrowText"
+                                        FontSize="Medium"
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="Start"
+                                        HorizontalTextAlignment="Start"
+                                        TextColor="#AA000000" />
+
+                                    <Grid
+                                         IsVisible="false"
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="11,20,11,17">
+
+                                        <t:DrMuscleButton
+                                            Text="LEARN MORE"
+                                            FontSize="13"
+                                            FontAttributes="Bold"
+                                            Grid.Column="0"
+                                            HorizontalOptions="Center"
+                                            Clicked="BtnLearnMore_Clicked"
+                                            VerticalOptions="Center"
+                                            Style="{StaticResource buttonLinkStyle}"
+                                            TextColor="{x:Static app:AppThemeConstants.BlueColor}" />
+
+
+                                        <pancakeView:PancakeView
+                                            Padding="0"
+                                            Margin="0"
+                                            IsClippedToBounds="true"
+                                            OffsetAngle="90"
+                                            CornerRadius="6"
+                                            Grid.Column="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Center"
+                                            HeightRequest="45">
+                                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                                <pancakeView:GradientStopCollection>
+                                                    <pancakeView:GradientStop
+                                                        Color="#0C2432"
+                                                        Offset="1" />
+                                                    <pancakeView:GradientStop
+                                                        Color="#195276"
+                                                        Offset="0" />
+                                                </pancakeView:GradientStopCollection>
+                                            </pancakeView:PancakeView.BackgroundGradientStops>
+                                            <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="LOG WEIGHT"
+                                                Clicked="EnterWeight_Clicked"
+                                                IsVisible="true"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                        </pancakeView:PancakeView>
+
+                                    </Grid>
+                                </StackLayout>
+                        </controls:CustomFrame>
+                         <pancakeView:PancakeView
+                                            
+                                            Margin="20,20"
+                                            IsClippedToBounds="true"
+                                            OffsetAngle="90"
+                                            CornerRadius="6"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Center"
+                                            HeightRequest="55">
+                                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                                <pancakeView:GradientStopCollection>
+                                                    <pancakeView:GradientStop
+                                                        Color="#0C2432"
+                                                        Offset="1" />
+                                                    <pancakeView:GradientStop
+                                                        Color="#195276"
+                                                        Offset="0" />
+                                                </pancakeView:GradientStopCollection>
+                                            </pancakeView:PancakeView.BackgroundGradientStops>
+                                            
+                                            <t:DrMuscleButton
+                                                CornerRadius="6"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="45"
+                                                FontSize="16"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="GET MEAL PLAN"
+                                                Clicked="GetMealPlan_Clicked"
+                                                IsVisible="true"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+                                                
+                                        </pancakeView:PancakeView>
+
+                        </StackLayout>
+                    
+                 </ScrollView>
+         </StackLayout>
+    </ContentPage.Content>
+
+</t:DrMusclePage>

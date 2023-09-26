@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Views.EndExercisePopup"
+    CloseWhenBackgroundIsClicked="True"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:forms="clr-namespace:Particle.Forms;assembly=Particle.Forms"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+<Frame Padding="0" CornerRadius="4"
+             HasShadow="False"
+             IsClippedToBounds="True"
+             HorizontalOptions="FillAndExpand"
+        VerticalOptions="CenterAndExpand"
+             BackgroundColor="White"
+             Margin="20,20,20,0">
+        <Grid>
+             
+
+        
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="20,10,20,10"
+            BackgroundColor="#f4f4f4"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <ScrollView
+                VerticalOptions="FillAndExpand">
+
+                
+                    <StackLayout
+                        VerticalOptions="FillAndExpand">
+
+                        <StackLayout
+                            x:Name="ResultStackLayout"
+                            VerticalOptions="FillAndExpand"
+                            Padding="0,27,0,0">
+                            <ffimageloading:CachedImage IsVisible="false"  Margin="0,0,0,0" x:Name="ImgName" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" Aspect="AspectFit" VerticalOptions="Start" />
+                            <Label
+                                        x:Name="lblResult4"
+                                        Text=""
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Font="Bold,43"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="Black" />
+                    <Label Margin="0,-5,0,0" Text="" x:Name="lblResult1" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" MaxLines="1" />
+
+                            
+                            <Grid Margin="0,17,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="10" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                 
+                                    <ColumnDefinition
+                                        Width="*" />
+                                    <ColumnDefinition
+                                        Width="10" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout
+                                    Grid.Column="1"
+                                    HorizontalOptions="FillAndExpand">
+                                <Image
+                                        x:Name="IconHistory"
+                                        Source="history.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    
+                                <Label
+                                        x:Name="lblResult3"
+                                        Text=""
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Font="Bold,22"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="Black" />
+                                    
+                                    <Label
+                                        x:Name="lblResult33"
+                                        Text="Last workout"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Style="{StaticResource LabelStyle}"
+                                        FontSize="18"
+                                        TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+                                </StackLayout>
+                                <StackLayout
+                                    Grid.Column="2"
+                                    HorizontalOptions="FillAndExpand">
+                                <Image
+                                        x:Name="IconCalander"
+                                        Source="calander.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    
+                                <Label
+                                        x:Name="lblResult21"
+                                        Text=""
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Style="{StaticResource LabelStyle}"
+                                        Font="Bold,22"
+                                        TextColor="Black" />
+                                    
+                                    <Label
+                                        x:Name="lblResult211"
+                                        Text="Today's 1RM"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Style="{StaticResource LabelStyle}"
+                                        FontSize="18"
+                                        TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+                                </StackLayout>
+                                <!--<StackLayout
+                                    Grid.Column="2"
+                                    HorizontalOptions="FillAndExpand">
+                                <Image
+                                        x:Name="IconResultImage"
+                                        Source="up_arrow.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+
+                                <Label
+                                        x:Name="lblResult4"
+                                        Text=""
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Font="Bold,17"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="Black" />
+                                    
+                                    
+                                    <Label
+                                        x:Name="lblResult44"
+                                        Text="Progress"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" />
+                                </StackLayout>-->
+                            </Grid>
+
+                            <Grid
+                                Margin="0,17,0,0"
+                            HeightRequest="190">
+                                <microcharts:ChartView x:Name="chartView"
+                 Margin="-67,0"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       HeightRequest="210" />
+                                <!--<oxy:PlotView
+                                x:Name="plotView"
+                                IsVisible="true"
+                                VerticalOptions="Start"
+                                HeightRequest="170">
+                            </oxy:PlotView>-->
+                            </Grid>
+
+                            <Label
+                                VerticalOptions="FillAndExpand" />
+
+                        </StackLayout>
+                    </StackLayout>
+                
+            </ScrollView>
+            <StackLayout
+                Orientation="Vertical"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Padding="0,0,0,25">
+                
+                <!--<t:DrMuscleButton x:Name="ShareWithFBButton" Padding="10,0,0,0" Image="facebook_f_white.png" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Text="Share record" IsVisible="true" Style="{StaticResource highEmphasisButtonStyle}" BackgroundColor="#7f3c5a99" BorderColor="#7f3c5a99" BorderWidth="2" TextColor="White" />-->
+
+                <pancakeView:PancakeView
+            Padding="0"
+            Margin="0"
+            IsClippedToBounds="true"
+            OffsetAngle="90"
+            CornerRadius="0"
+                        HorizontalOptions="FillAndExpand" 
+                        HeightRequest="66">
+                    <pancakeView:PancakeView.BackgroundGradientStops>
+                        <pancakeView:GradientStopCollection>
+                            <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                            <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                        </pancakeView:GradientStopCollection>
+                    </pancakeView:PancakeView.BackgroundGradientStops>
+                    <t:DrMuscleButton
+                    x:Name="NextExerciseButton"
+                    VerticalOptions="EndAndExpand"
+                        HeightRequest="66"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="true"
+                    Style="{StaticResource highEmphasisButtonStyle}"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        TextColor="White"/>
+                </pancakeView:PancakeView>
+                
+            </StackLayout>
+
+        </StackLayout>
+            <forms:ParticleView x:Name="MyParticleCanvas"
+                              FallingParticlesPerSecond="25.0"
+                              IsActive="False"
+                              IsRunning="False"
+                              HasFallingParticles="True"
+                              VerticalOptions="FillAndExpand"
+                              HorizontalOptions="FillAndExpand"
+                              InputTransparent="True"/>
+        </Grid>
+            </Frame>
+</pages:PopupPage>
+

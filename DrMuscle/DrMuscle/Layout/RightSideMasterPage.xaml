@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:SlideMenuView xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:t="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+                 x:Class="DrMuscle.Layout.RightSideMasterPage"
+                 xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                 xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                 xmlns:layout="clr-namespace:DrMuscle.Layout">
+    <t:SlideMenuView.Content>
+        <!--<ScrollView x:Name="ScrllView" >
+            -->
+        <StackLayout>
+            <StackLayout x:Name="GeneralStack" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Start"  Spacing="1">
+                        <!--<layout:DrMuscleButton x:Name="HomeButton" Text="Home screen" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <pancakeView:PancakeView VerticalOptions="Start"
+                                   x:Name="PancakeContainer" 
+            IsClippedToBounds="true"
+                                     HorizontalOptions="End" OffsetAngle="45" Margin="0" Padding="0,10,0,0" CornerRadius="0" >
+                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                <pancakeView:GradientStopCollection>
+                                    <pancakeView:GradientStop Color="#0B202D" Offset="0" />
+                                    <pancakeView:GradientStop Color="#1A587F" Offset="1" />
+                                </pancakeView:GradientStopCollection>
+                            </pancakeView:PancakeView.BackgroundGradientStops>
+                            <Grid Padding="15,0,0,15" RowSpacing="12">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="35" />
+
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ffimageloading:CachedImage x:Name="ImgProfile" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+			WidthRequest="60"
+            HeightRequest="60"
+			DownsampleToViewSize="true"
+			Source = "me_tab.png">
+                                    <ffimageloading:CachedImage.Transformations>
+                                        <fftransformations:CircleTransformation />
+                                    </ffimageloading:CachedImage.Transformations>
+                                </ffimageloading:CachedImage>
+                                <StackLayout Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Spacing="2" HorizontalOptions="Start" VerticalOptions="Center">
+                                    <Label TextColor="#CCFFFFFF" x:Name="LblNmae" Text="Etienee Juneau" Margin="0,0,0,0" VerticalOptions="End" VerticalTextAlignment="End" FontSize="21" />
+                                    <Label  TextColor="#77FFFFFF" x:Name="LblDoneWorkout" Text="" FontSize="15" VerticalOptions="Start"  />
+                                </StackLayout>
+                                <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+                                    <BoxView.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="MeGesture" />
+                                    </BoxView.GestureRecognizers>
+                                </BoxView>
+                                <Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" Grid.ColumnSpan="2" x:Name="SettingsButton" Text="Settings" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="18" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="SettingGesture" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Row="3" Grid.Column="0" Margin="5,0,0,0" Grid.ColumnSpan="2" x:Name="SubscriptionInfosButton" Text="Subscription info" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="18">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="SubscriptionGesture" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </pancakeView:PancakeView>
+                        <Grid RowSpacing="15" Padding="15,15,14,5" >
+                            <Label Grid.Row="0" Grid.Column="0" Margin="5,0,0,0" x:Name="ChartsButton" Text="Charts" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"  FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="ChartsGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Grid.Row="1" Grid.Column="0" Margin="5,0,0,0" x:Name="HistoryButton" Text="History" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="HistoryGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <!--<Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" x:Name="WebButton" Text="Web app" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="WebGesture" />
+                                    </Label.GestureRecognizers>
+                                </Label>-->
+                            <Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" x:Name="TellAFriend" Text="Share free trial" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="TellAFriendGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Grid.Row="3" Grid.Column="0" Margin="5,0,0,0" x:Name="FAQButton" Text="FAQ" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="FAQGesture" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" x:Name="WebReviews" Text="Reviews" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="21">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="WebGestures" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <!--<layout:DrMuscleButton x:Name="MeButton" Text="Me" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <!--<layout:DrMuscleButton x:Name="HistoryButton" Text="History" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />-->
+                        <!--<BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <!--<layout:DrMuscleButton x:Name="SettingsButton" Text="Settings" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <!--<layout:DrMuscleButton x:Name="WebButton" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />-->
+                        <!--<BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <!--<layout:DrMuscleButton x:Name="SubscriptionInfosButton" Text="Subscription info" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <!--<layout:DrMuscleButton x:Name="OldHomeButton" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+
+                        <!--<layout:DrMuscleButton x:Name="FAQButton" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />-->
+                        <!--<BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+                        <!-- <layout:DrMuscleButton x:Name="ChatButton" Text="Chat" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+
+                        <!--<layout:DrMuscleButton x:Name="EmailUsButton" Text="Email support" Margin="20,18,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>-->
+
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#F0F0F0" VerticalOptions="FillAndExpand">
+                        <!--<Label
+                                Text="User reviews"
+                                Margin="20,10,0,0"
+                                IsVisible="true"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Font="Bold,18"
+                                Style="{StaticResource LabelStyle}"
+                                TextColor="Black" />-->
+                        <Frame Padding="25,5,25,10" Margin="20,5,20,0" BackgroundColor="White" CornerRadius="8" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblReview" Text="For basic strength training this app out performs the many methods/apps I have tried in my 30+ years of body/strength training. What I like the most is that it take the brain work out of weights, reps, and sets (if you follow a structured workout). What I like even more is the exceptional customer engagement." LineBreakMode="TailTruncation" Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="LblReviewerName" Text="A McM" MaxLines="1" LineBreakMode="TailTruncation" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapMoreReviews_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <!--<Label
+                                Text="Read more reviews &#x226B;"
+                                Margin="20,2,0,10"
+                                IsVisible="true"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Font="Bold,16"
+                                Style="{StaticResource LabelStyle}"
+                                TextColor="Black" >
+                                 <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapMoreReviews_Tapped" />
+                            </Label.GestureRecognizers>
+                                </Label>-->
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" VerticalOptions="End" Spacing="14" Padding="0">
+                        <!--<BoxView HeightRequest="0.5" BackgroundColor="White" HorizontalOptions="FillAndExpand" />-->
+                        <Label Grid.Row="1" Grid.Column="0" Margin="20,8,0,0" x:Name="LogOutButton" Text="Log out" BackgroundColor="Transparent" TextColor="#26262B" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="18">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="LogoutGesture" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <!--<layout:DrMuscleButton x:Name="LogOutButton" Text="Log out" Margin="20,18,20,18" Style="{StaticResource slideMenuButtonStyle}" />-->
+                        <Label x:Name="VersionInfoLabel" FontSize="14" VerticalOptions="End" HorizontalOptions="Start" Margin="20,0,0,20" TextColor="#26262B">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_BuildVersionTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="BotStack" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="1">
+                        <layout:DrMuscleButton x:Name="SignInButton" Text="Sign in" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <layout:DrMuscleButton x:Name="SkipDemoButton" Text="Skip demo" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <layout:DrMuscleButton x:Name="CancelButton" Text="Cancel" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+                        <layout:DrMuscleButton x:Name="RestartDemoButton" Text="Restart demo" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" x:Name="BoxDemoBorder" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+
+                        <layout:DrMuscleButton x:Name="LanguageButton" Text="Language" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" x:Name="BoxLanguageBorder" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+                        <layout:DrMuscleButton x:Name="RestartSetupButton" Text="Restart setup" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" x:Name="BoxSetupBorder" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand"></BoxView>
+
+                        <!--<layout:DrMuscleButton x:Name="NewNUXButton" Text="New NUX" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                            <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                            </BoxView>-->
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                        <Label x:Name="ModeLbl" Text="Normal experience - load beta" Margin="20,20,20,0" FontSize="10" HorizontalOptions="CenterAndExpand" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_ModeChange" />
+                            </Label.GestureRecognizers>
+                            </Label>
+
+                        <Label x:Name="VersionInfoLabel1" FontSize="10" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_BuildVersionTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="HomeStack" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout x:Name="HomeMainStack" Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="1">
+                        <layout:DrMuscleButton x:Name="SharefreeMonthButton" Text="Share 1 month free" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+                        <!--<layout:DrMuscleButton x:Name="WorkoutsButton" Text="Workouts" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                            <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                            </BoxView>-->
+                        <layout:DrMuscleButton x:Name="TiredTodayButton" Text="Tired today" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+                        <layout:DrMuscleButton x:Name="ShortOnTimeButton" Text="Short on time" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+                        <!--<layout:DrMuscleButton x:Name="StartWorkoutButton" Text="Start workouts" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                            <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                            </BoxView>-->
+
+                    </StackLayout>
+                    <StackLayout x:Name="SummaryMainStack" Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="1">
+                        <layout:DrMuscleButton x:Name="MoreStatsButton" Text="View more stats" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                        <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                        </BoxView>
+
+                        <!--<layout:DrMuscleButton x:Name="StartWorkoutButton" Text="Start workouts" Margin="20,20,20,0" Style="{StaticResource slideMenuButtonStyle}" />
+                            <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand">
+                            </BoxView>-->
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                        <Label x:Name="VersionInfoLabel2" FontSize="10" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_BuildVersionTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout x:Name="TimerStack" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="2">
+                    <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+                        <layout:DrMuscleButton x:Name="TimerLess" Text="-" WidthRequest="50" Style="{StaticResource timerButtonStyle}" Margin="0,0,0,0" />
+                        <layout:DrEntry x:Name="TimerEntry" MaxLength="4" TextColor="Black" Text="60" HorizontalOptions="FillAndExpand" Keyboard="Numeric" HorizontalTextAlignment="Center" Focused="TimerEntry_Focused" Style="{StaticResource timerEntryStyle}">
+                        </layout:DrEntry>
+                        <layout:DrMuscleButton x:Name="TimerMore" Text="+" WidthRequest="50" Style="{StaticResource timerButtonStyle}" Margin="0,0,0,0" />
+                    </StackLayout>
+                    <Label Text="To apply your custom rest time, turn off the automatch reps below" Margin="20,0" Style="{StaticResource infoText}" />
+                    <StackLayout Margin="20,10,20,0">
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,0,0,0">
+                            <Label x:Name="LblVibrate" Text="VIBRATE" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="VibrateSwitch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,10,0,0">
+                            <Label x:Name="LblTimer321Sound" Text="3-2-1" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="Timer123Switch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,10,0,0">
+                            <Label x:Name="LblRepsSound" Text="REPS TO DO" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="RepsSoundSwitch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,10,0,0">
+                            <Label x:Name="LblSound" Text="DING" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="SoundSwitch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,10,0,0">
+                            <Label x:Name="LblFullScreen" Text="FULLSCREEN" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="FullscreenSwitch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,10,0,0">
+                            <Label x:Name="LblAutoStart" Text="AUTOSTART" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="AutostartSwitch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout x:Name="StackAutoMatch" Orientation="Horizontal" Spacing="0" Margin="0,10,0,0">
+                            <Label x:Name="LblAutomatchReps" Text="AUTOMATCH REPS" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="AutosetSwitch" IsToggled="true" HorizontalOptions="End" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,0,0,0">
+                            <Label x:Name="LblAutomaticallyChangeTimer" Text="(Automatically change timer duration to match recommended reps and optimize muscle hypertrophy.)" Style="{StaticResource infoText}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,0,0,0">
+                            <Label x:Name="LearnMoreLink" Text="Learn more" Style="{StaticResource infoText}" TextColor="Blue" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Margin="20,15,20,0">
+                        <layout:DrMuscleButton x:Name="TimerStartButton" Text="START" Style="{StaticResource timerButtonStyle}" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+       
+       </StackLayout>
+        <!--</ScrollView>-->
+    </t:SlideMenuView.Content>
+</t:SlideMenuView>

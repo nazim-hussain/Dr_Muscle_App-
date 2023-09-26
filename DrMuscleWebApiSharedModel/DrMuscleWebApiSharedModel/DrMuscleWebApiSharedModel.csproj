@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B4E17091-29B9-41E6-8DE5-7F6CD8C13E51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DrMuscleWebApiSharedModel</RootNamespace>
+    <AssemblyName>DrMuscleWebApiSharedModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AddUserExerciseModel.cs" />
+    <Compile Include="AddUserWorkoutTemplateModel.cs" />
+    <Compile Include="ApiResponse.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="BodyPartModel.cs" />
+    <Compile Include="BooleanModel.cs" />
+    <Compile Include="DeleteWorkoutLogExerciseModel.cs" />
+    <Compile Include="ErrorResponse.cs" />
+    <Compile Include="ExerciceModel.cs" />
+    <Compile Include="FeaturedProgramModel.cs" />
+    <Compile Include="GetExerciseRequest.cs" />
+    <Compile Include="GetUserProgramInfoResponseModel.cs" />
+    <Compile Include="GetUserWorkoutLogAverageForExerciseRequest.cs" />
+    <Compile Include="GetUserWorkoutTemplateGroupResponseModel.cs" />
+    <Compile Include="OneRMAverage.cs" />
+    <Compile Include="GetExercisesLogResponseModel.cs" />
+    <Compile Include="GetOneRMforExerciseModel.cs" />
+    <Compile Include="GetRecommendationForExerciseModel.cs" />
+    <Compile Include="GetUserExerciseResponseModel.cs" />
+    <Compile Include="GetUserWorkoutLogAverageResponse.cs" />
+    <Compile Include="GetUserWorkoutResponseModel.cs" />
+    <Compile Include="HistoryExerciseModel.cs" />
+    <Compile Include="HistoryModel.cs" />
+    <Compile Include="LoginErrorResponseModel.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="LoginSuccessResult.cs" />
+    <Compile Include="MultiUnityWeight.cs" />
+    <Compile Include="NewExerciceLogModel.cs" />
+    <Compile Include="NewExerciceModel.cs" />
+    <Compile Include="OneRMModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecommendationModel.cs" />
+    <Compile Include="RegisterModel.cs" />
+    <Compile Include="SetLog.cs" />
+    <Compile Include="SetModel.cs" />
+    <Compile Include="SingleIntegerModel.cs" />
+    <Compile Include="UserInfosModel.cs" />
+    <Compile Include="WorkoutLogSerieModel.cs" />
+    <Compile Include="IsEmailAlreadyExistModel.cs" />
+    <Compile Include="ForgotPasswordModel.cs" />
+    <Compile Include="ForgotPasswordResponseModel.cs" />
+    <Compile Include="ResetPasswordModel.cs" />
+    <Compile Include="WorkoutTemplateModel.cs" />
+    <Compile Include="WorkoutTemplateGroupModel.cs" />
+    <Compile Include="SubscriptionModel.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="ExerciseSettingsModel.cs" />
+    <Compile Include="ProgramExerciseModel.cs" />
+    <Compile Include="ExerciseStates.cs" />
+    <Compile Include="WorkoutTemplateSettingsModel.cs" />
+    <Compile Include="EquipmentModel.cs" />
+    <Compile Include="UnlockCodeResponseModel.cs" />
+    <Compile Include="LightSessionModel.cs" />
+    <Compile Include="NewUserSubscriptionModel.cs" />
+    <Compile Include="MealPlanModel.cs" />
+    <Compile Include="UserInfoMealPlanModel.cs" />
+    <Compile Include="NewExerciseLogResponseModel.cs" />
+    <Compile Include="GooglePushNotificationModel.cs" />
+    <Compile Include="AppleNotificationModel.cs" />
+    <Compile Include="UnsubscribeModel.cs" />
+    <Compile Include="SendBirdNotificationModel.cs" />
+    <Compile Include="ConsecutiveWeeksModel.cs" />
+    <Compile Include="PhoneToWatchModel.cs" />
+    <Compile Include="ChatModel.cs" />
+    <Compile Include="GroupChatModel.cs" />
+    <Compile Include="ChatRoomModel.cs" />
+    <Compile Include="DeviceModel.cs" />
+    <Compile Include="LifeCycle.cs" />
+    <Compile Include="ThriveCartSubscription.cs" />
+    <Compile Include="SaveWorkoutModel.cs" />
+    <Compile Include="UserWeight.cs" />
+    <Compile Include="SubscriptionSourceModel.cs" />
+    <Compile Include="AvailablePlateModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

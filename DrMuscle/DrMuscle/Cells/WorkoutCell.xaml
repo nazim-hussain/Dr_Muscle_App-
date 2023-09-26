@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:app="clr-namespace:DrMuscle.Constants;"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    x:Class="DrMuscle.Cells.WorkoutCell">
+    <ViewCell.View>
+         <controls:CustomFrame
+                            x:Name="WeightProgress2"
+                            Margin="10,0,10,10  "
+                            Padding="10,10,10,10"
+                            CornerRadius="12"
+                            HasShadow="False">
+        <Grid
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Padding="10,15,10,15">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+
+            </Grid.ColumnDefinitions>
+             <StackLayout
+                Grid.Column="0"
+                HorizontalOptions="FillAndExpand">
+                <Image
+                    Source="Clock.png"
+                    Aspect="AspectFit"
+                    HeightRequest="32"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    x:Name="lblResult3"
+                    Text="{Binding MinuteCount}"
+                    IsVisible="true"
+                    HorizontalOptions="Center"
+                    Font="Bold,17"
+                    Style="{StaticResource LabelStyle}"
+                    TextColor="Black" />
+                <Label
+                    x:Name="lblResult33"
+                    Text="Minutes"
+                    IsVisible="true"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource LabelStyle}"
+                    TextColor="{x:Static app:AppThemeConstants.OffBlackColor}">
+                    <Label.Triggers>
+                        <DataTrigger
+                            TargetType="Label"
+                            Binding="{Binding MinuteCount}"
+                            Value="1">
+                            <Setter
+                                Property="Text"
+                                Value="Minute" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+
+
+            </StackLayout>
+            <StackLayout
+                Grid.Column="1"
+                HorizontalOptions="FillAndExpand">
+                <Image
+                                        x:Name="IconExerciseImage"
+                                        Source="Exercise.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+                <Label
+                    x:Name="lblResult21"
+                    Text="{Binding ExerciseCount}"
+                    IsVisible="true"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource LabelStyle}"
+                    Font="Bold,17"
+                    TextColor="Black" />
+                <Label
+                    x:Name="lblResult211"
+                    Text="Exercises"
+                    IsVisible="true"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource LabelStyle}"
+                    TextColor="{x:Static app:AppThemeConstants.OffBlackColor}">
+                    <Label.Triggers>
+                        <DataTrigger
+                            TargetType="Label"
+                            Binding="{Binding ExerciseCount}"
+                            Value="1">
+                            <Setter
+                                Property="Text"
+                                Value="Exercise" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </StackLayout>
+           
+            <StackLayout
+                                    Grid.Column="2"
+                                    HorizontalOptions="FillAndExpand">
+                                    <Image
+                                        x:Name="IconResultImage"
+                                        Source="WorkoutNow.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+
+                                    <Label
+                                        x:Name="lblResult4"
+                                        Text="{Binding WorksetCount}"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Font="Bold,17"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="Black" />
+                                    <Label
+                                        x:Name="lblResult44"
+                                        Text="Work sets"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" >
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding WorksetCount}" Value="1" >
+                                                <Setter Property="Text" Value="Work set" />
+                                                </DataTrigger>
+                                         </Label.Triggers>
+                                        </Label>
+                                </StackLayout>
+
+            
+            </Grid>
+    </controls:CustomFrame>
+    </ViewCell.View>
+</ViewCell>

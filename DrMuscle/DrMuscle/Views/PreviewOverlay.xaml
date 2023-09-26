@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    CloseWhenBackgroundIsClicked="false"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+     xmlns:constnats="clr-namespace:DrMuscle.Constants"
+     xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    xmlns:Controls="clr-namespace:DrMuscle.Controls"
+    
+    BackgroundColor="#f4f4f4"
+    x:Class="DrMuscle.Views.PreviewOverlay">
+    <ScrollView Grid.Row="0" x:Name="scrollView">
+        <StackLayout Spacing="0" >
+            <Grid >
+
+                <Frame
+                Margin="0"
+            Padding="0"
+            CornerRadius="0"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True">
+                    
+                            <ffimageloading:CachedImage
+                x:Name="ImgGender"
+                Source="bottom2.png"
+                HeightRequest="225"
+                VerticalOptions="Start"
+                Aspect="AspectFill" />
+                       
+                    
+                </Frame>
+                <Image Source="Close_Gray.png" WidthRequest="50" Aspect="AspectFit" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" Margin="0,10,8,0" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Close_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+            </Grid>
+           
+            <!--Cards-->
+            
+            <Frame
+                Margin="10,10,10,10"
+            Padding="10,5,10,5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+                <StackLayout>
+                    <Label
+            x:Name="DrMuscleWorkoutsButton"
+            LineBreakMode="WordWrap"
+                    Text=""
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            TextColor="Black"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            Margin="10,5,10,5"
+            FontSize="24"></Label>
+                
+                <Grid x:Name="GridTips" HorizontalOptions="CenterAndExpand" Padding="0,0,5,10" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--<Image HorizontalOptions="Start" VerticalOptions="Center"  Source="green.png" WidthRequest="20" Aspect="AspectFit" HeightRequest="20" Grid.Row="0" Grid.Column="0" />-->
+                    <!--<Label Grid.Row="0" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="More advanced" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" FontSize="17" />-->
+
+                    <!--<Image HorizontalOptions="Start" VerticalOptions="Center"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="1" Grid.Column="0"  />-->
+                    <!--<Label Grid.Row="1" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="You get in shape faster" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" FontSize="17" />-->
+
+                    <!--<Image HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="2" Grid.Column="0" />-->
+                    <!--<Label Grid.Row="2" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Center"  />
+                    <Label Grid.Row="2" x:Name="LblGenderGoal3" Grid.Column="1" Text="It's like a trainer in your phone" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" FontSize="17" />-->
+
+                    <!--<Image HorizontalOptions="Start" VerticalOptions="Center"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="3" Grid.Column="0" />-->
+                    <Label Grid.Row="0" Grid.Column="0" Text="•"  HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource LabelStyle}" />
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="LblGenderGoal4" Text="Build muscle " HorizontalOptions="Start" Style="{StaticResource LabelStyle}" FontSize="17" />
+
+                    <!--<Image HorizontalOptions="Start" VerticalOptions="Center"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="4" Grid.Column="0" />-->
+                    <Label Grid.Row="1" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="1" Grid.Column="1"  Text="Exercises, reps, and sets fine-tuned for your goals" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" FontSize="17" />
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+                    <Label Grid.Row="2" Grid.Column="1"  Text="Adjusted automatically every workout based on your progress" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" FontSize="17" />
+
+                    
+                </Grid>
+                </StackLayout>
+            </Frame>
+            
+<!--Cards-->
+            
+            
+            <Frame
+                Margin="10,0,10,10"
+            Padding="10,5,0,5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+                <StackLayout>
+                    <Label
+            LineBreakMode="WordWrap"
+            Text="What to expect"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            TextColor="Black"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            Margin="10,5,10,5"
+            FontSize="24" />
+
+                    <Controls:FlowLayout HorizontalOptions="FillAndExpand" Margin="0,5,0,5"  x:Name="flChipView" Spacing="5">
+                    </Controls:FlowLayout>
+                </StackLayout>
+            </Frame>
+            
+            <!--Results-->
+            
+            
+            <Frame
+                Margin="10,0,10,0"
+            Padding="10,5,10,5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+                <StackLayout>
+                    <Label
+            LineBreakMode="WordWrap"
+            Text="Why we're different"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            TextColor="Black"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            Margin="10,5,10,5"
+            FontSize="24" />
+                    <Grid HorizontalOptions="CenterAndExpand" Padding="0,0,5,10" RowSpacing="12">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Image HorizontalOptions="Start" VerticalOptions="Start"  Source="green.png" WidthRequest="20" Aspect="AspectFit" HeightRequest="20" Grid.Row="0" Grid.Column="0" />
+
+
+                        <Image HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="1" Grid.Column="0"  />
+
+                        <Image HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="2" Grid.Column="0" />
+
+                        <Image HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png" Grid.Row="3" Grid.Column="0" />
+
+                        <Image Grid.Row="4" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+
+                        <Image Grid.Row="5" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="6" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="7" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="8" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="9" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="10" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="11" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="12" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="13" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="14" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />
+                        <Image Grid.Row="15" HorizontalOptions="Start" VerticalOptions="Start"  WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="green.png"  Grid.Column="0" />-->
+
+                        <Label Grid.Row="0" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="2" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="3" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="4" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="5" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="6" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="7" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="8" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="9" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="10" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="11" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="12" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Label Grid.Row="13" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="Start" />
+
+
+                       
+                        <!---->
+                        <StackLayout Grid.Row="0" Grid.Column="1">
+                            <Label Text="Smart challenges" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Trigger when you're on a roll to speed up your gains." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+                        <StackLayout Grid.Row="1" Grid.Column="1">
+                            <Label Text="Daily undulating periodization" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="You progress faster when you change reps often. Your reps change (undulate) automatically every workout." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+
+                        <StackLayout Grid.Row="2" Grid.Column="1">
+                            <Label Text="Exercise rotation" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="You get new exercises automatically over time—your program rotates them for you." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+                        <!---->
+                        <StackLayout Grid.Row="3" Grid.Column="1">
+                            <Label Text="Overtraining protection" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Your workouts becomes easier automatically when you show signs of overtraining." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+                        <!---->
+                        <StackLayout Grid.Row="4" Grid.Column="1">
+                            <Label Text="Recovery coach" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="How long should you rest before your next workout? The app tells you on your home page." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+                        <!---->
+                        <StackLayout Grid.Row="5" Grid.Column="1">
+                            <Label Text="Nutrition coach" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="How many calories and protein should you eat for your goals and current progress? The app tells you on the Learn tab." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+                        <!---->
+                        <StackLayout Grid.Row="6" Grid.Column="1">
+                            <Label Text="Multiple equipment profiles" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Training at home and on the road? You can set up multiple equipment profiles in Settings." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+
+                        </StackLayout>
+
+                        <!---->
+                        <StackLayout Grid.Row="7" Grid.Column="1">
+
+                            <Label Text="Pyramid sets" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="&quot;The most reliable and effective technique I've ever come across.&quot; -Martin Berkhan" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+                        <!---->
+                        <StackLayout Grid.Row="8" Grid.Column="1">
+
+                            <Label Text="Detailed tracking" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Track all your stats inside the app. Get more details inside our Web app." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+                        <!---->
+                        <StackLayout Grid.Row="9" Grid.Column="1">
+                            <Label Text="Favorite exercises" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Favorite an exercise to see it more often." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+                        <!---->
+                        <StackLayout Grid.Row="10" Grid.Column="1">
+                            <Label Text="Plate calculator" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Tap the plate icon (top-right) to see how to load barbell exercises. No more plate math." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+                        <!---->
+                        <StackLayout Grid.Row="11" Grid.Column="1">
+                            <Label Text="Light sessions" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Got off track? No problem: when you return after a break, you get a light session automatically." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="12" Grid.Column="1">
+                            <Label Text="Sets redistribution" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Skip a workout? No problem: some of your sets are redistributed to your next workout automatically." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="13" Grid.Column="1">
+                            <Label Text="Strenth phase" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                            <Label Text="Optional, automated 3-week strength phase on each program." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                        </StackLayout>
+
+
+
+
+                        <!--<StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Suggest and vote" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Something missing? Suggest and vote for new features on our feedback site." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                                           
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="And more!" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="New updates every week. View the full list?" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+
+                </StackLayout>
+            </Frame>
+
+            <!--<Frame
+                Margin="10,0,10,5"
+            Padding="5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+              
+          <Grid x:Name="GridTips1" HorizontalOptions="CenterAndExpand" Padding="35,10,35,12" RowSpacing="5">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="0" Grid.Column="1" Text="More expensive than others app" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="1" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}"/>
+              <Label Grid.Row="1" Grid.Column="1" Text="More advanced" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="2" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="2" Grid.Column="1" Text="You get in shape faster with us" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" /> 
+               <Label Grid.Row="3" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}"/>
+              <Label Grid.Row="3" Grid.Column="1" Text="It's like a trainer in your phone" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+          </Grid>
+</Frame>-->
+            
+                <Frame
+                Margin="10,10,10,10"
+            Padding="0,10,0,0"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+                    <StackLayout>
+            <pancakeView:PancakeView
+            Padding="0"
+            Margin="10,0,10,8"
+            IsClippedToBounds="true"
+              x:Name="previewButton"
+            OffsetAngle="90"
+            CornerRadius="0"
+                        HorizontalOptions="FillAndExpand" 
+                        HeightRequest="60">
+                <pancakeView:PancakeView.BackgroundGradientStops>
+                    <pancakeView:GradientStopCollection>
+                        <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                        <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                    </pancakeView:GradientStopCollection>
+                </pancakeView:PancakeView.BackgroundGradientStops>
+
+                <t:DrMuscleButton x:Name="ChooseworkoutButton"
+                                  HeightRequest="60" Text="Continue" BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        TextColor="White" Style="{StaticResource buttonStyle}" HorizontalOptions="FillAndExpand" Clicked="Close_Tapped" Margin="0,0,0,5" ></t:DrMuscleButton>
+            </pancakeView:PancakeView>
+
+            <t:DrMuscleButton Text="View more programs" Margin="10,0,10,5" 
+Style="{StaticResource buttonStyle}" x:Name="btnViewMoreProgram" HorizontalOptions="FillAndExpand" Clicked="ViewmoreProgram" ></t:DrMuscleButton>
+                        <!--<Controls:DropDownPicker x:Name="programPicker" PropertyChanged="programPicker_PropertyChanged"
+                    Margin="10,0,10,10"
+                    HeightRequest="40"
+                                                 Title="View more programs"
+                    Style="{StaticResource PickerStyle}" Unfocused="programPicker_Unfocused" >
+                <Controls:DropDownPicker.Image>
+                    <OnPlatform x:TypeArguments="x:String" Android="white_down_arrow.png" iOS="black_down_arrow.png" />
+                </Controls:DropDownPicker.Image>
+                </Controls:DropDownPicker>-->
+                        
+                        </StackLayout>
+                    </Frame>
+            <Frame
+                Margin="10,0,10,10"
+            Padding="0,5,0,5"
+            CornerRadius="4"
+            Grid.Row="0"
+                x:Name="workoutFrm"
+                IsVisible="false"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+              <StackLayout IsVisible="true" Margin="0,0,0,0"  x:Name="workoutStack"></StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</pages:PopupPage>

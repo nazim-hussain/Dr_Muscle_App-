@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+                x:Class="DrMuscle.Screens.History.HistoryPage"
+                xmlns:t="clr-namespace:DrMuscle.Layout"
+                xmlns:control="clr-namespace:DrMuscle.Controls"
+                xmlns:helpers="clr-namespace:DrMuscle.Helpers"
+                xmlns:effects="clr-namespace:DrMuscle.Effects"
+                xmlns:app="clr-namespace:DrMuscle.Constants"
+                xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                xmlns:s="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+                xmlns:history="clr-namespace:DrMuscle.Screens.History">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="historyDateTemplate"
+                          x:Name="DateTemplate">
+                <ViewCell Height="45">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="45"
+                                 VerticalOptions="Center">
+                        <!--                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                        <Label Margin="0,0,5,0"
+                               Opacity="1"
+                               Text="{Binding Label}"
+                               Style="{StaticResource LabelStyle}"
+                               VerticalTextAlignment="Center"
+                               Font="Bold,16"
+                               HorizontalOptions="StartAndExpand" />
+                        <!--                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End">
+                            <t:DrMuscleButton Clicked="OnCancelClicked"
+                                              Text="{Binding [Cancel].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextCancelButton}" />
+                            <t:DrMuscleButton Clicked="OnDeleteWorkoutLogClicked"
+                                              Text="{Binding [Delete].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              BackgroundColor="Red" BorderColor="Red" TextColor="White"
+                                              Style="{StaticResource ItemContextDeleteButton}" />
+                            <t:DrMuscleButton Clicked="OnContextMenuClicked"
+                                              CommandParameter="{Binding .}"
+                                              HorizontalOptions="End"
+                                              
+                                              Style="{StaticResource ItemContextMoreButton}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="historyExerciseTemplate"
+                          x:Name="ExerciseTemplate">
+                <ViewCell Height="45">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="45"
+                                 VerticalOptions="Center">
+                        <!--                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                        <Label Margin="20,0,0,0"
+                               Opacity="1"
+                               Text="{Binding Label}"
+                               Style="{StaticResource LabelStyle}"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               Font="16" />
+                        <!--                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End">
+                            <t:DrMuscleButton Clicked="OnCancelClicked"
+                                              Text="{Binding [Cancel].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextCancelButton}" />
+                            <t:DrMuscleButton Clicked="OnDeleteWorkoutLogExerciseClicked"
+                                              Text="{Binding [Delete].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              BackgroundColor="Red" BorderColor="Red" TextColor="White"
+                                              Style="{StaticResource ItemContextDeleteButton}" />
+                            <t:DrMuscleButton Clicked="OnContextMenuClicked"
+                                              CommandParameter="{Binding .}"
+                                              HorizontalOptions="End"
+                                              
+                                              Style="{StaticResource ItemContextMoreButton}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="historySetTemplate"
+                          x:Name="SetTemplate">
+                <ViewCell Height="45">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="45"
+                                 VerticalOptions="Center">
+                        <!--                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                        <Label Margin="40,0,0,0"
+                               Text="{Binding Label}"
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Style="{StaticResource LabelStyle}"
+                               VerticalTextAlignment="Center"
+                               Font="16" />
+                        <!--                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End">
+                            <t:DrMuscleButton Clicked="OnCancelClicked"
+                                              Text="{Binding [Cancel].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextCancelButton}" />
+                            <t:DrMuscleButton Clicked="OnEditClicked"
+                                              Text="{Binding [Edit].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              Style="{StaticResource ItemContextEditButton}" />
+                            <t:DrMuscleButton Clicked="OnDeleteWorkoutLogSerieClicked"
+                                              Text="{Binding [Delete].Value, Mode=OneWay, Source={x:Static helpers:ResourceLoader.Instance}}"
+                                              CommandParameter="{Binding .}"
+                                              IsVisible="false"
+                                              HorizontalOptions="End"
+                                              BackgroundColor="Red" BorderColor="Red" TextColor="White"
+                                              Style="{StaticResource ItemContextDeleteButton}" />
+                            <t:DrMuscleButton Clicked="OnContextMenuClicked"
+                                              CommandParameter="{Binding .}"
+                                              HorizontalOptions="End"
+                                              
+                                              Style="{StaticResource ItemContextMoreButton}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="historyStatisticTemplate"
+                          x:Name="StatisticTemplate">
+                <ViewCell Height="40">
+                    <!--<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" HeightRequest="40" VerticalOptions="Center">-->
+                    <Label Margin="40,0,0,0"
+                           Opacity="1"
+                           Text="{Binding Label}"
+                           VerticalOptions="FillAndExpand"
+                           Style="{StaticResource LabelStyle}"
+                           VerticalTextAlignment="Center"
+                           FontSize="12" />
+                    <!--</StackLayout>-->
+                </ViewCell>
+            </DataTemplate>
+            <history:HistoryDataTemplateSelector x:Key="historyDataTemplateSelector"
+                                                 HistoryDateTemplate="{StaticResource historyDateTemplate}"
+                                                 HistoryExerciseTemplate="{StaticResource historyExerciseTemplate}"
+                                                 HistorySetTemplate="{StaticResource historySetTemplate}">
+            </history:HistoryDataTemplateSelector>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  
+</t:DrMusclePage>

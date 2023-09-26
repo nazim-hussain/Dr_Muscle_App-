@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    CloseWhenBackgroundIsClicked="False"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:constants="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    BackgroundColor="#99000000"
+    x:Class="DrMuscle.Views.GeneralPopup">
+    <Frame
+        Padding="0"
+        CornerRadius="4"
+        HasShadow="False"
+        IsClippedToBounds="True"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="CenterAndExpand"
+        BackgroundColor="Transparent"
+        Margin="20,0,20,0">
+        <Grid
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            Padding="0,0,0,15">
+
+            <Frame
+                Padding="0,0,0,20"
+                Margin="0,10,0,0"
+                CornerRadius="6"
+                HasShadow="False"
+                IsClippedToBounds="True"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout
+                    Padding="0,0,0,24">
+                
+                    <BoxView Margin="0,0,0,0" BackgroundColor="Transparent" />
+                    <Image Margin="0,0,0,0" x:Name="ImgName" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Start" Source="TrueState.png" />
+
+                    <Label Margin="0,15,0,0" Text="Success!" x:Name="LblHeading" HorizontalOptions="Center" FontSize="26" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
+                    <Label Text="Account created" x:Name="LblSubHead" Margin="15,0,15,30" HorizontalOptions="Center"  HorizontalTextAlignment="Center" FontSize="17" TextColor="#505050" FontAttributes="Bold"/>
+                    <t:DrMuscleButton Text="Learn more" x:Name="BtnLearnMore" Clicked="DrMuscleButton_Clicked" BackgroundColor="Transparent" TextColor="#007aff" HeightRequest="66" />
+                    <pancakeView:PancakeView
+            Padding="0"
+            x:Name="OkAction"
+            IsClippedToBounds="true"
+            OffsetAngle="90"
+            CornerRadius="0"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="25,0"
+                        HeightRequest="66">
+                 <pancakeView:PancakeView.BackgroundGradientStops>
+                <pancakeView:GradientStopCollection>
+                    <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                    <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                </pancakeView:GradientStopCollection>
+            </pancakeView:PancakeView.BackgroundGradientStops>
+                    <Label
+                        x:Name="OkButton"
+                        Text="OK cool"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0"
+                        HeightRequest="66"
+                         />
+                    
+                        </pancakeView:PancakeView>
+                     <t:DrMuscleButton Text="Cancel" x:Name="BtnCancel" Clicked="DrMuscleButtonCancel_Clicked" BackgroundColor="Transparent" TextColor="#007aff" HeightRequest="66" IsVisible="false" />
+                    
+                    <Label Text="" x:Name="LblTipText" Margin="15,0,15,0"
+HeightRequest="66"
+HorizontalOptions="Center"
+                          VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="17" TextColor="#505050" FontAttributes="Bold"/>
+                    <Label Text="" IsVisible="False" HeightRequest="30" x:Name="LblCountDown" Margin="15,0,15,0"
+HorizontalOptions="Center"
+                          VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="15" TextColor="#505050" FontAttributes="Bold"/>
+                </StackLayout>
+                
+            </Frame>
+            <!--<Image Grid.Row="0" Margin="0,25" Source="SharpCurve.png" HorizontalOptions="FillAndExpand" HeightRequest="120"  VerticalOptions="Start" Aspect="Fill" />-->
+            <Image Grid.Row="0" Margin="0,50,0,20" Source="" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                    </Grid>
+    </Frame>
+       
+
+</pages:PopupPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:app="clr-namespace:DrMuscle.Constants;"
+    x:Class="DrMuscle.Cells.ExplainerCell">
+    <ViewCell.View>
+        <Frame
+        Margin="10,10,10,5"
+        CornerRadius="12"
+        x:Name="FrmContainer"
+        Padding="10,6,10,6"
+        HorizontalOptions="Start"
+        BorderColor="Transparent"
+        OutlineColor="Transparent"
+        HasShadow="False"
+        BackgroundColor="Transparent">
+            <Label
+                x:Name="LblAnswer"
+                Text="{Binding Question}"
+                Style="{StaticResource LabelStyle}"
+                TextColor="{x:Static app:AppThemeConstants.OffBlackColor}"
+                HorizontalOptions="Start"
+                Margin="4,0" />
+            </Frame>
+    </ViewCell.View>
+</ViewCell>

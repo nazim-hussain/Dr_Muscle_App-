@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="MainTheme" parent="MainTheme.Base">
+		<item name="android:windowNoTitle">true</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="colorAccent">@android:drawable/screen_background_light_transparent</item>
+		<item name="colorControlNormal">#c5c5c5</item>
+		<item name="colorControlActivated">#c5c5c5</item>
+		<item name="colorControlHighlight">#c5c5c5</item>
+		<!--<item name="android:colorLongPressedHighlight">#333333</item>
+    	<item name="android:colorFocusedHighlight">#666666</item>-->
+		<item name="android:colorPressedHighlight">@color/ListViewSelected</item>
+		<item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>
+		<item name="android:colorFocusedHighlight">@color/ListViewSelected</item>
+		<item name="android:colorActivatedHighlight">@color/ListViewSelected</item>
+		<item name="android:activatedBackgroundIndicator">@color/ListViewSelected</item>
+   <item name="android:alertDialogTheme">@style/AlertDialogCustomGreen</item>
+		<item name="android:editTextStyle">@style/App_EditTextStyleGreen</item>
+         <item name="android:actionMenuTextAppearance">@style/MenuItemTextAppearance</item>
+		<item name="android:timePickerDialogTheme">@style/TimePickerDialogTheme</item>
+		
+	</style>
+	<style name="MainTheme.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+		<item name="colorControlActivated">#00ff00</item>
+	</style>
+    <style name="MenuItemTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+    <item name="textAllCaps">false</item>
+	</style>
+
+
+<style name="TimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+<item name="colorAccent">#FF4081</item>
+<item name="android:timePickerStyle">@style/TimePickerDialogStyle</item> 
+</style>
+
+		<style name="TimePickerDialogStyle" parent="@android:style/Widget.Material.Light.TimePicker">
+<item name="colorAccent">#FF4081</item>
+<item name="android:timePickerMode">clock</item>
+<item name="android:headerBackground">#FF4081</item>
+<item name="android:numbersTextColor">#ff000000</item>
+<item name="android:numbersSelectorColor">#FF4081</item>
+<item name="android:numbersBackgroundColor">#ffdddddd</item>
+			</style>
+
+<style name="TextAppearance.Widget.Event.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <!--Any text styling can be done here-->
+    <item name="android:textStyle">normal</item>
+		    <item name="android:gravity">center</item>
+		<item name="android:layout_centerHorizontal">true</item>>
+		<item name="android:textAlignment">center</item>>
+</style>
+	<style name="DefaultNumberPickerTheme" parent="MainTheme">
+        <item name="colorControlNormal">#000000</item>
+</style>
+
+	<style name="ToolTipLayoutDefaultStyle.Custom1">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ToolTipLayoutCustomStyle">
+        <item name="ttlm_padding">25dip</item>
+        <item name="ttlm_strokeColor">#195377</item>
+        <item name="ttlm_backgroundColor">#195377</item>
+        <item name="ttlm_strokeWeight">2dip</item>
+        <item name="ttlm_cornerRadius">8dip</item>        
+        <item name="android:textAppearance">?android:attr/textAppearanceInverse</item>
+    </style>
+
+	<style name="ToolTipLayoutCustomStyleReys">
+        <item name="ttlm_padding">25dip</item>
+        <item name="ttlm_strokeColor">#97D2F3</item>
+        <item name="ttlm_backgroundColor">#97D2F3</item>
+        <item name="ttlm_strokeWeight">2dip</item>
+        <item name="ttlm_cornerRadius">8dip</item>        
+        <item name="android:textAppearance">?android:attr/textAppearanceInverse</item>
+    </style>
+
+    <style name="ToolTipOverlayCustomStyle">
+        <item name="android:color">#66ff0000</item>
+        <item name="ttlm_repeatCount">999</item>
+        <item name="ttlm_duration">400</item>
+    </style>
+
+  <!--Maybe delete if useless now-->
+  <style name="AlertDialogCustomGray" parent="Theme.AppCompat.Dialog.Alert">
+		<item name="buttonBarNegativeButtonStyle">@style/dialog_button.negative</item>
+		<item name="buttonBarPositiveButtonStyle">@style/dialog_button.negative</item>
+		<item name="android:background">@drawable/gradientpopupbackground</item>>
+		<item name="android:editTextStyle">@style/App_EditTextStyle</item>
+	</style>
+  <style name="AlertDialogCustomGreen" parent="Theme.AppCompat.Dialog.Alert">
+		<item name="buttonBarNegativeButtonStyle">@style/dialog_button.negative</item>
+		<item name="buttonBarPositiveButtonStyle">@style/dialog_button.negative</item>
+		<item name="android:background">@drawable/gradientpopupbackground</item>>
+		<item name="android:editTextStyle">@style/App_EditTextStyleGreen</item>
+	</style>
+	<style name="AlertDialogFirstTimeExercise" parent="Theme.AppCompat.Dialog.Alert">
+    <!--<item name="android:textSize">15sp</item>-->
+        <item name="android:buttonBarNegativeButtonStyle">@style/dialog_button.negative</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/dialog_button.positiveGreen</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+    </style>
+	<style name="AlertDialogCustomRed" parent="Theme.AppCompat.Dialog.Alert">
+		<item name="android:buttonBarNegativeButtonStyle">@style/dialog_button.negative</item>
+		<item name="android:buttonBarPositiveButtonStyle">@style/dialog_button.positiveRed</item>
+		<item name="android:editTextStyle">@style/App_EditTextStyle</item>
+	</style>
+	<style name="dialog_button">
+		<item name="android:textColorPrimary">#FFFFFF</item>
+		<!--<item name="android:minWidth">64dp</item>
+	    <item name="android:paddingLeft">8dp</item>
+	    <item name="android:paddingRight">8dp</item>
+	    <item name="android:background">@drawable/dialogButtonSelector</item>-->
+	</style>
+	<style name="dialog_button.negative">
+		<item name="android:background">@android:color/transparent</item>
+				<item name="android:layout_marginLeft">8dp</item>
+
+		<item name="android:textColor">#FFFFFF</item>
+	</style>
+
+
+	<style name="dialog_button.positiveRed">
+		<item name="android:background">@drawable/buttonRed</item>
+		<item name="android:layout_marginLeft">8dp</item>
+		<item name="android:textColor">#FFFFFF</item>
+	</style>
+	<style name="dialog_button.positiveGreen">
+		<item name="android:background">@drawable/buttonGreen</item>
+		<item name="android:layout_marginLeft">8dp</item>
+		<item name="android:textColor">#FFFFFF</item>
+	</style>
+	<style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+		<item name="android:background">#CCFFFFFF</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:paddingLeft">8dp</item>
+						<item name="android:layout_marginLeft">8dp</item>
+
+		<item name="android:paddingRight">8dp</item>
+		<item name="android:paddingTop">8dp</item>
+		<item name="android:paddingBottom">8dp</item>
+	</style>
+	<style name="App_EditTextStyleGreen" parent="@android:style/Widget.EditText">
+		<item name="android:background">#44FFFFFF</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:paddingLeft">8dp</item>
+						<item name="android:layout_marginLeft">8dp</item>
+
+		<item name="android:paddingRight">8dp</item>
+		<item name="android:paddingTop">8dp</item>
+		<item name="android:paddingBottom">8dp</item>
+	</style>
+	<!-- Base theme applied no matter what API -->
+	<style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+		<item name="windowNoTitle">true</item>
+		<!--We will be using the toolbar so no need to show ActionBar-->
+		<item name="windowActionBar">false</item>
+		<!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
+		<!-- colorPrimary is used for the default action bar background -->
+		<item name="colorPrimary">#2196F3</item>
+		<!-- colorPrimaryDark is used for the status bar -->
+		<item name="colorPrimaryDark">#1976D2</item>
+		<!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+		<item name="colorAccent">#FF4081</item>
+		<!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+		<item name="windowActionModeOverlay">true</item>
+		<item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+        
+        <item name="android:windowBackground">@drawable/Backgroundblack</item>
+	</style>
+	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+		    <item name="colorAccent">#FF4081</item>
+
+	</style>
+	<style name="MyTheme.Splash" parent="Theme.AppCompat.Light">
+		<item name="android:background">@drawable/splash_screen</item>
+        <item name="android:windowBackground">@drawable/Backgroundblack</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+</resources>

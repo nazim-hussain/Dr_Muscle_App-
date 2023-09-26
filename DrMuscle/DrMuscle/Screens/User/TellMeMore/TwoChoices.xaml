@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+             x:Class="DrMuscle.Screens.User.TellMeMore.TwoChoices">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <AbsoluteLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,0,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <StackLayout VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label x:Name="ChoiceLabel" FontSize="20" Style="{StaticResource OnBoardingLabelStyle}"></Label>
+                    <t:DrMuscleButton x:Name="Choice1Button" Style="{StaticResource buttonStyle}"></t:DrMuscleButton>
+                    <t:DrMuscleButton x:Name="Choice2Button" Style="{StaticResource buttonStyle}"></t:DrMuscleButton>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="0,0,0,20">
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,0 +1,25 @@
+ {
+    "WorkoutOrders": [
+      {
+        "Id": 1,
+        "IsFeaturedProgram": false,
+        "UserId": "45bef179-dvfb-47wf-849w-ad1f57970ee0",
+        "Label": "[Gym] Full-Body Level 1",
+        "WorkoutTemplates": [
+          {
+            "Id": 1,
+            "UserId": null,
+            "Label": "[Gym] Full-Body",
+            "Exercises": [],
+            "IsSystemExercise": true,
+            "WorkoutSettingsModel": null
+          }
+        ],
+        "IsSystemExercise": true,
+        "RequiredWorkoutToLevelUp": 18,
+        "Level": 1,
+        "RemainingToLevelUp": null,
+        "NextProgramId": null,
+        "ProgramId": 0
+      }]
+  }

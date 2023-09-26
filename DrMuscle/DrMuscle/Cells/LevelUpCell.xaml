@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:app="clr-namespace:DrMuscle.Constants;"
+    x:Class="DrMuscle.Cells.LevelUpCell">
+    <ViewCell.View>
+                   <Grid
+                
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Padding="10,20,10,0"
+                >
+                <Grid.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0" />
+                </Grid.Margin>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="*" />
+                    <!--<RowDefinition
+                        Height="Auto" />-->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+                       <StackLayout
+                                    Grid.Column="0"
+                                    HorizontalOptions="FillAndExpand">
+                                    <Image
+                                        x:Name="IconResultImage"
+                                        Source="Chain.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+
+                                    <Label
+                                        x:Name="lblResult4"
+                                        Text="{Binding ChainCount}"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        Font="Bold,17"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="Black" />
+                                    <Label
+                                        x:Name="lblResult44"
+                                        Text="Weeks streak"
+                                        IsVisible="true"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Style="{StaticResource LabelStyle}"
+                                        TextColor="{x:Static app:AppThemeConstants.OffBlackColor}" >
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding ChainCount}" Value="1" >
+                                                <Setter Property="Text" Value="Week streak" />
+                                                </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding ChainCount}" Value="0" >
+                                                <Setter Property="Text" Value="Week streak" />
+                                                </DataTrigger>
+                                         </Label.Triggers>
+                                        </Label>
+                                </StackLayout>
+                <!--<StackLayout
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Column="1">
+                    <Image
+                                        Source="Exercise.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+
+                    <Label
+                        Text="{Binding WorkoutDone}"
+                        Font="Bold,17"
+                        Style="{StaticResource LabelStyle}"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"/>
+                    <Label
+                        Text="{Binding WorkoutDoneText}"
+                            Style="{StaticResource LabelStyle}"
+                         
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>-->
+                
+                <StackLayout
+                    Grid.Row="0"
+                    IsVisible="{Binding IsLastVisible}"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Column="1">
+                    <Image
+                                        Source="WorkoutDone.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="32"
+                                        HorizontalOptions="CenterAndExpand" />
+                    <Label
+                        Text="{Binding LevelUpMessage}"
+                        Font="Bold,17"
+                        Style="{StaticResource LabelStyle}"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"/>
+                    <Label
+                        Text="{Binding LevelUpText}"
+                        
+                            Style="{StaticResource LabelStyle}"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                       <StackLayout
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                Grid.Column="2">
+                <Image
+                    Source="Flexed_Biceps.png"
+                    Aspect="AspectFit"
+                    HeightRequest="32"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="{Binding LbsLifted}"
+                    Font="Bold,17"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black" />
+                <Label
+                    Text="{Binding LbsLiftedText}"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center" />
+            </StackLayout>
+            </Grid>
+
+    </ViewCell.View>
+</ViewCell>

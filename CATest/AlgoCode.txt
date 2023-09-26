@@ -1,0 +1,145 @@
+﻿using DrMuscleWebApiSharedModel;
+using System;
+
+namespace DrMuscleAlgo
+{
+    public class Algo
+    {
+        public RecommendationModel GetRecommendation(int LastWorkoutNbSeriesForExercise,
+                                                        decimal Weight0,
+                                                        decimal Weight1,
+                                                        decimal Weight2,
+                                                        int Reps0,
+                                                        int Reps1,
+                                                        int Reps2
+                                                        )
+        {
+			// Calcul du 1RM pour les deux précédent sets
+			decimal OneRM0 = ComputeOneRM(Weight0, Reps0);
+			decimal OneRM1 = ComputeOneRM(Weight1, Reps1);
+            
+            // Calcul du progres en % entre les deux dernier workout
+            RecommendationModel result = new RecommendationModel();
+            result.OneRMProgress = (OneRM0 - OneRM1) * 100 / OneRM1;
+
+            // Calcul du nombre de reps de la recommendation
+            // en fonction de la moyenne du nombre de reps sur les 3 précédents workout
+            int repsAverage = Convert.ToInt32(Math.Ceiling((decimal)((Reps0 + Reps1 + Reps2) / 3)));
+            if (repsAverage == 0)
+                repsAverage = 1;
+            int nbReps = 0;
+            int min = 0;
+            int max = 0;
+            switch (repsAverage)
+            {
+                case 1:
+                    min = 2;
+                    max = 3;
+                    break;
+                case 2:
+                    min = 3;
+                    max = 4;
+                    break;
+                case 3:
+                    min = 6;
+                    max = 8;
+                    break;
+                case 4:
+                    min = 7;
+                    max = 9;
+                    break;
+                case 5:
+                    min = 9;
+                    max = 11;
+                    break;
+                case 6:
+                    min = 10;
+                    max = 12;
+                    break;
+                case 7:
+                case 8:
+                    Random r2 = new Random();
+                    int t = r2.Next(0, 1);
+                    if (t == 0)
+                    {
+                        min = 3;
+                        max = 4;
+                    }
+                    else
+                    {
+                        min = 11;
+                        max = 12;
+                    }
+                    break;
+                case 9:
+                    min = 3;
+                    max = 5;
+                    break;
+                case 10:
+                    min = 4;
+                    max = 6;
+                    break;
+                case 11:
+                    min = 5;
+                    max = 7;
+                    break;
+                case 12:
+                    min = 6;
+                    max = 8;
+                    break;
+                default:
+                case 13:
+                    min = 8;
+                    max = 10;
+                    break;
+            }
+            Random random = new Random();
+            nbReps = random.Next(min, max);
+            result.Reps = nbReps;
+
+            // Calcul du poids (en Kg) de la recommendation
+			decimal percent = (decimal)(102.78 - 2.78 * nbReps);
+            decimal recommendationInKg = OneRM0 * percent / 100;
+            decimal oneRMRelativeProgress = (OneRM0 - OneRM1) / OneRM0;
+            recommendationInKg = recommendationInKg + (recommendationInKg * (oneRMRelativeProgress * (decimal)0.9));
+            recommendationInKg = Math.Floor(recommendationInKg);
+            result.Weight = new MultiUnityWeight(recommendationInKg, WeightUnities.kg);
+
+            // Calcul du nombre de séries de recommendation 
+            // En fonction du progres réalisé entre les
+            if ((double)result.OneRMProgress >= 7.5)
+            {
+                result.Series = LastWorkoutNbSeriesForExercise + 1;
+            }
+            else
+            {
+                if ((double)result.OneRMProgress >= 2 && (double)result.OneRMProgress < 7.5)
+                {
+                    result.Series = LastWorkoutNbSeriesForExercise;
+                }
+                else
+                {
+                    if ((double)result.OneRMProgress >= 0.1 && result.OneRMProgress < 2)
+                    {
+                        result.Series = LastWorkoutNbSeriesForExercise - 1;
+                        if (result.Series == 0)
+                            result.Series = 1;
+                    }
+                    else
+                    {
+                        if ((double)result.OneRMProgress < 0.1)
+                        {
+                            result.Series = LastWorkoutNbSeriesForExercise / 2;
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+		public decimal ComputeOneRM(decimal weight, int reps)
+		{
+			return (decimal)(weight / (decimal)(1.0278 - (0.0278 * reps)));
+		}
+    }
+}

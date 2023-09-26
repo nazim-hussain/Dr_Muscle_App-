@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Layout.LanguagesPage">
+    <StackLayout
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            Orientation="Horizontal"
+            Spacing="0"
+            HeightRequest="44">
+            <StackLayout.Margin>
+                <OnPlatform
+                    x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"
+                    Android="0,10,0,0" />
+            </StackLayout.Margin>
+            <Image
+                Margin="20,0"
+                VerticalOptions="Center"
+                Source="downarrow.png"
+                WidthRequest="25"
+                HeightRequest="25" />
+            <Label
+                Text="Language"
+                x:Name="LblLanguage"
+                VerticalTextAlignment="Center"
+                TextColor="White" />
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Close_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+        <t:DrMuscleListView
+            x:Name="LanguageListView"
+            BackgroundColor="Transparent"
+            VerticalOptions="FillAndExpand"
+            SeparatorColor="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell
+                        Height="45">
+                        <StackLayout
+                            Margin="15,0"
+                            Orientation="Horizontal"
+                            BackgroundColor="Transparent">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                HorizontalOptions="CenterAndExpand">
+                                <Image
+                                    Source="{Binding FlagImage}"
+                                    WidthRequest="30"
+                                    HeightRequest="25">
+                                </Image>
+                                <Label
+                                    Text="{Binding LanguageName}"
+                                    VerticalTextAlignment="Center"
+                                    WidthRequest="80"
+                                    >
+                                </Label>
+                                <Image
+                                    VerticalOptions="Center"
+                                    WidthRequest="20"
+                                    HeightRequest="20">
+                                    <Image.Triggers>
+                                        <DataTrigger
+                                            TargetType="Image"
+                                            Binding="{Binding IsSelected}"
+                                            Value="True">
+                                            <Setter
+                                                Property="Source"
+                                                Value="green.png" />
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </t:DrMuscleListView>
+    </StackLayout>
+</t:DrMusclePage>

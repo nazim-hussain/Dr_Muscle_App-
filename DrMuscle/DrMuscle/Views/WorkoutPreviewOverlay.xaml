@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    CloseWhenBackgroundIsClicked="false"
+      xmlns:Controls="clr-namespace:DrMuscle.Controls"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+     xmlns:constnats="clr-namespace:DrMuscle.Constants"
+     xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    x:Class="DrMuscle.Views.WorkoutPreviewOverlay"
+    BackgroundColor="#f4f4f4">
+    <ScrollView Grid.Row="0">
+        <StackLayout >
+             
+            <Frame
+                Margin="10,10,10,5"
+            Padding="5,5,5,5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+                <StackLayout>
+           <Grid>
+
+
+                <Image Source="Close_Gray.png" WidthRequest="50" Aspect="AspectFit" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" Margin="0,0,0,0" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Close_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
+            <Label
+            x:Name="workoutNameLabel"
+            HorizontalOptions="Start"
+            VerticalOptions="End"
+            TextColor="Black"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            FontSize="30" LineBreakMode="WordWrap"></Label>
+            <Label
+            x:Name="workoutCountLabel"
+                    Text="48 workouts • 3x weeks approx"
+            HorizontalOptions="Start"
+            VerticalOptions="End"
+            TextColor="Black"
+            BackgroundColor="Transparent"
+            FontSize="17" LineBreakMode="WordWrap"/>
+            
+</StackLayout>
+                </Frame>
+            <!--<Frame
+                Margin="10,0,10,5"
+            Padding="5,5,5,10"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+          <Controls:FlowLayout HorizontalOptions="FillAndExpand" Margin="0,5,0,0"  x:Name="flChipView" Spacing="5">
+             
+          </Controls:FlowLayout>
+                </Frame>-->
+            <Frame
+                Margin="10,0,10,5"
+            Padding="5,0,5,10"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+                <StackLayout>
+            
+<pancakeView:PancakeView
+            Padding="0"
+            Margin="0,10,0,0"
+            IsClippedToBounds="true"
+            OffsetAngle="90"
+            CornerRadius="0"
+                        HorizontalOptions="FillAndExpand" 
+                        HeightRequest="60">
+                <pancakeView:PancakeView.BackgroundGradientStops>
+                    <pancakeView:GradientStopCollection>
+                        <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                        <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                    </pancakeView:GradientStopCollection>
+                </pancakeView:PancakeView.BackgroundGradientStops>
+            <t:DrMuscleButton Text="Start free trial"  BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        TextColor="White" Style="{StaticResource buttonStyle}"  Clicked="Close_Tapped" ></t:DrMuscleButton>
+    </pancakeView:PancakeView>
+            <Label Text="No card needed" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}" ></Label>
+                   
+            
+
+            <t:DrMuscleButton Margin="0,10,0,0" x:Name="BuyMonthlyAccessButton" Text="Sign up monthly" Style="{StaticResource buttonStyle}" HorizontalOptions="FillAndExpand" ></t:DrMuscleButton>
+             <Label Margin="0" Text="Monthly" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}" ></Label>
+                    
+            
+            <t:DrMuscleButton Margin="0,10,0,0" x:Name="BuyYearlyAccessButton" Text="Sign up annual" Style="{StaticResource buttonStyle}" HorizontalOptions="FillAndExpand" ></t:DrMuscleButton>
+                    <Label Margin="0,0,0,0" Text="Annual" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Style="{StaticResource LabelStyle}"  ></Label>
+            <t:DrMuscleButton Margin="0,10,0,0" x:Name="RestorePurchaseButton" IsVisible="false" Text="Restore purchase" Style="{StaticResource buttonStyle}" HorizontalOptions="FillAndExpand" ></t:DrMuscleButton>
+
+           
+
+            
+
+            <Label x:Name="LblTooExpensive2" IsVisible="false" Text="Still too expensive?" HorizontalOptions="Center" Font="Bold,17"  Style="{StaticResource LabelStyle}" Margin="0,10,0,5"  />
+
+            <pancakeView:PancakeView
+            Padding="0"
+            IsClippedToBounds="true"
+              x:Name="SupportEmail"
+            OffsetAngle="90"
+            CornerRadius="0"
+                        HorizontalOptions="FillAndExpand" 
+                        HeightRequest="60">
+                <pancakeView:PancakeView.BackgroundGradientStops>
+                    <pancakeView:GradientStopCollection>
+                        <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                        <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                    </pancakeView:GradientStopCollection>
+                </pancakeView:PancakeView.BackgroundGradientStops>
+
+                <t:DrMuscleButton x:Name="EmailSupportButton"  HeightRequest="60" Text="Email us, we reply in 1 day" BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        TextColor="White" Style="{StaticResource buttonStyle}" HorizontalOptions="FillAndExpand" ></t:DrMuscleButton>
+            </pancakeView:PancakeView>
+ </StackLayout>
+                </Frame>
+
+
+<!---->
+
+             <StackLayout>
+            
+
+
+            
+                <!--<StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Build muscle and burn fat" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="All settings fine tuned for your goals." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0" Padding="0"  >
+
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Smart weights, reps, and sets" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Adjusted automatically every workout based on your goals and progress." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+            
+              <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Smart challenges" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Trigger when you're on a roll to speed up your gains." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Daily undulating periodization" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="You progress faster when you change reps often. Your reps change (undulate) automatically every workout." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+            
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Exercise rotation" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="You get new exercises automatically over time—your program rotates them for you." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                   
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Overtraining protection" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Your workouts becomes easier automatically when you show signs of overtraining." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                              
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Recovery coach" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="How long should you rest before your next workout? The app tells you on your home page." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                                  
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Nutrition coach" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="How many calories and protein should you eat for your goals and current progress? The app tells you on the Learn tab." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+            
+                                  
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Multiple equipment profiles" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Training at home and on the road? You can set up multiple equipment profiles in Settings." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+            
+            
+                                  
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Pyramid sets" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="&quot;The most reliable and effective technique I’ve ever come across.&quot; -Martin Berkhan" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout> 
+
+                  
+                                  
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Detailed tracking" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Track all your stats inside the app. Get more details inside our Web app." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+                
+                                  
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Favorite exercises" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Favorite an exercise to see it more often." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+             
+                                  
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Plate calculator" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Tap the plate icon (top-right) to see how to load barbell exercises. No more plate math." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                                      
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Light sessions" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Got off track? No problem: when you return after a break, you get a light session automatically." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+            
+                                      
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Sets redistribution" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Skip a workout? No problem: some of your sets are redistributed to your next workout automatically." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                
+                                      
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Strenth phase" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Optional, automated 3-week strength phase on each program." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                  
+                                      
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="Suggest and vote" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="Something missing? Suggest and vote for new features on our feedback site." Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+                                           
+
+            <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,15,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                
+                                <Label Text="And more!" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label Text="New updates every week. View the full list?" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>-->
+
+
+
+            
+           <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"   x:Name="FrmExepertReviewJonny" >
+          <Frame Padding="20,5,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblReview2" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label x:Name="LblsubHeadingReviewer2" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                <Label x:Name="LblReviewerName2" LineBreakMode="WordWrap" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                                <StackLayout Margin="0,0,0,0" Padding="0" x:Name="ImgArtin" >
+          <Image Margin="0" Source="jonus.png" Aspect="AspectFill" />
+              </StackLayout>
+                            </StackLayout>
+                        </Frame>
+              </StackLayout>
+
+           <StackLayout BackgroundColor="#f4f4f4" Margin="0,0,0,0"   x:Name="FrmExepertReview" >
+          <Frame Padding="20,5,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblReview1" Text="{Binding Part2}" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15"/>
+                                <Label x:Name="LblsubHeadingReviewer1" Text="{Binding Part3}" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                <Label x:Name="LblReviewerName1" Text="{Binding Answer}" LineBreakMode="WordWrap" Style="{StaticResource LabelStyle}" FontAttributes="Bold" FontSize="15" />
+                                
+          <Image Margin="0" Source="artin.png" Aspect="AspectFill" x:Name="ImgJonus" />
+              
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+
+          <StackLayout x:Name="FrmPoteroUserReview" BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,5,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblPoteroReview" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label x:Name="LblPoterosubHeadingReviewer" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                <Label x:Name="LblPoteroReviewerName" LineBreakMode="WordWrap" Style="{StaticResource LabelStyle}"  FontAttributes="Bold" FontSize="15" />
+                            </StackLayout>
+                            
+                        </Frame>
+              </StackLayout>
+          <StackLayout x:Name="FrmMKJUserReview" BackgroundColor="#f4f4f4" Margin="0,0,0,0"    >
+          <Frame  Padding="20,5,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblMKJReview" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label x:Name="LblMKJsubHeadingReviewer" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                <Label x:Name="LblMKJReviewerName" LineBreakMode="WordWrap" Style="{StaticResource LabelStyle}"  FontAttributes="Bold" FontSize="15" />
+                            </StackLayout>
+                        </Frame>
+              </StackLayout>
+
+          
+
+          <StackLayout x:Name="FrmUserReview" BackgroundColor="#f4f4f4" Margin="0,0,0,5"    >
+          <Frame  Padding="20,5,20,15" Margin="12,2,12,2" BackgroundColor="White" CornerRadius="12" HasShadow="False" >
+                            <StackLayout>
+                                <Image Source="stars_5.png" WidthRequest="120" Aspect="AspectFit" HorizontalOptions="Start" />
+                                <Label x:Name="LblReview" Style="{StaticResource LabelStyle}" FontAttributes="Bold, Italic" FontSize="15" />
+                                <Label x:Name="LblsubHeadingReviewer" Style="{StaticResource LabelStyle}" FontSize="15" FontAttributes="Italic" />
+                                <Label x:Name="LblReviewerName" LineBreakMode="WordWrap" Style="{StaticResource LabelStyle}"  FontAttributes="Bold" FontSize="15" />
+                                <Label Text="Read more reviews" x:Name="LblMoreUserReview" HorizontalOptions="Start" TextDecorations="Underline" Style="{StaticResource LabelStyle}" TextColor="{x:Static constnats:AppThemeConstants.BlueColor}" Margin="0">
+              <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="MoreUserReviewGestureRecognizer_Tapped" />
+              </Label.GestureRecognizers>
+          </Label>
+                            </StackLayout>
+                        </Frame>
+              </StackLayout>
+
+         
+          
+         
+          <Frame
+                Margin="10,0,10,5"
+            Padding="5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+          <StackLayout>
+          <Label x:Name="LblTheTestla" Text="The Tesla of workout apps" HorizontalOptions="Center" Font="Bold,17"  Style="{StaticResource LabelStyle}" Margin="0,5,0,10"  />
+          <Grid x:Name="GridTips2" HorizontalOptions="CenterAndExpand" Padding="15,0,15,10" RowSpacing="5">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="0" Grid.Column="1" Text="Invested over $1 M over 4 years" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="1" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}"/>
+              <Label Grid.Row="1" Grid.Column="1" Text="New updates weekly (41 in 2020)" HorizontalOptions="Start" TextDecorations="Underline" Style="{StaticResource LabelStyle}" TextColor="{x:Static constnats:AppThemeConstants.BlueColor}" >
+                  <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="NewUpdatesGestureRecognizer_Tapped" />
+                  </Label.GestureRecognizers>
+              </Label>
+              <Label Grid.Row="2" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="2" Grid.Column="1" Text="With exercise scientist Dr. Carl Juneau, PhD" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" >
+                 
+              </Label>
+          </Grid>
+              </StackLayout>
+            </Frame>
+            <Frame
+                Margin="10,0,10,5"
+            Padding="5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+          <Image Margin="10,10,10,0" x:Name="ImgBrandLogo" Source="brandLogo.png" Aspect="AspectFill" />
+                </Frame>
+         
+          <!--<Frame
+
+                Margin="10,0,10,5"
+            Padding="5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+              
+          <Grid x:Name="GridTips1" HorizontalOptions="CenterAndExpand" Padding="35,10,35,12" RowSpacing="5">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="•"  Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="0" Grid.Column="1" Text="More expensive than others app" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="1" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}"/>
+              <Label Grid.Row="1" Grid.Column="1" Text="More advanced" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="2" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}" />
+              <Label Grid.Row="2" Grid.Column="1" Text="You get in shape faster with us" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" /> 
+               <Label Grid.Row="3" Grid.Column="0" Text="•" Style="{StaticResource LabelStyle}"/>
+              <Label Grid.Row="3" Grid.Column="1" Text="It's like a trainer in your phone" HorizontalOptions="Start" Style="{StaticResource LabelStyle}" />
+          </Grid>
+</Frame>-->
+
+          
+        </StackLayout>
+
+
+
+             <Frame
+                Margin="10,0,10,10"
+            Padding="5"
+            CornerRadius="4"
+            Grid.Row="0"
+            HasShadow="False"
+            IsClippedToBounds="True" >
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Vertical" Margin="0,10,0,0">
+                <Label IsVisible="false" x:Name="SignUpLabelLine3" HorizontalOptions="CenterAndExpand" Text="Once you confirm your subscription purchase, your payment will be charged to your iTunes account, and any unused portion of your free trial will be forfeited."  Style="{StaticResource LabelStyle}" FontSize="12"></Label>
+                <Label IsVisible="false" x:Name="SignUpLabelLine4" HorizontalOptions="CenterAndExpand" Text="Once your subscription is active, your iTunes account will be charged again automatically when your subscription renews at the end of your subscription period, unless you turn off auto-renew at least 24 hours before. You can turn off auto-renew anytime in your iTunes account settings."  Style="{StaticResource LabelStyle}" FontSize="12"></Label>
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Horizontal" Margin="20,20,20,0">
+                    <Label x:Name="TermsOfUse" Text="Terms of Use" Style="{StaticResource LearnMoreText}" />
+                    <Label x:Name="Pipe" Text=" ∣ " FontSize="12" Style="{StaticResource LabelStyle}" />
+                    <Label x:Name="PrivacyPolicy" Text="Privacy Policy" Style="{StaticResource LearnMoreText}" Margin="0,0,0,10"/>
+                </StackLayout>
+            </StackLayout>
+                 </Frame>
+        </StackLayout>
+    </ScrollView>
+</pages:PopupPage>

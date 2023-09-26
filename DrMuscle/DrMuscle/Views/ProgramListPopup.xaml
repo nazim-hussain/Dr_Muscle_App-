@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    CloseWhenBackgroundIsClicked="false"
+    BackgroundColor="#AA333333"
+    x:Class="DrMuscle.Views.ProgramListPopup">
+    <StackLayout Margin="20,20,20,20">
+        <StackLayout  Padding="20"
+                      BackgroundColor="White"
+                      VerticalOptions="CenterAndExpand">
+            <Label Text="Select a program to do next?"
+                   Style="{StaticResource BoldLabelStyle}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Black" />
+            <t:DrMuscleListView x:Name="ProgramListView"
+                                HeightRequest="100"
+                                BackgroundColor="Transparent"
+                                SeparatorVisibility="None"
+                                VerticalOptions="FillAndExpand"
+                                SeparatorColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="50">
+                            <StackLayout Orientation="Horizontal"
+                                         BackgroundColor="Transparent">
+                                <Label Text="{Binding Label}"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalTextAlignment="Center"
+                                       Style="{StaticResource LabelStyle}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </t:DrMuscleListView>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

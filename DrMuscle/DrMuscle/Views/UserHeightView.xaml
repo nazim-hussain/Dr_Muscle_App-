@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     CloseWhenBackgroundIsClicked="false"
+    xmlns:constants="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:convertors="clr-namespace:DrMuscle.Convertors"
+    xmlns:local="clr-namespace:DrMuscle.Views"
+    x:Class="DrMuscle.Views.UserHeightView">
+       <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <convertors:IntegerDigitVisibleConverter
+                x:Key="intDigitConv" />
+            <convertors:DecimalDigitVisibleConverter
+                x:Key="decDigitConv" />
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <Frame
+        Padding="0"
+        CornerRadius="4"
+        HasShadow="False"
+        IsClippedToBounds="True"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="CenterAndExpand"
+        BackgroundColor="White"
+        Margin="20,20,20,0">
+        <StackLayout Padding="0,10,0,0">
+            <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style
+                            TargetType="Button"
+                            x:Key="ButtonStyle">
+                            <Setter
+                                Property="FontSize"
+                                Value="Medium" />
+                            <Setter
+                                Property="TextColor"
+                                Value="{x:Static constants:AppThemeConstants.BlueColor}" />
+                            <Setter
+                                Property="BorderColor"
+                                Value="Transparent" />
+                            <Setter
+                                Property="HorizontalOptions"
+                                Value="End" />
+                            <Setter
+                                Property="VerticalOptions"
+                                Value="CenterAndExpand" />
+                            <Setter
+                                Property="BackgroundColor"
+                                Value="Transparent" />
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+             <Label
+                    x:Name="LblTitle"
+                    Margin="15,0,10,0"
+                    Text="How tall are you?"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start" />
+            <Frame
+                        Margin="5,5,5,0"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="1,1,1,1"
+                        BackgroundColor="Transparent"
+                        BorderColor="{x:Static constants:AppThemeConstants.BlueColor}"
+                        CornerRadius="6">
+            <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            Spacing="0"
+                            BackgroundColor="Transparent">
+                            <pancakeView:PancakeView
+                                Margin="0"
+                                x:Name="FeetGradient"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="End"
+                                OffsetAngle="270"
+                                CornerRadius="0">
+
+                                <Button
+                                    Text="Feet/Inch"
+                                    x:Name="BtnFeet"
+                                    HorizontalOptions="FillAndExpand"
+                                    Clicked="BtnFeetClicked"
+                                    TextColor="White"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="Transparent"
+                                    HeightRequest="40"
+                                    CornerRadius="6"></Button>
+                            </pancakeView:PancakeView>
+                            <pancakeView:PancakeView
+                                Margin="0"
+                                HorizontalOptions="FillAndExpand"
+                                x:Name="CMGradient"
+                                VerticalOptions="End"
+                                OffsetAngle="270"
+                                CornerRadius="0">
+
+                                <Button
+                                    Text="Centimeter"
+                                    x:Name="BtnCM"
+                                    HorizontalOptions="FillAndExpand"
+                                    Clicked="BtnCMClicked"
+                                    TextColor="#0C2432"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="Transparent"
+                                    HeightRequest="40"
+                                    CornerRadius="6"></Button>
+                            </pancakeView:PancakeView>
+                        </StackLayout>
+            </Frame>
+            <StackLayout>
+
+            <Grid
+                x:Name="FeetGrid">
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition
+                        Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    Margin="0,0,10,0"
+                    VerticalTextAlignment="Center"
+                    Text="Ft" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Margin="0,0,10,0"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    Text="In" />
+                <local:PickerView
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="PickerFeet"
+                    WidthRequest="100"
+                    IsVisible="{Binding IntegerDigitLength,
+                    Converter={StaticResource intDigitConv}, ConverterParameter=9}"
+                    SelectedIndex="4" />
+                <local:PickerView
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="PickerInch"
+                    WidthRequest="100"
+                    IsVisible="{Binding IntegerDigitLength,
+                    Converter={StaticResource intDigitConv}, ConverterParameter=8}"
+                    SelectedIndex="5" />
+            </Grid>
+                <local:PickerView
+                    x:Name="PickerCM"
+                    IsVisible="false"
+                    WidthRequest="100"
+                    MinimumHeightRequest="100"
+                    HorizontalOptions="Center"
+                    SelectedIndex="141" />
+                </StackLayout>
+            <StackLayout
+                    Orientation="Horizontal"
+                    Margin="10,0,10,10"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="End">
+                    <Button
+                        x:Name="BtnCancel"
+                        Text="Cancel"
+                        IsVisible="false"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalOptions="End"
+                        WidthRequest="100"
+                        Clicked="BtnCancel_Clicked" />
+                    <Button
+                        x:Name="BtnConfirm"
+                        Text="Save"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalOptions="End"
+                        WidthRequest="80"
+                        Clicked="BtnDoneClicked" />
+                </StackLayout>
+            </StackLayout>
+    </Frame>
+</pages:PopupPage>

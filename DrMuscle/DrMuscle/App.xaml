@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:constnats="clr-namespace:DrMuscle.Constants"
+             xmlns:localize="clr-namespace:DrMuscle.Resx"
+             xmlns:converter="clr-namespace:DrMuscle.Converters"
+             x:Class="DrMuscle.App">
+  <Application.Resources>
+    <ResourceDictionary>
+            <converter:InttoBoolConvertor x:Key="IntBoolConverter" />
+        <converter:StringToBoolConvertor x:Key="StringBoolConverter" />
+      <!-- Application resource dictionary -->
+            <OnPlatform x:TypeArguments="x:Double" Android="11" iOS="11" x:Key="ItemContextFontSize" />
+            <OnPlatform x:TypeArguments="Color" Android="#195276" iOS="White" x:Key="BackgColor" />
+            <OnPlatform x:TypeArguments="Color" Android="{x:Static constnats:AppThemeConstants.DefaultColor}" iOS="{x:Static constnats:AppThemeConstants.TextColorBlack}" x:Key="TitleTextColor" />
+            <OnPlatform x:TypeArguments="Color" Android="Gray" iOS="Gray" x:Key="SeparatorColor" />
+            <OnPlatform x:TypeArguments="Color" Android="White" iOS="#007aff" x:Key="LinkTextColor" />
+        <OnPlatform x:TypeArguments="Thickness" Android="0,7" iOS="0" x:Key="VideoPadding" />
+            <OnPlatform x:TypeArguments="TextAlignment" Android="Start" iOS="Center" x:Key="TitleTextAlignment" />
+            <Style x:Key="infoText" TargetType="Label">
+                <Setter Property="FontSize" Value="10" />
+            </Style>
+            <Style x:Key="LearnMoreText" TargetType="Label">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+            </Style>
+            <Style x:Key="ItemContextCancelButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Cancel} " />
+        <Setter Property="WidthRequest" Value="45" />
+      </Style>
+      <Style x:Key="ItemContextRenameButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Rename} " />
+        <Setter Property="WidthRequest" Value="55" />
+      </Style>
+      <Style x:Key="ItemContextSwapButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Swap} " />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+            <Style x:Key="ItemContextVideoButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+                <Setter Property="Padding" Value="{StaticResource VideoPadding}" />
+        <Setter Property="Margin" Value="0,0" />
+        <Setter Property="Text" Value=" {localize:Translate Video} " />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+            <!---->
+        <Style x:Key="ItemContextDeloadButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+
+        <Style x:Key="ItemContextChallengeButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Video}" />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+      <Style x:Key="ItemContextEditButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Edit} " />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+      <Style x:Key="ItemContextRestoreButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Restore} " />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+      <Style x:Key="ItemContextDeleteButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate Delete} " />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="WidthRequest" Value="50" />
+      </Style>
+      <Style x:Key="ItemContextResetButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate More} " />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+        <Style x:Key="ItemContextSettingsButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" {localize:Translate More} " />
+        <Setter Property="WidthRequest" Value="60" />
+      </Style>
+      <Style x:Key="ItemContextMoreButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontSize" Value="{StaticResource ItemContextFontSize}" />
+        <Setter Property="Margin" Value="1,5" />
+        <Setter Property="Text" Value=" ... " />
+        <Setter Property="WidthRequest" Value="51" />
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+	  <Style x:Key="timerButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="BorderRadius" Value="5" />
+          <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderColor" Value="{x:Static constnats:AppThemeConstants.TextColorBlack}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>		
+	  <Style x:Key="timerEntryStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+      </Style>
+            
+      <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="BorderColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="HeightRequest" Value="55" />
+
+            </Style>
+            <Style x:Key="highEmphasisButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="HeightRequest" Value="55" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+                <Setter Property="BorderColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+            </Style>
+            <Style x:Key="buttonLinkStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="HeightRequest" Value="50" />
+            </Style>
+            <Style x:Key="repsbuttonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+        <Setter Property="TextColor" Value="Gray" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="BorderRadius" Value="5" />
+        <Setter Property="BorderColor" Value="Gray" />
+                <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+      <Style x:Key="menubuttonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="BorderRadius" Value="5" />
+          <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="Margin" Value="40" />
+      </Style>
+            <Style x:Key="fbButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#f4f4f4" />
+                <Setter Property="TextColor" Value="#3b5998" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="BorderColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        <Style x:Key="GoogleButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E74B37" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="BorderColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        
+            <Style x:Key="entryStylebackup" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+                <Setter Property="Opacity" Value="0.80" />
+            </Style>
+            <Style x:Key="entryStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#f9f9f9" />
+                <Setter Property="Opacity" Value="0.85" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.TextColorBlack}" />
+            </Style>
+
+            <Style x:Key="slideMenuButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.TextColorBlack}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="0" />
+            </Style>
+            <Style x:Key="buttonTransparent" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+      </Style>
+            <Style x:Key="mainButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="0" />
+            </Style>
+        
+            <!-- Labels -->
+            <Style 
+                TargetType="Label" x:Key="LabelStyle">
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.OffBlackColor}" />
+                <Setter Property="FontSize" Value="{x:Static constnats:AppThemeConstants.DescriptionFontSize}" />
+            </Style>   
+        
+            <Style 
+                TargetType="Label" x:Key="NormalLabelStyle" BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+        
+            <Style TargetType="Label" x:Key="BoldLabelStyle" BasedOn="{StaticResource LabelStyle}" >
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.TextColorBlack}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+        
+            <Style TargetType="Label" x:Key="WorkoutLabelStyle" BasedOn="{StaticResource LabelStyle}" >
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+                
+            <Style TargetType="Label" x:Key="OnBoardingLabelStyle" BasedOn="{StaticResource LabelStyle}" >
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Opacity" Value="0.95" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="OnBoardingLabelStyleBig" BasedOn="{StaticResource LabelStyle}" >
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+
+            <Style TargetType="Picker" x:Key="PickerStyle">
+                <Setter Property="TextColor" Value="{StaticResource TitleTextColor}" />
+                <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.DefaultColor}" />
+            </Style>
+
+            <Style
+                TargetType="Label" x:Key="PasscodeLabelStyle">
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="16" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+            </Style>
+            
+            <Style
+                TargetType="Button" x:Key="PasscodeButtonStyle" >
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="WidthRequest" Value="60" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="CornerRadius" Value="30" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="FontSize" Value="24" />
+            </Style>
+             
+            <Style
+                TargetType="BoxView" x:Key="PasscodeBoxviewStyle">
+                <Setter Property="BackgroundColor" Value="{x:Static constnats:AppThemeConstants.BlueColor}" />
+                <Setter Property="HeightRequest" Value="24" />
+                <Setter Property="WidthRequest" Value="24" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+        <Style TargetType="Button" x:Key="RippleStyle">
+            
+                    <Setter Property="VisualStateManager.VisualStateGroups">
+                 <VisualStateGroupList>
+                        
+                <VisualStateGroup x:Name="CommonStates">
+
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor"
+                            Value="#DFFF69" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Pressed">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor"
+                            Value="#AADFFF69" />
+                </VisualState.Setters>
+            </VisualState>
+
+        </VisualStateGroup>
+                     </VisualStateGroupList>
+            </Setter>
+            
+        </Style>
+        </ResourceDictionary>
+  </Application.Resources>
+</Application>

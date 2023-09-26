@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DrMuscle.Cells.HeaderCell" xmlns:t="clr-namespace:DrMuscle.Layout" xmlns:app="clr-namespace:DrMuscle.Constants;">
+    <StackLayout BackgroundColor="Transparent" Orientation="Vertical">
+        <StackLayout Padding="16,8,0,8" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+            <Label VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="{x:Static app:AppThemeConstants.BlueColor}" BackgroundColor="Transparent" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
+            <t:DrMuscleButton x:Name="ViewAlldButton" Text="View all" FontSize="Small" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Style="{StaticResource buttonLinkStyle}" Clicked="ViewAll_Clicked" IsVisible="false" />
+        </StackLayout>
+    </StackLayout>
+</ViewCell>

@@ -1,0 +1,28 @@
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DrMuscle"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    x:Class="DrMuscle.Screens.Workouts.ChooseWorkoutExerciseOrder">
+    <AbsoluteLayout>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="20,0,20,0"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+         
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="EndAndExpand"
+                Padding="0,0,0,20">
+                <t:DrMuscleButton
+                    x:Name="SaveWorkoutButton"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="58"
+                    Style="{StaticResource buttonStyle}"></t:DrMuscleButton>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</t:DrMusclePage>

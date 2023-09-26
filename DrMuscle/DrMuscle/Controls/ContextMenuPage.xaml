@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Controls.ContextMenuPage"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Name="ContextMenuPopup">
+    <Frame
+        x:Name="MainFrame"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        BackgroundColor="#123b54"
+        Padding="0"
+        CornerRadius="2">
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="PageTapGestureRecognizer_Tapped"/>
+        </Frame.GestureRecognizers>
+        <ListView
+            RowHeight="48"
+            Margin="0,5,0,5"
+            BackgroundColor="Transparent"
+            SeparatorVisibility="None"
+            VerticalScrollBarVisibility="Never"
+            ItemsSource="{Binding Items, Source={Reference ContextMenuPopup}}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0" BackgroundColor="#123b54">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ItemTapGestureRecognizer_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <BoxView BackgroundColor="#77FFFFFF" HeightRequest="0.5" Margin="-15,0" IsVisible="{Binding IsDestructive}"></BoxView>
+                            <Label Margin="15,0"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalTextAlignment="Center"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="18"
+                                TextColor="White"
+                                Text="{Binding Text}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Frame>
+</pages:PopupPage>

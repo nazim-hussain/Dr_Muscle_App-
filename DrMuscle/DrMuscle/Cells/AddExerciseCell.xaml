@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DrMuscle.Cells.AddExerciseCell" Height="44">
+    <ViewCell.View>
+        <StackLayout Orientation="Horizontal" Padding="20,0,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Label Text="{Binding Label}" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" Style="{StaticResource LabelStyle}"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Switch x:Name="ToggleSwitch" IsToggled="{Binding IsSelected,Mode=TwoWay}" HorizontalOptions="End"></Switch>
+            </StackLayout>
+            
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:helpers="clr-namespace:DrMuscle.Helpers" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                
+xmlns:local="clr-namespace:DrMuscle" xmlns:t="clr-namespace:DrMuscle.Layout" xmlns:s="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions" x:Class="DrMuscle.Screens.Workouts.ChooseYourBodyweightWorkoutPage"
+                xmlns:CustomCell="clr-namespace:DrMuscle.Cells"
+                xmlns:constnats="clr-namespace:DrMuscle.Constants">
+    <t:DrMusclePage.Resources>
+        <ResourceDictionary>
+            <helpers:NegateBooleanConverter x:Key="BooleanInverter" />
+        </ResourceDictionary>
+    </t:DrMusclePage.Resources>
+    
+</t:DrMusclePage>

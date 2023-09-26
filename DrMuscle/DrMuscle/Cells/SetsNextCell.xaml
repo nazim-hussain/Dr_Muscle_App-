@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    x:Class="DrMuscle.Cells.SetsNextCell"
+    xmlns:behaviours="clr-namespace:DrMuscle.Behaviors"
+    xmlns:converters="clr-namespace:DrMuscle.Converters"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    xmlns:controls="clr-namespace:DrMuscle.Controls"
+    xmlns:helpers="clr-namespace:DrMuscle.Helpers"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:video="clr-namespace:FormsVideoLibrary"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <ViewCell.View>
+        <pancakeView:PancakeView
+            Padding="15,10,15,0"
+            Margin="4,0,4,0"
+            IsClippedToBounds="true"
+            HorizontalOptions="End"
+            OffsetAngle="90"
+            VerticalOptions="FillAndExpand"
+            CornerRadius="0">
+            <pancakeView:PancakeView.BackgroundGradientStops>
+                <pancakeView:GradientStopCollection>
+                    <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                    <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                </pancakeView:GradientStopCollection>
+            </pancakeView:PancakeView.BackgroundGradientStops>
+            <StackLayout CompressedLayout.IsHeadless="True" VerticalOptions="FillAndExpand">
+                <StackLayout.Resources>
+                    <converters:BoolInverter
+                        x:Key="BoolInverterConverter" />
+                </StackLayout.Resources>
+                <ffimageloadingsvg:SvgCachedImage x:Name="videoPlayer" Source="{Binding VideoUrl}" HeightRequest="200" Aspect="AspectFit" FadeAnimationForCachedImages="False" HorizontalOptions="FillAndExpand" BackgroundColor="White" IsVisible="{Binding IsVideoUrlAvailable}">
+                    <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    </ffimageloadingsvg:SvgCachedImage>
+               
+                
+                    <!--<StackLayout
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Orientation="Horizontal"
+                        Margin="0,0,0,4"
+                        x:Name="HeaderDescStack"
+                        IsVisible="{Binding IsHeaderCell}"
+                        Spacing="0"
+                        HorizontalOptions="Center">
+                        <ffimageloading:CachedImage
+                            Source="{Binding HeaderImage}"
+                            x:Name="IconOrange"
+                            Aspect="AspectFit"
+                            WidthRequest="26"
+                            VerticalOptions="Start" />
+                        <Label
+                            x:Name="lblResult3"
+                            Margin="10,0,-10,0"
+                            Style="{StaticResource LabelStyle}"
+                            FontAttributes="Italic"
+                            FontSize="21"
+                            Text="{Binding HeaderTitle}"
+                            HorizontalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            TextColor="#ECFF92">
+                        </Label>
+                    </StackLayout>-->
+                <Grid IsVisible="{Binding IsHeaderCell}" ColumnSpacing="0" Padding="0,10,0,11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"  />
+                        <ColumnDefinition Width="60"  />
+                        <ColumnDefinition Width="0.77*" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="0.77*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="SET" Grid.Column="1" FontSize="18" TextColor="#FFFFFF"  FontAttributes="Bold" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                    <Label Text="REPS" x:Name="repsTypeLabel"  Grid.Column="2" FontSize="18"  TextColor="#FFFFFF" FontAttributes="Bold" HorizontalOptions="FillAndExpand"  HorizontalTextAlignment="Center"/>
+                    <Label Text="LBS" x:Name="massUnitLabel" Grid.Column="4" FontSize="18" TextColor="#FFFFFF" FontAttributes="Bold" HorizontalOptions="FillAndExpand"  HorizontalTextAlignment="Center"/>
+                </Grid>
+                    <Grid
+                        IsVisible="{Binding IsNext}"
+                        Margin="0,0,0,0"
+                        VerticalOptions="FillAndExpand"
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="*" />
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="Auto" />
+
+                            <!--<RowDefinition
+                                Height="Auto" />-->
+                            <!--<RowDefinition
+                                Height="Auto" />-->
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition
+                                Width="50" />
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+                        <StackLayout
+                            Spacing="0"
+                            Grid.Row="0"
+                            Margin="0,0,0,3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3">
+                            <!--<Label
+                                Text="{Binding SetNo, StringFormat='SET {0}'}"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="#ECFF92" />-->
+                            <!--<Grid ColumnSpacing="0">
+                             <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="25" />
+                            <ColumnDefinition
+                                Width="60" />
+                            <ColumnDefinition
+                                Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="*" />
+                                </Grid.RowDefinitions>
+                                <ffimageloading:CachedImage
+                            Source="deleteset.png"
+                            Margin="0,5,0,5"
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Aspect="AspectFit"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" >
+                            </ffimageloading:CachedImage>
+                       <t:DrMuscleButton
+                            Margin="0"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            Clicked="DeleteSetTapGestureRecognizer_Tapped">
+                            </t:DrMuscleButton>
+                        <Label
+                            Text="{Binding SetNo}"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            FontSize="21"
+                            TextColor="#FFFFFF" />
+                                
+                            </Grid>-->
+
+                            
+                        </StackLayout>
+
+                        <!--<StackLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            x:Name="StackRepsConatiner"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Orientation="Horizontal"
+                            effects:TooltipEffect.Text="I adjusted your reps"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="{Binding ISbackOffSetTooltip}">
+                            <t:DrMuscleButton
+                                x:Name="RepsLess"
+                                Margin="0,0,0,3"
+                                Image="ic_minus.png"
+                                Style="{StaticResource buttonStyle}"
+                                BorderColor="Transparent"
+                                BackgroundColor="Transparent"
+                                Padding="0"
+                                WidthRequest="50"
+                                Clicked="RepsLess_Clicked"
+                                VerticalOptions="Center" />
+                            <Frame
+                                BorderColor="#ECFF92"
+                                HasShadow="False"
+                                Padding="0"
+                                x:Name="FrmReps"
+                                WidthRequest="{x:Static app:AppThemeConstants.SetCellEntryHeight}"
+                                HeightRequest="{x:Static app:AppThemeConstants.SetCellEntryHeight}"
+                                CornerRadius="{x:Static app:AppThemeConstants.SetCellEntryCornerRadius}"
+                                BackgroundColor="#8F0C2432"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                >
+                                <StackLayout
+                                    HorizontalOptions="Center"
+                                    IsClippedToBounds="True"
+                                    VerticalOptions="Center"
+                                    x:Name="StackReps"
+                                    Spacing="0"
+                                    effects:TooltipEffect.Text="{Binding Reps, StringFormat='Do {0} reps'}"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="False">
+                                    <controls:DrMuscleEntry
+                                        x:Name="RepsEntry"
+                                        HorizontalOptions="Center"
+                                        Keyboard="Numeric"
+                                        HorizontalTextAlignment="Center"
+                                        BackgroundColor="Transparent"
+                                        Text="{Binding Reps}"
+                                        MaxLength="4"
+                                        WidthRequest="{x:Static app:AppThemeConstants.SetCellEntryHeight}"
+                                        FontSize="{x:Static app:AppThemeConstants.SetCellEntryBigFontSize}"
+                                        TextChanged="RepsEntry_TextChanged"
+                                        Unfocused="RepsEntry_Unfocused"
+                                        TextColor="White" >
+                                        <controls:DrMuscleEntry.Triggers>
+                                            <DataTrigger
+                                                TargetType="controls:DrMuscleEntry"
+                                                Binding="{Binding IsMaxChallenge}"
+                                                Value="true">
+                                                <Setter
+                                                    Property="IsVisible"
+                                                    Value="false" />
+                                            </DataTrigger>
+                                        </controls:DrMuscleEntry.Triggers>
+                                    </controls:DrMuscleEntry>
+                                    <Label
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Reps, StringFormat='Max ({0})'}"
+                                        WidthRequest="130"
+                                        IsVisible="false"
+                                        FontSize="21"
+                                        TextColor="#FFFFFF">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                TargetType="Label"
+                                                Binding="{Binding IsMaxChallenge}"
+                                                Value="true">
+                                                <Setter
+                                                    Property="IsVisible"
+                                                    Value="true"/>
+                                                <Setter
+                                                    Property="Margin"
+                                                    Value="0,7,0,7" />
+                                                <Setter
+                                                    Property="VerticalTextAlignment"
+                                                    Value="Center" />
+                                                <Setter
+                                                    Property="VerticalOptions"
+                                                    Value="Center" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                    <Label
+                                        x:Name="RepText"
+                                        HorizontalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Center"
+                                        Text="Reps"
+                                        WidthRequest="110"
+                                        FontSize="14"
+                                        TextColor="White">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                TargetType="Label"
+                                                Binding="{Binding IsTimeBased}"
+                                                Value="True">
+                                                <Setter
+                                                    Property="Text"
+                                                    Value="Secs" />
+                                            </DataTrigger>
+                                            <DataTrigger
+                                                TargetType="Label"
+                                                Binding="{Binding IsTimeBased}"
+                                                Value="False">
+                                                <Setter
+                                                    Property="Text"
+                                                    Value="Reps" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </StackLayout>
+                            </Frame>
+                            <t:DrMuscleButton
+                                x:Name="RepsMore"
+                                Image="ic_plus.png"
+                                Style="{StaticResource buttonStyle}"
+                                BorderColor="Transparent"
+                                BackgroundColor="Transparent"
+                                Padding="0"
+                                WidthRequest="50"
+                                Clicked="RepsMore_Clicked"
+                                VerticalOptions="Center" />
+                        </StackLayout>-->
+                        <!--<StackLayout
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Orientation="Horizontal">
+                            <t:DrMuscleButton
+                                x:Name="WeightLess"
+                                Image="ic_minus.png"
+                                Style="{StaticResource buttonStyle}"
+                                BorderColor="Transparent"
+                                BackgroundColor="Transparent"
+                                Margin="0"
+                                Padding="0"
+                                WidthRequest="50"
+                                Clicked="WeightLess_Clicked"
+                                VerticalOptions="Center" />
+                            <Frame
+                                BorderColor="#ECFF92"
+                                HasShadow="False"
+                                IsClippedToBounds="True"
+                                Padding="0"
+                                WidthRequest="{x:Static app:AppThemeConstants.SetCellEntryHeight}"
+                                HeightRequest="{x:Static app:AppThemeConstants.SetCellEntryHeight}"
+                                CornerRadius="{x:Static app:AppThemeConstants.SetCellEntryCornerRadius}"
+                                BackgroundColor="#8F0C2432"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+
+                                <StackLayout
+                                    IsClippedToBounds="True"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Spacing="0"
+                                    x:Name="StackWeight"
+                                    effects:TooltipEffect.Text="I adjusted your weight"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                >
+                                    <controls:DrMuscleEntry
+                                        x:Name="WeightEntry"
+                                        Text="{Binding WeightDouble}"
+                                        HorizontalOptions="FillAndExpand"
+                                        Keyboard="Numeric"
+                                        MaxLength="7"
+                                        HorizontalTextAlignment="Center"
+                                        TextChanged="WeightEntry_TextChanged"
+                                        WidthRequest="120"
+                                        FontSize="{x:Static app:AppThemeConstants.SetCellEntryBigFontSize}"
+                                        TextColor="White"
+                                        BackgroundColor="Transparent">
+                                        <controls:DrMuscleEntry.Triggers>
+                                            <DataTrigger
+                                                TargetType="controls:DrMuscleEntry"
+                                                Binding="{Binding IsBodyweight}"
+                                                Value="true">
+                                                <Setter
+                                                    Property="IsVisible"
+                                                    Value="false" />
+                                            </DataTrigger>
+                                        </controls:DrMuscleEntry.Triggers>
+                                    </controls:DrMuscleEntry>
+                                    <Label
+                                        x:Name="WeightText"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Text="Kgs"
+                                        WidthRequest="130"
+                                        FontSize="14"
+                                        TextColor="#FFFFFF">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                TargetType="Label"
+                                                Binding="{Binding IsBodyweight}"
+                                                Value="true">
+                                                <Setter
+                                                    Property="Text"
+                                                    Value="Bodyweight" />
+                                                <Setter
+                                                    Property="FontSize"
+                                                    Value="16" />
+                                                <Setter
+                                                    Property="Margin"
+                                                    Value="0,7,0,7" />
+                                                <Setter
+                                                    Property="VerticalTextAlignment"
+                                                    Value="Center" />
+                                                <Setter
+                                                    Property="VerticalOptions"
+                                                    Value="Center" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+
+                                </StackLayout>
+                            </Frame>
+                            <t:DrMuscleButton
+                                x:Name="WeightMore"
+                                Image="ic_plus.png"
+                                Style="{StaticResource buttonStyle}"
+                                BorderColor="Transparent"
+                                BackgroundColor="Transparent"
+                                Margin="0"
+                                Padding="0"
+                                WidthRequest="50"
+                                Clicked="WeightMore_Clicked"
+                                VerticalOptions="Center" />
+                        </StackLayout>-->
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        IsClippedToBounds="True"
+                        ColumnSpacing="0"
+                        RowSpacing="0"
+                        VerticalOptions="FillAndExpand"
+                        Grid.ColumnSpan="3"
+                        HorizontalOptions="FillAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"  />
+                        <ColumnDefinition Width="60"  />
+                        <ColumnDefinition Width="0.77*" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="0.77*" />
+                        <!--<ColumnDefinition Width="Auto" />-->
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                                Height="0.85*" />
+                            <RowDefinition
+                                Height="*" />
+                            <RowDefinition
+                                Height="0.85*" />
+                    </Grid.RowDefinitions>
+                    <!--<ffimageloading:CachedImage
+                            Source="done2.png"
+                            Margin="0,5,0,5"
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Aspect="AspectFit"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            IsVisible="{Binding IsFinished}" />-->
+                     <ffimageloading:CachedImage
+                            Source="deleteset_yellow.png"
+                            Margin="{OnPlatform Android='0,3,0,5', iOS='0,5,0,5'}"
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Aspect="AspectFit"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" >
+                            </ffimageloading:CachedImage>
+                    <t:DrMuscleButton
+                            Margin="0"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            Clicked="DeleteSetTapGestureRecognizer_Tapped">
+                            </t:DrMuscleButton>
+
+                        <Label
+                            Text="{Binding SetNo}"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="{OnPlatform Android='0,-4,0,0', iOS='0'}"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            FontSize="30"
+                            TextColor="#FFFFFF"
+                            />
+                        <t:DrMuscleButton
+                            Grid.Row="0"
+                            Grid.Column="2"
+                                x:Name="RepsMore"
+                                Style="{StaticResource buttonStyle}"
+                                BackgroundColor="Transparent"
+                                Margin="5,3,5,4"
+                                Image="light_blue_arrow.png"
+                                Padding="0,21,0,0"
+                                TextColor="White"
+                                BorderColor="Transparent"
+                                BorderWidth="0"
+                                HeightRequest="72"
+                                Clicked="RepsMore_Clicked"
+                                VerticalOptions="Center" />
+                        <StackLayout x:Name="StackReps" Grid.Row="1" Spacing="0" Margin="5,3,5,3" 
+                            Grid.Column="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            
+                    <t:WorkoutEntry
+                                Text="{Binding Reps}"
+                                x:Name="RepsEntry"
+                                HorizontalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                Keyboard="Numeric"
+                                HorizontalOptions="FillAndExpand"
+                                FontSize="30"
+                                MaxLength="4"
+                                HeightRequest="{OnPlatform iOS='84', Android='87'}"
+                                TextChanged="RepsEntry_TextChanged"
+                                BackgroundColor="{Binding BackColor}"
+                                TextColor="White" >
+                                <t:WorkoutEntry.Triggers>
+                            <DataTrigger
+                                                TargetType="t:WorkoutEntry"
+                                                Binding="{Binding IsMaxChallenge}"
+                                                Value="true">
+                                       <Setter
+                                                    Property="IsVisible"
+                                                    Value="false"/> 
+                            </DataTrigger>
+                        </t:WorkoutEntry.Triggers>
+                        </t:WorkoutEntry>
+
+                            <t:WorkoutEntry
+                                Text="{Binding Reps, StringFormat='Max ({0})'}"
+                                HorizontalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                Keyboard="Numeric"
+                                IsVisible="false"
+                                HorizontalOptions="FillAndExpand"
+                                FontSize="21"
+                                HeightRequest="{OnPlatform iOS='84', Android='87'}"
+                                TextChanged="RepsEntry_TextChanged"
+                                BackgroundColor="{Binding BackColor}"
+                                TextColor="White" >
+                                <t:WorkoutEntry.Triggers>
+                            <DataTrigger
+                                                TargetType="t:WorkoutEntry"
+                                                Binding="{Binding IsMaxChallenge}"
+                                                Value="true">
+                                        <Setter Property="IsReadOnly" Value="True" />
+                                       <Setter
+                                                    Property="IsVisible"
+                                                    Value="true"/> 
+                            </DataTrigger>
+                        </t:WorkoutEntry.Triggers>
+                        </t:WorkoutEntry>
+                            
+                        </StackLayout>
+                        <!--<Label
+Grid.Row="1" Margin="5,3,5,3" 
+                            Grid.Column="2"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalOptions="End"
+                                        VerticalTextAlignment="End"
+                                        Text="max"
+                                        WidthRequest="130"
+                                        IsVisible="false"
+                                        FontSize="18"
+                                        TextColor="#FFFFFF">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                TargetType="Label"
+                                                Binding="{Binding IsMaxChallenge}"
+                                                Value="true">
+                                                <Setter
+                                                    Property="IsVisible"
+                                                    Value="true"/>
+                                               
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>-->
+
+                    <Label
+                            Text="*"
+                            Grid.Row="1"
+                            Margin="0,2,0,0"
+                            Grid.Column="3"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            FontSize="25"
+                            TextColor="White" />
+                        <t:DrMuscleButton
+                                x:Name="RepsLess"
+                                Grid.Row="2"
+                                Grid.Column="2"
+                                Style="{StaticResource buttonStyle}"
+                                Image="light_blue_arrow_down.png"
+                                Padding="0,0,0,18"
+                                BorderColor="Transparent"
+                                BorderWidth="0"
+                                Margin="{OnPlatform Android='5,2,5,0', iOS='5,0,5,0'}"
+                                HeightRequest="72"
+                                Clicked="RepsLess_Clicked"
+                                VerticalOptions="Start" />
+                    <controls:AutoSizeLabel
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="{OnPlatform Android='5,0,5,8', iOS='5,0,5,8'}"
+                        x:Name="PerSideText"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        VerticalTextAlignment="End"
+                        HorizontalTextAlignment="End"
+                        Text="per side"
+                        MaxLines="1"
+                        FontSize="17"
+                        TextColor="#AAFFFFFF">
+                                        
+                    </controls:AutoSizeLabel>
+                        <t:DrMuscleButton
+                                x:Name="WeightMore"
+                                Grid.Row="0"
+                                Grid.Column="4"
+                                Style="{StaticResource buttonStyle}"
+                                Image="light_blue_arrow.png"
+                                IsVisible="{Binding IsBodyweight, Converter={StaticResource BoolInverterConverter}}"
+                                Padding="0,21,0,0"
+                                TextColor="White"
+                                BorderColor="Transparent"
+                                Margin="5,3,5,4"
+                                HeightRequest="72"
+                                Clicked="WeightMore_Clicked"
+                                VerticalOptions="Center" />
+                        
+                        <StackLayout
+Grid.Row="1"
+                            Grid.Column="4"
+                            Margin="5,3,5,3"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Spacing="0"
+                                    x:Name="StackWeight"
+                                    effects:TooltipEffect.Text="I adjusted your weight"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                >
+                    <t:WorkoutEntry
+                                x:Name="WeightEntry"
+                            Keyboard="Numeric"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                                Text="{Binding WeightSingal}"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                TextChanged="WeightEntry_TextChanged"
+                                BackgroundColor="{Binding BackColor}"
+                                HeightRequest="{OnPlatform iOS='84', Android='87'}"
+                                FontSize="30"
+                                TextColor="#FFFFFF">   
+                        <t:WorkoutEntry.Triggers>
+                                <DataTrigger
+                                                TargetType="t:WorkoutEntry"
+                                                Binding="{Binding IsBodyweight}"
+                                                Value="true">
+                                    <Setter Property="IsReadOnly" Value="True" />
+                                            </DataTrigger>
+                            </t:WorkoutEntry.Triggers>
+                    </t:WorkoutEntry>
+                            
+                            </StackLayout>
+                        <t:DrMuscleButton
+                            Grid.Row="2"
+                            Grid.Column="4"
+                                x:Name="WeightLess"
+                                Image="light_blue_arrow_down.png"
+                            Style="{StaticResource buttonStyle}"
+                                IsVisible="{Binding IsBodyweight, Converter={StaticResource BoolInverterConverter}}"
+                                BackgroundColor="Transparent"
+                                Margin="{OnPlatform Android='5,2,5,0', iOS='5,0,5,0'}"
+                                Padding="0,0,0,18"
+                                BorderColor="Transparent"
+                                BorderWidth="0"
+                                HeightRequest="72"
+                                Clicked="WeightLess_Clicked"
+                                VerticalOptions="Start" />
+                        <controls:AutoSizeLabel
+Grid.Row="1"
+                            Grid.Column="4"
+                            Margin="{OnPlatform Android='5,0,5,8', iOS='5,0,5,8'}"
+                                        x:Name="WeightText"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="End"
+                                        VerticalTextAlignment="End"
+                                        HorizontalTextAlignment="End"
+                                        Text="per hand"
+                                        MaxLines="1"
+                                        FontSize="17"
+                                        TextColor="#AAFFFFFF">
+                                        
+                                    </controls:AutoSizeLabel>
+                    <Grid.Triggers>
+                        <DataTrigger TargetType="Grid" Binding="{Binding IsSetupNotCompleted}" Value="true">
+                            <Setter Property="HeightRequest" Value="0" />
+                        </DataTrigger>
+                    </Grid.Triggers>
+                </Grid>
+                    <StackLayout Grid.Row="1"
+                        Grid.ColumnSpan="3" HorizontalOptions="Center" Orientation="Horizontal"><Label
+                        
+                                x:Name="LblCoachTips"
+                                Text="{Binding SetTitle}"
+                                FontAttributes="Italic"
+                                FontSize="21"
+                                
+                                HorizontalTextAlignment="Center"
+                                TextColor="White" 
+                                effects:TooltipEffect.Text="Warm-up and sets instructions"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="{Binding ShowPlusTooltip}"/>
+                        <ffimageloading:CachedImage
+                            Source="{Binding HeaderImage}"
+                            x:Name="IconOrange"
+                            Aspect="AspectFit"
+                            IsVisible="{Binding HeaderImage, Converter={StaticResource StringBoolConverter}}"
+                            WidthRequest="22"
+                            Margin="{OnPlatform iOS='0,0,0,1', Android='0,1,0,-3'}"
+                            VerticalOptions="Center" >
+                            <ffimageloading:CachedImage.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ShowAlert_Tapped" />
+                            </ffimageloading:CachedImage.GestureRecognizers>
+
+
+                        </ffimageloading:CachedImage>
+                                </StackLayout>
+                        <Label Text="{Binding LastTimeSet}"
+                                Grid.ColumnSpan="3"
+                               Margin="0,4,0,0"
+                                Grid.Row="2" 
+                                FontAttributes="Italic"
+                                FontSize="21"
+                                HorizontalOptions="Center"
+                                IsVisible="{Binding LastTimeSet, Converter={StaticResource StringBoolConverter}}"
+                                HorizontalTextAlignment="Center"
+                                TextColor="White" />
+                            
+                        <!--<t:DrMuscleButton 
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Margin="2,10,2,0"
+                            IsVisible="false"
+                            Text="Delete set"
+                            TextColor="White"
+                            Clicked="DeleteSet_Clicked"
+                            CommandParameter="{Binding .}"
+                            BorderColor="#ECFF92"
+                            BorderWidth="1"
+                            CornerRadius="0"
+                            BackgroundColor="Transparent"
+                            HeightRequest="60">
+                            <t:DrMuscleButton.Triggers>
+                                <MultiTrigger
+                                    TargetType="t:DrMuscleButton">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding IsEditing}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding IsFinished}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding IsExerciseFinished}"
+                                            Value="False" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </MultiTrigger>
+                            </t:DrMuscleButton.Triggers>
+
+                        </t:DrMuscleButton>-->
+                        
+                        <Label
+                             Grid.Row="3"
+                            x:Name="LblBackoffset"
+                            Margin="2,13,2,6"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="60"
+                            BackgroundColor="Transparent"
+                            effects:TooltipEffect.Text="Save a set"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="{Binding ShowSuperSet3}" />
+                        <Label
+                             Grid.Row="3"
+                            x:Name="LblSuperSet"
+                            Margin="2,13,2,6"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="66"
+                            BackgroundColor="Transparent"
+                            effects:TooltipEffect.Text="Go back to your previous exercise"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="{Binding ShowSuperSet2}" />
+                        
+                        <pancakeView:PancakeView
+                            Grid.Row="3"
+                            x:Name="BtnSaveSet"
+                            Margin="2,13,2,20"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            IsClippedToBounds="true"
+                            OffsetAngle="90"
+                            CornerRadius="6"
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="66"
+                            effects:TooltipEffect.Text="Tap here when you are done"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                effects:TooltipEffect.HasShowTooltip="False"
+                            >
+                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                <pancakeView:GradientStopCollection>
+                                     <pancakeView:GradientStop
+                                        Color="#DFFF69"
+                                        Offset="1" />
+                                    <pancakeView:GradientStop
+                                        Color="#E9FF97"
+                                        Offset="0" />
+                                </pancakeView:GradientStopCollection>
+                            </pancakeView:PancakeView.BackgroundGradientStops>
+                            <Label
+                                x:Name="BtnFinishSet"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Text=""
+                                IsEnabled="False"
+                                TextColor="#0C2432"
+                                FontSize="21"
+                                FontAttributes="Bold"
+                                effects:TooltipEffect.Text="Tap here when you are done"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"
+                                >
+                                <!--<controls:ExtendedButton.Style>
+
+                                    <OnPlatform x:TypeArguments="Style">
+                                        <On Platform="iOS" Value="{StaticResource RippleStyle}" />
+
+                                    </OnPlatform>
+                                    </controls:ExtendedButton.Style>-->
+                                <!--<Label.Triggers>
+                            <MultiTrigger
+                                TargetType="Label">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition
+                                        Binding="{Binding IsEditing}"
+                                        Value="false" />
+                                    <BindingCondition
+                                        Binding="{Binding IsFinished}"
+                                        Value="false" />
+                                </MultiTrigger.Conditions>
+                                <Setter
+                                    Property="Margin"
+                                    Value="2,13,2,6" />
+                            </MultiTrigger>
+                            <MultiTrigger
+                                TargetType="Label">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition
+                                        Binding="{Binding IsEditing}"
+                                        Value="True" />
+                                    <BindingCondition
+                                        Binding="{Binding IsFinished}"
+                                        Value="True" />
+                                </MultiTrigger.Conditions>
+                                <Setter
+                                    Property="Margin"
+                                    Value="2,0" />
+                            </MultiTrigger>
+                            <MultiTrigger
+                                TargetType="Label">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition
+                                        Binding="{Binding IsEditing}"
+                                        Value="True" />
+                                    <BindingCondition
+                                        Binding="{Binding IsFinished}"
+                                        Value="True" />
+                                    <BindingCondition
+                                        Binding="{Binding IsExerciseFinished}"
+                                        Value="true" />
+                                </MultiTrigger.Conditions>
+                                <Setter
+                                    Property="Margin"
+                                    Value="2,10,2,0" />
+                            </MultiTrigger>
+                        </Label.Triggers>-->
+                            </Label>
+                            <pancakeView:PancakeView.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="SaveSet_Clicked"
+                                    CommandParameter="{Binding .}" />
+                            </pancakeView:PancakeView.GestureRecognizers>
+                        <pancakeView:PancakeView.Triggers>
+                            <DataTrigger TargetType="pancakeView:PancakeView" Binding="{Binding IsLastSet}" Value="False">
+                                <Setter Property="Margin" Value="2,13,2,0" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="pancakeView:PancakeView" Binding="{Binding IsExerciseFinished}" Value="True">
+                                <Setter Property="Margin" Value="2,13,2,20" />
+                            </DataTrigger>
+                            
+
+                        </pancakeView:PancakeView.Triggers>
+                        </pancakeView:PancakeView>
+                        
+                        <FlexLayout
+                            Direction="Row"
+                            AlignContent="Start"
+                              Grid.Row="4"
+                            JustifyContent="SpaceBetween"
+                            Grid.Column="0"
+                            Margin="0,-10,0,20"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                            IsVisible="false"
+                            HeightRequest="60" >
+                        <FlexLayout.Triggers>
+                                <MultiTrigger
+                                    TargetType="FlexLayout">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding IsLastSet}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding IsFinished}"
+                                            Value="false" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </MultiTrigger>
+                            </FlexLayout.Triggers>
+                             <t:DrMuscleButton
+                            HorizontalOptions="FillAndExpand"
+                            FlexLayout.Grow="1"
+                            IsVisible="false"
+                            Text="Add set"
+                             x:Name="btnAddSet"
+                            TextColor="White"
+                            Clicked="btnAddSet_Clicked"
+                            CommandParameter="{Binding .}"
+                            BackgroundColor="Transparent"
+                            BorderColor="#ECFF92"
+                            BorderWidth="1"
+                            CornerRadius="6"
+                            HeightRequest="60"
+                            Margin="3,0,10,0">
+                            <t:DrMuscleButton.Triggers>
+                                <MultiTrigger
+                                    TargetType="t:DrMuscleButton">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding IsLastSet}"
+                                            Value="True" /> 
+                                        <BindingCondition
+                                            Binding="{Binding IsFinished}"
+                                            Value="false" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </MultiTrigger>
+                            </t:DrMuscleButton.Triggers>
+                        </t:DrMuscleButton>
+                        <t:DrMuscleButton
+                            IsVisible="true"
+                            x:Name="UnFinishedExercises"
+                            FlexLayout.Grow="1"
+                            Text="Finish exercise"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="White"
+                            Clicked="UnFinishedExercise_Clicked"
+                            CommandParameter="{Binding .}"
+                            BackgroundColor="Transparent"
+                            BorderColor="#ECFF92"
+                            BorderWidth="1"
+                            CornerRadius="6"
+                            HeightRequest="60"
+                            Margin="3,0,3,0">
+                            <t:DrMuscleButton.Triggers>
+                               
+                                <MultiTrigger
+                                    TargetType="t:DrMuscleButton">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding IsLastSet}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding IsFinished}"
+                                            Value="false" />
+                                        <BindingCondition
+                                            Binding="{Binding IsExerciseFinished}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="Text"
+                                        Value="Save" />
+                                </MultiTrigger>
+                            </t:DrMuscleButton.Triggers>
+
+                        </t:DrMuscleButton>
+
+                        </FlexLayout>
+                        
+                    </Grid>
+
+                    
+                
+                
+            </StackLayout>
+            
+        </pancakeView:PancakeView>
+        
+    </ViewCell.View>
+</ViewCell>

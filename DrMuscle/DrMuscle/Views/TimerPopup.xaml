@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:xfShapeView="clr-namespace:XFShapeView;assembly=XFShapeView"
+    xmlns:effects="clr-namespace:DrMuscle.Effects"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    CloseWhenBackgroundIsClicked="false"
+    Opacity="0.9"
+    BackgroundColor="#333333"
+    x:Class="DrMuscle.Views.TimerPopup">
+    <pages:PopupPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Padding="0,0,0,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Image Source="nav.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        <StackLayout
+            x:Name="TimerView"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            Padding="20,10,20,0"
+            BackgroundColor="Transparent">
+            <StackLayout
+                VerticalOptions="CenterAndExpand"
+                Margin="0,30,0,0">
+                <Label
+                    x:Name="LblRestFor"
+                    FontSize="22"
+                    Text="Rest for"
+                    TextColor="White"
+                    HorizontalOptions="Center" />
+                <xfShapeView:ShapeView
+                    WidthRequest="180"
+                    HeightRequest="180"
+                    x:Name="ProgressCircle"
+                    ShapeType="ProgressCircle"
+                    BorderColor="Gray"
+                    Color="Transparent"
+                    Opacity="1"
+                    BorderWidth="5"
+                    ProgressBorderWidth="5"
+                    ProgressBorderColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                    <StackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                        <Label
+                            x:Name="LblProgressSeconds"
+                            FontSize="40"
+                            TextColor="White"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                        <Label
+                            x:Name="LblSecondsText"
+                            Text="seconds"
+                            TextColor="White"
+                            FontSize="22" />
+                    </StackLayout>
+                </xfShapeView:ShapeView>
+                <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,30,0,0">
+                    <Label
+                        x:Name="LblLastTimeData"
+                        HorizontalOptions="Center"
+                        Text=""
+                        TextColor="White"
+                        FontSize="22" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                    <Label
+                        x:Name="LblGetReadyFor"
+                        HorizontalOptions="Center"
+                        Text="Get ready for"
+                        TextColor="White"
+                        FontSize="22" />
+                        <Label
+                        x:Name="LblLastTime"
+                        HorizontalOptions="Center"
+                        Text=""
+                        TextColor="White"
+                        FontSize="22" />
+                    </StackLayout>
+                    <Label
+                        x:Name="LblUpNextRepsSet"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text=""
+                        TextColor="White"
+                        Style="{StaticResource LabelStyle}"
+                        FontSize="34" />
+                     <Label
+                        x:Name="LblPerHand"
+                        HorizontalOptions="Center"
+                        Text="per hand"
+                        TextColor="White"
+                        FontSize="22" />
+                    <StackLayout x:Name="PlateStack" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Spacing="1">
+                        <!--<t:DrMuscleButton
+                    ContentLayout="Top,8"
+                    FontSize="15"
+                    x:Name="PlateButton"
+                    Text="Show plates"
+                    Image="big_plate.png"
+                    BackgroundColor="Transparent"
+                            VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Clicked="ButtonShowPlates_Clicked"
+                    Padding="0,5" />-->
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout
+                VerticalOptions="End"
+                Spacing="30"
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,0,0,0"
+                Padding="25.0"
+                x:Name="StackBtnHide"
+                >
+                <t:DrMuscleButton
+                    ContentLayout="Top,8"
+                    FontSize="17"
+                    x:Name="HideButton"
+                    Text="Hide"
+                    Image="hide.png"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Clicked="ButtonHide_Clicked"
+                    Padding="0,5"
+                effects:TooltipEffect.Text="Tap here to hide"
+                                effects:TooltipEffect.BackgroundColor="{x:Static app:AppThemeConstants.ReysBlueColor}"
+                                effects:TooltipEffect.TextColor="White"
+                                effects:TooltipEffect.Position="Top"
+                                effects:TooltipEffect.HasTooltip="True"    
+                    />
+            </StackLayout>
+        </StackLayout>
+            </AbsoluteLayout>
+        </pages:PopupPage.Content>
+</pages:PopupPage>

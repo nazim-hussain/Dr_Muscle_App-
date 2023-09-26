@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DrMuscle.Controls"
+             xmlns:app="clr-namespace:DrMuscle.Constants"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="DrMuscle.Cells.AIAnalysisCell">
+  <ViewCell.View>
+      <controls:CustomFrame
+                            x:Name="WeightProgress2"
+                            Margin="10,10,10,10"
+                            Padding="0,10,10,10"
+                            CornerRadius="12"
+                            HasShadow="False">
+        <controls:CustomFrame.Triggers>
+                <DataTrigger Binding="{Binding IsNewRecordAvailable}" Value="True" TargetType="controls:CustomFrame">
+                    <Setter Property="Margin" Value="10,10,10,0" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsNewRecordAvailable}" Value="False" TargetType="controls:CustomFrame">
+                    <Setter Property="Margin" Value="10,0,10,10" />
+                </DataTrigger>
+            </controls:CustomFrame.Triggers>
+            <StackLayout Padding="10,15,10,15">
+                
+                    <!--<StackLayout
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            >
+                        <Label
+                                                Text="{Binding Question}"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19"
+                                                Margin="0,0,0,9" />
+                        <Label
+                            x:Name="LblDescription"
+                                                Text="Next workout reps..."
+                                                TextColor="#AA000000"
+                                                FontSize="15" />
+                    </StackLayout>-->
+                <Grid
+                                        Margin="0,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="*" />
+                                            <RowDefinition
+                                                Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+                                                Width="40" />
+                                            <ColumnDefinition
+                                                Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image
+                                            Source="{Binding StrengthImage}"
+                                            Margin="{OnPlatform Android='0,-6,0,0', iOS='0,-8,0,0'}"
+                                            Grid.Row="0"
+                                            WidthRequest="27"
+                                            VerticalOptions="Start"
+                                            HeightRequest="27" />
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                            Grid.RowSpan="2">
+                                            <Label
+                                                x:Name="LblStrengthUp"
+                                                Text="{Binding Question}"
+                                                Margin="0,-8,0,9"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                FontSize="19" />
+                                            <Label
+                                                x:Name="LblStrengthUpText"
+                                                Margin="0,-2,0,0"
+                                                Text="{Binding Part1}"
+                                                TextColor="#AA000000"
+                                                Style="{StaticResource LabelStyle}" >
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="{Binding Part1}" />
+                                                        <Span Text="{Binding Part2}"
+                                                              TextColor="{x:Static app:AppThemeConstants.BlueLightColor}">
+                                                            <Span.GestureRecognizers>
+                                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                                                            </Span.GestureRecognizers>
+                                                        </Span>
+                                                        
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                                
+                                            </Label>
+                                        </StackLayout>
+                                    </Grid>
+                <Grid
+                    x:Name="gridChatButtons"
+                    IsVisible="False"
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="1,20,-9,0">
+                                        <t:DrMuscleButton
+                                            Text="HELP WITH GOAL"
+                                            FontSize="13"
+                                            FontAttributes="Bold"
+                                            Grid.Column="0"
+                                            HorizontalOptions="Center"
+                                            x:Name="BtnHistory"
+                                            Clicked="HelpWithGoal_Clicked"
+                                            Style="{StaticResource buttonLinkStyle}"
+                                            VerticalOptions="Center"
+                                            TextColor="{x:Static app:AppThemeConstants.BlueColor}" />
+                                        <pancakeView:PancakeView
+                                            Padding="0"
+                                            Margin="0"
+                                            IsClippedToBounds="true"
+                                            OffsetAngle="90"
+                                            CornerRadius="6"
+                                            VerticalOptions="Center"
+                                            x:Name="btnWelcomeGotit"
+                                            Grid.Column="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            HeightRequest="45">
+                                            <pancakeView:PancakeView.BackgroundGradientStops>
+                                                <pancakeView:GradientStopCollection>
+                                                    <pancakeView:GradientStop
+                                                        Color="#0C2432"
+                                                        Offset="1" />
+                                                    <pancakeView:GradientStop
+                                                        Color="#195276"
+                                                        Offset="0" />
+                                                </pancakeView:GradientStopCollection>
+                                            </pancakeView:PancakeView.BackgroundGradientStops>
+                                            <t:DrMuscleButton
+                                                VerticalOptions="Center"
+                                                HeightRequest="45"
+                                                FontSize="13"
+                                                CornerRadius="6"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="AI CHAT"
+                                                Clicked="OpenChat_Clicked"
+                                                IsVisible="true"
+                                                Style="{StaticResource highEmphasisButtonStyle}"
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                TextColor="White" />
+
+                                        </pancakeView:PancakeView>
+                                        
+
+                                    </Grid>
+            </StackLayout>
+        </controls:CustomFrame>
+  </ViewCell.View>
+</ViewCell>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="DrMuscle.Cells.LiftedCell">
+    <ViewCell.View>
+        <Grid
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Padding="10,20,10,0">
+            <Grid.Margin>
+                <OnPlatform
+                    x:TypeArguments="Thickness"
+                    iOS="0,0,0,0"
+                    Android="0" />
+            </Grid.Margin>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                Grid.Column="0">
+                <Image
+                    Source="Bodyweight.png"
+                    Aspect="AspectFit"
+                    HeightRequest="32"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="{Binding LbsLifted}"
+                    x:Name="LblBodyweight"
+                    Font="Bold,17"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black" />
+                <Label
+                    Text="{Binding LbsLiftedText}"
+                    x:Name="LblBodyweightText"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <StackLayout
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                Grid.Column="1">
+                <Image
+                    Source="RestRecovery.png"
+                    Aspect="AspectFit"
+                    HeightRequest="32"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="{Binding SinceTime}"
+                    Font="Bold,17"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black" />
+                <Label
+                    Text="{Binding LastWorkoutText}"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                Grid.Column="2">
+
+                <ffimageloading:CachedImage
+                    HorizontalOptions="Center"
+                    WidthRequest="20"
+                    HeightRequest="32"
+                    Source="orange2.png"
+                    Aspect="AspectFit">
+                    <ffimageloading:CachedImage.Triggers>
+                        <DataTrigger
+                            TargetType="ffimageloading:CachedImage"
+                            Binding="{Binding TrainRest}"
+                            Value="Train">
+                            <Setter
+                                Property="Source"
+                                Value="green.png" />
+                        </DataTrigger>
+                        <DataTrigger
+                            TargetType="ffimageloading:CachedImage"
+                            Binding="{Binding TrainRest}"
+                            Value="Rest">
+                            <Setter
+                                Property="Source"
+                                Value="orange2.png" />
+                        </DataTrigger>
+                    </ffimageloading:CachedImage.Triggers>
+                </ffimageloading:CachedImage>
+                <Label
+                    Text="{Binding TrainRest}"
+                    TextColor="{Binding StrengthTextColor}"
+                    Font="Bold,17"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+
+                <Label
+                    Text="{Binding TrainRestText}"
+                    Style="{StaticResource LabelStyle}"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+
+        </Grid>
+    </ViewCell.View>
+</ViewCell>

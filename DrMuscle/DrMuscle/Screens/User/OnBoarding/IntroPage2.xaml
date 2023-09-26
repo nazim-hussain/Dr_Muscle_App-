@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+                x:Class="DrMuscle.Screens.User.OnBoarding.IntroPage2"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:app="clr-namespace:DrMuscle.Constants"
+                xmlns:local="clr-namespace:DrMuscle"
+                xmlns:t="clr-namespace:DrMuscle.Layout"
+                xmlns:constnats="clr-namespace:DrMuscle.Constants"
+                xmlns:localize="clr-namespace:DrMuscle.Resx"
+                xmlns:locali="clr-namespace:DrMuscle.Helpers"
+                xmlns:cells="clr-namespace:DrMuscle.Cells"
+                xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+                xmlns:effects="clr-namespace:DrMuscle.Effects"
+                xmlns:converter="clr-namespace:DrMuscle.Converters"
+                xmlns:heaer="clr-namespace:DrMuscle.Screens.Workouts"
+                NavigationPage.HasNavigationBar="False"
+                xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                xmlns:controls="clr-namespace:DrMuscle.Controls">
+    <t:DrMusclePage.Resources>
+        <ResourceDictionary>
+
+
+            <DataTemplate x:Key="KenkoRegularTemplate" x:Name="RegularTemplate">
+                <ViewCell Height="115" BindingContextChanged="OnBindingContextChanged" >
+                    <Grid IsClippedToBounds="True">
+                        <!--<ffimageloading:CachedImage Grid.Row="0" Source="gradient_background.png" Aspect="Fill" Margin="4,10,4,0" >
+                            <ffimageloading:CachedImage.Triggers>
+                                <DataTrigger TargetType="ffimageloading:CachedImage" Binding="{Binding IsFinishWorkoutExe}" Value="false">
+                                    <Setter Property="IsVisible" Value="true" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="ffimageloading:CachedImage" Binding="{Binding IsFinishWorkoutExe}" Value="true">
+                                    <Setter Property="IsVisible" Value="false" />
+                                </DataTrigger>
+                            </ffimageloading:CachedImage.Triggers>
+                        </ffimageloading:CachedImage>-->
+                         <pancakeView:PancakeView
+                            Grid.Row="0" 
+            Padding="0"
+            IsClippedToBounds="true"
+            OffsetAngle="90"
+            CornerRadius="4,4,0,0"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="4,10,4,0">
+                        <pancakeView:PancakeView.BackgroundGradientStops>
+                <pancakeView:GradientStopCollection>
+                    <pancakeView:GradientStop
+                        Color="#0C2432"
+                        Offset="1" />
+                    <pancakeView:GradientStop
+                        Color="#195276"
+                        Offset="0" />
+                </pancakeView:GradientStopCollection>
+            </pancakeView:PancakeView.BackgroundGradientStops>
+                            <pancakeView:PancakeView.Triggers>
+                                <DataTrigger TargetType="pancakeView:PancakeView" Binding="{Binding IsFinishWorkoutExe}" Value="false">
+                                    <Setter Property="IsVisible" Value="true" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="pancakeView:PancakeView" Binding="{Binding IsFinishWorkoutExe}" Value="true">
+                                    <Setter Property="IsVisible" Value="false" />
+                                </DataTrigger>
+                            </pancakeView:PancakeView.Triggers>
+                            </pancakeView:PancakeView>
+                        <ffimageloading:CachedImage Grid.Row="0" Source="{Binding BodyPartId, Converter={StaticResource IdToTransBodyConverter}}" Aspect="Fill" Margin="4,10,4,0"/>
+                        <Frame Margin="4,10,4,0" Grid.Row="0" HasShadow="False" CornerRadius="4" BackgroundColor="Transparent" HeightRequest="115" Padding="20,16">
+                            <Frame.Triggers>
+                                <DataTrigger TargetType="Frame" Binding="{Binding IsFinishWorkoutExe}" Value="true">
+                                    <Setter Property="Margin" Value="8,10,8,0" />
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                    <Setter Property="Padding" Value="15,5,15,10" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Frame" Binding="{Binding IsFinishWorkoutExe}" Value="false">
+                                    <Setter Property="Margin" Value="4,10,4,0" />
+                                    <Setter Property="Padding" Value="8,10,20,10" />
+                                </DataTrigger>
+
+
+                            </Frame.Triggers>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                    <StackLayout.Triggers>
+                                        <DataTrigger TargetType="StackLayout" Binding="{Binding IsFinishWorkoutExe}" Value="false">
+                                            <Setter Property="IsVisible" Value="true" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="StackLayout" Binding="{Binding IsFinishWorkoutExe}" Value="true">
+                                            <Setter Property="IsVisible" Value="false" />
+                                        </DataTrigger>
+                                    </StackLayout.Triggers>
+                                    <Image Source="done2.png" WidthRequest="18" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="FillAndExpand" IsVisible="{Binding IsFinished}" Margin="7,0,0,0"/>
+                                    <ffimageloading:CachedImage Source="{Binding BodyPartId, Converter={StaticResource IdToBodyConverter}}" HeightRequest="90" WidthRequest="65" Aspect="AspectFit">
+
+                                    </ffimageloading:CachedImage>
+                                    <StackLayout Spacing="0" VerticalOptions="Center" Margin="0,0,0,8">
+                                        <Label Text="{Binding CountNo}" HorizontalOptions="Start" VerticalTextAlignment="Center" Style="{StaticResource LabelStyle}" TextColor="#AAFFFFFF" FontSize="16" />
+                                        <controls:AutoSizeLabel Text="{Binding Label}" HorizontalOptions="Start" VerticalTextAlignment="Center" Style="{StaticResource LabelStyle}" TextColor="#FFFFFF" FontSize="17" MaxLines="3" />
+                                    </StackLayout>
+                                    <Image Source="swap.png" WidthRequest="10" Aspect="AspectFit" HorizontalOptions="Start" IsVisible="{Binding IsSwapTarget}" Margin="3,6" VerticalOptions="Start" />
+                                    <Label HorizontalOptions="StartAndExpand" />
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End">
+                                        <!--<t:DrMuscleButton Clicked="OnVideo" Text="{Binding [Video].Value, Mode=OneWay,  Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextVideoButton}" TextColor="#0C2432" BackgroundColor="#ECFF92"  />-->
+                                        <t:DrMuscleButton Clicked="OnSwap" Text="{Binding [Swap].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextSwapButton}" TextColor="#0C2432" BackgroundColor="#ECFF92"/>
+                                        <t:DrMuscleButton Clicked="OnRestore" Text="{Binding [Restore].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextRestoreButton}" TextColor="#0C2432" BackgroundColor="#ECFF92" />
+                                        <t:DrMuscleButton Clicked="OnDeload" Text="Deload" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextDeloadButton}" TextColor="#0C2432" BackgroundColor="#ECFF92" />
+                                        <t:DrMuscleButton Clicked="OnChallenge" Text="{Binding [Challenge].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextChallengeButton}" TextColor="#0C2432" BackgroundColor="#ECFF92" />
+                                        <t:DrMuscleButton Clicked="OnReset" Text="{Binding [Settings].Value, Mode=OneWay, Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextSettingsButton}" TextColor="#0C2432" BackgroundColor="#ECFF92" />
+                                        <t:DrMuscleButton Clicked="OnContextVideo" Text="{Binding [Video].Value, Mode=OneWay,  Source={x:Static locali:ResourceLoader.Instance}}" CommandParameter="{Binding .}" Image="Play.png" ContentLayout="Top,0" IsVisible="false" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource ItemContextVideoButton}" TextColor="#97D2F3" BackgroundColor="Transparent" />
+                                        <t:DrMuscleButton Clicked="OnContextMenuClicked" CommandParameter="{Binding .}" Image="more_blue.png" WidthRequest="50" TextColor="#97D2F3" ContentLayout="Top,0"  Text="More" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,-3,0" Style="{StaticResource ItemContextVideoButton}"  BackgroundColor="Transparent">
+
+                                            <!--<t:DrMuscleButton.Triggers>
+                                                <DataTrigger TargetType="t:DrMuscleButton" Binding="{Binding IsNextExercise}" Value="True">
+                                                    <Setter Property="Text" Value="Edit" />
+                                                    <Setter Property="WidthRequest" Value="80" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="t:DrMuscleButton" Binding="{Binding IsNextExercise}" Value="False">
+                                                    <Setter Property="Text" Value="" />
+                                                    <Setter Property="WidthRequest" Value="25" />
+                                                </DataTrigger>
+                                            </t:DrMuscleButton.Triggers>-->
+                                        </t:DrMuscleButton>
+                                    </StackLayout>
+                                    <StackLayout.GestureRecognizers>
+
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="CellHeaderTapped" />
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <StackLayout x:Name="StackSets" IsVisible="{Binding IsFinishWorkoutExe}" Spacing="0">
+
+
+                                    <Grid Margin="0,9,0,0">
+                                        <Image Margin="-2,0" Source="finishSet_orange.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" Aspect="AspectFill" IsVisible="{Binding IsFinished}" />
+                                        <t:DrMuscleButton x:Name="BtnFinishWorkout" Grid.Row="0" Grid.Column="0" TextColor="White" HorizontalOptions="FillAndExpand" Text="Save workout" BackgroundColor="Transparent" Clicked="SaveWorkoutButton_Clicked" HeightRequest="50">
+                                            <t:DrMuscleButton.Triggers>
+                                                <DataTrigger TargetType="t:DrMuscleButton" Binding="{Binding IsFinished}" Value="false">
+                                                    <Setter Property="TextColor" Value="#195377" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="t:DrMuscleButton" Binding="{Binding IsFinished}" Value="true">
+                                                    <Setter Property="TextColor" Value="White" />
+                                                </DataTrigger>
+                                            </t:DrMuscleButton.Triggers>
+                                        </t:DrMuscleButton>
+                                    </Grid>
+                                </StackLayout>
+                                <!--<ffimageloading:CachedImage x:Name="videoPlayer" Source="{Binding LocalVideo}" HeightRequest="200" Aspect="AspectFit"
+                           DownsampleToViewSize="True" HorizontalOptions="FillAndExpand" Margin="8,0,-3,0" BackgroundColor="White" IsVisible="{Binding IsVideoUrlAvailable}">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>-->
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="KenkoHeaderTemplate" x:Name="HeaderTemplate">
+                <ViewCell  Height="90">
+                    <Frame Margin="8,10,8,0" HasShadow="False" CornerRadius="4" BackgroundColor="Red" HeightRequest="90" Padding="15,10,15,10">
+                        <StackLayout x:Name="StackSets" Spacing="0">
+
+                            <Grid Margin="0,9,0,0">
+                                <Image Margin="-2,0" Source="finishSet_orange.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+                                <t:DrMuscleButton x:Name="BtnFinishWorkout"  Grid.Row="0" Grid.Column="0" TextColor="White" HorizontalOptions="FillAndExpand" Text="Save workout" HeightRequest="50" BackgroundColor="Transparent" Clicked="SaveWorkoutButton_Clicked">
+                                </t:DrMuscleButton>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+            <heaer:KenkoHeaderDataTemplateSelector x:Key="kenkoHeaderDataTemplateSelector" RegularDateTemplate="{StaticResource KenkoRegularTemplate}" FooterExerciseTemplate="{StaticResource KenkoHeaderTemplate}">
+            </heaer:KenkoHeaderDataTemplateSelector>
+            <cells:SetDataTemplateSelector x:Key="SetDataTemplateSelector">
+            </cells:SetDataTemplateSelector>
+            <converter:IdToBodyPartConverter x:Key="IdToBodyConverter" />
+            <converter:IdToTransparentBodyPartConverter x:Key="IdToTransBodyConverter" />
+        </ResourceDictionary>
+    </t:DrMusclePage.Resources>
+
+
+
+
+    <Grid x:Name="NavGrid" BackgroundColor="#D8D8D8" Padding="0,0,0,8" >
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="StatusBarHeight" Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+      <Image IsEnabled="False" Source="nav.png" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Start" Aspect="AspectFill" Grid.RowSpan="3" />
+        <t:DrMuscleListViewCache IsEnabled="False" x:Name="ExerciseListView"
+                                                 
+                                                  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  Margin="0,0,0,0" HasUnevenRows="True" BackgroundColor="Transparent" SeparatorColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SeparatorVisibility="None" IsGroupingEnabled="True" Header="{Binding}" ItemTemplate="{StaticResource SetDataTemplateSelector}" GroupHeaderTemplate="{StaticResource kenkoHeaderDataTemplateSelector}" RowHeight="-1" ios:ListView.GroupHeaderStyle="Grouped"
+                                                 >
+            <!--<t:DrMuscleListViewCache.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ListTapped" />
+            </t:DrMuscleListViewCache.GestureRecognizers>-->
+
+        </t:DrMuscleListViewCache>
+
+
+         <pancakeView:PancakeView Border="{pancakeView:BorderMarkup Color=#77ECFF92, Thickness=4}" Padding="0,0,0,8" CornerRadius="0" IsEnabled="False" x:Name="stackBottomContent"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="4" VerticalOptions="EndAndExpand" BackgroundColor="#CC0C2432">
+            
+            <StackLayout VerticalOptions="End" Spacing="10">
+                 <pancakeView:PancakeView OffsetAngle="45" Padding="8" VerticalOptions="EndAndExpand">
+                     <pancakeView:PancakeView.Shadow>
+                <pancakeView:DropShadow BlurRadius ="3" Offset="0,0" Color="#55ECFF92" Opacity="0.5" />
+            </pancakeView:PancakeView.Shadow>
+                      <pancakeView:PancakeView.BackgroundGradientStops>
+                <pancakeView:GradientStopCollection>
+                    <pancakeView:GradientStop
+                        Color="#DFFF69"
+                        Offset="0" />
+                    <pancakeView:GradientStop
+                        Color="#77E9FF97"
+                        Offset="1" />
+                </pancakeView:GradientStopCollection>
+            </pancakeView:PancakeView.BackgroundGradientStops>
+        <StackLayout Orientation="Horizontal" >
+            <Image Source="adminprofile.png" WidthRequest="32" HeightRequest="32"/>
+            <Label Text="Dr. Carl Juneau" FontAttributes="Bold" VerticalTextAlignment="Center"  VerticalOptions="Center" TextColor="#0C2432" FontSize="20" />
+            </StackLayout>
+        </pancakeView:PancakeView>
+                <Label  Margin="12,0" Text="This app is different: it gives you custom workouts based on your goals." TextColor="White" FontSize="20" />
+
+                <Label  Margin="12,0,14,8" Text="Got it" HorizontalOptions="End" FontAttributes="Bold" TextColor="#ECFF92" FontSize="18" />
+            </StackLayout>
+        </pancakeView:PancakeView>    
+        
+        <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="MoveToPage2_Tapped" />
+            </Grid.GestureRecognizers>
+    </Grid>
+
+
+
+
+</t:DrMusclePage>

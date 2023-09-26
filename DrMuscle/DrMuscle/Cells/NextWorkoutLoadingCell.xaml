@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DrMuscle.Cells.NextWorkoutLoadingCell">
+    <ViewCell.View>
+
+        <Frame
+            Margin="10,10,10,5"
+            CornerRadius="12"
+            x:Name="FrmContainer"
+            Padding="20,12,20,2"
+            HorizontalOptions="Center"
+            BorderColor="Transparent"
+            OutlineColor="Transparent"
+            HasShadow="False"
+            BackgroundColor="Transparent">
+            <Label
+                x:Name="LblAnswer"
+                FontSize="Medium"
+                Text="{Binding Question}"
+                IsVisible="true"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Font="Bold,20"
+                Style="{StaticResource LabelStyle}"
+                TextColor="Black"
+                Margin="0" />
+
+        </Frame>
+    </ViewCell.View>
+</ViewCell>

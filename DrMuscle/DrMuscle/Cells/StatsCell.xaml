@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="DrMuscle.Cells.StatsCell">
+    <ViewCell.View>
+        <!--<Frame
+            Margin="10,10,10,10"
+            CornerRadius="12"
+            x:Name="FrmContainer"
+            HorizontalOptions="FillAndExpand"
+            HasShadow="False"
+            Opacity="1"
+            Padding="10,10,0,10"
+            BackgroundColor="White"> -->
+            <Grid
+                
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Padding="10,10,10,0"
+                >
+                <Grid.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0" />
+                </Grid.Margin>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="*" />
+                    <!--<RowDefinition
+                        Height="Auto" />-->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Row="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Grid.Column="0">
+                    <Label
+                        Text="{Binding StrengthPerText}"
+                        TextColor="{Binding StrengthTextColor}"
+                         FontSize="Medium"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center" />
+                    <ffimageloading:CachedImage
+                        HorizontalOptions="Center"
+                        Aspect="AspectFit"
+                        Source="{Binding StrengthImage}" />
+                    
+                </StackLayout>
+                
+                <StackLayout
+                    Grid.Row="0"
+                    
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Grid.Column="1">
+                    <Label
+                        Text="{Binding SetsPerText}"
+                        TextColor="{Binding SetTextColor}"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center" />
+                    <ffimageloading:CachedImage
+                        HorizontalOptions="Center"
+                        Aspect="AspectFit"
+                        Source="{Binding SetsImage}" />
+                    
+                </StackLayout>
+                
+                <!--<Label
+                    
+                     FontSize="Medium" 
+                    IsVisible="{Binding IsLastVisible}"
+                    TextColor="#23253a"
+                    Text="{Binding LevelUpMessage}"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2" />-->
+            </Grid>
+       <!-- </Frame>-->
+    </ViewCell.View>
+</ViewCell>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+     xmlns:local="clr-namespace:DrMuscle"
+             xmlns:helpers="clr-namespace:DrMuscle.Helpers"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                xmlns:CustomCell="clr-namespace:DrMuscle.Cells"
+    xmlns:constnats="clr-namespace:DrMuscle.Constants"
+    xmlns:converter="clr-namespace:DrMuscle.Converters"
+                xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:s="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             
+    x:Class="DrMuscle.Screens.Exercises.AllExercisePage">
+    <t:DrMusclePage.Resources>
+    <ResourceDictionary>
+      <helpers:NegateBooleanConverter x:Key="BooleanInverter" />
+                    <converter:IdToBodyPartConverter x:Key="IdToBodyConverter" />
+
+    </ResourceDictionary>
+  </t:DrMusclePage.Resources>
+  <AbsoluteLayout>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,0,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+      <StackLayout VerticalOptions="FillAndExpand">
+
+       
+        <StackLayout BackgroundColor="Transparent" Padding="0" VerticalOptions="FillAndExpand">
+           
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+         
+      
+  </AbsoluteLayout>
+</t:DrMusclePage>

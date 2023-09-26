@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:t="clr-namespace:DrMuscle.Layout" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DrMuscle.Screens.User.OnBoarding.OnBoardingAI">
+  <StackLayout VerticalOptions="CenterAndExpand" Padding="20,0,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+    <Label x:Name="LblIAmNotLike" Text="I'm not like other apps. I tell you what to do when you work out, like a personal trainer in your phone. I use the latest science, but I can't correct your form, or allow for a medical condition. I may be wrong at times. When in doubt, trust your own judgment. And contact us. The team is always improving my AI." HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" />
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <t:DrMuscleButton Margin="0,8,0,0" x:Name="BtnGotIt" Style="{StaticResource buttonStyle}" HorizontalOptions="FillAndExpand" Clicked="GotItClicked" />
+      </StackLayout>
+    </StackLayout>
+  </t:DrMusclePage>

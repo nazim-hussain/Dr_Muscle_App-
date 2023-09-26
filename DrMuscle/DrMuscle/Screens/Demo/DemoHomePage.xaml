@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.Screens.Demo.DemoHomePage"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+                xmlns:app="clr-namespace:DrMuscle.Constants"
+                xmlns:local="clr-namespace:DrMuscle.Cells"
+                BackgroundColor="#f4f4f4"
+                xmlns:controls="clr-namespace:DrMuscle.Controls">
+    <t:DrMusclePage.Resources>
+        <ResourceDictionary>
+            <local:BotDataTemplateSelector
+                x:Key="BotTemplateSelector">
+            </local:BotDataTemplateSelector>
+        </ResourceDictionary>
+    </t:DrMusclePage.Resources>
+    <t:DrMusclePage.Content>
+        <Grid
+            BackgroundColor="#f4f4f4"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="1"
+            Padding="2,10,2,0">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="1" />
+                <RowDefinition
+                    Height="auto" />
+            </Grid.RowDefinitions>
+            <controls:AutoBotListView
+                Grid.Row="0"
+                BackgroundColor="Transparent"
+                ItemTemplate="{StaticResource BotTemplateSelector}"
+                HasUnevenRows="True"
+                x:Name="lstChats"
+                VerticalOptions="FillAndExpand"
+                SeparatorColor="Transparent">
+            </controls:AutoBotListView>
+            <BoxView
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="0"
+                BackgroundColor="Transparent"
+                Grid.Row="1" />
+            <StackLayout
+                Grid.Row="2"
+                Margin="0,0,0,20"
+                BackgroundColor="Transparent"
+                VerticalOptions="EndAndExpand"
+                x:Name="stackOptions" />
+           
+        </Grid>
+    </t:DrMusclePage.Content>
+</t:DrMusclePage>

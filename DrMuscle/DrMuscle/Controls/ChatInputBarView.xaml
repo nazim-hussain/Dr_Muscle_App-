@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:DrMuscle.Controls" xmlns:app="clr-namespace:DrMuscle.Constants" x:Class="DrMuscle.Controls.ChatInputBarView">
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="45" />
+        </Grid.ColumnDefinitions>
+
+        <Frame CornerRadius="24" IsClippedToBounds="True" Margin="0,2,0,2" BorderColor="#195377" HasShadow="False" Padding="10,2" OutlineColor="#195377">
+        <controls:ExtendedEditorControl x:Name="chatTextInput" IsTextPredictionEnabled="True" IsSpellCheckEnabled="True"  Text="{Binding MessageText,Mode=TwoWay}" Margin="5,1" TextColor="Black" IsExpandable="true" HorizontalOptions="FillAndExpand" PlaceholderColor="LightGray" Placeholder="Type your message here" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" TextChanged="chatTextInput_TextChanged" />
+        </Frame>
+        <Label Text="Send" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1" TextColor="{x:Static app:AppThemeConstants.BlueColor}" x:Name="BtnSend" VerticalOptions="Center" VerticalTextAlignment="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_Completed" />
+            </Label.GestureRecognizers>
+        </Label>
+    </Grid>
+</ContentView>

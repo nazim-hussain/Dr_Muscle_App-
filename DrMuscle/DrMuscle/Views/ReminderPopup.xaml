@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:xfShapeView="clr-namespace:XFShapeView;assembly=XFShapeView"
+    CloseWhenBackgroundIsClicked="false"
+    Opacity="0.9"
+    BackgroundColor="#333333"
+    x:Class="DrMuscle.Views.ReminderPopup">
+    <pages:PopupPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Padding="0,0,0,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Image Source="nav.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout
+            x:Name="TimerView"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            Padding="20,10,20,0"
+            BackgroundColor="Transparent">
+                <StackLayout
+                VerticalOptions="CenterAndExpand"
+                Margin="0,30,0,0">
+                    <Label
+                    x:Name="LblChooseDays"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Choose workout days"
+                    TextColor="White"
+                    HorizontalOptions="Center" />
+                    <Label
+                    x:Name="LblProgramName"
+                    Text="For your program"
+                    TextColor="White"
+                        HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center" />
+                    
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        
+                        <xfShapeView:ShapeView
+                    WidthRequest="36"
+                    HeightRequest="36"
+                        CornerRadius="18"
+                    x:Name="MondayCircle"
+                    ShapeType="Circle"
+                    BorderColor="#ECFF92"
+                            IsClippedToBounds="True"
+                    Color="Transparent"
+                    Opacity="1"
+                    BorderWidth="2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblMonday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="M"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MondayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+
+                        <xfShapeView:ShapeView
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        CornerRadius="18"
+                        x:Name="TuesdayCircle"
+                        IsClippedToBounds="True"
+                        ShapeType="Circle"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblTuesday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="T"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TuesdayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+
+                        <xfShapeView:ShapeView
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        CornerRadius="18"
+                        x:Name="WednesdayCircle"
+                        IsClippedToBounds="True"
+                        ShapeType="Circle"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblWednesday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="W"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="WednesdayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+
+                        <xfShapeView:ShapeView
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        CornerRadius="18"
+                        x:Name="ThursdayCircle"
+                        IsClippedToBounds="True"
+                        ShapeType="Circle"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblThursday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="T"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ThursdayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+                        <xfShapeView:ShapeView
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        CornerRadius="18"
+                        x:Name="FridayCircle"
+                        IsClippedToBounds="True"
+                        ShapeType="Circle"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblFriday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="F"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FridayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+                        <xfShapeView:ShapeView
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        CornerRadius="18"
+                        x:Name="SaturdayCircle"
+                        IsClippedToBounds="True"
+                        ShapeType="Circle"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblSaturday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="S"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SaturdayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+                        <xfShapeView:ShapeView
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        CornerRadius="18"
+                        x:Name="SundayCircle"
+                        IsClippedToBounds="True"
+                        ShapeType="Circle"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <Label
+                            x:Name="LblSunday"
+                            FontSize="20"
+                            TextColor="White"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Text="S"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SundayTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+                    </StackLayout>
+                    <Label
+                    x:Name="LblInstruction"
+                    Text=""
+                    TextColor="White"
+                        HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center" />
+                    
+                    <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,30,0,0">
+                        <Label
+                    x:Name="LblChooseTimes"
+                    FontSize="Medium"
+                            FontAttributes="Bold"
+                    Text="Choose time"
+                    TextColor="White"
+                    HorizontalOptions="Center" VerticalOptions="Center" />
+                        <xfShapeView:ShapeView
+                        HeightRequest="36"
+                        CornerRadius="0"
+                        x:Name="TimeFrame"
+                        IsClippedToBounds="True"
+                        ShapeType="Box"
+                        BorderColor="#ECFF92"
+                        Color="Transparent"
+                        Opacity="1"
+                        BorderWidth="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center" Orientation="Horizontal" Padding="10,0">
+                        <TimePicker HorizontalOptions="Center" TextColor="White" BackgroundColor="Transparent" x:Name="timePicker" Unfocused="Timer_Unfocused" >
+                            <TimePicker.Format>hh:mm tt</TimePicker.Format>
+                            </TimePicker>
+                        <Image Source="open.png" WidthRequest="25" HeightRequest="25" Aspect="AspectFit" />
+                        </StackLayout>
+                            <xfShapeView:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TimerTapped" />
+                            </xfShapeView:ShapeView.GestureRecognizers>
+                        </xfShapeView:ShapeView>
+                    </StackLayout>
+                    
+                </StackLayout>
+                <StackLayout
+                VerticalOptions="End"
+                Orientation="Vertical"
+                HorizontalOptions="FillAndExpand"
+                Margin="0,0,0,0"
+                Padding="25.0">
+                     <t:DrMuscleButton
+                    ContentLayout="Top,8"
+                    x:Name="SkipButton"
+                    Text="Skip"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="#97D2F3"
+                    Clicked="ButtonSkip_Clicked"
+                    Padding="0,5" />
+                    <t:DrMuscleButton
+                    x:Name="SaveButton"
+                        HeightRequest="55"
+                        CornerRadius="0"
+                    Text="Save reminders"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="#0C2432"
+                    Clicked="ButtonDone_Clicked"
+                        BackgroundColor="#ECFF92"
+                     />
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

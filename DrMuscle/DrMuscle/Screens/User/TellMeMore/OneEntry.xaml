@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+             x:Class="DrMuscle.Screens.User.TellMeMore.OneEntry">
+    <AbsoluteLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,0,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20,75,20,0">
+                        <Label x:Name="QuestionLabel" FontSize="20" Style="{StaticResource ObBoardingLabelStyle}"></Label>
+                        <Entry x:Name="FirstEntry" Keyboard="Default" Style="{StaticResource entryStyle}"></Entry>
+                        <t:DrMuscleButton x:Name="NextButton" Text="Continue" Style="{StaticResource buttonStyle}"></t:DrMuscleButton>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

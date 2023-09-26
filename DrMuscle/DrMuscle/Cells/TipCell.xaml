@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:controls="clr-namespace:DrMuscle.Controls"
+             x:Class="DrMuscle.Cells.TipCell">
+    <ViewCell.View>
+        <controls:CustomFrame
+                            
+                            Margin="10,0,10,10"
+                            Padding="10,10,10,10"
+                            CornerRadius="12"
+                            HasShadow="False">
+
+            <StackLayout Padding="10,15,10,15">
+                <Grid RowSpacing="0"
+                                        >
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                                                Height="Auto" />
+                        <RowDefinition
+                                                Height="Auto" />
+
+                        <RowDefinition
+                                                Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition
+                                                Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            >
+                        <Label
+                                                Text="{Binding Question}"
+                                                
+                Font="Bold,20"
+                            Margin="0,0,0,9"
+                Style="{StaticResource LabelStyle}"
+                TextColor="Black"
+                                                 />
+                        <Label
+                                                Text="{Binding Answer}"
+                                                TextColor="#AA000000"
+                                                FontSize="15" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </controls:CustomFrame>
+    </ViewCell.View>
+</ViewCell>

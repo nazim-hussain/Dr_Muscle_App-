@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DrMuscle.Screens.History.HistoryExercisePage">
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,20,20,0">
+    <StackLayout VerticalOptions="FillAndExpand">
+      <StackLayout BackgroundColor="Black" Padding="0" VerticalOptions="FillAndExpand">
+        <ScrollView  Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+          <StackLayout x:Name="ExerciseHistoryStackLayout" Orientation="Vertical">
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

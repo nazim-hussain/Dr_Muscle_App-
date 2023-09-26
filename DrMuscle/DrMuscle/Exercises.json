@@ -1,0 +1,17 @@
+[
+  {
+    "Id": "1",
+    "UserId": "",
+    "Label": "Plate Push (lying face down)",
+    "BodyPartId": "10",
+    "EquipmentId": null,
+    "ReplaceExerciseId": null,
+    "IsEasy": "False",
+    "IsBodyweight": "False",
+    "VideoUrl": "",
+    "IsMedium": "False",
+    "IsUnilateral": "False",
+    "IsTimeBased": "False",
+    "NormalExerciceId": null
+  }
+]

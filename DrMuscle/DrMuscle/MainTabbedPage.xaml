@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:navigation="clr-namespace:DrMuscle.Layout"
+    xmlns:local="clr-namespace:DrMuscle.Screens.User"
+    xmlns:me="clr-namespace:DrMuscle.Screens.Me"
+    xmlns:exercise="clr-namespace:DrMuscle.Screens.Exercises"
+    xmlns:workout="clr-namespace:DrMuscle.Screens.Workouts"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    NavigationPage.HasNavigationBar="False"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    BarTextColor="White"
+    BarBackgroundColor="#010101"
+    android:TabbedPage.BarItemColor="#AAAAAA"
+    android:TabbedPage.BarSelectedItemColor="White"
+    android:TabbedPage.IsSwipePagingEnabled="False"
+    CurrentPageChanged="TabbedPage_CurrentPageChanged"
+    BackgroundImage="nav.png"
+    xmlns:local1="clr-namespace:DrMuscle"
+    x:Class="DrMuscle.MainTabbedPage"
+    BackgroundColor="White">  
+    <TabbedPage.Behaviors>
+        <local1:ActivePageTabbedPageBehavior />
+    </TabbedPage.Behaviors>
+    <NavigationPage x:Name="TabHome" Title="Home" Icon="home_tab.png" BackgroundImageSource="nav.png" BarTextColor="White">
+        <x:Arguments>
+            <local:MainAIPage />
+        </x:Arguments>
+        
+    </NavigationPage>
+    <!--<NavigationPage x:Name="TabWorkout" Title="Workouts" Icon="workout_tab.png" BackgroundImage="nav.png" BarTextColor="White">
+        <x:Arguments>
+            <workout:ChooseDrMuscleOrCustomPage />
+        </x:Arguments>
+    </NavigationPage>-->
+    
+
+
+     <!--<navigation:NoAnimationNavigationPage
+        x:Name="TabExercise" Title="Exercises" Icon="exercise_tab.png" BackgroundImage="nav.png" BarTextColor="White">
+     <navigation:NoAnimationNavigationPage.Resources>
+            <ResourceDictionary>
+                <DataTemplate
+                    x:Key="ContentTemplate">
+                    <exercise:AllExercisesView />
+                </DataTemplate>
+            </ResourceDictionary>
+        </navigation:NoAnimationNavigationPage.Resources>
+        <navigation:NoAnimationNavigationPage.Behaviors>
+            <local1:LazyNavigationPageBehavior
+                ContentTemplate="{StaticResource ContentTemplate}" />
+        </navigation:NoAnimationNavigationPage.Behaviors>
+        <x:Arguments>
+            <exercise:AllExercisePage
+                x:Name="ExercisePage"
+                Title="Exercises">
+                <ContentPage.Behaviors>
+                    <local1:LazyContentPageBehavior
+                        ContentTemplate="{StaticResource ContentTemplate}" />
+                </ContentPage.Behaviors>
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <DataTemplate
+                            x:Key="ContentTemplate">
+                             Complex and slow to render layout 
+                            <exercise:AllExercisesView/>
+                        </DataTemplate>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+            </exercise:AllExercisePage>
+        </x:Arguments>
+    </navigation:NoAnimationNavigationPage>-->
+
+    <!--//-->
+    <NavigationPage x:Name="TabExercise" Title="Exercises" Icon="exercise_tab.png" BackgroundImageSource="nav.png" BarTextColor="White" ios:NavigationPage.IsNavigationBarTranslucent="False">
+        <x:Arguments>
+            <exercise:AllExercisePage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <!--<NavigationPage x:Name="TabLearn" Title="Learn" Icon="Learn_Tab.png" BackgroundImageSource="nav.png" BarTextColor="White">
+        <x:Arguments>
+            <local:LearnPage />
+        </x:Arguments>
+    </NavigationPage>-->
+
+  
+    <navigation:NoAnimationNavigationPage
+        ios:NavigationPage.IsNavigationBarTranslucent="False"
+        x:Name="TabChat"
+        Title="AI Chat" Icon="chat_tab.png" BackgroundImageSource="nav.png" BarTextColor="White">
+     <navigation:NoAnimationNavigationPage.Resources>
+            <ResourceDictionary>
+                <DataTemplate
+                    x:Key="ContentTemplate">
+                    <local:ChatView />
+                </DataTemplate>
+            </ResourceDictionary>
+        </navigation:NoAnimationNavigationPage.Resources>
+        
+        <x:Arguments>
+            <local:ChatPage
+                Title="Chat">
+                <ContentPage.Behaviors>
+                    <local1:LazyContentPageBehavior
+                        ContentTemplate="{StaticResource ContentTemplate}" />
+                </ContentPage.Behaviors>
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <DataTemplate
+                            x:Key="ContentTemplate">
+                            <!-- Complex and slow to render layout -->
+                            <local:ChatView/>
+                        </DataTemplate>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+            </local:ChatPage>
+        </x:Arguments>
+        <navigation:NoAnimationNavigationPage.Behaviors>
+            <local1:LazyNavigationPageBehavior
+                ContentTemplate="{StaticResource ContentTemplate}" />
+        </navigation:NoAnimationNavigationPage.Behaviors>
+    </navigation:NoAnimationNavigationPage>
+     <NavigationPage x:Name="TabSettings" Title="Settings" Icon="settings_tab.png" BackgroundImageSource="nav.png" BarTextColor="White">
+        <x:Arguments>
+            <local:SettingsPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <!--<navigation:NoAnimationNavigationPage
+        x:Name="TabMe" Title="Me" Icon="me_tab.png" BarBackgroundColor="Black" BarTextColor="White">
+     <navigation:NoAnimationNavigationPage.Resources>
+            <ResourceDictionary>
+                <DataTemplate
+                    x:Key="ContentTemplate">
+                    <me:MeView />
+                </DataTemplate>
+            </ResourceDictionary>
+        </navigation:NoAnimationNavigationPage.Resources>
+        <navigation:NoAnimationNavigationPage.Behaviors>
+            <local1:LazyNavigationPageBehavior
+                ContentTemplate="{StaticResource ContentTemplate}" />
+        </navigation:NoAnimationNavigationPage.Behaviors>
+        <x:Arguments>
+            <me:MePage
+                x:Name="MePage"
+                Title="Me">
+                <ContentPage.Behaviors>
+                    <local1:LazyContentPageBehavior
+                        ContentTemplate="{StaticResource ContentTemplate}" />
+                </ContentPage.Behaviors>
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <DataTemplate
+                            x:Key="ContentTemplate">
+                             Complex and slow to render layout 
+                            <me:MeView/>
+                        </DataTemplate>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+            </me:MePage>
+        </x:Arguments>
+    </navigation:NoAnimationNavigationPage>-->
+    <!--<local:MorePage x:Name="TabMe" Title="More" Icon="more.png" BackgroundColor="Black" >
+        
+    </local:MorePage>-->
+</TabbedPage>

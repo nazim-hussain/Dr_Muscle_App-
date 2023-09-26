@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.OnBoarding.Page2">
+    <Grid>
+        <Image Source="page2.png" Aspect="AspectFill" />
+        <StackLayout HorizontalOptions="Center" Margin="0,100,0,50" x:Name="mainView">
+            <Image x:Name="ImgLogo" HeightRequest="130" WidthRequest="150" Source="logo1.png" />
+
+            <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                
+                    <Label TextColor="White" Margin="25,0" x:Name="LblTitle" Text="The only workout app&#10;with 23+ smart features" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="21" FontAttributes="Bold" >
+                        <!--<Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.iOS>Jura-Bold</OnPlatform.iOS>
+                    <OnPlatform.Android>JuraBold.ttf#JuraBold</OnPlatform.Android>
+                </OnPlatform>
+            </Label.FontFamily>-->
+                        </Label>
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Label TextColor="LightGray" x:Name="LblLine1" Text="• Automates everything"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                    <Label TextColor="LightGray" x:Name="LblLine2" Text="• Workouts unique to you"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                    <Label TextColor="LightGray" x:Name="LblLine3" Text="• Speed up your progress" Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                </StackLayout>
+                <StackLayout x:Name="ReviewStack" Padding="0,25,0,0">
+                <Image Margin="0,20,0,0" x:Name="ImgStar1" Source="stars_5.png" WidthRequest="90" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Label TextColor="White" FontAttributes="Italic" Text="&quot;Like a trainer in your pocket&quot;" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="14" x:Name="LblReview1" />
+                    <Label TextColor="LightGray" Text="-Jon Benson" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13"  x:Name="LblAuthor1" />
+                </StackLayout>
+            </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentView>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string
+        name="hello_world">Hello Round World!</string>
+    <string
+        name="weight">Weight</string>
+    <string
+        name="reps">Reps</string>
+
+    <string
+        name="save_set">Save set</string>
+    <string
+        name="plus_symbol">+</string>
+    <string
+        name="minus_symbol">-</string>
+    <string
+        name="hide">Hide</string>
+    <string
+        name="rest">Rest</string>
+
+    <string name="finish_exercise">Finish exercise</string>
+    <string name="finish_workout">Finish workout</string>
+    <string name="next_exercise">Next exercise</string>
+    <string name="waiting">Open an exercise to begin...</string>
+    <string name="loading">Loading</string>
+    <string name="save">Save</string>
+</resources>

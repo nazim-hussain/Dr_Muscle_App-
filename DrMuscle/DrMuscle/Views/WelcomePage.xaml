@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:DrMuscle.Layout"
+                             xmlns:constnats="clr-namespace:DrMuscle.Constants"
+
+             x:Class="DrMuscle.Screens.User.WelcomePage">
+  <AbsoluteLayout> 
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,20,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+        <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+          <Label x:Name="WorkoutInfo1" Text="See C# (bottom)" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}"></Label>
+          <Label x:Name="WorkoutInfo2" Text="See C# (bottom)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyleBig}"></Label>
+          <t:DrMuscleButton x:Name="MadeAMistakeButton" Text="Made a mistake? Start over" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Style="{StaticResource buttonLinkStyle}"></t:DrMuscleButton>
+          
+          <StackLayout x:Name="CreateAccountStack">
+            <Label FontSize="19" x:Name="LblCreateAccount" Text="Create account" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}"></Label>
+                <Label x:Name="LblBackUpAutomatically" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}"></Label>
+          </StackLayout>
+
+          <StackLayout x:Name="CreateAccount" Orientation="Vertical" Padding="0,10,0,10">
+            <Label x:Name="LblLoginText" Text="Log in with email" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}"></Label>
+            <t:DrEntry x:Name="EmailEntry" Placeholder="Tap to enter your email" Keyboard="Email" Style="{StaticResource entryStyle}"></t:DrEntry>
+            <t:DrEntry x:Name="PasswordEntry" Placeholder="Tap to enter a password" IsPassword="True" Style="{StaticResource entryStyle}"></t:DrEntry>
+            <Label x:Name="LblPasswordText" Text="6 characters or longer" HorizontalOptions="CenterAndExpand" Style="{StaticResource LabelStyle}"></Label>
+
+            <t:DrMuscleButton x:Name="LoginButton" Text="Log in" HorizontalOptions="FillAndExpand" Style="{StaticResource buttonStyle}" Margin="0,4,0,0"></t:DrMuscleButton>
+              
+              <t:DrMuscleButton x:Name="ResetPasswordButton" Text="Forgot password?" HorizontalOptions="FillAndExpand" VerticalOptions="End" Style="{StaticResource buttonLinkStyle}" Margin="0,4,0,0"></t:DrMuscleButton>
+              <StackLayout Orientation="Horizontal" Padding="20,10,20,0">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                  <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand"></BoxView>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                  <Label Text="Or" Style="{StaticResource LabelStyle}"></Label>
+                </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+              <BoxView Color="Gray" HeightRequest="1" Opacity="0.5" HorizontalOptions="FillAndExpand"></BoxView>
+            </StackLayout>
+                      </StackLayout>
+            <t:DrMuscleButton Margin="0,12,0,0" x:Name="LoginWithFBButton" Image="facebook.png" Text="Log in with facebook" HorizontalOptions="FillAndExpand" Style="{StaticResource fbButtonStyle}"></t:DrMuscleButton>
+              <t:DrMuscleButton Margin="0,12,0,0" x:Name="LoginWithGoogleButton" Image="google_icon.png" Text="Log in with google" HorizontalOptions="FillAndExpand" Style="{StaticResource fbButtonStyle}" BackgroundColor="#E74B37" TextColor="White" BorderWidth="0" BorderColor="#E74B37" ContentLayout="Left,20" >
+                  <t:DrMuscleButton.Image >
+                      <OnPlatform x:TypeArguments="FileImageSource" iOS="google_ic.png" Android="google_icon.png"/>
+                  </t:DrMuscleButton.Image>
+              </t:DrMuscleButton>
+<!--<Grid HorizontalOptions="FillAndExpand">
+                  <t:DrMuscleButton Grid.Row="0" Grid.Column="0" HeightRequest="50" x:Name="LoginWithGoogleButton"  Text="Login with Google" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="#E74B37" BorderWidth="0" BorderColor="#E74B37"  CornerRadius="0" Style="{StaticResource highEmphasisButtonStyle}" VerticalOptions="EndAndExpand" FontAttributes="Bold" >
+                        <t:DrMuscleButton.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" Android="15" iOS="17" />
+                        </t:DrMuscleButton.FontSize>
+                    </t:DrMuscleButton>
+                    <t:DrMuscleButton Grid.Row="0" Grid.Column="0" Padding="10,0" Image="google_icon.png" Text=" "  TextColor="#7f3c5a99" HeightRequest="50" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" BorderColor="Transparent" IsEnabled="false"  Style="{StaticResource highEmphasisButtonStyle}" >
+                        <t:DrMuscleButton.HorizontalOptions >
+                            <OnPlatform x:TypeArguments="LayoutOptions" iOS="Start" Android="FillAndExpand" />
+                        </t:DrMuscleButton.HorizontalOptions>
+                    </t:DrMuscleButton>
+              </Grid>-->
+            <t:DrMuscleButton x:Name="CreateNewAccountButton" Text="Create new account" HorizontalOptions="FillAndExpand" Style="{StaticResource buttonLinkStyle}"></t:DrMuscleButton>
+
+            <Image Margin="0,24,0,0" Source="stars_5.png" WidthRequest="90" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+              <Label TextColor="{x:Static constnats:AppThemeConstants.BlueColor}" FontAttributes="Italic" Text="&quot;Stronger at 58 than I was at 27&quot;" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="14" />
+              <Label TextColor="{x:Static constnats:AppThemeConstants.BlueColor}" Text="-Bob McDermott" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13" />
+            </StackLayout>
+
+          </StackLayout>
+
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" >
+          <Label x:Name="ByContinueAgree" HorizontalOptions="CenterAndExpand" Text="By continuing, you agree to our " FontSize="12" Style="{StaticResource LabelStyle}"/>
+          <StackLayout x:Name="TermsPrivacyPolicy" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Horizontal">
+            <Label x:Name="TermsOfUse" Text="terms of use" Style="{StaticResource LearnMoreText}"/>
+            <Label x:Name="LblAnd" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}"/>
+            <Label x:Name="PrivacyPolicy" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,20"/>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+            </ScrollView>
+        </StackLayout>
+  </AbsoluteLayout>
+</t:DrMusclePage>

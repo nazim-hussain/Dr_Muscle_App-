@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:app="clr-namespace:DrMuscle.Constants"
+    x:Class="DrMuscle.Cells.AttributedLabel">
+    <ViewCell.View>
+       <Frame
+        Margin="10,10,40,5"
+        CornerRadius="12"
+        x:Name="FrmContainer"
+        Padding="20,12,20,12"
+        HorizontalOptions="Start"
+        BorderColor="#ffffff"
+        OutlineColor="#ffffff"
+        HasShadow="False"
+        Opacity="0"
+        BackgroundColor="#ffffff">
+        <Label
+            x:Name="LblAnswer"
+            FontSize="Medium"
+            Text="{Binding Question}"
+            Style="{StaticResource LabelStyle}"
+            HorizontalOptions="Start"
+            Margin="4,0" >
+            <Label.FormattedText>
+        <FormattedString>
+            <Span Text="{Binding Part1}" />
+            <Span Text="{Binding Part2}"
+                  TextColor="{x:Static app:AppThemeConstants.BlueLightColor}"
+                  TextDecorations="Underline">
+                
+            </Span>
+                <Span Text="{Binding Part3}" />
+        </FormattedString>
+
+    </Label.FormattedText>
+            <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+    </Frame>
+    </ViewCell.View>
+</ViewCell>

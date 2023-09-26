@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                
+                xmlns:app="clr-namespace:DrMuscle.Constants;assembly:DrMuscle"
+    xmlns:t="clr-namespace:DrMuscle.Layout"
+    xmlns:local="clr-namespace:DrMuscle.Cells"
+    xmlns:controls="clr-namespace:DrMuscle.Controls" x:Class="DrMuscle.Screens.User.SupportPage">
+  
+</t:DrMusclePage>

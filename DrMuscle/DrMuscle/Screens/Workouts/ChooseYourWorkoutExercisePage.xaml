@@ -1,0 +1,22 @@
+<t:DrMusclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DrMuscle"
+			 xmlns:t="clr-namespace:DrMuscle.Layout"
+                xmlns:constnats="clr-namespace:DrMuscle.Constants"
+             xmlns:localize="clr-namespace:DrMuscle.Resx"
+             xmlns:locali="clr-namespace:DrMuscle.Helpers"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="DrMuscle.Screens.Workouts.ChooseYourWorkoutExercisePage">
+  <AbsoluteLayout>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,0,20,0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+      <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="Transparent" Padding="0" VerticalOptions="FillAndExpand">
+         
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="0,0,0,20">
+      </StackLayout>
+    </StackLayout>
+      
+  </AbsoluteLayout>
+</t:DrMusclePage>

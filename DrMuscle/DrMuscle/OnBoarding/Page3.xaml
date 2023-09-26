@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DrMuscle.OnBoarding.Page3">
+    <Grid>
+        <Image Source="page3.png" Aspect="AspectFill" />
+        <StackLayout HorizontalOptions="Center" Margin="0,100,0,50" x:Name="mainView">
+            <Image HeightRequest="130" WidthRequest="150" Source="logo1.png" x:Name="ImgLogo" />
+
+            <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                
+                    <Label TextColor="White" Margin="25,0" x:Name="LblTitle" Text="Your workouts optimized&#10;in real time, on autopilot" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Style="{StaticResource OnBoardingLabelStyle}" FontSize="21" FontAttributes="Bold" >
+                         <!--<Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.iOS>Jura-Bold</OnPlatform.iOS>
+                    <OnPlatform.Android>JuraDemiBold.ttf#JuraDemiBold</OnPlatform.Android>
+                </OnPlatform>
+            </Label.FontFamily>-->
+                        </Label>
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Label TextColor="LightGray" x:Name="LblLine1" Text="• RPE, DUP &amp; more"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                    <Label TextColor="LightGray" x:Name="LblLine2" Text="• Get in shape faster"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                    <Label TextColor="LightGray" x:Name="LblLine3" Text="• Build muscle &amp; burn fat" Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                </StackLayout>
+                <StackLayout Margin="0,40" x:Name="LeavesStack" HorizontalOptions="Center" Orientation="Horizontal">
+                    <Image x:Name="ImgLeave1" WidthRequest="45" Source="leaves.png" />
+                    <StackLayout Margin="0,16,0,0">
+                        <Label TextColor="White" x:Name="LblSubHeading" Text="Optimizes workouts&#10;with cutting-edge tech" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="17" />
+                        <Label TextColor="LightGray" Text="-The Burn-In" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13"  x:Name="LblAuthor1" VerticalOptions="Center"  HorizontalTextAlignment="Center" />
+                        </StackLayout>
+                    <Image x:Name="ImgLeave2" WidthRequest="45"  Source="leaves2.png" />
+                </StackLayout>
+            </StackLayout>
+            
+        </StackLayout>
+    </Grid>
+</ContentView>
+
