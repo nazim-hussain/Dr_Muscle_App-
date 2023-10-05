@@ -302,23 +302,23 @@ namespace DrMuscle.Screens.User
             //registerModel.Firstname = LocalDBManager.Instance.GetDBSetting("firstname").Value;
 
             //Revert it
-            string FirstName = "";
-            try
-            {
-                if (EmailEntry.Text.Contains("@"))
-                {
-                    string[] parts = EmailEntry.Text.Split('@');
-                    FirstName = parts[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                FirstName = "";
-            }
-            LocalDBManager.Instance.SetDBSetting("firstname", FirstName);
-            //Revert it
+            //string FirstName = "";
+            //try
+            //{
+            //    if (EmailEntry.Text.Contains("@"))
+            //    {
+            //        string[] parts = EmailEntry.Text.Split('@');
+            //        FirstName = parts[0];
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    FirstName = "";
+            //}
+            //LocalDBManager.Instance.SetDBSetting("firstname", FirstName);
+            ////Revert it
 
-            registerModel.Firstname = FirstName;
+            //registerModel.Firstname = FirstName;
             registerModel.EmailAddress = LocalDBManager.Instance.GetDBSetting("email").Value;
             registerModel.MassUnit = "lb";
             registerModel.BodyWeight = new MultiUnityWeight(150, "lb");

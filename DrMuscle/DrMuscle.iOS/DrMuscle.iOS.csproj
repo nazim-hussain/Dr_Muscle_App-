@@ -181,6 +181,7 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DrMuscleEntryRenderer.cs" />
     <Compile Include="DrMuscleSubscription_iOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -1041,12 +1042,6 @@
     <ImageAsset Include="Assets.xcassets\apple.imageset\apple.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\apple.imageset\apple1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\apple.imageset\apple2.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\closeEye.imageset\closeEye.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -1089,12 +1084,7 @@
     <ImageAsset Include="Assets.xcassets\logo1.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\logo1.imageset\logo1-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\logo1.imageset\logo1-2.png">
-      <Visible>false</Visible>
-    </ImageAsset>
+    
     <ImageAsset Include="Assets.xcassets\logo1.imageset\logo1.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -1123,12 +1113,6 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\openEye.imageset\openEye@3x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\page2.imageset\page2-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\page2.imageset\page2-2.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\page2.imageset\page2.png">

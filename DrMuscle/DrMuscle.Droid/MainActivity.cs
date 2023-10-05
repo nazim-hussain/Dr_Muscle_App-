@@ -29,7 +29,7 @@ using Android.Support.V4.Content;
 using Android.Gms.Common.Apis;
 //using Android.Gms.Wearable;
 using Newtonsoft.Json;
-using DrMuscleWebApiSharedModel;
+//using DrMuscleWebApiSharedModel;
 using Android.Gms.Common;
 using Plugin.FirebasePushNotification;
 using Plugin.CurrentActivity;
@@ -504,12 +504,12 @@ namespace DrMuscle.Droid
 
             
             var message = intent.GetStringExtra("WearMessage");
-            var phoneModel = JsonConvert.DeserializeObject<PhoneToWatchModel>(message);
-            if (phoneModel != null && phoneModel.SenderPlatform == DrMuscleWebApiSharedModel.Platform.Watch)
-            {
-                    App.IsConnectedToWatch = true;
-                    MessagingCenter.Send<ReceivedWatchMessage>(new ReceivedWatchMessage() { PhoneToWatchModel = phoneModel }, "ReceivedWatchMessage");
-            }
+            //var phoneModel = JsonConvert.DeserializeObject<PhoneToWatchModel>(message);
+            //if (phoneModel != null && phoneModel.SenderPlatform == DrMuscleWebApiSharedModel.Platform.Watch)
+            //{
+            //        App.IsConnectedToWatch = true;
+            //        MessagingCenter.Send<ReceivedWatchMessage>(new ReceivedWatchMessage() { PhoneToWatchModel = phoneModel }, "ReceivedWatchMessage");
+            //}
 
             }
             catch (Exception ex)
@@ -537,13 +537,13 @@ namespace DrMuscle.Droid
             //if (_client.IsConnected)
             //    App.IsConnectedToWatch = true;
 
-            var m = new PhoneToWatchModel() { WatchMessageType = emoji.WatchMessageType, Seconds = emoji.Seconds };
-            if (emoji.SetModel != null)
-            {
-                m.Id = emoji.SetModel.Id; m.Reps = emoji.SetModel.Reps; m.Weight = emoji.SetModel.WeightDouble;
-                m.Label = emoji.Label;
-            }
-            m.SenderPlatform = DrMuscleWebApiSharedModel.Platform.Phone;
+            //var m = new PhoneToWatchModel() { WatchMessageType = emoji.WatchMessageType, Seconds = emoji.Seconds };
+            //if (emoji.SetModel != null)
+            //{
+            //    m.Id = emoji.SetModel.Id; m.Reps = emoji.SetModel.Reps; m.Weight = emoji.SetModel.WeightDouble;
+            //    m.Label = emoji.Label;
+            //}
+            //m.SenderPlatform = DrMuscleWebApiSharedModel.Platform.Phone;
             //var request = PutDataMapRequest.Create("/DrMuscleWear/Data");
             //var map = request.DataMap;
             //map.PutString("Message", JsonConvert.SerializeObject(m));

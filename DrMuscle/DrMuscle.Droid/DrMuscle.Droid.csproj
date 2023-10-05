@@ -825,6 +825,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrMuscleEntryRenderer.cs" />
     <Compile Include="FacebookLoginButtonRenderer.cs" />
     <Compile Include="FacebookManager_Droid.cs" />
     <Compile Include="Service\NetworkCheck.cs" />

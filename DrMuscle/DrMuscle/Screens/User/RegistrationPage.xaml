@@ -88,7 +88,7 @@
                             HasShadow="False"
                             BackgroundColor="#50FBC1BC"
                             BorderColor="LightGray">
-                            <t:DrEntry 
+                            <t:DrMuscleEntry 
                                 MaxLength="40"
                                 TextChanged="EmailTextChanged"
                             FontSize="16"
@@ -99,7 +99,7 @@
                             Keyboard="Email" 
                                 TextColor="White"
                             >
-                            </t:DrEntry>
+                            </t:DrMuscleEntry>
 
                         </Frame>
                         <Label Text="" Margin="6,0,0,0" TextColor="White" FontSize="12" x:Name="EmailValidator" IsVisible="false"/>
@@ -111,7 +111,7 @@
                             BackgroundColor="#50FBC1BC"
                             BorderColor="LightGray">
                             <Grid>
-                                <t:DrEntry 
+                                <t:DrMuscleEntry 
                                     MaxLength="15"
                                 TextChanged="PasswordTextChanged"
                                 FontSize="16"
@@ -120,7 +120,7 @@
                                 IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
                                 BackgroundColor="Transparent"
                                 TextColor="White"
-                                PlaceholderColor="LightGray"></t:DrEntry>
+                                PlaceholderColor="LightGray"></t:DrMuscleEntry>
                                 <ImageButton VerticalOptions="Center"
                                    HeightRequest="20"
                                              Margin="0,0,6,0"
