@@ -302,7 +302,7 @@ namespace DrMuscle.Screens.User
             //registerModel.Firstname = LocalDBManager.Instance.GetDBSetting("firstname").Value;
 
             //Revert it
-            //string FirstName = "";
+            string FirstName = "";
             //try
             //{
             //    if (EmailEntry.Text.Contains("@"))
@@ -318,7 +318,7 @@ namespace DrMuscle.Screens.User
             //LocalDBManager.Instance.SetDBSetting("firstname", FirstName);
             ////Revert it
 
-            //registerModel.Firstname = FirstName;
+            registerModel.Firstname = FirstName;
             registerModel.EmailAddress = LocalDBManager.Instance.GetDBSetting("email").Value;
             registerModel.MassUnit = "lb";
             registerModel.BodyWeight = new MultiUnityWeight(150, "lb");
@@ -425,6 +425,7 @@ namespace DrMuscle.Screens.User
         }
         private async void CreateAccountByGmail(object sender, EventArgs e)
         {
+
             _googleClientManager = CrossGoogleClient.Current;
             if (!CrossConnectivity.Current.IsConnected)
             {

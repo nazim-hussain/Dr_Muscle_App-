@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrMuscle.Droid", "DrMuscle\DrMuscle.Droid\DrMuscle.Droid.csproj", "{B312BAC9-C489-4133-A4C5-7952A125BBC5}"
 EndProject
@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrMuscleWatch.WatchOSApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrMuscleWatch.WatchOSExtension", "DrMuscleWatch\DrMuscleWatch.WatchOSExtension\DrMuscleWatch.WatchOSExtension.csproj", "{746A5706-CF13-47CB-93E1-A18E38A05383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrMuscle", "DrMuscle\DrMuscle\DrMuscle.csproj", "{BE1EE65E-49AA-451B-843C-40477246DB1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrMuscle", "DrMuscle\DrMuscle\DrMuscle.csproj", "{BE1EE65E-49AA-451B-843C-40477246DB1B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrMuscleWear", "DrMuscleWear\DrMuscleWear\DrMuscleWear.csproj", "{D651CAE5-40D5-4645-AC67-9276422FFAAF}"
 EndProject
@@ -422,6 +422,7 @@ Global
 		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.AppStore|x86.Build.0 = Release|Any CPU
 		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.Debug|ARM.Build.0 = Debug|Any CPU
 		{D651CAE5-40D5-4645-AC67-9276422FFAAF}.Debug|iPhone.ActiveCfg = Debug|Any CPU

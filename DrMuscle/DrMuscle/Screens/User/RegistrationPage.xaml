@@ -84,7 +84,7 @@
                         <Frame
                             Margin="0,30,0,0"
                             CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                            Padding="6"
+                            Padding="{OnPlatform Android='6',iOS= '14'}"
                             HasShadow="False"
                             BackgroundColor="#50FBC1BC"
                             BorderColor="LightGray">
@@ -106,7 +106,7 @@
                         <Frame
                             Margin="0,2,0,0"
                             CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                            Padding="6"
+                            Padding="{OnPlatform Android='6',iOS= '14'}"
                             HasShadow="False"
                             BackgroundColor="#50FBC1BC"
                             BorderColor="LightGray">
