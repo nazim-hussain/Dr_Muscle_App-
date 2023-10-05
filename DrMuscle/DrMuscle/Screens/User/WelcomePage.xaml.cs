@@ -37,7 +37,10 @@ namespace DrMuscle.Screens.User
         private async void CreateNewAccountButton_Clicked(object sender, EventArgs e)
         {
             //MoveToDemo();
-            await PagesFactory.PushAsync<MainOnboardingPage>();
+            //await PagesFactory.PopToRootAsync();
+            ((App)Application.Current).displayCreateNewAccount = true;
+            await PagesFactory.PopThenPushAsync<RegistrationPage>(true);
+            //await PagesFactory.PushAsync<MainOnboardingPage>();
         }
 
         public WelcomePage()

@@ -74,10 +74,10 @@
             </StackLayout>
 
           </StackLayout>
-            <StackLayout x:Name="StackSignupMenu" Padding="20" IsVisible="false">
+            <!--<StackLayout x:Name="StackSignupMenu" Padding="20" IsVisible="false">
                 
                 <Grid x:Name="LoginButton" Padding="0,0,0,0" VerticalOptions="EndAndExpand" HeightRequest="170">
-                    <!--<Image Grid.Row="0" Grid.Column="0" Source="finishSet.png" HorizontalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="50"/>-->
+                    --><!--<Image Grid.Row="0" Grid.Column="0" Source="finishSet.png" HorizontalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="50"/>--><!--
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -86,11 +86,11 @@
                     </Grid.RowDefinitions>
                     <pancakeView:PancakeView
                         x:Name="LoginButtonStack"
-            Padding="0"
-            Margin="0"
-            IsClippedToBounds="true"
-            OffsetAngle="90"
-            CornerRadius="0"
+                        Padding="0"
+                        Margin="0"
+                        IsClippedToBounds="true"
+                        OffsetAngle="90"
+                        CornerRadius="0"
                         HorizontalOptions="FillAndExpand" 
                         HeightRequest="50"
                         Grid.Row="0" Grid.Column="0"
@@ -149,17 +149,17 @@
                             <OnPlatform x:TypeArguments="x:Double" Android="15" iOS="17" />
                         </t:DrMuscleButton.FontSize>
                     </t:DrMuscleButton>
-                    <!--<t:DrMuscleButton Grid.Row="3" Grid.Column="0" Padding="10,0" x:Name="BtnAppleSignIn2"  Text=" "  TextColor="#7f3c5a99" HeightRequest="50" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" BorderColor="Transparent" IsEnabled="false"  Style="{StaticResource highEmphasisButtonStyle}" >
+                    --><!--<t:DrMuscleButton Grid.Row="3" Grid.Column="0" Padding="10,0" x:Name="BtnAppleSignIn2"  Text=" "  TextColor="#7f3c5a99" HeightRequest="50" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" BorderColor="Transparent" IsEnabled="false"  Style="{StaticResource highEmphasisButtonStyle}" >
                         <t:DrMuscleButton.HorizontalOptions >
                             <OnPlatform x:TypeArguments="LayoutOptions" iOS="Start" Android="FillAndExpand" />
                         </t:DrMuscleButton.HorizontalOptions>
-                    </t:DrMuscleButton>-->
+                    </t:DrMuscleButton>--><!--
                                   
 
                     
                 </Grid>
                 
-            </StackLayout>
+            </StackLayout>-->
         </Grid>
 </t:DrMusclePage.Content>
 </t:DrMusclePage>

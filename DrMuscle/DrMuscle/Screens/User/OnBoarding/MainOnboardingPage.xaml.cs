@@ -148,26 +148,26 @@ namespace DrMuscle.Screens.User.OnBoarding
             
             _googleClientManager = CrossGoogleClient.Current;
             _manager = DependencyService.Get<IFacebookManager>();
-            LoginWithFBButton.Clicked += LoginWithFBButton_Clicked;
-            LoginWithGoogleButton.Clicked += LoginWithGoogleAsync;
-            LoginWithEmailButton.Clicked += ConnectWithEmail;
+            //LoginWithFBButton.Clicked += LoginWithFBButton_Clicked;
+            //LoginWithGoogleButton.Clicked += LoginWithGoogleAsync;
+            //LoginWithEmailButton.Clicked += ConnectWithEmail;
 
-            LoginButton.HeightRequest = Device.RuntimePlatform.Equals(Device.Android) ? 120 : 170;
+            //LoginButton.HeightRequest = Device.RuntimePlatform.Equals(Device.Android) ? 120 : 170;
             
-            BtnAppleSignIn.IsVisible = false;
-            // BtnAppleSignIn2.IsVisible = false;
+            //BtnAppleSignIn.IsVisible = false;
+            //// BtnAppleSignIn2.IsVisible = false;
 
-            appleSignInService = DependencyService.Get<IAppleSignInService>();
-            if (appleSignInService != null)
-            {
-                if (appleSignInService.IsAvailable)
-                {
-                    LoginButton.HeightRequest = 220;
-                    BtnAppleSignIn.IsVisible = true;
-                    // BtnAppleSignIn2.IsVisible = true;
-                    BtnAppleSignIn.Clicked += LoginWithAppleAsync;
-                }
-            }
+            //appleSignInService = DependencyService.Get<IAppleSignInService>();
+            //if (appleSignInService != null)
+            //{
+            //    if (appleSignInService.IsAvailable)
+            //    {
+            //        LoginButton.HeightRequest = 220;
+            //        BtnAppleSignIn.IsVisible = true;
+            //        // BtnAppleSignIn2.IsVisible = true;
+            //        BtnAppleSignIn.Clicked += LoginWithAppleAsync;
+            //    }
+            //}
 
             Timer.Instance.OnTimerChange -= OnTimerChange;
             Timer.Instance.OnTimerDone -= OnTimerDone;
@@ -783,7 +783,7 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
         {
             try
             {
-                StackSignupMenu.IsVisible = false;
+                //StackSignupMenu.IsVisible = false;
                 try
                 {
 
@@ -3750,7 +3750,7 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
         }
         private void GetFirstName()
         {
-            StackSignupMenu.IsVisible = false;
+            //StackSignupMenu.IsVisible = false;
             PromptConfig p = new PromptConfig()
             {
                 InputType = InputType.Default,
@@ -6015,33 +6015,33 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
 
         async void SetMenu()
         {
-            //if (IsRealBetaExperience == true)
-            //{
-                LoginWithEmailButton.Text = "Sign in with email";
-            //}
-            stackOptions.Children.Add(StackSignupMenu);
-            BottomViewHeight.Height = GridLength.Auto;
-            StackSignupMenu.IsVisible = true;
-            //if (Device.RuntimePlatform.Equals(Device.iOS))
-            //{
-            //    lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
-            //    lstChats.ScrollTo(BotList.Last(), ScrollToPosition.End, false);
-            //}
-            //if (IsRealBetaExperience == true)
-            //{
-                StackSignupMenu.Padding = new Thickness(20, 20, 20, 10);
-                stackOptions.Children.Add(TermsConditionStackBeta);
-                TermsConditionStackBeta.IsVisible = true;
+            ////if (IsRealBetaExperience == true)
+            ////{
+            //    LoginWithEmailButton.Text = "Sign in with email";
+            ////}
+            //stackOptions.Children.Add(StackSignupMenu);
+            //BottomViewHeight.Height = GridLength.Auto;
+            //StackSignupMenu.IsVisible = true;
+            ////if (Device.RuntimePlatform.Equals(Device.iOS))
+            ////{
+            ////    lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
+            ////    lstChats.ScrollTo(BotList.Last(), ScrollToPosition.End, false);
+            ////}
+            ////if (IsRealBetaExperience == true)
+            ////{
+            //    StackSignupMenu.Padding = new Thickness(20, 20, 20, 10);
+            //    stackOptions.Children.Add(TermsConditionStackBeta);
+            //    TermsConditionStackBeta.IsVisible = true;
 
-            //}
-            //else
-            //{
-            //    stackOptions.Children.Add(TermsConditionStack);
-            //    TermsConditionStack.IsVisible = true;
+            ////}
+            ////else
+            ////{
+            ////    stackOptions.Children.Add(TermsConditionStack);
+            ////    TermsConditionStack.IsVisible = true;
 
-            //}
-            //
-            //
+            ////}
+            ////
+            ////
             
         }
         async void GotItButton_Clicked(object sender, EventArgs e)
@@ -6417,7 +6417,7 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
                         LocalDBManager.Instance.SetDBSetting("gender", uim.Gender);
                         LocalDBManager.Instance.SetDBSetting("massunit", uim.MassUnit);
                         LocalDBManager.Instance.SetDBSetting("token", lr.access_token);
-                       LocalDBManager.Instance.SetDBSetting("token_expires_date", DateTime.Now.Add(TimeSpan.FromSeconds((double)lr.expires_in + 1)).Ticks.ToString());
+                        LocalDBManager.Instance.SetDBSetting("token_expires_date", DateTime.Now.Add(TimeSpan.FromSeconds((double)lr.expires_in + 1)).Ticks.ToString());
                         LocalDBManager.Instance.SetDBSetting("creation_date", uim.CreationDate.Ticks.ToString());
                         LocalDBManager.Instance.SetDBSetting("reprange", "Custom");
                         LocalDBManager.Instance.SetDBSetting("reprangeType", uim.ReprangeType.ToString());

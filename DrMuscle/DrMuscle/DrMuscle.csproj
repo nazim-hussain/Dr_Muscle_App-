@@ -106,4 +106,9 @@
     <Folder Include="Screens\Eve\" />
     <Folder Include="OnBoarding\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Screens\User\RegistrationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
