@@ -185,6 +185,7 @@
     <Compile Include="DrMuscleSubscription_iOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderer\DpiService.cs" />
     <Compile Include="SQLite_iOS.cs" />
     <None Include="app.config" />
     <None Include="Entitlements.plist" />
@@ -1081,11 +1082,22 @@
     <ImageAsset Include="Assets.xcassets\apple.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo11.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\logo1.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    
     <ImageAsset Include="Assets.xcassets\logo1.imageset\logo1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo11.imageset\logo11.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo11.imageset\logo11@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo11.imageset\logo11@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\page2.imageset\Contents.json">

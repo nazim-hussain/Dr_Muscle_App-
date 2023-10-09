@@ -41,7 +41,7 @@ namespace DrMuscle.Screens.User
 		{
 			InitializeComponent ();
             ClearFormValues();
-            
+            SetUIForSmallDensityDevices();
             //HasSlideMenu = false;
         }
 
@@ -56,7 +56,50 @@ namespace DrMuscle.Screens.User
         {
             base.OnAppearing();
             ClearFormValues();
+            
         }
+
+        private void SetUIForSmallDensityDevices()
+        {
+            var dpi = DependencyService.Get<IDpiService>().GetDpi();
+            
+            if (dpi <= 401)
+            {
+                if (dpi < 350)
+                {
+                    AppLogoImage.HeightRequest = 105;
+                    AppLogoImage.WidthRequest = 105;
+                    LblHeader1.FontSize = 16;
+                    LblHeader2.FontSize = 12;
+                    LblHeader3.FontSize = 12;
+                    EmailFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 4 : 10;
+                    PasswordFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 4 : 10;
+                    EmailBtnFrame.Padding = 11;
+                    GoogleBtnFrame.Padding = 11;
+                    FacebookBtnFrame.Padding = 11;
+                    AppleBtnFrame.Padding = 11;
+                    EmailValidator.Margin = (Device.RuntimePlatform == Device.Android) ? new Thickness(0, -2, 0, 0) : new Thickness(0, -6, 0, 0);
+                    PasswordValidator.Margin = (Device.RuntimePlatform == Device.Android) ? new Thickness(0, -2, 0, 0) : new Thickness(0, -6, 0, 0);
+                }
+                else
+                {
+                    //AppLogoImage.HeightRequest = 120;
+                    //AppLogoImage.WidthRequest = 120;
+                    LblHeader1.FontSize = 18;
+                    LblHeader2.FontSize = 14;
+                    LblHeader3.FontSize = 14;
+                    EmailFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 5 : 11;
+                    PasswordFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 5 : 11;
+                    EmailBtnFrame.Padding = 12;
+                    GoogleBtnFrame.Padding = 12;
+                    FacebookBtnFrame.Padding = 12;
+                    AppleBtnFrame.Padding = 12;
+                }
+
+            }
+            
+        }
+
         public override void OnBeforeShow()
         {
             base.OnBeforeShow();

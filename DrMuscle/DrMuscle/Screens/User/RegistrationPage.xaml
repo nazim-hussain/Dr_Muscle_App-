@@ -33,12 +33,10 @@
             Orientation="Vertical"
             Spacing="0">
                 <Image
-                Grid.Row="0"
+                    x:Name="AppLogoImage"
                 Aspect="AspectFit"
-                HeightRequest="145"
                 HorizontalOptions="Center"
-                Source="logo1"
-                WidthRequest="145" >
+                Source="logo11">
                     <Image.Margin>
                         <OnPlatform x:TypeArguments="Thickness">
                             <On Platform="iOS" Value="0,12,0,0"/>
@@ -47,18 +45,21 @@
                     </Image.Margin>
                 </Image>
                 <Label
+                    x:Name="LblHeader1"
                     FontSize="Large"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center"
                     Text="Create free account"
                     TextColor="White" />
                 <Label
+                    x:Name="LblHeader2"
                     FontSize="Medium"
                     HorizontalOptions="CenterAndExpand"
                     HorizontalTextAlignment="Center"
                     Text="Save your workouts,"
                     TextColor="White" />
                 <Label
+                    x:Name="LblHeader3"
                     FontSize="Medium"
                     HorizontalOptions="CenterAndExpand"
                     HorizontalTextAlignment="Center"
@@ -67,9 +68,10 @@
             </StackLayout>
             <StackLayout
             Grid.Row="1"
+                Margin="0,60,0,0"
             HorizontalOptions="FillAndExpand"
             Orientation="Vertical"
-            VerticalOptions="End">
+            VerticalOptions="CenterAndExpand">
                 <StackLayout />
                 <StackLayout
                 Margin="0,20"
@@ -82,6 +84,7 @@
                         Spacing="10">
 
                         <Frame
+                            x:Name="EmailFrame"
                             Margin="0,30,0,0"
                             CornerRadius="{OnPlatform Android='10', iOS='5'}"
                             Padding="{OnPlatform Android='6',iOS= '14'}"
@@ -102,8 +105,9 @@
                             </t:DrMuscleEntry>
 
                         </Frame>
-                        <Label Text="" Margin="6,0,0,0" TextColor="White" FontSize="12" x:Name="EmailValidator" IsVisible="false"/>
+                        <Label Text="" Margin="6,-4,0,0" TextColor="White" FontSize="12" x:Name="EmailValidator" IsVisible="false"/>
                         <Frame
+                            x:Name="PasswordFrame"
                             Margin="0,2,0,0"
                             CornerRadius="{OnPlatform Android='10', iOS='5'}"
                             Padding="{OnPlatform Android='6',iOS= '14'}"
@@ -139,8 +143,9 @@
                             </Grid>
 
                         </Frame>
-                        <Label Text="" Margin="6,0,0,0" TextColor="White" FontSize="12" x:Name="PasswordValidator" IsVisible="false"/>
+                        <Label Text="" Margin="6,-4,0,0" TextColor="White" FontSize="12" x:Name="PasswordValidator" IsVisible="false"/>
                         <Frame
+                            x:Name="EmailBtnFrame"
                         Padding="15"
                         BackgroundColor="White"
                         CornerRadius="{OnPlatform Android='10', iOS='5'}"
@@ -168,19 +173,19 @@
                     HorizontalOptions="FillAndExpand"
                     Orientation="Horizontal">
                         <BoxView
-                        HeightRequest="0.1"
+                        HeightRequest="0.6"
                         HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Center"
-                        Color="White" />
+                        VerticalOptions="CenterAndExpand"
+                        Color="WhiteSmoke" />
                         <Label
                         FontSize="Small"
                         Text="OR"
                         TextColor="White"
                         VerticalTextAlignment="Center" />
                         <BoxView
-                        HeightRequest="0.1"
+                        HeightRequest="0.6"
                         HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
                         Color="White" />
                     </StackLayout>
                     <StackLayout
@@ -189,6 +194,7 @@
                     Spacing="10"
                     VerticalOptions="EndAndExpand">
                         <Frame
+                            x:Name="GoogleBtnFrame"
                         Padding="15"
                         BackgroundColor="#db3737"
                         CornerRadius="{OnPlatform Android='10', iOS='5'}"
@@ -211,6 +217,7 @@
                             </Frame.GestureRecognizers>
                         </Frame>
                         <Frame
+                            x:Name="FacebookBtnFrame"
                         Padding="15"
                         BackgroundColor="#4768AD"
                         CornerRadius="{OnPlatform Android='10', iOS='5'}"
@@ -233,6 +240,7 @@
                             </Frame.GestureRecognizers>
                         </Frame>
                         <Frame
+                            x:Name="AppleBtnFrame"
                             IsVisible="{OnPlatform Android='false' , iOS='true'}"
                         Padding="15"
                         BackgroundColor="Black"
@@ -293,33 +301,19 @@
             <StackLayout Grid.Row="2" Spacing="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" >
                 <Label x:Name="ByContinueAgree" TextColor="White" HorizontalOptions="CenterAndExpand" Text="By continuing, you agree to our " FontSize="12" Style="{StaticResource LabelStyle}"/>
                 <StackLayout x:Name="TermsPrivacyPolicy" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Horizontal">
-                    <Label x:Name="TermsOfUse" TextColor="#247db5" Text="terms of use" Style="{StaticResource LearnMoreText}"/>
-                    <Label x:Name="LblAnd" TextColor="White" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}"/>
-                    <Label x:Name="PrivacyPolicy" TextColor="#247db5" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,10"/>
-                </StackLayout>
-            </StackLayout>
-            <!--<StackLayout
-                Grid.Row="2"
-    Spacing="0"
-    HorizontalOptions="CenterAndExpand"
-    VerticalOptions="EndAndExpand">
-                <StackLayout x:Name="TermsConditionStackBeta" HorizontalOptions="CenterAndExpand" IsVisible="true" VerticalOptions="EndAndExpand" Orientation="Horizontal" Spacing="0" >
-                    <Label x:Name="LblAgree" TextColor="White" Text="You agree to our " FontSize="12" Style="{StaticResource LabelStyle}"/>
-                    <Label x:Name="TermsOfUseBeta" TextColor="#247db5" Text="terms" Style="{StaticResource LearnMoreText}">
+                    <Label x:Name="TermsOfUse" TextColor="#247db5" Text="terms of use" Style="{StaticResource LearnMoreText}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TermsClicked"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="LblAndBeta" TextColor="White" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}">
-
-                    </Label>
-                    <Label x:Name="PrivacyPolicyBeta" TextColor="#247db5" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,10">
+                    <Label x:Name="LblAnd" TextColor="White" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}"/>
+                    <Label x:Name="PrivacyPolicy" TextColor="#247db5" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,10">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="PrivacyClicked"/>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
-            </StackLayout>-->
+            </StackLayout>
         </Grid>
     </Grid>
 
