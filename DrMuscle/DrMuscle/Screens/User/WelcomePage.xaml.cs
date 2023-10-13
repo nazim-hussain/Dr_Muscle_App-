@@ -38,9 +38,19 @@ namespace DrMuscle.Screens.User
         {
             //MoveToDemo();
             //await PagesFactory.PopToRootAsync();
-            ((App)Application.Current).displayCreateNewAccount = true;
-            await PagesFactory.PopThenPushAsync<RegistrationPage>(true);
             //await PagesFactory.PushAsync<MainOnboardingPage>();
+            try
+            {
+                ((App)Application.Current).displayCreateNewAccount = true;
+                //await PagesFactory.PushAsync<RegistrationPage>(true);
+                RegistrationPage page = new RegistrationPage();
+                page.OnBeforeShow();
+                Navigation.PushAsync(page);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         public WelcomePage()

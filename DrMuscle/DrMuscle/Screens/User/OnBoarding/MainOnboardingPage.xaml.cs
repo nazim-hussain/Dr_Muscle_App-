@@ -2919,9 +2919,29 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
 
         async void GetGender()
         {
-            
             ClearOptions();
-            GotItAfterImage(new DrMuscleButton(), EventArgs.Empty);
+            try
+            {
+                if (string.IsNullOrEmpty(LocalDBManager.Instance.GetDBSetting("firstname").Value))
+                {
+                    await AddQuestion("Enter first name");
+                    if (Device.RuntimePlatform.Equals(Device.iOS))
+                    {
+                        lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
+                        lstChats.ScrollTo(BotList.Last(), ScrollToPosition.End, false);
+                    }
+                    GetFirstName();
+                }
+                else
+                {
+                    GotItAfterImage(new DrMuscleButton(), EventArgs.Empty);
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+            }
         }
 
         async void RecommendedProgram_clicked(object sender, EventArgs args)
@@ -3751,18 +3771,26 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
         private void GetFirstName()
         {
             //StackSignupMenu.IsVisible = false;
-            PromptConfig p = new PromptConfig()
+            try
             {
-                InputType = InputType.Default,
-                IsCancellable = false,
-                Title = "Your first name",
-                Placeholder = "Enter first name",
-                OkText = AppResources.Continue,
-                AndroidStyleId = DependencyService.Get<IStyles>().GetStyleId(EAlertStyles.AlertDialogCustomGray),
-                OnAction = new Action<PromptResult>(GetFirstNameAction)
-            };
-            p.OnTextChanged += Name_OnTextChanged;
-            firstnameDisposible = UserDialogs.Instance.Prompt(p);
+                PromptConfig p = new PromptConfig()
+                {
+                    InputType = InputType.Default,
+                    IsCancellable = false,
+                    Title = "Your first name",
+                    Placeholder = "Enter first name",
+                    OkText = AppResources.Continue,
+                    AndroidStyleId = DependencyService.Get<IStyles>().GetStyleId(EAlertStyles.AlertDialogCustomGray),
+                    OnAction = new Action<PromptResult>(GetFirstNameAction)
+                };
+                p.OnTextChanged += Name_OnTextChanged;
+
+                firstnameDisposible = UserDialogs.Instance.Prompt(p);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         private async void GetFirstNameAction(PromptResult response)
         {
@@ -3775,7 +3803,7 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
                     text = text.Replace(">", "");
                     text = text.Replace("/", "");
                 }
-                    if (string.IsNullOrEmpty(text))
+                if (string.IsNullOrEmpty(text))
                 {
                     GetFirstName();
                     return;
@@ -3791,7 +3819,10 @@ lstChats.ScrollTo(BotList.Last(), ScrollToPosition.MakeVisible, false);
                 CurrentLog.Instance.ShowWelcomePopUp = true;
                 ((App)Application.Current).displayCreateNewAccount = false;
 
-                GetPassword();
+                var result = await DrMuscleRestClient.Instance.SetUserFirstname(new UserInfosModel() { Firstname = response.Text });
+                
+
+                GetGender();
             }
         }
 

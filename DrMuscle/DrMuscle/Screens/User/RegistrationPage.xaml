@@ -6,317 +6,324 @@
                 NavigationPage.HasNavigationBar="False"
              xmlns:t="clr-namespace:DrMuscle.Layout" xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <!--<ScrollView>-->
-
-        <!--Option 1-->
-    <Grid
-    Margin="0"
-    HorizontalOptions="FillAndExpand"
-    RowSpacing="0"
-    VerticalOptions="FillAndExpand">
-        <Image
-        Aspect="Fill"
+    <StackLayout>
+        <Grid
+            Margin="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+    <Image
+        Aspect="AspectFill"
         HorizontalOptions="FillAndExpand"
         Source="page2"
         VerticalOptions="FillAndExpand" />
-        <Grid
-        Margin="20"
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="12*" />
-                <RowDefinition Height="87*" />
-                <RowDefinition Height="5*" />
-            </Grid.RowDefinitions>
-            <StackLayout
-            Grid.Row="0"
-            HorizontalOptions="FillAndExpand"
-            Orientation="Vertical"
-            Spacing="0">
-                <Image
-                    x:Name="AppLogoImage"
-                Aspect="AspectFit"
-                HorizontalOptions="Center"
-                Source="logo11">
-                    <Image.Margin>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="iOS" Value="0,12,0,0"/>
-                            <On Platform="Android" Value="0"/>
-                        </OnPlatform>
-                    </Image.Margin>
-                </Image>
-                <Label
-                    x:Name="LblHeader1"
-                    FontSize="Large"
-                    FontAttributes="Bold"
-                    HorizontalTextAlignment="Center"
-                    Text="Create free account"
-                    TextColor="White" />
-                <Label
-                    x:Name="LblHeader2"
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="Save your workouts,"
-                    TextColor="White" />
-                <Label
-                    x:Name="LblHeader3"
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="progress, and stats"
-                    TextColor="White" />
-            </StackLayout>
-            <StackLayout
-            Grid.Row="1"
-                Margin="0,60,0,0"
-            HorizontalOptions="FillAndExpand"
-            Orientation="Vertical"
-            VerticalOptions="CenterAndExpand">
-                <StackLayout />
+            <ScrollView
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand">
                 <StackLayout
-                Margin="0,20"
-                HorizontalOptions="FillAndExpand"
-                Spacing="10"
-                VerticalOptions="End">
-                    <StackLayout
-                        Padding="0"
-                        Orientation="Vertical"
-                        Spacing="10">
+                    Margin="20">
 
-                        <Frame
-                            x:Name="EmailFrame"
-                            Margin="0,30,0,0"
-                            CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                            Padding="{OnPlatform Android='6',iOS= '14'}"
-                            HasShadow="False"
-                            BackgroundColor="#50FBC1BC"
-                            BorderColor="LightGray">
-                            <t:DrMuscleEntry 
-                                MaxLength="40"
-                                TextChanged="EmailTextChanged"
-                            FontSize="16"
-                            x:Name="EmailEntry"
-                            BackgroundColor="Transparent"
-                            PlaceholderColor="LightGray"
-                            Placeholder="Enter email" 
-                            Keyboard="Email" 
-                                TextColor="White"
-                            >
-                            </t:DrMuscleEntry>
-
-                        </Frame>
-                        <Label Text="" Margin="6,-4,0,0" TextColor="White" FontSize="12" x:Name="EmailValidator" IsVisible="false"/>
-                        <Frame
-                            x:Name="PasswordFrame"
-                            Margin="0,2,0,0"
-                            CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                            Padding="{OnPlatform Android='6',iOS= '14'}"
-                            HasShadow="False"
-                            BackgroundColor="#50FBC1BC"
-                            BorderColor="LightGray">
-                            <Grid>
-                                <t:DrMuscleEntry 
-                                    MaxLength="15"
-                                TextChanged="PasswordTextChanged"
-                                FontSize="16"
-                                x:Name="PasswordEntry" 
-                                Placeholder="Create password" 
-                                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
-                                BackgroundColor="Transparent"
-                                TextColor="White"
-                                PlaceholderColor="LightGray"></t:DrMuscleEntry>
-                                <ImageButton VerticalOptions="Center"
-                                   HeightRequest="20"
-                                             Margin="0,0,6,0"
-                                             BackgroundColor="Transparent"
-                                   HorizontalOptions="End"
-                                   Source="closeEye">
-                                    <ImageButton.Triggers>
-                                        <EventTrigger Event="Clicked">
-                                            <local:ShowPasswordTriggerAction ShowIcon="openEye"
-                                                              HideIcon="closeEye"
-                                                              x:Name="ShowPasswordActualTrigger"/>
-                                        </EventTrigger>
-                                    </ImageButton.Triggers>
-                                </ImageButton>
-                                
-                            </Grid>
-
-                        </Frame>
-                        <Label Text="" Margin="6,-4,0,0" TextColor="White" FontSize="12" x:Name="PasswordValidator" IsVisible="false"/>
-                        <Frame
-                            x:Name="EmailBtnFrame"
-                        Padding="15"
-                        BackgroundColor="White"
-                        CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                        HorizontalOptions="FillAndExpand">
-                            <StackLayout
-                                Padding="0"
-                                Orientation="Horizontal"
-                                Spacing="10">
-                                <Image HeightRequest="20" Source="mail_icon" />
-                                <Label
-                                FontSize="Body"
-                                HorizontalOptions="FillAndExpand"
-                                HorizontalTextAlignment="Center"
-                                Text="Create free account"
-                                TextColor="Black"
-                                VerticalTextAlignment="Center" />
-                            </StackLayout>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer  Tapped="CreateAccountByEmail"/>
-                            </Frame.GestureRecognizers>
-                        </Frame>
-                    </StackLayout>
                     <StackLayout
-                    Margin="20,0"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                        <BoxView
-                        HeightRequest="0.6"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Color="WhiteSmoke" />
-                        <Label
-                        FontSize="Small"
-                        Text="OR"
-                        TextColor="White"
-                        VerticalTextAlignment="Center" />
-                        <BoxView
-                        HeightRequest="0.6"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Color="White" />
-                    </StackLayout>
-                    <StackLayout
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Vertical"
-                    Spacing="10"
-                    VerticalOptions="EndAndExpand">
-                        <Frame
-                            x:Name="GoogleBtnFrame"
-                        Padding="15"
-                        BackgroundColor="#db3737"
-                        CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                        HorizontalOptions="FillAndExpand">
-                            <StackLayout
-                            Padding="0"
-                            Orientation="Horizontal"
-                            Spacing="10">
-                                <Image HeightRequest="20" Source="google_icon" />
-                                <Label
-                                FontSize="Body"
-                                HorizontalOptions="FillAndExpand"
-                                HorizontalTextAlignment="Center"
-                                Text="Join free with Google"
-                                TextColor="White"
-                                VerticalTextAlignment="Center" />
-                            </StackLayout>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer  Tapped="CreateAccountByGmail"/>
-                            </Frame.GestureRecognizers>
-                        </Frame>
-                        <Frame
-                            x:Name="FacebookBtnFrame"
-                        Padding="15"
-                        BackgroundColor="#4768AD"
-                        CornerRadius="{OnPlatform Android='10', iOS='5'}"
-                        HorizontalOptions="FillAndExpand">
-                            <StackLayout
-                            Padding="0"
-                            Orientation="Horizontal"
-                            Spacing="10">
-                                <Image HeightRequest="20" Source="facebook_icon" />
-                                <Label
-                                FontSize="Body"
-                                HorizontalOptions="FillAndExpand"
-                                HorizontalTextAlignment="Center"
-                                Text="Join free with Facebook"
-                                TextColor="White"
-                                VerticalTextAlignment="Center" />
-                            </StackLayout>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer  Tapped="CreateAccountByFacebook"/>
-                            </Frame.GestureRecognizers>
-                        </Frame>
-                        <Frame
-                            x:Name="AppleBtnFrame"
-                            IsVisible="{OnPlatform Android='false' , iOS='true'}"
-                        Padding="15"
-                        BackgroundColor="Black"
-                        HorizontalOptions="FillAndExpand">
-                            <StackLayout
-                            Padding="0"
-                            Orientation="Horizontal"
-                            Spacing="10">
-                                <Image HeightRequest="20" Source="apple" />
-                                <Label
-                                FontSize="Body"
-                                HorizontalOptions="FillAndExpand"
-                                HorizontalTextAlignment="Center"
-                                Text="Join free with Apple"
-                                TextColor="White"
-                                VerticalTextAlignment="Center" />
-                            </StackLayout>
-                            <Frame.CornerRadius>
-                                <OnPlatform x:TypeArguments="x:Single">
-                                    <On Platform="iOS" Value="5" />
-                                    <On Platform="Android" Value="10" />
+                       HorizontalOptions="FillAndExpand"
+                       Orientation="Vertical"
+                       Spacing="0">
+                        <Image
+                           x:Name="AppLogoImage"
+                           Aspect="AspectFit"
+                           HorizontalOptions="Center"
+                           Source="logo11">
+                            <Image.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="0,18,0,0"/>
+                                    <On Platform="Android" Value="0,10,0,0"/>
                                 </OnPlatform>
-                            </Frame.CornerRadius>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer  Tapped="CreateAccountByApple"/>
-                            </Frame.GestureRecognizers>
-                        </Frame>
+                            </Image.Margin>
+                        </Image>
+                        <Label
+                           x:Name="LblHeader1"
+                           Style="{StaticResource OnBoardingLabelStyle}"
+                           FontSize="21" 
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           Text="Create free account"
+                           TextColor="White" />
+                        <Label
+                           x:Name="LblHeader2"
+                           Style="{StaticResource OnBoardingLabelStyle}" 
+                           FontSize="17"
+                           HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           Text="Save your workouts,"
+                           TextColor="LightGray" />
+                        <Label
+                           x:Name="LblHeader3"
+                           Style="{StaticResource OnBoardingLabelStyle}" 
+                           FontSize="17"
+                           HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           Text="progress, and stats"
+                           TextColor="LightGray" />
                     </StackLayout>
-                    <StackLayout 
-                        Margin="0,0,0,10"
-                        Orientation="Horizontal"
-                        HorizontalOptions="Center"
-                        Spacing="3">
-                    <Label 
-                        VerticalTextAlignment="Start"
-                        HorizontalOptions="CenterAndExpand"
-                        FontSize="Small"
-                        Padding="0"
-                        Margin="0"
-                        TextColor="White" 
-                        Text="Already have an account?"/>
-                    <Label 
-                        VerticalTextAlignment="Start"
-                        TextDecorations="Underline"
-                        Margin="0"
-                        Padding="0"
-                        Text="Log in"
-                        FontSize="Small"
-                        FontAttributes="Bold"
-                        TextColor="White">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Login_btn_clicked"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                </StackLayout>
-                </StackLayout>
-            </StackLayout>
-            <StackLayout Grid.Row="2" Spacing="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" >
-                <Label x:Name="ByContinueAgree" TextColor="White" HorizontalOptions="CenterAndExpand" Text="By continuing, you agree to our " FontSize="12" Style="{StaticResource LabelStyle}"/>
-                <StackLayout x:Name="TermsPrivacyPolicy" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Horizontal">
-                    <Label x:Name="TermsOfUse" TextColor="#247db5" Text="terms of use" Style="{StaticResource LearnMoreText}">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TermsClicked"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                    <Label x:Name="LblAnd" TextColor="White" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}"/>
-                    <Label x:Name="PrivacyPolicy" TextColor="#247db5" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,10">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="PrivacyClicked"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                </StackLayout>
-            </StackLayout>
-        </Grid>
-    </Grid>
+                    <StackLayout
+                        x:Name="DataFetchLayout"
+                        Margin="{OnPlatform Android='0,10,0,0',iOS='0,0,0,0'}"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        VerticalOptions="CenterAndExpand">
+                        <StackLayout />
+                        <StackLayout
+                           Margin="0,20"
+                           HorizontalOptions="FillAndExpand"
+                           Spacing="10"
+                           VerticalOptions="End">
+                            <StackLayout
+                               Padding="0"
+                               Orientation="Vertical"
+                               Spacing="10">
 
+                                <Frame
+                                   x:Name="EmailFrame"
+                                   Margin="0,30,0,0"
+                                   CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                   Padding="{OnPlatform Android='6',iOS= '14'}"
+                                   HasShadow="False"
+                                   BackgroundColor="#4C000000"
+                                   BorderColor="LightGray">
+                                    <t:DrMuscleEntry 
+                                       MaxLength="40"
+                                       TextChanged="EmailTextChanged"
+                                       FontSize="16"
+                                       x:Name="EmailEntry"
+                                       BackgroundColor="Transparent"
+                                       PlaceholderColor="LightGray"
+                                       Placeholder="Enter email" 
+                                       Keyboard="Email" 
+                                       TextColor="White"
+                                    >
+                                    </t:DrMuscleEntry>
+
+                                </Frame>
+                                <Label Text="" Margin="6,-4,0,0" TextColor="White" FontSize="12" x:Name="EmailValidator" IsVisible="false"/>
+                                <Frame
+                                   x:Name="PasswordFrame"
+                                   Margin="0,2,0,0"
+                                   CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                   Padding="{OnPlatform Android='6',iOS= '14'}"
+                                   HasShadow="False"
+                                   BackgroundColor="#4C000000"
+                                   BorderColor="LightGray">
+                                    <Grid>
+                                        <t:DrMuscleEntry 
+                                           MaxLength="20"
+                                           TextChanged="PasswordTextChanged"
+                                           FontSize="16"
+                                           x:Name="PasswordEntry" 
+                                           Placeholder="Create password" 
+                                           IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
+                                           BackgroundColor="Transparent"
+                                           TextColor="White"
+                                           PlaceholderColor="LightGray"></t:DrMuscleEntry>
+                                        <ImageButton VerticalOptions="Center"
+                                            HeightRequest="20"
+                                            Margin="0,0,6,0"
+                                            BackgroundColor="Transparent"
+                                            HorizontalOptions="End"
+                                            Source="closeEye">
+                                            <ImageButton.Triggers>
+                                                <EventTrigger Event="Clicked">
+                                                    <local:ShowPasswordTriggerAction ShowIcon="openEye"
+                                                 HideIcon="closeEye"
+                                                 x:Name="ShowPasswordActualTrigger"/>
+                                                </EventTrigger>
+                                            </ImageButton.Triggers>
+                                        </ImageButton>
+
+                                    </Grid>
+
+                                </Frame>
+                                <Label Text="" Margin="6,-4,0,0" TextColor="White" FontSize="12" x:Name="PasswordValidator" IsVisible="false"/>
+                                <Frame
+                                    x:Name="EmailBtnFrame"
+                                    Padding="15"
+                                    BackgroundColor="White"
+                                    CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                    HorizontalOptions="FillAndExpand">
+                                    <StackLayout
+                                       Padding="0"
+                                       Orientation="Horizontal"
+                                       Spacing="10">
+                                        <Image HeightRequest="20" Source="mail_icon" />
+                                        <Label
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="FillAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           Text="Create free account"
+                                           TextColor="Black"
+                                           VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="CreateAccountByEmail"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout
+                               Margin="20,0"
+                               HorizontalOptions="FillAndExpand"
+                               Orientation="Horizontal">
+                                <BoxView
+                                   HeightRequest="0.6"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Color="WhiteSmoke" />
+                                <Label
+                                    x:Name="LblOr"
+                                    FontSize="15"
+                                   Text="OR"
+                                   TextColor="White"
+                                   VerticalTextAlignment="Center" />
+                                <BoxView
+                                   HeightRequest="0.6"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Color="White" />
+                            </StackLayout>
+                            <StackLayout
+                               HorizontalOptions="FillAndExpand"
+                               Orientation="Vertical"
+                               Spacing="10"
+                               VerticalOptions="EndAndExpand">
+                                <Frame
+                                    x:Name="GoogleBtnFrame"
+                                    Padding="15"
+                                    BackgroundColor="#db3737"
+                                    CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                    HorizontalOptions="FillAndExpand">
+                                    <StackLayout
+                                        Padding="0"
+                                        Orientation="Horizontal"
+                                        Spacing="10">
+                                        <Image HeightRequest="20" Source="google_icon" />
+                                        <Label
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="FillAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           Text="Join free with Google"
+                                           TextColor="White"
+                                           VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="CreateAccountByGmail"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                                <Frame
+                                    x:Name="FacebookBtnFrame"
+                                    Padding="15"
+                                    BackgroundColor="#4768AD"
+                                    CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                    HorizontalOptions="FillAndExpand">
+                                    <StackLayout
+                                       Padding="0"
+                                       Orientation="Horizontal"
+                                       Spacing="10">
+                                        <Image HeightRequest="20" Source="facebook_icon" />
+                                        <Label
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="FillAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           Text="Join free with Facebook"
+                                           TextColor="White"
+                                           VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="CreateAccountByFacebook"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                                <Frame
+                                   x:Name="AppleBtnFrame"
+                                   IsVisible="{OnPlatform Android='false' , iOS='true'}"
+                                   Padding="15"
+                                   BackgroundColor="Black"
+                                   HorizontalOptions="FillAndExpand">
+                                    <StackLayout
+                                       Padding="0"
+                                       Orientation="Horizontal"
+                                       Spacing="10">
+                                        <Image HeightRequest="20" Source="apple" />
+                                        <Label
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="FillAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           Text="Join free with Apple"
+                                           TextColor="White"
+                                           VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                    <Frame.CornerRadius>
+                                        <OnPlatform x:TypeArguments="x:Single">
+                                            <On Platform="iOS" Value="5" />
+                                            <On Platform="Android" Value="10" />
+                                        </OnPlatform>
+                                    </Frame.CornerRadius>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="CreateAccountByApple"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout 
+                               Margin="0,0,0,10"
+                               Orientation="Horizontal"
+                               HorizontalOptions="Center"
+                               Spacing="3">
+                                <Label 
+                                    VerticalTextAlignment="Start"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    Padding="0"
+                                    Margin="0"
+                                    TextColor="LightGray" 
+                                    Text="Already have an account?"/>
+                                <Label 
+                                   VerticalTextAlignment="Start"
+                                   TextDecorations="Underline"
+                                   Margin="0"
+                                   Padding="0"
+                                   Text="Log in"
+                                   FontSize="Small"
+                                   FontAttributes="Bold"
+                                   TextColor="LightGray">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Login_btn_clicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout  Spacing="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" >
+                        <Label x:Name="ByContinueAgree" TextColor="White" HorizontalOptions="CenterAndExpand" Text="By continuing, you agree to our " FontSize="12" Style="{StaticResource LabelStyle}"/>
+                        <StackLayout x:Name="TermsPrivacyPolicy" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Horizontal">
+                            <Label x:Name="TermsOfUse" TextColor="#247db5" Text="terms of use" Style="{StaticResource LearnMoreText}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TermsClicked"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label x:Name="LblAnd" TextColor="White" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}"/>
+                            <Label x:Name="PrivacyPolicy" TextColor="#247db5" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,0">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="PrivacyClicked"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+        
+    </StackLayout>
+    
+        <!--Option 1-->
    
 
 </t:DrMusclePage>

@@ -41,10 +41,20 @@ namespace DrMuscle.Screens.User
 		{
 			InitializeComponent ();
             ClearFormValues();
-            SetUIForSmallDensityDevices();
+            SetUIAccordingToScreenSizes();
             //HasSlideMenu = false;
         }
 
+        private void SetUIAccordingToScreenSizes()
+        {
+            if (App.ScreenWidth > 375)
+            {
+                LblHeader1.FontSize = 22;
+                LblHeader2.FontSize = 19;
+                LblHeader3.FontSize = 19;
+                LblOr.FontSize = 16;
+            }
+        }
         private void ClearFormValues()
         {
             EmailEntry.Text = "";
@@ -56,50 +66,12 @@ namespace DrMuscle.Screens.User
         {
             base.OnAppearing();
             ClearFormValues();
-            
-        }
-
-        private void SetUIForSmallDensityDevices()
+            CancelNotification();
+        }    
+        private void CancelNotification()
         {
-            var dpi = DependencyService.Get<IDpiService>().GetDpi();
-            
-            if (dpi <= 401)
-            {
-                if (dpi < 350)
-                {
-                    AppLogoImage.HeightRequest = 105;
-                    AppLogoImage.WidthRequest = 105;
-                    LblHeader1.FontSize = 16;
-                    LblHeader2.FontSize = 12;
-                    LblHeader3.FontSize = 12;
-                    EmailFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 4 : 10;
-                    PasswordFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 4 : 10;
-                    EmailBtnFrame.Padding = 11;
-                    GoogleBtnFrame.Padding = 11;
-                    FacebookBtnFrame.Padding = 11;
-                    AppleBtnFrame.Padding = 11;
-                    EmailValidator.Margin = (Device.RuntimePlatform == Device.Android) ? new Thickness(0, -2, 0, 0) : new Thickness(0, -6, 0, 0);
-                    PasswordValidator.Margin = (Device.RuntimePlatform == Device.Android) ? new Thickness(0, -2, 0, 0) : new Thickness(0, -6, 0, 0);
-                }
-                else
-                {
-                    //AppLogoImage.HeightRequest = 120;
-                    //AppLogoImage.WidthRequest = 120;
-                    LblHeader1.FontSize = 18;
-                    LblHeader2.FontSize = 14;
-                    LblHeader3.FontSize = 14;
-                    EmailFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 5 : 11;
-                    PasswordFrame.Padding = (Device.RuntimePlatform == Device.Android) ? 5 : 11;
-                    EmailBtnFrame.Padding = 12;
-                    GoogleBtnFrame.Padding = 12;
-                    FacebookBtnFrame.Padding = 12;
-                    AppleBtnFrame.Padding = 12;
-                }
-
-            }
-            
+            DependencyService.Get<IAlarmAndNotificationService>().CancelNotification(1651);
         }
-
         public override void OnBeforeShow()
         {
             base.OnBeforeShow();
@@ -107,7 +79,16 @@ namespace DrMuscle.Screens.User
         private async void Login_btn_clicked(object sender, EventArgs e)
         {
             ((App)Application.Current).displayCreateNewAccount = true;
-            PagesFactory.PushAsync<WelcomePage>();
+            try
+            {
+                WelcomePage page = new WelcomePage();
+                page.OnBeforeShow();
+                await Navigation.PushAsync(page);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void TermsClicked(object sender, EventArgs e)
@@ -119,12 +100,14 @@ namespace DrMuscle.Screens.User
         {
             Browser.OpenAsync("http://drmuscleapp.com/news/privacy/", BrowserLaunchMode.SystemPreferred);
         }
-        protected override bool OnBackButtonPressed()
-        {           
-            ((App)Application.Current).displayCreateNewAccount = true;
-            PagesFactory.PushAsync<WelcomePage>();
-            return true;
-        }
+        //protected override bool OnBackButtonPressed()
+        //{           
+        //    ((App)Application.Current).displayCreateNewAccount = true;
+        //    WelcomePage page = new WelcomePage();
+        //    page.OnBeforeShow();
+        //    Navigation.PushAsync(page);
+        //    return true;
+        //}
 
         private async void CreateAccountByEmail(object sender, EventArgs e)
         {
@@ -138,7 +121,7 @@ namespace DrMuscle.Screens.User
                 });
                 return;
             }
-            if (DataValidation())
+            if (await DataValidation())
             {
                 bool isEmailExist =await CheckEmailExist(EmailEntry.Text);
                 if (!isEmailExist)
@@ -150,7 +133,7 @@ namespace DrMuscle.Screens.User
             }
         }
 
-        private bool DataValidation()
+        private async Task<bool> DataValidation()
         {
             try
             {
@@ -161,19 +144,26 @@ namespace DrMuscle.Screens.User
                     EmailValidator.IsVisible = true;
                     EmailValidator.Text = AppResources.EnterYourEmail;
                     PasswordValidator.IsVisible = true;
-                    PasswordValidator.Text = "Enter your password.";
+                    PasswordValidator.Text = "Enter your password";
+                    await Task.Delay(1000);
+                    EmailValidator.IsVisible = false;
+                    PasswordValidator.IsVisible = false;
                     return false;
                 }
                 else if (string.IsNullOrEmpty(EmailEntry.Text))
                 {
                     EmailValidator.IsVisible = true;
                     EmailValidator.Text = AppResources.EnterYourEmail;
+                    await Task.Delay(1000);
+                    EmailValidator.IsVisible = false;
                     return false;
                 }
                 else if (string.IsNullOrEmpty(PasswordEntry.Text))
                 {
                     PasswordValidator.IsVisible = true;
-                    PasswordValidator.Text = "Enter your password.";
+                    PasswordValidator.Text = "Enter your password";
+                    await Task.Delay(1000);
+                    PasswordValidator.IsVisible = false;
                     return false;
                 }
                 else
@@ -382,11 +372,8 @@ namespace DrMuscle.Screens.User
 
             }
             //Login
-            LoginSuccessResult lr = await DrMuscleRestClient.Instance.LoginWithoutLoader(new LoginModel()
+            LoginSuccessResult lr = await DrMuscleRestClient.Instance.Login(new LoginModel()
             {
-                //Username = "nazimtest11@gmail.com",
-                //Password = "Nazim123"
-                ////Revert it
                 Username = registerModel.EmailAddress,
                 Password = registerModel.Password
             });
@@ -402,8 +389,6 @@ namespace DrMuscle.Screens.User
                 LocalDBManager.Instance.SetDBSetting("lastname", uim.Lastname);
                 //LocalDBManager.Instance.SetDBSetting("gender", uim.Gender);
                 LocalDBManager.Instance.SetDBSetting("massunit", uim.MassUnit);
-                //LocalDBManager.Instance.SetDBSetting("password", "Nazim123");
-                //Revert it
                 LocalDBManager.Instance.SetDBSetting("password", registerModel.Password);
                 LocalDBManager.Instance.SetDBSetting("token", lr.access_token);
                 LocalDBManager.Instance.SetDBSetting("token_expires_date", current.Add(TimeSpan.FromSeconds((double)lr.expires_in + 1)).Ticks.ToString());
@@ -1549,13 +1534,15 @@ namespace DrMuscle.Screens.User
 
         private void EmailTextChanged(object sender, TextChangedEventArgs e)
         {
-            var text = e.NewTextValue as string;
-            if (string.IsNullOrEmpty(text))
+            try
             {
-                EmailValidator.IsVisible = true;
-                EmailValidator.Text = AppResources.EnterYourEmail;
+                var text = e.NewTextValue as string;
+                if (!string.IsNullOrEmpty(text))
+                {
+                    EmailValidator.IsVisible = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
                 EmailValidator.IsVisible = false;
             }
@@ -1563,21 +1550,32 @@ namespace DrMuscle.Screens.User
 
         private void PasswordTextChanged(object sender, TextChangedEventArgs e)
         {
-            var text = e.NewTextValue as string;
-            if (string.IsNullOrEmpty(text))
+            try
             {
-                PasswordValidator.IsVisible = true;
-                PasswordValidator.Text = "Enter your password.";
+                var text = e.NewTextValue as string;
+                if (!string.IsNullOrEmpty(text))
+                {
+                    if (text.Length < 6)
+                    {
+                        PasswordValidator.IsVisible = true;
+                        PasswordValidator.Text = "At least 6 characters";
+                    }
+                    else
+                    {
+                        PasswordValidator.IsVisible = false;
+                    }
+                }
+                else
+                {
+                    PasswordValidator.IsVisible = false;
+                }
             }
-            else if(text.Length < 6)
+            catch (Exception ex)
             {
-                PasswordValidator.IsVisible = true;
-                PasswordValidator.Text = "At least 6 characters";
+
+                throw;
             }
-            else
-            {
-                PasswordValidator.IsVisible = false;
-            }
+            
         }
     }
 }

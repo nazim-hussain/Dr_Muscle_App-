@@ -952,5 +952,9 @@ namespace DrMuscle
         {
             return await PostJson<SingleIntegerModel>("/api/Account/GetRepsMaximum", null);
         }
+        public async Task<UserInfosModel> SetUserFirstname(UserInfosModel userInfosModel)
+        {
+            return await PostJson<UserInfosModel>("api/Account/SetUserFirstname", userInfosModel);
+        }
     }
 }
