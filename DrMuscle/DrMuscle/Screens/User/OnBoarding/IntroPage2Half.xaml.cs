@@ -6100,7 +6100,7 @@ namespace DrMuscle.Screens.User.OnBoarding
                 //Skip Last page
                 App.IsIntroBack = true;
             //await PagesFactory.PushAsync<RegistrationPage>();
-            await PagesFactory.PopThenPushAsync<RegistrationPage>(true);
+            await PagesFactory.PushAsync<RegistrationPage>(true);
             await Navigation.PopModalAsync(false);
             //var page = PagesFactory.GetPage<MainOnboardingPage>();
             //page.OnBeforeShow();

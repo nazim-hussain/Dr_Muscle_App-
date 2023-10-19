@@ -34,7 +34,7 @@
                            Source="logo11">
                             <Image.Margin>
                                 <OnPlatform x:TypeArguments="Thickness">
-                                    <On Platform="iOS" Value="0,18,0,0"/>
+                                    <On Platform="iOS" Value="0,20,0,0"/>
                                     <On Platform="Android" Value="0,10,0,0"/>
                                 </OnPlatform>
                             </Image.Margin>
@@ -84,7 +84,7 @@
                                 <Frame
                                    x:Name="EmailFrame"
                                    Margin="0,30,0,0"
-                                   CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                   CornerRadius="{OnPlatform Android='10', iOS='10'}"
                                    Padding="{OnPlatform Android='6',iOS= '14'}"
                                    HasShadow="False"
                                    BackgroundColor="#4C000000"
@@ -107,7 +107,7 @@
                                 <Frame
                                    x:Name="PasswordFrame"
                                    Margin="0,2,0,0"
-                                   CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                   CornerRadius="{OnPlatform Android='10', iOS='10'}"
                                    Padding="{OnPlatform Android='6',iOS= '14'}"
                                    HasShadow="False"
                                    BackgroundColor="#4C000000"
@@ -146,7 +146,7 @@
                                     x:Name="EmailBtnFrame"
                                     Padding="15"
                                     BackgroundColor="White"
-                                    CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                    CornerRadius="{OnPlatform Android='10', iOS='10'}"
                                     HorizontalOptions="FillAndExpand">
                                     <StackLayout
                                        Padding="0"
@@ -197,7 +197,7 @@
                                     x:Name="GoogleBtnFrame"
                                     Padding="15"
                                     BackgroundColor="#db3737"
-                                    CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                    CornerRadius="{OnPlatform Android='10', iOS='10'}"
                                     HorizontalOptions="FillAndExpand">
                                     <StackLayout
                                         Padding="0"
@@ -221,7 +221,7 @@
                                     x:Name="FacebookBtnFrame"
                                     Padding="15"
                                     BackgroundColor="#4768AD"
-                                    CornerRadius="{OnPlatform Android='10', iOS='5'}"
+                                    CornerRadius="{OnPlatform Android='10', iOS='10'}"
                                     HorizontalOptions="FillAndExpand">
                                     <StackLayout
                                        Padding="0"
@@ -263,7 +263,7 @@
                                     </StackLayout>
                                     <Frame.CornerRadius>
                                         <OnPlatform x:TypeArguments="x:Single">
-                                            <On Platform="iOS" Value="5" />
+                                            <On Platform="iOS" Value="10" />
                                             <On Platform="Android" Value="10" />
                                         </OnPlatform>
                                     </Frame.CornerRadius>

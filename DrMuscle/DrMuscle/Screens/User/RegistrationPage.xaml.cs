@@ -100,14 +100,6 @@ namespace DrMuscle.Screens.User
         {
             Browser.OpenAsync("http://drmuscleapp.com/news/privacy/", BrowserLaunchMode.SystemPreferred);
         }
-        //protected override bool OnBackButtonPressed()
-        //{           
-        //    ((App)Application.Current).displayCreateNewAccount = true;
-        //    WelcomePage page = new WelcomePage();
-        //    page.OnBeforeShow();
-        //    Navigation.PushAsync(page);
-        //    return true;
-        //}
 
         private async void CreateAccountByEmail(object sender, EventArgs e)
         {
@@ -291,7 +283,9 @@ namespace DrMuscle.Screens.User
                     else
                     {
                         ((App)Xamarin.Forms.Application.Current).displayCreateNewAccount = true;
-                        await PagesFactory.PushAsync<WelcomePage>();
+                        WelcomePage page = new WelcomePage();
+                        page.OnBeforeShow();
+                        await Navigation.PushAsync(page);
                     }
 
                     return true;
