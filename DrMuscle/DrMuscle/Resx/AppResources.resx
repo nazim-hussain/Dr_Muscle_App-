@@ -379,10 +379,10 @@
     <value>Your workout plan is:</value> 
   </data> 
   <data name="LogInWithFacebook" xml:space="preserve"> 
-    <value>Log in with facebook</value> 
+    <value>Log in with Facebook</value> 
   </data> 
   <data name="LogInWithEmail" xml:space="preserve"> 
-    <value>Log in with email</value> 
+    <value>Log in with Email</value> 
   </data> 
   <data name="TapToEnterYourEmail" xml:space="preserve"> 
     <value>Tap to enter your email</value> 

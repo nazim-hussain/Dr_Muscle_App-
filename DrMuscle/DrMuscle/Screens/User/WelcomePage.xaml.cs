@@ -64,8 +64,8 @@ namespace DrMuscle.Screens.User
             //LoginButton.Clicked += LoginButton_Clicked;
             ResetPasswordButton.Clicked += ResetPasswordButton_Clicked;
             MadeAMistakeButton.Clicked += MadeAMistakeButton_Clicked;
-            LoginWithFBButton.Clicked += LoginWithFBButton_Clicked;
-            LoginWithGoogleButton.Clicked += LoginWithGoogleAsync;
+            //LoginWithFBButton.Clicked += LoginWithFBButton_Clicked;
+            //LoginWithGoogleButton.Clicked += LoginWithGoogleAsync;
             CreateNewAccountButton.Clicked += CreateNewAccountButton_Clicked;
             NavigationPage.SetHasNavigationBar(this, false);
             DependencyService.Get<IDrMuscleSubcription>().Init();
@@ -100,7 +100,7 @@ namespace DrMuscle.Screens.User
                 {
 
                     BtnAppleSignIn.IsVisible = true;
-                    BtnAppleSignIn.Clicked += LoginWithAppleAsync;
+                    //BtnAppleSignIn.Clicked += LoginWithAppleAsync;
 
                 }
             }
@@ -2080,14 +2080,14 @@ namespace DrMuscle.Screens.User
             CreateNewAccountButton.IsVisible = ((App)Application.Current).displayCreateNewAccount;
             LoginWithFBButton.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogInWithFacebook : AppResources.ConnectWithFacebook;
             LoginWithGoogleButton.Text = ((App)Application.Current).displayCreateNewAccount ? "Login with Google" : "Connect with Google";
-            BtnAppleSignIn.Text = ((App)Application.Current).displayCreateNewAccount ? "Sign in with Apple" : "Continue with Apple";
-            LblLoginText.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogInWithEmail : "";
-            LblLoginText.IsVisible = ((App)Application.Current).displayCreateNewAccount;
-            LoginButton.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogIn : AppResources.CreateAccount;
-            if (((App)Application.Current).displayCreateNewAccount)
-                SetDefaultButtonStyle(LoginButton);
-            else
-                SetEmphasisButtonStyle(LoginButton);
+            AppleBtnText.Text = ((App)Application.Current).displayCreateNewAccount ? "Sign in with Apple" : "Continue with Apple";
+            //LblLoginText.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogInWithEmail : "";
+            //LblLoginText.IsVisible = ((App)Application.Current).displayCreateNewAccount;
+            LoginButton.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogInWithEmail : AppResources.CreateAccount;
+            //if (((App)Application.Current).displayCreateNewAccount)
+            //    SetDefaultButtonStyle(LoginButton);
+            //else
+            //    SetEmphasisButtonStyle(LoginButton);
             ResetPasswordButton.IsVisible = ((App)Application.Current).displayCreateNewAccount;
             MadeAMistakeButton.IsVisible = !((App)Application.Current).displayCreateNewAccount;
             LblPasswordText.IsVisible = !((App)Application.Current).displayCreateNewAccount;
@@ -2240,5 +2240,6 @@ namespace DrMuscle.Screens.User
             btn.BorderColor = AppThemeConstants.BlueColor;
             btn.TextColor = AppThemeConstants.BlueColor;
         }
+
     }
 }

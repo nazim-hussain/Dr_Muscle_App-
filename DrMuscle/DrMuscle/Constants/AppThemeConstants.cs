@@ -24,6 +24,7 @@ namespace DrMuscle.Constants
         public static Color CellItemsButtonColor = Color.FromHex("#faf0e6");
         public static Color IncomingBubbleColor = Color.FromHex("#333333");
         public static Color BlueColor = Color.FromHex("#195377");
+        public static Color SharpBlueColor = Color.FromHex("#247db5");
         
         public static Color BlueStartGradient = Color.FromHex("#99195276");
         public static Color GreenGradient = Color.LightGray;//Color.FromHex("#5DD397");

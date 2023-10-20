@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DrMuscle.Screens.User.RegistrationPage"
                 xmlns:local="clr-namespace:DrMuscle.Behaviors"
+                xmlns:constnats="clr-namespace:DrMuscle.Constants"
                 NavigationPage.HasNavigationBar="False"
              xmlns:t="clr-namespace:DrMuscle.Layout" xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <!--<ScrollView>-->
@@ -175,7 +176,7 @@
                                    HeightRequest="0.6"
                                    HorizontalOptions="FillAndExpand"
                                    VerticalOptions="CenterAndExpand"
-                                   Color="WhiteSmoke" />
+                                   Color="White" />
                                 <Label
                                     x:Name="LblOr"
                                     FontSize="15"
@@ -302,15 +303,15 @@
                         </StackLayout>
                     </StackLayout>
                     <StackLayout  Spacing="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" >
-                        <Label x:Name="ByContinueAgree" TextColor="White" HorizontalOptions="CenterAndExpand" Text="By continuing, you agree to our " FontSize="12" Style="{StaticResource LabelStyle}"/>
+                        <Label x:Name="ByContinueAgree" TextColor="White" HorizontalOptions="CenterAndExpand" Text="By continuing, you agree to our " FontSize="13" Style="{StaticResource LabelStyle}"/>
                         <StackLayout x:Name="TermsPrivacyPolicy" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Orientation="Horizontal">
-                            <Label x:Name="TermsOfUse" TextColor="#247db5" Text="terms of use" Style="{StaticResource LearnMoreText}">
+                            <Label x:Name="TermsOfUse" TextColor="{x:Static constnats:AppThemeConstants.SharpBlueColor}" Text="terms of use" FontSize="13">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TermsClicked"/>
                                 </Label.GestureRecognizers>
                             </Label>
-                            <Label x:Name="LblAnd" TextColor="White" Text=" and " FontSize="12" Style="{StaticResource LabelStyle}"/>
-                            <Label x:Name="PrivacyPolicy" TextColor="#247db5" Text="privacy policy." Style="{StaticResource LearnMoreText}" Margin="0,0,0,0">
+                            <Label x:Name="LblAnd" TextColor="White" Text=" and " FontSize="13" Style="{StaticResource LabelStyle}"/>
+                            <Label x:Name="PrivacyPolicy" FontSize="13" Text="privacy policy." TextColor="{x:Static constnats:AppThemeConstants.SharpBlueColor}" Margin="0,0,0,0">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="PrivacyClicked"/>
                                 </Label.GestureRecognizers>
