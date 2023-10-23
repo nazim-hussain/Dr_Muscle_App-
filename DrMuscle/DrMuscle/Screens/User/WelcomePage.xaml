@@ -87,12 +87,53 @@
                 Source="page2"
                 VerticalOptions="FillAndExpand" />
             <ScrollView>
-                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,60,20,0" >
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,30,20,0" >
                     
                         <StackLayout VerticalOptions="FillAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
-                            <Label x:Name="WorkoutInfo1" Text="See C# (bottom)" HorizontalOptions="CenterAndExpand" TextColor="LightGray" FontSize="16"></Label>
-                                <Label x:Name="WorkoutInfo2" Text="See C# (bottom)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="White" Style="{StaticResource OnBoardingLabelStyleBig}"></Label>
+                            <Label x:Name="WorkoutInfo1" IsVisible="false" Text="See C# (bottom)" HorizontalOptions="CenterAndExpand" TextColor="LightGray" FontSize="16"></Label>
+                            <StackLayout
+                               HorizontalOptions="FillAndExpand"
+                               Orientation="Vertical"
+                               Spacing="0">
+                                <Image
+                                   x:Name="AppLogoImage"
+                                   Aspect="AspectFit"
+                                   HorizontalOptions="Center"
+                                   Source="logo11">
+                                    <Image.Margin>
+                                        <OnPlatform x:TypeArguments="Thickness">
+                                            <On Platform="iOS" Value="0,20,0,0"/>
+                                            <On Platform="Android" Value="0,10,0,0"/>
+                                        </OnPlatform>
+                                    </Image.Margin>
+                                </Image>
+                                <Label
+                                   x:Name="LblHeader1"
+                                   Style="{StaticResource OnBoardingLabelStyle}"
+                                   FontSize="21" 
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   Text="Log In"
+                                   TextColor="White" />
+                                <Label
+                                   x:Name="LblHeader2"
+                                   Style="{StaticResource OnBoardingLabelStyle}" 
+                                   FontSize="17"
+                                   HorizontalOptions="CenterAndExpand"
+                                   HorizontalTextAlignment="Center"
+                                   Text="Save your workouts,"
+                                   TextColor="LightGray" />
+                                <Label
+                                   x:Name="LblHeader3"
+                                   Style="{StaticResource OnBoardingLabelStyle}" 
+                                   FontSize="17"
+                                   HorizontalOptions="CenterAndExpand"
+                                   HorizontalTextAlignment="Center"
+                                   Text="progress, and stats"
+                                   TextColor="LightGray" />
+                            </StackLayout>
+                            <Label x:Name="WorkoutInfo2" IsVisible="false" Text="See C# (bottom)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="White" Style="{StaticResource OnBoardingLabelStyleBig}"></Label>
                             <t:DrMuscleButton CornerRadius="0" x:Name="MadeAMistakeButton" Text="Made a mistake? Start over" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Style="{StaticResource buttonLinkStyle}"></t:DrMuscleButton>
 
                                 <StackLayout x:Name="CreateAccountStack">
@@ -137,7 +178,7 @@
                                     <StackLayout Padding="0" Orientation="Horizontal" Spacing="10">
                                         <Image HeightRequest="20" Source="mail_icon" />
                                         <Label FontSize="15" Margin="-30,0,0,0" x:Name="LoginButton" FontAttributes="Bold"
-                                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Text="Log in with Email" TextColor="Black"
+                                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Text="Log in" TextColor="Black"
                                            VerticalTextAlignment="Center" />
                                     </StackLayout>
                                     <Frame.GestureRecognizers>
@@ -200,8 +241,8 @@
 
                                     <Image Margin="0,24,0,0" Source="stars_5.png" WidthRequest="90" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
                                     <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                                    <Label TextColor="{x:Static constnats:AppThemeConstants.SharpBlueColor}" FontAttributes="Italic" Text="&quot;Stronger at 62 than I was at 31&quot;" HorizontalOptions="CenterAndExpand"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="14" />
-                                    <Label TextColor="{x:Static constnats:AppThemeConstants.SharpBlueColor}" Text="-Rodney Spence" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13" />
+                                      <Label TextColor="{x:Static constnats:AppThemeConstants.LightGrayColor}" FontAttributes="Italic" Text="&quot;Stronger at 62 than I was at 31&quot;" HorizontalOptions="CenterAndExpand"  Style="{StaticResource OnBoardingLabelStyle}" FontSize="14" />
+                                      <Label TextColor="{x:Static constnats:AppThemeConstants.LightGrayColor}" Text="-Rodney Spence" HorizontalOptions="CenterAndExpand" Style="{StaticResource OnBoardingLabelStyle}" FontSize="13" />
                                     </StackLayout>
 
                                 </StackLayout>

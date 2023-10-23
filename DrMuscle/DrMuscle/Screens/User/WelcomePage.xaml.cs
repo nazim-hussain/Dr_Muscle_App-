@@ -57,6 +57,7 @@ namespace DrMuscle.Screens.User
         {
             InitializeComponent();
             RefreshLocalized();
+            SetUIAccordingToScreenSizes();
             HasSlideMenu = false;
             _manager = DependencyService.Get<IFacebookManager>();
             alarmAndNotificationService = new AlarmAndNotificationService();
@@ -106,12 +107,24 @@ namespace DrMuscle.Screens.User
             }
         }
 
+
+        private void SetUIAccordingToScreenSizes()
+        {
+            if (App.ScreenWidth > 375)
+            {
+                LblHeader1.FontSize = 22;
+                LblHeader2.FontSize = 19;
+                LblHeader3.FontSize = 19;
+                LblOr.FontSize = 16;
+            }
+        }
+
         private void RefreshLocalized()
         {
             MadeAMistakeButton.Text = AppResources.MadeAMistakeStartOver;
             LblBackUpAutomatically.Text = AppResources.BackupAutomaticallyAccessAnywhere;
-            EmailEntry.Placeholder = AppResources.TapToEnterYourEmail;
-            PasswordEntry.Placeholder = AppResources.TapToEnterYourPassword;
+            //EmailEntry.Placeholder = AppResources.TapToEnterYourEmail;
+            //PasswordEntry.Placeholder = AppResources.TapToEnterYourPassword;
             LblPasswordText.Text = AppResources.SixCharactersOrLonger;
             LoginButton.Text = AppResources.LogIn;
             ResetPasswordButton.Text = AppResources.ForgotPassword;
@@ -2082,7 +2095,7 @@ namespace DrMuscle.Screens.User
             AppleBtnText.Text = ((App)Application.Current).displayCreateNewAccount ? "Sign in with Apple" : "Continue with Apple";
             //LblLoginText.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogInWithEmail : "";
             //LblLoginText.IsVisible = ((App)Application.Current).displayCreateNewAccount;
-            LoginButton.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogInWithEmail : AppResources.CreateAccount;
+            LoginButton.Text = ((App)Application.Current).displayCreateNewAccount ? AppResources.LogIn : AppResources.CreateAccount;
             //if (((App)Application.Current).displayCreateNewAccount)
             //    SetDefaultButtonStyle(LoginButton);
             //else
@@ -2092,7 +2105,7 @@ namespace DrMuscle.Screens.User
             LblPasswordText.IsVisible = !((App)Application.Current).displayCreateNewAccount;
             EmailEntry.Text = "";
             PasswordEntry.Text = "";
-            PasswordEntry.Placeholder = ((App)Application.Current).displayCreateNewAccount ? AppResources.TapToEnterYourPassword : AppResources.TapToCreateYourPassword;
+            //PasswordEntry.Placeholder = ((App)Application.Current).displayCreateNewAccount ? AppResources.TapToEnterYourPassword : AppResources.TapToCreateYourPassword;
             DBSetting experienceSetting = LocalDBManager.Instance.GetDBSetting("experience");
             DBSetting workoutPlaceSetting = LocalDBManager.Instance.GetDBSetting("workout_place");
             int? workoutId = null;
@@ -2210,6 +2223,7 @@ namespace DrMuscle.Screens.User
             WorkoutInfo2.FontSize = 16;
             WorkoutInfo2.Text = AppResources.DrMuslce;
             WorkoutInfo2.FontSize = 36;
+            WorkoutInfo1.Text = AppResources.LogIn;
             //}
             //else
             //{
