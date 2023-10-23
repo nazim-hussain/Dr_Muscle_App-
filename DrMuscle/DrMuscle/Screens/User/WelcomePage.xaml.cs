@@ -109,7 +109,6 @@ namespace DrMuscle.Screens.User
         private void RefreshLocalized()
         {
             MadeAMistakeButton.Text = AppResources.MadeAMistakeStartOver;
-            LblCreateAccount.Text = AppResources.CreateAccount;
             LblBackUpAutomatically.Text = AppResources.BackupAutomaticallyAccessAnywhere;
             EmailEntry.Placeholder = AppResources.TapToEnterYourEmail;
             PasswordEntry.Placeholder = AppResources.TapToEnterYourPassword;

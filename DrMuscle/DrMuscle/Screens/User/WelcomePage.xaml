@@ -192,7 +192,7 @@
                                             </OnPlatform>
                                         </Frame.CornerRadius>
                                         <Frame.GestureRecognizers>
-                                            <TapGestureRecognizer  Tapped="CreateAccountByApple"/>
+                                        <TapGestureRecognizer  Tapped="LoginWithAppleAsync"/>
                                         </Frame.GestureRecognizers>
                                     </Frame>
                                 </StackLayout>
