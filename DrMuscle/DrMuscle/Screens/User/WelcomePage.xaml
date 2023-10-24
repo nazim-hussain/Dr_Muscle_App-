@@ -87,7 +87,7 @@
                 Source="page2"
                 VerticalOptions="FillAndExpand" />
             <ScrollView>
-                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,30,20,0" >
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,0,20,0" >
                     
                         <StackLayout VerticalOptions="FillAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
@@ -103,8 +103,8 @@
                                    Source="logo11">
                                     <Image.Margin>
                                         <OnPlatform x:TypeArguments="Thickness">
-                                            <On Platform="iOS" Value="0,20,0,0"/>
-                                            <On Platform="Android" Value="0,10,0,0"/>
+                                            <On Platform="iOS" Value="0,40,0,0"/>
+                                            <On Platform="Android" Value="0,25,0,0"/>
                                         </OnPlatform>
                                     </Image.Margin>
                                 </Image>
@@ -141,7 +141,7 @@
                                 <Label x:Name="LblBackUpAutomatically" HorizontalOptions="CenterAndExpand" TextColor="LightGray" Style="{StaticResource LabelStyle}"></Label>
                                 </StackLayout>
                             </StackLayout>
-                            <StackLayout x:Name="CreateAccount" VerticalOptions="CenterAndExpand" Orientation="Vertical" Padding="0,10,0,10" Spacing="10">
+                            <StackLayout x:Name="CreateAccount" VerticalOptions="CenterAndExpand" Orientation="Vertical" Padding="0,20,0,10" Spacing="10">
                                 
                                 <!--<Label x:Name="LblLoginText" Margin="0,2,0,0" Text="Log in with email" HorizontalOptions="CenterAndExpand" TextColor="LightGray" FontSize="16"></Label>-->
                                 <Frame x:Name="EmailFrame" Margin="0,0,0,0" CornerRadius="{OnPlatform Android='10', iOS='10'}" Padding="{OnPlatform Android='6',iOS= '14'}"
